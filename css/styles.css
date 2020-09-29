@@ -1,0 +1,42 @@
+/******** Tag ********/
+
+body{
+    
+    margin: 0;
+    text-align: right;
+    direction: rtl;
+}
+
+
+h1{
+ 
+}
+
+/******** Class ********/
+
+.bg{
+  
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: white;
+    background:url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");        
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.container{
+ 
+    font-family: sans-serif;
+    color: black;
+}
+
+
+
+/******** Id ********/
+
+
+  
