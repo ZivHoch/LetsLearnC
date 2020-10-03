@@ -4,6 +4,12 @@ body {
   margin: 0;
   text-align: right;
   direction: rtl;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden;
 }
 
 h1 {
@@ -214,21 +220,3 @@ h1 {
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
  }
-
-
- pre {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f2334c;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
-  }
