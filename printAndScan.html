@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/printAndScan-style.css">
 </head>
 
 <body>
@@ -58,84 +59,85 @@
   <h2 class="top-right-head">קלט ופלט</h2>
 
   <p class=top-right>
-    בשפת סי יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת printf() (שעליה הסברנו ב"תוכנית הראשונה שלנו").
+    בשפת סי יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה הסברנו ב"תוכנית הראשונה שלנו").
     <br>
     בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו "משתנים") בצורה הבאה:
     <br>
-    printf("%(kind)",name_of_variable);
+    <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
     <br>
     הסבר:
     <br>
-    printf("%left",right) = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג המשתנה שאותו אנו מדפיסים ובצד
+    <span dir="ltr">printf("%left",right)</span> = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג המשתנה שאותו אנו מדפיסים ובצד
     ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
     <br>
-    לדוגמה:
+    לדוגמה:<!-- code 1 -->
+    <br><br><br><br><br><br><br><br>
+    printf = הפקודה שאנו מבצעים
     <br>
-
-    <!--CODE-->
-    #include <stdio.h>
-      void main()
-      {
-      int x = 7;
-      printf("%d",x);
-      }
-      <!--END CODE-->
-
+    "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+    <br>
+    x = שם המשתנה שאותו אנו מדפיסים
+    <br>
+    אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
+    <br>
+    קלט:
+    <br>
+    בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
+    <br>
+    <span dir="ltr">scanf("%kind", &name_of_variable);</span>
+    <br>
+    הסבר:
+    <br>
+    פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
+    <span dir="ltr">scanf("%left",&right);</span> .
+    <br>
+    לדוגמה:<!-- code 2 -->
+    <br><br><br><br><br><br><br><br><br>
       <br>
-      printf = הפקודה שאנו מבצעים
+      ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
       <br>
-      "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+      לאחר שנכניס ערך יודפס לנו:
       <br>
-      x = שם המשתנה שאותו אנו מדפיסים
-      <br>
-      אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
-      <br>
-      קלט:
-      <br>
-      בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת scanf() שעליה נסביר:
-      <br>
-      scanf("%kind", &name_of_variable);
-      <br>
-      הסבר:
-      <br>
-      פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
-      scanf("%left",&right); .
-      <br>
-      לדוגמה:
+      The value is: הערך
       <br>
 
-      <!--CODE-->
-        #include <stdio.h>
-        void main()
-        {
-           int x;
-           printf("Please enter a value");
-           scanf("%d",&x);
-           printf("The value is: %d",x);
-        }
-        <!--END CODE-->
-
-        <br>
-        ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
-        <br>
-        לאחר שנכניס ערך יודפס לנו:
-        <br>
-        The value is: הערך
-        <br>
-
-        <!--TABLE-->
-        מה רושמים? מה מדפיסים?
-        %d int
-        %c char
-        %f float
-        %lf double
-        %s String
-        %u Unsigned int
-        %ld long
-         <!--END TABLE-->
+      <!--TABLE-->
+      מה רושמים? מה מדפיסים?
+      %d int
+      %c char
+      %f float
+      %lf double
+      %s String
+      %u Unsigned int
+      %ld long
+      <!--END TABLE-->
 
   </p>
-
+  <figure id="code-1">
+    <!--CODE-->
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> x = 7;
+  printf(<u>"%d"</u>,x);
+}
+            </code></pre>
+  </figure>
+  <!--END CODE-->
+  <figure id="code-2">
+    <!--CODE-->
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> x;
+  printf(<u>"Please enter a value"</u>);
+  scanf(<u>"%d"</u>,&amp;x);
+  printf(<u>"The value is: %d"</u>,x);
+}
+            </code></pre>
+  </figure>
 
 </body>
 

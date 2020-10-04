@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="css/statments-style.css">
+  <link rel="stylesheet" href="css/code.css">
+  <script src="js/code.js"></script>
 </head>
 
 <body>
@@ -101,30 +103,28 @@
         <br>
         <br>
         פתרון בקוד:
+      </p>
         <!--CODE-->
-        #include <stdio.h>
+        <figure id="code-1">
 
-          void main() // main function - this is the code that will be executed when we click f5.
-          {
-
-          int age = 15; // declaring an integer variable named age and setting in to 15.
-
-          if(age >= 15) // checking if our age variable is greater or equal to 15.
-          {
-
-            printf("You can enter\n"); // this code will be executed only if our if statement is true.
-
-          }
-          else // the code inside the curly brackets will be executed only if our if statement is false.
-          {
-
-            printf("You can't enter\n");
-
-          }
-
-          } // End of main function
-          <!--END CODE-->
-  </p>
+          <figcaption id="example1-caption">CODE:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main() <em>// main function - this is the code that will be executed when we click f5.</em>
+{
+  <b>int</b> age = 15; <em>// declaring an integer variable named age and setting in to 15.</em>
+  
+  <b>if</b>(age >= 15) <em>// checking if our age variable is greater or equal to 15.</em>
+  {
+    printf(<u>"You can enter\n"</u>);<em> // this code will be executed only if our if statement is true.</em>
+  }
+  <b>else</b><em>// the code inside the curly brackets will be executed only if our if statement is false.</em>
+  {
+    printf(<u>"You can't enter\n"</u>);
+  }
+} <em>// End of main function</em>
+        </code></pre>
+      </figure>
+  
 
 
 </body>

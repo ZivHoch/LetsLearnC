@@ -1,6 +1,6 @@
 /******** Tag ********/
 
-body {
+html,body {
   margin: 0;
   text-align: right;
   direction: rtl;
@@ -8,8 +8,9 @@ body {
   background: #232323;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
-  
   overflow-x: hidden;
+/* 
+  font: normal normal normal 100%/1.4 georgia, serif; */
 }
 
 h1 {
