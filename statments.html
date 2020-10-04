@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-two">
     <div class="container">
       <nav role='navigation'>
         <div id="menuToggle">
@@ -51,6 +51,80 @@
   <h1 class="top-left">Learning C</h1>
 
   </div>
+
+  <h2 class="top-right-head">משפטי בקרה</h2>
+
+  <p class="top-right">
+
+    • משפט שעל פיו אפשר לקבוע אמת / שקר נקרא - משפט בוליאני.
+    <br>
+    לדוגמה:
+    <br>
+    1. גשם יורד בחוץ כרגע.
+    <br>
+    2. X>0
+    <br>
+    3. grade >= 60
+    <br>
+    <br>
+    פעולות שניתן להשתמש בהן בשפת סי לצורך בדיקה בקרה:
+    <br>
+    1. > (קטן / גדול מ..)
+    <br>
+    2. < (קטן / גדול מ..) <br>
+      3. >= (קטן שווה / גדול שווה מ..)
+      <br>
+      4. <= (קטן שווה / גדול שווה מ..) <br>
+        5. == (שווה)
+        <br>
+        6. != (שונה)
+        <br>
+        <br>
+        משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
+        <br>
+        if() - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד שימצא בתוך סוגריים מסולסלות.
+        <br>
+        <br>
+        else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים אנחנו
+        נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
+        <br>
+        <br>
+        else if() - זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם שלנו לא התקיים.
+        <br>
+        <br>
+        נראה דוגמה במילים ולאחר מכן נפתור אותה בכתב:
+        <br>
+        נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם
+        שעולה על המתקן צריך להיות 15.
+        <br>
+        ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15.
+        <br>
+        <br>
+        פתרון בקוד:
+        <!--CODE-->
+        #include <stdio.h>
+
+          void main() // main function - this is the code that will be executed when we click f5.
+          {
+
+          int age = 15; // declaring an integer variable named age and setting in to 15.
+
+          if(age >= 15) // checking if our age variable is greater or equal to 15.
+          {
+
+            printf("You can enter\n"); // this code will be executed only if our if statement is true.
+
+          }
+          else // the code inside the curly brackets will be executed only if our if statement is false.
+          {
+
+            printf("You can't enter\n");
+
+          }
+
+          } // End of main function
+          <!--END CODE-->
+  </p>
 
 
 </body>
