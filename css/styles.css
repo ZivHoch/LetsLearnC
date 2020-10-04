@@ -30,6 +30,30 @@ h1 {
   background-attachment: fixed;
 }
 
+.bg-oneAndHalf{
+  width: 100vw;
+  height: 150vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-two{
+  width: 100vw;
+  height: 200vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .container {
   font-family: sans-serif;
   color: black;
@@ -43,15 +67,22 @@ h1 {
   left: 16px;
 }
 
-.top-right {
-
-  font-size: 20px;
-  color: black;
+.top-right-head {
+  color: #0099ff;
   position: absolute;
   margin-left: 300px;
   top: 80px;
   margin-right: 50px;
 
+}
+
+.top-right{
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  margin-left: 300px;
+  top: 120px;
+  margin-right: 50px;
 }
 
 

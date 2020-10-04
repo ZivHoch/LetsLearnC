@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-oneAndHalf">
 
     <div class="container">
       <nav role='navigation'>
@@ -54,6 +54,87 @@
   <h1 class="top-left">Learning C</h1>
 
   </div>
+
+  <h2 class="top-right-head">קלט ופלט</h2>
+
+  <p class=top-right>
+    בשפת סי יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת printf() (שעליה הסברנו ב"תוכנית הראשונה שלנו").
+    <br>
+    בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו "משתנים") בצורה הבאה:
+    <br>
+    printf("%(kind)",name_of_variable);
+    <br>
+    הסבר:
+    <br>
+    printf("%left",right) = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג המשתנה שאותו אנו מדפיסים ובצד
+    ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
+    <br>
+    לדוגמה:
+    <br>
+
+    <!--CODE-->
+    #include <stdio.h>
+      void main()
+      {
+      int x = 7;
+      printf("%d",x);
+      }
+      <!--END CODE-->
+
+      <br>
+      printf = הפקודה שאנו מבצעים
+      <br>
+      "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+      <br>
+      x = שם המשתנה שאותו אנו מדפיסים
+      <br>
+      אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
+      <br>
+      קלט:
+      <br>
+      בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת scanf() שעליה נסביר:
+      <br>
+      scanf("%kind", &name_of_variable);
+      <br>
+      הסבר:
+      <br>
+      פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
+      scanf("%left",&right); .
+      <br>
+      לדוגמה:
+      <br>
+
+      <!--CODE-->
+        #include <stdio.h>
+        void main()
+        {
+           int x;
+           printf("Please enter a value");
+           scanf("%d",&x);
+           printf("The value is: %d",x);
+        }
+        <!--END CODE-->
+
+        <br>
+        ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
+        <br>
+        לאחר שנכניס ערך יודפס לנו:
+        <br>
+        The value is: הערך
+        <br>
+
+        <!--TABLE-->
+        מה רושמים? מה מדפיסים?
+        %d int
+        %c char
+        %f float
+        %lf double
+        %s String
+        %u Unsigned int
+        %ld long
+         <!--END TABLE-->
+
+  </p>
 
 
 </body>
