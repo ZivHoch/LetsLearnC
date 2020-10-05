@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-two">
 
     <div class="container">
       <nav role='navigation'>
@@ -51,15 +51,67 @@
     </div>
 
   </div>
-
+  
   <h1 class="top-left">Learning C</h1>
 
   </div>
 
-  <h2 class="top-right-head">טייפ דפ</h2>
+  <h2 class="top-right-head">typedef & define</h2>
 
   <p class=top-right>
-    כרגע, אין מה להציג
+
+    שפת C נותנת לנו אפשרות להגדיר לפונקציה/משתנה/רצף מילים/מילה שם נוסף אשר תפקידו הוא להפוך את הטקסט להיות יותר קריא.
+    כלומר, נגיד ואנחנו רוצים להשתמש במשתנה unsigned int (רק מספרים חיוביים ושלמים), אנו נוכל להגדיר typedef של unsigned
+    int על ידי שם אחר, לדוגמא positive_only.
+    <br>
+    כעת כאשר אנו נצטרך להשתמש ב unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר קריא.
+    <br>
+    באופן דומה אנו יכולים להגדיר גם רצף של מילים (או מילה) או פונקציות על ידי שמות שאנחנו נגדיר.
+    <br>
+    לדוגמא, אנו נוכל להגדיר את 1 להיות ODD ואת 0 להיות EVEN על ידי הגדרת define.
+    <br>
+    הסינטקס של typedef & define:
+    <br>
+    <br>
+
+    <!--CODE CODE
+    typedef unsigned int positive_only;
+    
+    define ODD 1
+
+    END CODE-->
+
+    <br>
+    אדום-> מסמן לקומפיילר שיש פה "הגדרה חדשה".
+    <br>
+    כחול-> למה המחשב מתייחס.
+    <br>
+    כתום-> מה המתכנת רואה.
+    <br>
+    חשוב לזכור: typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה. נהוג לרשום define ו typedef בתחילת
+    הקוד (אחרי הinclude 'ים).
+    <br>
+    שימוש בקוד:
+    <br>
+
+    <!--CODE
+    #include <stdio.h>
+      #define ODD 1
+      #define EVEN 0
+      typedef unsigned int positive_only;
+      void main()
+      {
+      positive_only X;
+      printf("please enter number");
+      scanf_s("%u",&X);
+      if (X%2 == ODD){
+      printf("the number is odd");
+      {
+      if (x%2 == EVEN){
+      printf("the number is even");
+      }
+    END CODE-->
+
   </p>
 
 
