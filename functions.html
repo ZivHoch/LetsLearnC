@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/functions-style.css">
 </head>
 
 <body>
-  <div class="bg-three">
+  <div class="bg-fiveAndHalf">
 
     <div class="container">
       <nav role='navigation'>
@@ -74,64 +75,8 @@
     נראה תוכנית שלוקחת חמישה תלמידים – בודקת מה הממוצע שלהם ולאחר מכן בודקת כמה תלמידים נמצאים מעל הממוצע , מתחת לממוצע
     ובדיוק על הממוצע:
     <br>
-
-    <!--CODE
-#include <stdio.h>
-
-void main()
-
-{
-
-	int studentGrades[] = {100 , 90 , 80 , 70 , 60};
-
-double avg;
-
-int moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
-	
-avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
-
-avg = avg/4;
-
-for(int i=0;i<5;i++)
-
-	{
-
-	if(avg < studentGrades[i])
-
-		{
-
-		lessThanAvg++;
-
-		}
-
-		else if(studentGrades[i] < avg)
-
-		{
-
-		moreThanAvg++;
-	
-	}
-	
-	else
-	
-	{
-	
-		onTheAvg++;
-	
-	}
-
-}	
-
-printf("amount of students with higher grades than avg is: %d\n", moreThanAvg);
-
-printf("amount of students with lower grades than avg is: %d\n", lessThanAvg);
-
-printf("amount of students with same grades as the avg is: %d\n", onTheAvg);
-
-}
-
-END CODE-->
-
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br>
     אז מה יש לנו פה ?
     הרבה קוד שהוא לא מאוד קריא ולא הכי נוח לעבוד איתו.
@@ -139,139 +84,28 @@ END CODE-->
     <br>
     דוגמה איך אפשר לעשות את זה קצת יותר פשוט לקריאה:
     <br>
-
-    <!--CODE
-#include <stdio.h>
-double calculateAvg(int *arr , int sizeOfArr);
-
-void fillAnArrayWithDetails(int *OriginalArr, int sizeOfArr , int *res);
-
-void printRes(int *res);
-
-void main()
-
-{
-
-	int studentGrades[] = {100 , 90 , 80 , 70 , 60}; // declaring an array variable.
-
-	int res[] = {0,0,0}; // declaring an array variable
-
-  double avg = calculateAvg(studentGrades , 5); // Calculating the avg.
-
-	fillAnArrayWithDetails(studentGrades,5,res); // filling our res array with values.
-
-	printRes(res);	// printing values inside res.
-
-}
-
-double calculateAvg(int *arr , int sizeOfArr)
-
-{
-
-double avg = 0;
-
-int i =0;
-
-for(i =0; i < sizeOfArr; i++)
-
-{
-
-		avg += arr[i];
-
-}
-
-	avg = avg/sizeOfArr;
-
-	return avg;
-
-}
-
-void fillAnArrayWithDetails(int *originalArr, int sizeOfArr , int *res)
-
-{
-
-for(int i=0;i< sizeOfArr; i++)
-
-	{
-
-	if(avg < originalArr [i])
-
-		{
-
-		res [0]++;
-
-		}
-
-		else if(originalArr [i] < avg)
-
-		{
-
-		res[1]++;
-
-		}
-
-		else
-
-		{
-
-			res[2]++;
-
-		}
-
-}
-void printRes(int *res)
-
-{
-	
-printf("amount of students with higher grades than avg is: %d\n", res[1]);
-
-printf("amount of students with lower grades than avg is: %d\n", res[0]);
-
-printf("amount of students with same grades as the avg is: %d\n", res[2]);
-
-}
- 
-END CODE-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <br>
     יתרונות:
     <br>
-    כתבנו הרבה פחות קוד במיין והפכנו את הכל לנקי ומסודר יותר.
+    כתבנו הרבה פחות קוד ב main והפכנו את הכל לנקי ומסודר יותר.
     <br>
-    רוב הפונקציות שכתבנו יכולות לעבוד ליותר מקרים מאשר אם היינו כותבים הכל במיין.
+    רוב הפונקציות שכתבנו יכולות לעבוד ליותר מקרים מאשר אם היינו כותבים הכל ב main.
     <br>
     דגשים שחשוב לדעת בעבודה עם פונקציות:
     <br>
-    1. חותמת הפונקציה צריכה להיות מעל פונקציית המיין.
+    1. הצהרת הפונקציה צריכה להיות מעל פונקציית ה main.
     <br>
-    הכוונה היא שאם אנחנו רוצים לרשום למשל פונקציה שמחשבת ממוצעים אז צריך להצהיר עליה לפני שהצהרנו על המיין שלנו (ז"א
-    לרשום למשל int avg(int *arr , int sizeOfArr) ).
+    הכוונה היא שאם אנחנו רוצים לרשום למשל פונקציה שמחשבת ממוצעים אז צריך להצהיר עליה לפני שהצהרנו על ה main שלנו ז"א
+    לרשום למשל <span dir="ltr">avg(int *arr , int sizeOfArr);</span>
     <br>
-    ניתן לרשום את כל הקוד של הפונקציה לפני המיין, אבל השיטה שאנו נעבוד בה אומרת
-    שאנחנו רק רושמים את החותמות של הפונקציה מעל המיין ואת כל הקוד למטה.
+    ניתן לרשום את כל הקוד של הפונקציה לפני ה main, אבל השיטה שאנו נעבוד בה אומרת
+    שאנחנו רק רושמים את ההצהרות של הפונקציה מעל ה main ואת כל הקוד למטה.
     <br>
     למשל:
     <br>
-
-    <!--CODE
-int avg(int *arr , int sizeOfArr); // Before main function.
-
-void main()
-
-{
-
-	// code
-
-}
-
-int avg(int *arr , int sizeOfArr)
-
-{
-
-	//code
-
-}
--->
+    <br><br><br><br><br><br><br><br>
     <br>
     2. מתי נשתמש בפונקציות ?
     <br>
@@ -279,18 +113,18 @@ int avg(int *arr , int sizeOfArr)
     <br>
     אם יש לנו הרבה מידי קוד שחוזר על עצמו.
     <br>
-    באופן כללי כדאי לנסות לרשום את כל הקוד בפונקציות ורק לאחר מכן לחבר דברים במיין.
+    באופן כללי כדאי לנסות לרשום את כל הקוד בפונקציות ורק לאחר מכן לחבר דברים ב main.
     <br>
-    איך נראית חותמת הפונקציה שלנו ?
+    איך נראית הצהרת הפונקציה שלנו ?
     <br>
-    Variable/Void nameOfTheFunction (What the function receives);
+    <span dir="ltr"> nameOfTheFunction (What the function receives);</span>
     <br>
-    Variable/Void = איזה משתנה הפונקציה שלנו מחזירה או וויד אם היא לא מחזירה כלום
+    <span dir="ltr">Variable/Void </span>= איזה משתנה הפונקציה שלנו מחזירה או void אם היא לא מחזירה כלום
     <br>
-    nameOfTheFunction = שם הפונקציה – רצוי שתהיה ברורה
+    <span dir="ltr">nameOfTheFunction</span> = שם הפונקציה – רצוי שתהיה ברורה
     <br>
 
-    (What the function receives); = אילו משתנים הפונקציה מקבלת ?
+    <span dir="ltr">(What the function receives); </span>= אילו משתנים הפונקציה מקבלת ?
     <br>
     למשל:
     <br>
@@ -304,10 +138,119 @@ double returnSum(double *arr , int sizeOfArr);
 
 END CODE-->
   </p>
+  <figure id="code-1">
 
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};
+  <b>double</b> avg;
+  <b>int</b> i,moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
+  avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
+  avg = avg/4;
+  <b>for</b>( i=0 ; i &lt; 5 ;i++)
+  {
+    <b>if</b>(avg &lt; studentGrades[i])
+    {
+      lessThanAvg++;
+    }
+    <b>else if</b>(studentGrades[i] &lt; avg)
+    {
+      moreThanAvg++;
+    }
+    <b>else</b>
+    {
+      onTheAvg++;
+    }
+  }
+  printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, moreThanAvg);
+  printf(<u>"amount of students with lower grades than avg is: %d\n"</u>, lessThanAvg);
+  printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAvg);
+}
+      </code></pre>
+  </figure>
 
+  <figure id="code-2">
 
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>double</b> calculateAvg(<b>int</b> *arr , <b>int</b> sizeOfArr);
+<b>void</b>fillAnArrayWithDetails(<b>int</b> *OriginalArr, <b>int</b> sizeOfArr , <b>int</b> *res);
+<b>void</b> printRes(<b>int</b> *res);
 
+<b>void</b> main()
+{
+  <b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};<em>// declaring an array variable.</em>
+  <b>int</b> res[] = {0,0,0}; <em>// declaring an array variable</em>
+  <b>int</b> i ,moreThanAvg = 0 ,lessThanAvg = 0 ,onTheAvg = 0;
+  <b>double</b> avg=calculateAvg(studentGrades,5); <em>// Calculating the avg.</em>
+  fillAnArrayWithDetails(studentGrades,5,res); <em>// filling our res array with values.</em>
+  printRes(res);<em>// printing values inside res.</em>
+}
+<b>double</b> calculateAvg(<b>int</b> *arr,<b>int</b> sizeOfArr)
+{
+  <b>double</b> avg=0;
+  <b>int</b> i=0;
+  <b>for</b>( i=0; i &lt; sizeOfArr ;i++)
+  {
+    avg += arr[i];
+  }
+  avg = avg/sizeOfArr;
+	<b>return</b> avg;
+}
+<b>void</b> fillAnArrayWithDetails(<b>int</b> *originalArr, <b>int</b> sizeOfArr , <b>int</b> *res)
+{
+  <b>int</b> i;
+  <b>for</b>(i=0; i &lt; sizeOfArr; i++)
+  {
+    <b>if</b>(avg &lt; originalArr[i])
+    {
+      res[0]++;
+    }
+    <b>else if</b>(originalArr [i] &lt; avg)
+    {
+      res[1]++;
+    }
+    <b>else</b>
+    {
+      res[2]++;
+    }
+  }
+}
+<b>void</b> printRes(<b>int</b> *res)
+{
+  printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, res[1]);
+  printf(<u>"amount of students with lower grades than avg is: %d\n"</u>,  res[0]);
+  printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, res[2]);
+}
+      </code></pre>
+  </figure>
+
+  <figure id="code-3">
+
+    <figcaption id="example1-caption">CODE 3:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr); <em>// Before main function.</em>
+<b>void</b> main()
+{
+  <em>//code</em>
+}
+<b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr)
+{
+  <em>//code</em>
+}
+      </code></pre>
+  </figure>
+  <figure id="code-4">
+
+    <figcaption id="example1-caption">CODE 4:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> printMsg(<b>char</b> *s1);
+<b>int</b> returnSumNumbers(<b>int</b> *arr , <b>int</b> sizeOfArr);
+<b>double</b> returnSum(<b>double</b> *arr , <b>int</b> sizeOfArr);
+      </code></pre>
+  </figure>
 
 </body>
 

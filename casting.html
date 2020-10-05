@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/casting-style.css">
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-oneAndHalf">
 
     <div class="container">
       <nav role='navigation'>
@@ -41,7 +42,7 @@
             <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
             <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
             <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
-            <a href="twoDimLoops.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
+            <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
             <a href="" class="w3-bar-item w3-button">מיונים הסבר כללי</a>
           </ul>
         </div>
@@ -65,13 +66,8 @@
     לדוגמה:
     <br>
     <!--CODE-->
-    double num = 0;
-
-    printf("please enter a number/n");
-
-    scanf_s("%lf",&num);
-
-    printf("your number without decimal point is: %d", (int)num);
+    <br><br><br><br> 
+    <br>
     <!--END CODE-->
     <br>
     מה שעשינו פה:
@@ -92,19 +88,31 @@
     ניתן גם לבצע המרה באופן קבוע למשל:
     <br>
     <!--CODE-->
-    double num = 8.325;
-
-    int new_num = (int)num;
-
+    <br><br>
     <!--END CODE-->
     <br>
     במקרה הזה בעצם ביצענו המרה קבועה מdouble לint ושמרנו אותו בnew_num.
-
-
-
-
   </p>
+  
+  <figure id="code-1">
 
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>double</b> num = 0;
+  printf(<u>"please enter a number\n"</u>);
+  scanf_s(<u>"%lf"</u>,&amp;num);
+  printf(<u>"your number without decimal point is: %d"</u>, (<b>int</b>)num );
+}
+      </code></pre>
+  </figure>
+  <figure id="code-2">
+
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>double</b> num = 8.325;
+<b>int</b> new_num = (<b>int</b>)num;
+      </code></pre>
+  </figure>
 </body>
-
 </html>
