@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/oneDimLoops-style.css">
 </head>
 
 <body>
@@ -63,21 +64,10 @@
 
     לולאות
     תפקיד הלולאה היא לקצר את הקוד. כלומר במקום שנרשום 5 פעמים את אותה השורה אז אנחנו יכולים לרשום קוד אחר אשר יעזור לנו לקצר אותו. כלומר, במקום לרשום את הקוד הבא:
-    <!--CODE 1
-    printf("1");
-    printf("2");
-    printf("3");
-    printf("4");
-    printf("5");
-    ENDCODE-->
+    <br><br><br><br><br><br><br>
     <br>
     נוכל לרשום:
-    <!--CODE 2
-    int I;
-    for(i=0;i<5;i++){
-      printf("%d",i);
-    }
-    END CODE-->
+    <br><br><br><br><br><br><br>
     <br>
 
   אם נסתכל על שורת הקוד ה2 נוכל לראות שלושה דברים:
@@ -89,12 +79,31 @@
   3.	השינוי בין כל ריצה לריצה ( (i++ -> מגדיל ב1 את הערך של i.
   <br>
   אנו נוכל להשתמש בלולאה בכל מקום שנרצה בקוד כל עוד יש חוקיות מסוימת בקוד, כלומר, בדוגמא שלעיל החוקיות היא הדפסה של מספרים עוקבים.
-  <br>
-  •	ניתן לרשום יותר מתנאי אחד בכל אחד מחלקי הלולאה (1,2,3) אשר אותם נפריד בפסיקים.
-
-
+  <br><br>
+*  ניתן לרשום יותר מתנאי אחד בכל אחד מחלקי הלולאה (1,2,3) אשר אותם נפריד בפסיקים.
 
   </p>
+
+  <figure id="code-1">
+
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false">printf(<u>"1"</u>);
+printf(<u>"2"</u>);
+printf(<u>"3"</u>);
+printf(<u>"4"</u>);
+printf(<u>"5"</u>);
+      </code></pre>
+  </figure>
+  <figure id="code-2">
+
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> i;
+<b>for</b>(i=0 ; i &lt; 5 ;i++)
+{
+  printf(<u>"%d"</u>, i);
+}
+      </code></pre>
+  </figure>
 
 
 </body>

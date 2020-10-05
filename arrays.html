@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/arrays-style.css">
 </head>
 
 <body>
@@ -75,7 +76,7 @@
     <br>
     על מנת להגדיר מערך ההצהרה תהיה בדרך הבאה :
     <br>
-    Type array[sizeOfArray];
+    <span dir="ltr">Type array[sizeOfArray];</span>
     <br>
     Type = סוג המשתנה שאותו יכיל המערך
     <br>
@@ -83,13 +84,13 @@
     <br>
     לדוגמה:
     <br>
-    double second_array[120];
+    <span dir="ltr">double second_array[120];</span>
     <br>
     כאן יצרנו 120 משתנים מסוג דאבל שבזיכרון נמצאים אחד אחרי השני וניתן לגשת אל כל אחד לפי המקום שלו במערך.
     <br>
     דוגמה נוספת להקצאה:
     <br>
-    int array[10];
+    <span dir="ltr">int array[10];</span>
     <br>
     מה שעשינו בשורה הזאת היא יצירת 10 משתנים מסוג אינטג'ר שכולם באים אחד אחרי השני בזיכרון וניתן לגשת אליהם בעזרת (שם המערך) בטים. בואו ננסה להבין איך המבנה נראה :
     <br>
@@ -105,22 +106,22 @@
     <br>
     כדי לגשת לתא מסויים במערך אנחנו נבצע זאת על ידי האופרטור של [ ] ו על ידי מספר המציין את התא שאליו אנחנו רוצים לגשת.
     <br>
-    Int arr[30];
+    <span dir="ltr">Int arr[30];</span>
     <br>
-    Scanf_s(“%d” , &arr[10]);
+    <span dir="ltr">Scanf_s(“%d” , &arr[10]);</span>
     <br>
     מה שעשינו כאן היא יצירת מערך בגודל 30 של אינטים ואנחנו ביצענו קליטה של ערך מסוים לתוך תא מספר 10 של המערך.
     אם אנחנו ננסה לגשת לכל התאים במערך אנחנו לא יכולים לעשות זאת בגלל שאנחנו חייבים את הסוגריים המרובעים וחייבים לציין מיקום של תא.
     <br>
     דוגמאות נוספות:
     <br>
-    Int arr[3];
+    <span dir="ltr">Int arr[3];</span>
     <br>
-    arr[0] = 10;
+    <span dir="ltr">arr[0] = 10;</span>
     <br>
-    arr[1] = 20;
+    <span dir="ltr">arr[1] = 20;</span>
     <br>
-    arr[2] = 30;
+    <span dir="ltr">arr[2] = 30;</span>
     <br>
     מה שעשינו כאן הינה הכנסת נתונים לכל תא במערך ולאחר הקוד הזה אנחנו נקבל מערך שיראה כך:
     <br>
@@ -136,55 +137,13 @@
     <br>
     פיתרון ללא מערך
     <br>
-    void main()
     
-    {
-    
-    int number1 , number2 ……….. number30;
-    
-      printf(please enter the 1st number: );
-    
-      scanf_s(“%d”,&number1);
-    
-      .
-      .
-    .
-    .	
-      .
-    
-      printf(please enter the 30st number: );
-    
-      scanf_s(“%d”,&number30);
-    
-      printf(“the avg is: %d, (number1+……+number30)/30);
-    
-    }
     <br>
     דמיינו שהיינו רושמים את כל זה היינו רושמים את אותו קוד כמה פעמים וזה היה יוצא קוד ארוך מאוד עובר משהו ממש פשוט כמו חישוב ממוצע בגלל ש עבור של מספר היינו צריכים לרשום פקודה של הודעת קליטה והקליטה עצמה פעמים ורק על הדבר הזה היינו כבר רושמים 60 שורות קוד , כלומר זה לא יעיל בשביל המתכנת וזה חוזר על אותו קוד שוב פעם ושוב פעם . כעט אנחנו נראה את הפתרון עם מערך.
     <br>
     פתרון עם מערך:
     <br>
-    void main()
     
-    {
-    
-    int grades[30], I ,average=0;
-    
-    for( i=0 ; I < 30 ; i++)
-    
-    {
-    
-      printf(“please enter grade number %d”,i);
-    
-      scanf_s( “%d”,&grades[i] );
-    
-      Average = average + grades[i];
-    
-    }
-    
-    printf( “the avg is: %d”, avarage/30 );
-    
-    }
     <br>
     אחד היתרונות הגדולים של מערך הוא שאפשר להשתמש בו בלולאות ובוא נבין למה. 
     <br>
@@ -192,7 +151,7 @@
     <br>
     אמרנו כבר בהתחלה שבמערך אנחנו יכולים לפנות לאיזה תא שאנחנו רוצים וכל זה מתבצע על ידי המשתנה שלנו "איי" שם המערך שלנו אם נסתכל על שורות הקוד הזאת:
     <br>
-    scanf_s( “%d”,&grades[i] );
+    <span dir="ltr">scanf_s( “%d”,&grades[i] );</span>
     <br>
     השורה הזאת אומרת תקלוט ערך מסוים שהמשתמש מקליד ותכניס אותו לתוך המערך במקום של "איי"!
     כלומר אם "איי" שווה עכשיו לאפס אז הערך שאנחנו נכניס יכנס לתא מספר אפס, אם "איי" שווה ל 5 אז הערך שאנחנו נכניס יכנס לתא מספר 5 וכאן יש בלבול, יש שחושבים שכשאומרים תא מספר 5 אז הכוונה היא לתא שרשום עליו 5 אבל אם נשים לב אמרנו שספירת התאים במערך מתחילים מ – 0 ולכן תא מספר 1 הוא בעצם תא 0 וכשאנחנו אומרים תא מספר 5 הכוונה היא לתא 4 וכך הלאה.
@@ -201,11 +160,11 @@
     <br>
     ערכי ברירת מחדל במערך:
     <br>
-    double arr[6];
+    <span dir="ltr">double arr[6];</span>
     <br>
-    double num1 = 23;
+    <span dir="ltr">double num1 = 23;</span>
     <br>
-    arr[5] = num1;
+    <span dir="ltr">arr[5] = num1;</span>
     <br>
     יצרנו כאן מערך שכל תא במערך הוא מסוג דאבל ואז הכנסו לתא החמישי עד הערך של המשתנה "נאם1" שערכו הוא 23 ולכן המערך שלנו יראה כך :
     <br>
@@ -221,12 +180,12 @@
      <br>
     כעת נראה דרכים להכנסת ערכים התחלתיים לתוך מערך כדי למנוע "ערכי זבל":
     <br>
-    Int arr[10] = {0};
+    <span dir="ltr">Int arr[10] = {0};</span>
     <br>
     השורה הזאת יוצרת לנו מערך מסוג אינט והדבר הנוסף שהוא עושה הוא נותן לכל תא במערך ערך התחלתי 0 וכך בעצם מנענו אם הכנסת ערך הזבל לתוך המערך.
     <br>
     דוגמה נוספת:
-    Int arr[5] = {1 , 2 ,3};
+    <span dir="ltr">Int arr[5] = {1 , 2 ,3};</span>
     <br>
     יצרנו כאן מערך בגודל 5 של אינטים ונתנו ערכים התחלתיים ל  3 האיברים הראשונים במערך , אבל מה לגבי 2 התאים האחרונים של המערך ? האם הם גם יהיו "ערכי זבל" ? , לשמחתנו הם לא , כל התאים האחרים יהיו מאופסים לאפס , כלומר אם היינו נותנים ערך התחלתי רק ל 2 התאים הראשונים אז  כל 3 התאים האחרים היו מאופסים ל 0.
     <br>
@@ -237,43 +196,29 @@
     כאשר אנחנו רוצים לשלוח מערך לפונקציה שמחשבת ממוצע אנחנו נשלח לה את המערך עצמו ואנחנו גם נשלח את גודל המערך כך:
     <br>
     
-    Void main()
-    
-    {
-    
-      Int arr[5];
-    
-      average(arr,5);
-    
-    }
-    
-    void average(int arr[],int size)
-    
-    {
-    
-    } 
     
     
-    void average(int arr[],int size);
+    
+    <span dir="ltr">void average(int arr[],int size);</span>
     <br>
     שורה זאת הינה הדרך שהפונקציה צריכה להראות כאשר שולחים אליה מערך סטטי , צד שמאל עם הסוגרים המרובעים אומרים למחשב שבעצם אנחנו עכשיו שולחים לו מערך סטטי ולא סתם משתנה רגיל וצד ימין יגיד לו את גודל המערך.
     <br>
-    :sizeof
+    <span dir="ltr">:sizeof</span>
     <br>
     נניח שאנחנו לא רוצים לשלוח את גודל המערך, זה בסדר גם בתוך הפונקציה עצמה אנחנו יכולים לדעת מה גודל של המערך על ידי הפעולה :
     <br>
-    sizeof(name);
+    <span dir="ltr">sizeof(name);</span>
     <br>
     מה שפקודה זאת עושה היא מחזירה לנו את הגודל של משתנה מסוים בבתים.
     <br>
-    int number;
+    <span dir="ltr">int number;</span>
     <br>
-    printf (%d ,sizeof(number));
+    <span dir="ltr">printf (%d ,sizeof(number));</span>
     <br>
     הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג אינט ומשתנה מסוג אינט תופס 4 בתים , במידה והוא היה דאבל אז היה מודפס לנו 8 כי דאבל תופס 8 בתים.
     <br>
     לכן כדי שאנחנו נקבל את גודל המערך לא בבתים אלה כמספר שמציין את הגודל שלו אנו צריכים אחרי הפקודה לבצע חילוק בסוג של המערך, כלומר אם המערך שלנו הוא מסוג אינט אז כדי לדעת את גודל המערך מסוג אינט עלינו לבצע את השורה הבאה : 
-    sizeof(number)/sizeof(int);
+    <span dir="ltr">sizeof(number)/sizeof(int);</span>
     <br>
     בגלל שאינט הוא 4 בתים ועל כל 4 בתים אנחנו סופרים משתנה 1, כלומר אם נגיד המערך שלנו היה מערך בגודל 23 ושלחנו אותו לפונקציה בלי הגודל של המערך אז כשאנחנו נבצע את השורה שרשמנו למעלה אנחנו נקבל 4 כפול 23 וחלקי 4 שזה יתן לנו 92 לחלק ל 4 וזה יתן לנו בדיוק 23 תאים. 
     <br>
@@ -285,3 +230,59 @@
 
 
   </div>
+  <figure id="code-1">
+
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number1 , number2 ……….. number30;
+  printf(<u>"please enter the 1st number:"</u>);
+  scanf_s(<u>“%d”</u>,&amp;number1);
+  .
+  .
+  .
+  .
+  printf(<u>"please enter the 30st number:"</u>);
+  scanf_s(<u>“%d”</u>,&amp;number30);
+  printf(<u>"the avg is: %d"</u>,(number1+……+number30)/30);
+}
+      </code></pre>
+  </figure>
+  <figure id="code-2">
+
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> grades[30], i ,average=0;
+  <b>for</b>(i=0 ; i &lt; 30; i++)
+  {
+  printf(<u>"please enter the %d'st number:"</u>,i);
+  scanf_s(<u>“%d”</u>,&amp;grades[i]);
+  Average = average + grades[i];
+  }
+  printf( <u>“the avg is: %d”</u>, avarage/30 );
+}
+      </code></pre>
+  </figure>
+
+  <figure id="code-3">
+
+    <figcaption id="example1-caption">CODE 3:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> average(<b>int</b> arr[],<b>int</b> size);
+
+<b>void</b> main()
+{
+  <b>int</b> arr[5];
+  average(arr,5);
+}
+<b>void</b> average(<b>int</b> arr[],<b>int</b> size)
+{
+  .
+  .
+  .
+}
+      </code></pre>
+  </figure>
