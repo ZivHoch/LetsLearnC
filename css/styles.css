@@ -55,6 +55,30 @@ h1 {
   background-attachment: fixed;
 }
 
+.bg-three{
+  width: 100vw;
+  height: 300vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-fiveAndHalf{
+  width: 100vw;
+  height: 550vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .container {
   font-family: sans-serif;
   color: black;

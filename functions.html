@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-three">
 
     <div class="container">
       <nav role='navigation'>
@@ -59,6 +59,254 @@
   <h1 class="top-left">Learning C</h1>
 
   </div>
+
+  <h2 class="top-right-head">פונקציות</h2>
+
+  <p class="top-right">
+
+    פונקציות זו שיטה לחלק את הקוד שלנו לחלקים קטנים וקריאים יותר.
+    <br>
+    עיקרון ששווה ליישם בתור מתכנתים זה לנסות לדאוג שהקוד שלנו יהיה מחולק בצורה טובה לחתיכות קטנות יותר ובעצם לחבר את הכל
+    בסוף.
+    <br>
+    פונקציות מאוד נוחות לעבודה משום שהן עוזרות לנו לכתוב פחות קוד מיותר.
+    <br>
+    נראה תוכנית שלוקחת חמישה תלמידים – בודקת מה הממוצע שלהם ולאחר מכן בודקת כמה תלמידים נמצאים מעל הממוצע , מתחת לממוצע
+    ובדיוק על הממוצע:
+    <br>
+
+    <!--CODE
+#include <stdio.h>
+
+void main()
+
+{
+
+	int studentGrades[] = {100 , 90 , 80 , 70 , 60};
+
+double avg;
+
+int moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
+	
+avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
+
+avg = avg/4;
+
+for(int i=0;i<5;i++)
+
+	{
+
+	if(avg < studentGrades[i])
+
+		{
+
+		lessThanAvg++;
+
+		}
+
+		else if(studentGrades[i] < avg)
+
+		{
+
+		moreThanAvg++;
+	
+	}
+	
+	else
+	
+	{
+	
+		onTheAvg++;
+	
+	}
+
+}	
+
+printf("amount of students with higher grades than avg is: %d\n", moreThanAvg);
+
+printf("amount of students with lower grades than avg is: %d\n", lessThanAvg);
+
+printf("amount of students with same grades as the avg is: %d\n", onTheAvg);
+
+}
+
+END CODE-->
+
+    <br>
+    אז מה יש לנו פה ?
+    הרבה קוד שהוא לא מאוד קריא ולא הכי נוח לעבוד איתו.
+    <br>
+    <br>
+    דוגמה איך אפשר לעשות את זה קצת יותר פשוט לקריאה:
+    <br>
+
+    <!--CODE
+#include <stdio.h>
+double calculateAvg(int *arr , int sizeOfArr);
+
+void fillAnArrayWithDetails(int *OriginalArr, int sizeOfArr , int *res);
+
+void printRes(int *res);
+
+void main()
+
+{
+
+	int studentGrades[] = {100 , 90 , 80 , 70 , 60}; // declaring an array variable.
+
+	int res[] = {0,0,0}; // declaring an array variable
+
+  double avg = calculateAvg(studentGrades , 5); // Calculating the avg.
+
+	fillAnArrayWithDetails(studentGrades,5,res); // filling our res array with values.
+
+	printRes(res);	// printing values inside res.
+
+}
+
+double calculateAvg(int *arr , int sizeOfArr)
+
+{
+
+double avg = 0;
+
+int i =0;
+
+for(i =0; i < sizeOfArr; i++)
+
+{
+
+		avg += arr[i];
+
+}
+
+	avg = avg/sizeOfArr;
+
+	return avg;
+
+}
+
+void fillAnArrayWithDetails(int *originalArr, int sizeOfArr , int *res)
+
+{
+
+for(int i=0;i< sizeOfArr; i++)
+
+	{
+
+	if(avg < originalArr [i])
+
+		{
+
+		res [0]++;
+
+		}
+
+		else if(originalArr [i] < avg)
+
+		{
+
+		res[1]++;
+
+		}
+
+		else
+
+		{
+
+			res[2]++;
+
+		}
+
+}
+void printRes(int *res)
+
+{
+	
+printf("amount of students with higher grades than avg is: %d\n", res[1]);
+
+printf("amount of students with lower grades than avg is: %d\n", res[0]);
+
+printf("amount of students with same grades as the avg is: %d\n", res[2]);
+
+}
+ 
+END CODE-->
+
+    <br>
+    יתרונות:
+    <br>
+    כתבנו הרבה פחות קוד במיין והפכנו את הכל לנקי ומסודר יותר.
+    <br>
+    רוב הפונקציות שכתבנו יכולות לעבוד ליותר מקרים מאשר אם היינו כותבים הכל במיין.
+    <br>
+    דגשים שחשוב לדעת בעבודה עם פונקציות:
+    <br>
+    1. חותמת הפונקציה צריכה להיות מעל פונקציית המיין.
+    <br>
+    הכוונה היא שאם אנחנו רוצים לרשום למשל פונקציה שמחשבת ממוצעים אז צריך להצהיר עליה לפני שהצהרנו על המיין שלנו (ז"א
+    לרשום למשל int avg(int *arr , int sizeOfArr) ).
+    <br>
+    ניתן לרשום את כל הקוד של הפונקציה לפני המיין, אבל השיטה שאנו נעבוד בה אומרת
+    שאנחנו רק רושמים את החותמות של הפונקציה מעל המיין ואת כל הקוד למטה.
+    <br>
+    למשל:
+    <br>
+
+    <!--CODE
+int avg(int *arr , int sizeOfArr); // Before main function.
+
+void main()
+
+{
+
+	// code
+
+}
+
+int avg(int *arr , int sizeOfArr)
+
+{
+
+	//code
+
+}
+-->
+    <br>
+    2. מתי נשתמש בפונקציות ?
+    <br>
+    אם יש לנו יותר מידי קוד ודברים הופכים להיות קצת לא קריאים.
+    <br>
+    אם יש לנו הרבה מידי קוד שחוזר על עצמו.
+    <br>
+    באופן כללי כדאי לנסות לרשום את כל הקוד בפונקציות ורק לאחר מכן לחבר דברים במיין.
+    <br>
+    איך נראית חותמת הפונקציה שלנו ?
+    <br>
+    Variable/Void nameOfTheFunction (What the function receives);
+    <br>
+    Variable/Void = איזה משתנה הפונקציה שלנו מחזירה או וויד אם היא לא מחזירה כלום
+    <br>
+    nameOfTheFunction = שם הפונקציה – רצוי שתהיה ברורה
+    <br>
+
+    (What the function receives); = אילו משתנים הפונקציה מקבלת ?
+    <br>
+    למשל:
+    <br>
+
+    <!--CODE
+void printMsg(char *s1);
+
+int returnSumNumbers(int *arr , int sizeOfArr);
+
+double returnSum(double *arr , int sizeOfArr);
+
+END CODE-->
+  </p>
+
+
+
 
 
 </body>
