@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-oneAndHalf">
 
     <div class="container">
       <nav role='navigation'>
@@ -51,6 +51,77 @@
     <h1 class="top-left">Learning C</h1>
 
   </div>
+
+  <h2 class="top-right-head">מחרוזות</h2>
+
+  <p class="top-right">
+
+    מהי מחרוזת ?
+    <br>
+    אוסף של תווים (char 's ) שיוצרים לנו מילה , משפט או בעצם כל דבר אחר.
+    <br>
+    למשל: "1252s!@#" היא מחרוזת.
+    <br>
+    לצערנו , בשפת סי טיפוס בשם מחרוזת לא קיים ואנו צריכים לעבוד עם מערך של charים ולקרוא לספריית <string.h> כדי לקבל את כל היכולות של מחרוזות לקוד שלנו.
+    <br>
+    דוגמאות ליצירת משתנה של מחרוזת:
+    <br>
+    char s[6] = {'H' , 'e' , 'l' , 'l' , 'o' ,'\0' };
+    <br>
+    char s = "Hello";
+    <br>
+    /0	
+    <br>
+    נקרא גם null terminator ובעצם אומר לקוד שלנו מתי לעצור לקרוא תווים מהמחרוזת. 
+    <br>
+    פונקציות שימושיות לסטרינגים:
+    <br>
+    strcpy(s1,s2)  = מעתיקה ממחרוזת 2 למחרוזת 1
+    <br>
+    strcat(s1,s2) = מעתיקה את 2 לקצה של 1
+    <br>
+    strlen(s1) = מוצאת את הגודל של המחרוזת
+    <br>
+    strcmp(s1,s2) = מחריזה 0 אם המחרוזות שוות , מספר שלילי אם האות הראשונה (ששונה) במחרוזת 1 קטנה מ2 , מחזירה מספר חיובי אם האות הראשונה (ששונה) במחרוזת 1 גדולה מ2
+    <br>
+    strchr(s1,ch) = מחזירה פוינטר לפעם הראשונה שהאות הופיעה בתוך המחרוזת
+    <br>
+    strstr(s1,s2) = מחזירה פוינטר לפעם הראשונה שמחרוזת 2 הופיעה ב1
+    <br>
+    <!--CODE
+    #include <stdio.h>
+
+    #include <string.h>
+      
+    void main()
+    
+    {
+    
+      char s1[10] = "hello";	
+      
+      char s2[10] ="world";
+    
+      char s3[20];
+    
+      int length;
+    
+      strcpy(s3,s1); // copied s1 into s3.
+    
+      printf("%s\n",s3); // prints hello 
+    
+      strcat(s1,s2); 
+    
+      printf("s/n" , s1); // helloworld
+    
+      
+      len = strlen(s1);
+    
+      printf("%d",len); // prints 10. (helloworld = 10 letters)
+    
+    }
+    -->
+    
+  </p>
 
 
 </body>
