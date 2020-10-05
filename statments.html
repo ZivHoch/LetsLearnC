@@ -58,7 +58,7 @@
 
   <p class="top-right">
 
-    • משפט שעל פיו אפשר לקבוע אמת / שקר נקרא - משפט בוליאני.
+    משפט שעל פיו אפשר לקבוע אמת / שקר נקרא - משפט בוליאני.
     <br>
     לדוגמה:
     <br>
@@ -71,44 +71,44 @@
     <br>
     פעולות שניתן להשתמש בהן בשפת סי לצורך בדיקה בקרה:
     <br>
-    1. > (קטן / גדול מ..)
+    1. &gt; (קטן / גדול מ..)
     <br>
-    2. < (קטן / גדול מ..) <br>
-      3. >= (קטן שווה / גדול שווה מ..)
-      <br>
-      4. <= (קטן שווה / גדול שווה מ..) <br>
-        5. == (שווה)
-        <br>
-        6. != (שונה)
-        <br>
-        <br>
-        משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
-        <br>
-        if() - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד שימצא בתוך סוגריים מסולסלות.
-        <br>
-        <br>
-        else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים אנחנו
-        נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
-        <br>
-        <br>
-        else if() - זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם שלנו לא התקיים.
-        <br>
-        <br>
-        נראה דוגמה במילים ולאחר מכן נפתור אותה בכתב:
-        <br>
-        נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם
-        שעולה על המתקן צריך להיות 15.
-        <br>
-        ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15.
-        <br>
-        <br>
-        פתרון בקוד:
-      </p>
-        <!--CODE-->
-        <figure id="code-1">
+    2. &lt; (קטן / גדול מ..) <br>
+    3. &gt;= (קטן שווה / גדול שווה מ..)
+    <br>
+    4. &lt;= (קטן שווה / גדול שווה מ..) <br>
+    5. == (שווה)
+    <br>
+    6. != (שונה)
+    <br>
+    <br>
+    משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
+    <br>
+    <span dir="ltr">if()</span> - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד שימצא בתוך סוגריים מסולסלות.
+    <br>
+    <br>
+    else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים אנחנו
+    נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
+    <br>
+    <br>
+    <span dir="ltr">else if() </span>- זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם שלנו לא התקיים.
+    <br>
+    <br>
+    נראה דוגמה במילים ולאחר מכן נפתור אותה בכתב:
+    <br>
+    נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם
+    שעולה על המתקן צריך להיות 15.
+    <br>
+    ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15.
+    <br>
+    <br>
+    פתרון בקוד:
+  </p>
+  <!--CODE-->
+  <figure id="code-1">
 
-          <figcaption id="example1-caption">CODE:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+    <figcaption id="example1-caption">CODE:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main() <em>// main function - this is the code that will be executed when we click f5.</em>
 {
   <b>int</b> age = 15; <em>// declaring an integer variable named age and setting in to 15.</em>
@@ -123,8 +123,8 @@
   }
 } <em>// End of main function</em>
         </code></pre>
-      </figure>
-  
+  </figure>
+
 
 
 </body>

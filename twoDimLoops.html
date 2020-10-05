@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/code.css">
+  <link rel="stylesheet" href="css/twoDimLoops-style.css">
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-oneAndHalf">
 
     <div class="container">
       <nav role='navigation'>
@@ -70,44 +71,51 @@
     נניח שאנו רוצים להדפיס משולש שעשוי מכוכביות:
     <br>
     במקום לרשום:
-
-
-    <!--CODE1   
-    Printf("*");
-    Printf("**");
-    Printf("***");
-    Printf("****");
-    Printf("*****");
-    Printf("******"); 
-    END CODE-->
-
-
+    <br><br><br><br><br><br><br><br><br><br><br>
     <br>
     נוכל לרשום:
-    <br>
-    <!--
-    void main(){
-    int i,j;
-    for(i=1;i<6;i++)
-    {
-       for(j=1;j<=i;j++)
-       {
-          printf("*"); 
-       }
-        printf("\n"); 
-    }
-   
-  } 
-    -->
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
     הסבר:
     <br>
-     בדוגמא זו יש לנו לולאה בתוך לולאה,
+    בדוגמא זו יש לנו לולאה בתוך לולאה,
     הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5. בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מJ עד לi
     הנוכחי. בתול הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה). בכל פעם שאנו מסיימים את הלולאה השנייה
     אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
-
   </p>
+
+  <figure id="code-1">
+    <figcaption id="example1-caption">CODE 1:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  printf(<u>"*"</u>);
+  printf(<u>"**"</u>);
+  printf(<u>"***"</u>);
+  printf(<u>"****"</u>);
+  printf(<u>"*****"</u>);
+}
+      </code></pre>
+  </figure>
+  <figure id="code-2">
+
+    <figcaption id="example1-caption">CODE 2:</figcaption>
+    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> i,j;
+  <b>for</b>(i=1 ; i &lt; 6; i++)
+  {
+    <b>for</b>(j=1 ; j &lt;= i; j++)
+    {
+      printf(<u>"*"</u>); 
+    }
+    printf(<u>"/n"</u>);
+  }</code></pre>
+  </figure>
+
+
+
 </body>
 
 
