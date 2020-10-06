@@ -55,9 +55,69 @@ h1 {
   background-attachment: fixed;
 }
 
+.bg-twoAndHalf{
+  width: 100vw;
+  height: 250vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .bg-three{
   width: 100vw;
   height: 300vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-threeAndHalf{
+  width: 100vw;
+  height: 350vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-four{
+  width: 100vw;
+  height: 400vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-fourAndHalf{
+  width: 100vw;
+  height: 450vh;
+  display: flex;
+  color: white;
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-five{
+  width: 100vw;
+  height: 500vh;
   display: flex;
   color: white;
   background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
