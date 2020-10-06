@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg-threeAndHalf">
     <div class="container">
       <!--Side bar-->
       <nav role="navigation">
@@ -57,12 +57,156 @@
 
     <h1 class="top-left">Learning C</h1>
 
-    <h2 class="top-right-head">NULL</h2>
+    <h2 class="top-right-head">מיון בועות</h2>
 
     <p class="top-right">
 
+      מיון בועות דומה טיפה למיון בחירה אבל עובד בצורה שונה .
+      <br>
+      מיון בועות גם הוא עובד על השוואה אבל אנחנו מתחילים את ההשוואה מסוף המערך ואנחנו משווים בין שני איברים צמודים
+      ובמידת הצורך מחליפים בין הערכים של שני האיברים כך שהאיברים הגדולים של המערך יהיו בצד שמאל והאיברים הקטנים יהיו בצד
+      ימין של המערך ואנחנו ממשיכים את ההשוואות עד שאנחנו מגיעים לאיבר השמאלי ביותר בצד שמאל לפי n מינוס i (זה יהיה ברור
+      בהמשך)
+      <br>
+      <br>
+      דוגמה: נתבונן במערך הלא ממוין הבא
+      <br>
+      <img src="assest/tablesForBubleSort/1.png" alt="table_1_image">
+      <br>
+      <br>
+      <br>
+      כעת נבצע עליו מיון בועות. ראשית אנחנו מתחילים מהתא האחרון במערך שהוא יהיה גודל המערך פחות אחד:
+      n-1 כאשר n מציג את גודל המערך.
+      <br>
+      <br>
+      כעת אנו מתחילים להשוות את הערך 9 לערך 25:
+      <br>
+      <img src="assest/tablesForBubleSort/2.png" alt="">
+      <br>
+      <br>
+      <br>
+      בגלל ש 25 גדול יותר מ 9 ו25 כבר נמצא בצד השמאלי של המערך אז אין סיבה לבצע החלפה , לאחר מכן אנחנו מתקדמים לתא הבא
+      ומשווים בין 25 ל 12:
+      <br>
+      <img src="assest/tablesForBubleSort/3.png" alt="">
+      <br>
+      <br>
+      <br>
+      בגלל ש 12 קטן יותר מ 25 אנחנו נבצע החלפה ביניהם ונקבל את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/4.png" alt="">
+      <br>
+      <br>
+      <br>
+      לאחר מכן אנו עוברים לתא הבא תא מספר 4 ותא מספר 3 אנחנו משווים בין הערכים 25 ו 3:
+      <br>
+      <img src="assest/tablesForBubleSort/5.png" alt="">
+      <br>
+      <br>
+      <br>
+      בגלל ש 25 גדול יותר אז גם כאן עלינו לבצע החלפה ולכן נקבל את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/6.png" alt="">
+      <br>
+      <br>
+      <br>
+      כעת אנו עוברים לתאים הבאים שהם תא מספר 3 ותא מספר 2 ושנית בגלל ש 25 גדול יותר מ 2 אז אנו נבצע החלפה:
+      <br>
+      <img src="assest/tablesForBubleSort/7.png" alt="">
+      <br>
+      <br>
+      <br>
+      לאחר מכן נקבל את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/8.png" alt="">
+      <br>
+      <br>
+      <br>
+      נמשיך לתאים הסמוכים הבאים שהם תא 2 ו תא 1 ורואים ש 25 גדול יותר מ 5:
+      <br>
+      <img src="assest/tablesForBubleSort/9.png" alt="">
+      <br>
+      <br>
+      <br>
+      לכן נבצע כאן החלפה ונקבל את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/10.png" alt="">
+      <br>
+      <br>
+      <br>
+      כעת נמשיך ל 2 תאים הסמוכים האחרונים שהם 1 ו 0 ורואים ש 25 גדול מ 1:
+      <br>
+      <img src="assest/tablesForBubleSort/11.png" alt="">
+      <br>
+      <br>
+      <br>
+      לכן נבצע החלפה ונקבל את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/12.png" alt="">
+      <br>
+      <br>
+      <br>
+      כעת סיימנו את הסבב הראשון וכעת נעבור לסבב השני רק שהפעם אנחנו לא בודקים עד התא ה 0 אלה אנחנו בודקים עד תא מספר 1
+      בגלל שאנחנו כבר יודעים שבתא 0 יש את המספר הגדול ביותר במערך ואחרי שנבצע את הסבב השני אנחנו מקבל את המערך הבא :
+      <br>
+      <img src="assest/tablesForBubleSort/13.png" alt="">
+      <br>
+      <br>
+      <br>
+      ואז אנחנו נבצע סבב שלישי עד שהמערך שלנו יהיה ממוין ועברנו על כל 7 התאים שלנו והשוונו אותם מול כולם ונקבל את המערך
+      הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/14.png" alt="">
+      <br>
+      <br>
+      <br>
+      לאחר הסבב השלישי  אנחנו נבצע עוד סבב ועוד סבב עד שאנחנו נגיע ל תא n-1 ושם נסיים.
+      <br>
+      לאחר ביצוע כל ההשוואות אנחנו נקבל בסוף את המערך הבא:
+      <br>
+      <img src="assest/tablesForBubleSort/15.png" alt="">
+      <br>
+      <br>
+      <br>
+      והנה כאן המערך שלנו ממוין וניתן לסיים את התוכנית.
+      <br>
+      <br>
+      <br>
+      דוגמה לקוד של מיון בועות:
+      <br>
+      <!--CODE
+       
+        void swap(int *first, int *second)
+        {
+	        int temp;
+	        temp = *first;
+	        *first = *second;
+	        *second = temp;
+        }
+       
+      END CODE-->
+
+      <!--CODE
+      
+
+          void bubble_sort(int *array, int array_size)
+         {
+	          int i, j;
+	          for (i = 0; i < array_size-1; i++)
+	         {
+		          for ( j = 0; j < array_size -(i+1); j++)
+		         {
+			         if (array[j] > array[j + 1])
+			         {
+				        swap(array + j, array + j + 1);
+			         }
+		         }
+	         }
+         }
 
 
+      END CODE-->
+    </p>
 </body>
 
 </html>
