@@ -1,0 +1,422 @@
+/******** Tag ********/
+html {
+  margin: 0;
+  direction: rtl;
+  padding: 0;
+  text-align: right;
+}
+
+body {
+  text-align: right;
+  color: #232323;
+  background: #cdcdcd;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-size: 25px;
+}
+
+h1 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: tomato;
+}
+
+
+/******** Class ********/
+
+/***********************BACKGROUND IMAGE*********************/
+.bg,
+.bg-oneAndHalf,
+.bg-two,
+.bg-twoAndHalf,
+.bg-three,
+.bg-threeAndHalf,
+.bg-four,
+.bg-fourAndHalf,
+.bg-five,
+.bg-fiveAndHalf {
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.bg {
+  height: 100vh;
+}
+
+.bg-oneAndHalf {
+  height: 150vh;
+}
+
+.bg-two {
+  height: 200vh;
+}
+
+.bg-twoAndHalf {
+  height: 250vh;
+}
+
+.bg-three {
+  height: 300vh;
+}
+
+.bg-threeAndHalf {
+  height: 350vh;
+}
+
+.bg-four {
+  height: 400vh;
+}
+
+.bg-fourAndHalf {
+  height: 450vh;
+}
+
+.bg-five {
+  height: 500vh;
+}
+
+.bg-fiveAndHalf {
+  height: 550vh;
+}
+
+/* Top left text */
+.head-left {
+  margin: 8px 0 0 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.head-right {
+  color: #0099ff;
+  margin-top: 100px;
+  margin-right: 50px;
+  text-align: right;
+}
+/******** Id ********/
+
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+  * Just a quick hamburger
+  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+  * But let's hide the middle one.
+  */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+  * Ohyeah and the last one should go the other direction
+  */
+#menuToggle input:checked~span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+  * And let's fade it in from the left
+  */
+#menuToggle input:checked~ul {
+  transform: none;
+  opacity: 1;
+}
+
+
+/*paragraph*/
+.para {
+  text-align: right;
+  direction: rtl;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+.First-Para {
+  width: 60%;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+/*****************************CODE STYLE***************************/
+
+/*code*/
+.code {
+  color: black;
+  text-align: left;
+  direction: ltr;
+ margin: 0 0 0 30px;
+}
+
+figure {
+  font-size: 20px;
+  display: block;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+}
+
+figure figcaption {
+  display: block;
+
+  padding: 5px 10px 4px 10px;
+
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+
+  font-weight: bold;
+
+  background: #ddd;
+  color: #777;
+}
+
+pre,
+pre * {
+  font: normal normal normal 1em/1.4 monaco, courier, monospace;
+}
+pre {
+  font-size: 0.8em;
+}
+pre,
+pre code,
+pre samp {
+  display: block;
+  margin: 0;
+
+  cursor: text;
+}
+pre code,
+pre samp {
+  /* enforce white-space for IE7 */
+  white-space: pre-wrap;
+
+  /* enforce word-wrap for mobile safari */
+  word-wrap: normal;
+
+  padding: 10px;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  overflow-x: auto;
+}
+
+/* additional focus rules to provide a visual cue */
+pre [contenteditable]:focus {
+  border-radius: 0 0 3px 0;
+
+  background: #fff;
+
+  outline: none;
+
+  box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+pre.line-numbers {
+  position: relative;
+}
+pre.line-numbers code,
+pre.line-numbers samp {
+  margin-left: 3em;
+
+  border-left: 1px solid #ccc;
+}
+
+pre.line-numbers > div {
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  border-radius: 0 0 0 3px;
+
+  background: #e5e5e5;
+
+  overflow: hidden;
+
+  counter-reset: line;
+}
+
+pre.line-numbers > div > span {
+  display: block;
+  width: 2.5em;
+  padding: 0 0.5em 0 0;
+
+  text-align: right;
+
+  color: #777;
+
+  overflow: hidden;
+
+  counter-increment: line;
+}
+pre.line-numbers > div > span::before {
+  content: counter(line);
+}
+pre.line-numbers > div > span:first-child {
+  margin-top: 10px;
+}
+pre.line-numbers > div > span:nth-child(odd) {
+  background: #dfdfdf;
+}
+
+@media print {
+  pre code {
+    overflow-x: visible;
+    white-space: pre-wrap;
+  }
+  pre.line-numbers div {
+    display: none;
+  }
+  pre.line-numbers > code,
+  pre.line-numbers > samp {
+    margin-left: 0;
+  }
+}
+
+/* double-up the syntax elements for cross-browser RTF-keystroke support */
+pre b,
+pre strong {
+  font-weight: normal;
+  color: blue;
+}
+pre u,
+pre u b,
+pre u strong {
+  text-decoration: none;
+  color: red;
+}
+pre i,pre i *,pre i * *
+{
+  letter-spacing: -0.1em;
+  text-decoration: none;
+  font-style: normal;
+  color: gray;
+}
+pre em,pre em *,pre em * * {
+
+  letter-spacing: -0.1em;
+  text-decoration: none;
+  font-style: normal;
+  color: orange;
+}
+
+/******************MEDIA***************/
+@media (max-width:900px) {
+  h1 {
+    color: #0099ff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+}

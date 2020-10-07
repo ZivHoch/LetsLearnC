@@ -7,217 +7,416 @@
 
     <title>Learning C Variables</title>
     <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- CSS -->
+
+    <!-- Bootstrap Scripts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/code.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/variables.css">
 </head>
 
-<body>
-    <div class="bg-two">
-        <div class="container">
-            <!--Side bar-->
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="menu">
-                        <a href="index.html" class="w3-bar-item w3-button">מי אנחנו?</a>
-                        <a href="firstProgram.html" class="w3-bar-item w3-button">התוכנית הראשונה</a>
-                        <a href="variables.html" class="w3-bar-item w3-button">משתנים</a>
-                        <a href="printAndScan.html" class="w3-bar-item w3-button">קלט ופלט</a>
-                        <a href="mathOperator.html" class="w3-bar-item w3-button">אופרטורים חשבוניים</a>
-                        <a href="statments.html" class="w3-bar-item w3-button">משפטי בקרה</a>
-                        <a href="oneDimLoops.html" class="w3-bar-item w3-button">לולאות</a>
-                        <a href="twoDimLoops.html" class="w3-bar-item w3-button">לולאות דו מימדיות</a>
-                        <a href="casting.html" class="w3-bar-item w3-button">קסטינג </a>
-                        <a href="sizeOf.html" class="w3-bar-item w3-button">סייז אוף </a>
-                        <a href="typeDef.html" class="w3-bar-item w3-button">טייפ דפ</a>
-                        <a href="functions.html" class="w3-bar-item w3-button">פונקציות</a>
-                        <a href="recursion.html" class="w3-bar-item w3-button">רקורסיות</a>
-                        <a href="pointers.html" class="w3-bar-item w3-button">מצביעים</a>
-                        <a href="doublePointer.html" class="w3-bar-item w3-button">מצביע כפול</a>
-                        <a href="arrays.html" class="w3-bar-item w3-button">מערכים</a>
-                        <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
-                        <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
-                        <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
-                        <a href="twoDimArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
-                        <a href="bubbleSort.html" class="w3-bar-item w3-button">מיון בועות</a>
-                        <a href="selectionSort.html" class="w3-bar-item w3-button">מיון בחירה</a>
-                        <a href="insertionSort.html" class="w3-bar-item w3-button">מיון הכנסה</a>
-                        <a href="quickSort.html" class="w3-bar-item w3-button">מיון מהיר</a>
-                        <a href="mergeSort.html" class="w3-bar-item w3-button">מיון מיזוג</a>
-                    </ul>
-                </div>
-            </nav>
-            <!--End of Side bar-->
-
-        </div>
-
-        <h1 class="top-left">Learning C</h1>
+<body class="bg-two">
+    <div class="container">
+        <!--Side bar-->
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="index.html" class="w3-bar-item w3-button">מי אנחנו?</a>
+                    <a href="firstProgram.html" class="w3-bar-item w3-button">התוכנית הראשונה</a>
+                    <a href="variables.html" class="w3-bar-item w3-button">משתנים</a>
+                    <a href="printAndScan.html" class="w3-bar-item w3-button">קלט ופלט</a>
+                    <a href="mathOperator.html" class="w3-bar-item w3-button">אופרטורים חשבוניים</a>
+                    <a href="statments.html" class="w3-bar-item w3-button">משפטי בקרה</a>
+                    <a href="oneDimLoops.html" class="w3-bar-item w3-button">לולאות</a>
+                    <a href="twoDimLoops.html" class="w3-bar-item w3-button">לולאות דו מימדיות</a>
+                    <a href="casting.html" class="w3-bar-item w3-button">קסטינג </a>
+                    <a href="sizeOf.html" class="w3-bar-item w3-button">סייז אוף </a>
+                    <a href="typeDef.html" class="w3-bar-item w3-button">טייפ דפ</a>
+                    <a href="functions.html" class="w3-bar-item w3-button">פונקציות</a>
+                    <a href="recursion.html" class="w3-bar-item w3-button">רקורסיות</a>
+                    <a href="pointers.html" class="w3-bar-item w3-button">מצביעים</a>
+                    <a href="doublePointer.html" class="w3-bar-item w3-button">מצביע כפול</a>
+                    <a href="arrays.html" class="w3-bar-item w3-button">מערכים</a>
+                    <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
+                    <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
+                    <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
+                    <a href="twoDimArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
+                    <a href="bubbleSort.html" class="w3-bar-item w3-button">מיון בועות</a>
+                    <a href="selectionSort.html" class="w3-bar-item w3-button">מיון בחירה</a>
+                    <a href="insertionSort.html" class="w3-bar-item w3-button">מיון הכנסה</a>
+                    <a href="quickSort.html" class="w3-bar-item w3-button">מיון מהיר</a>
+                    <a href="mergeSort.html" class="w3-bar-item w3-button">מיון מיזוג</a>
+                </ul>
+            </div>
+        </nav>
+        <!--End of Side bar-->
 
     </div>
+    <h1 class="head-left">Learning C</h1>
+    <h1 class="head-right">משתנים</h1>
+    <div class="para">
+        <p>
+            משתנים הינם עצמים שמטרתם היא לאחוז בסוגי נתונים שונים.<br> כל סוג משתנה טופס סוג שונה של מקום בזיכרון ויכול
+            להחזיק
+            נתונים שונים.<br>
+        </p>
+    </div>
+    <!-- INT -->
+    <h1 class="head-right">int</h1>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    משתנה מסוג int הוא משתנה שתופס 4 בתים בזיכרון והוא מכיל מספרים שלמים כמו 1,2,3,4,5 וכו'.<br>
+                    הצהרה - כדי ליצור משתנה מסוג int אנחנו צריכים לרשום את ההצהרה הבאה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        <p>
+            הסבר:<br>
+            int – אומר בעצם למחשב שעכשיו אנחנו יוצרים משתנה שיכול להכיל מספרים שלמים.<br>
+            name – זה השם של המשתנה.<br>
+        </p>
+    </div>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    ישנה דרך נוספת להצהיר על משתנה int וזה על ידי signed/unsigned וההצהרה שלהם תהיה בצורה הזאת:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>signed int</b> name; 
+  <b>unsigned int</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
 
-    <h2 class="top-right-head">משתנים</h2>
+    <br>
+    <div class="para">
+        כאשר אנחנו רושמים signed int אנחנו אומרים למחשב שזה משתנה מסוג int אשר יכול להכיל גם מספרים חיובים וגם מספרים
+        שלילים.
+        <br>
+        כאשר אנחנו רושמים unsigned int אנחנו אומרים למחשב שזה משתנה שיכול להכיל רק מספרים חיובים.
+        <br>טווח מספרים- כאשר אנחנו משתמשים ב int טווח המספרים שלו נע
+        בין מינוס 2<sup>31</sup> לבין 2<sup>31</sup> פחות אחד.<br>
+        וכאשר אנו משתמשים במשתנה מסוג <span dir="ltr">unsigned int</span> טווח המספרים שלו נע בין אפס לבין
+        2<sup>32</sup>.<br>
+        <br>
+        חשוב לציין ש int name שקול להצהרה של signed int name לכן טווח המספרים כאן זהה
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- DOUBLE -->
+    <h1 class="head-right">double</h1>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    משתנה מסוג double הוא משתנה שתופס 8 בתים בזיכרון והוא מכיל מספרים שלמים ועשרוניים כמו:<br> 1, 2,
+                    3.1, 31 וכו'.<br>
+                    הצהרה - כדי ליצור משתנה מסוג double אנחנו נרשום את ההצהרה הבאה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>double</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    גם כאן יש את האופציה להצהיר עליו כ signed ו unsigned וההצהרות יהיו כך:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>signed double</b> name; 
+  <b>unsigned double</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        כאשר אנחנו רושמים signed double אנחנו אומרים למחשב שזה משתנה מסוג double אשר יכול להכיל גם מספרים חיובים וגם
+        מספרים
+        שלילים.
+        <br>
+        כאשר אנחנו רושמים unsigned int אנחנו אומרים למחשב שזה משתנה שיכול להכיל רק מספרים חיובים.
+        <br>טווח מספרים- כאשר אנחנו משתמשים ב double טווח המספרים שלו נע
+        בין מינוס 2<sup>63</sup> לבין 2<sup>63</sup> פחות אחד.<br>
+        וכאשר אנו משתמשים במשתנה מסוג <span dir="ltr">unsigned int</span> טווח המספרים שלו נע בין אפס לבין
+        2<sup>64</sup>.<br>
+        <br>
+        חשוב לציין ש double name שקול להצהרה של signed double name לכן טווח המספרים כאן זהה
+    </div>
+
+    <!-- CHAR -->
+    <br>
+    <h1 class="head-right">char</h1>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    משתנה מסוג char הוא משתנה שתופס ביט אחד בזיכרון והוא מכיל תווים כמו: a A , : ; 1 2 ^.<br>
+                    הצהרה - כדי ליצור משתנה מסוג char אנחנו נרשום את ההצהרה הבאה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>char</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    משתנים מסוג char הם אומנם תווים אבל ניתן לייצג אותם גם בעזרת מספרים מתוך טבלת ascii לדוגמה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+<b>char</b> name = <u>'A'</u>;
+}
+        </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    כעת יצרנו משתנה שמכיל תו A , תו זה מוכר בטבלת ה ascii כמספר 65 , אם אנחנו נרשום את הדבר הבא:<br><br>
+                    המחשב יודע להמיר את זה ישירות ל תו A.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+<b>char</b> name = 65;
+}
+        </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    גם כאן אפשר להצהיר על משתנה זה בעזרת signed ו unsigned וזה מתבצע כך:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>signed char</b> name; 
+  <b>unsigned char</b> name;
+}
+        </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="para">
+        <p>
+            <br>טווח מספרים- כאשר אנחנו משתמשים ב char טווח המספרים שלו נע
+            בין מינוס 2<sup>7</sup> לבין 2<sup>7</sup> פחות אחד.<br>
+            וכאשר אנו משתמשים במשתנה מסוג <span dir="ltr">unsigned char</span> טווח המספרים שלו נע בין אפס לבין
+            2<sup>8</sup>.<br>
+            <br>
+            חשוב לציין ש char name שקול להצהרה של signed char name לכן טווח המספרים כאן זהה
+        </p>
+        <a href="https://www.idogendel.com/whitebyte/tools/ascii-table">קישור לטבלת הASCII</a>
+    </div>
+
+    <!-- float -->
+    <h1 class="head-right">float</h1>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    משתנה מסוג float זהה למשתנה מסוג double , ההבדל בין סוגי משתנים אלה זה שfloat נותן לנו עד 7 מספרים
+                    אחרי הנקודה
+                    העשרונית ו double נותן לנו 15.<br>
+                    הצהרה - צורת ההצהרה של float יהיה בצורה הבאה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>float</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+
+                    בדומה ל int ו double גם את float אפשר להגדיר כ signed אבל בשפת C אי אפשר להגדיר אותו עם unsigned
+                    ורושמים את
+                    ההצהרה
+                    כך:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>signed float</b> name; 
+  <b>unsigned float</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="para">
+        <br>טווח מספרים- כאשר אנחנו משתמשים ב float טווח המספרים שלו נע בין מינוס
+        <span dir="ltr">3.40282x10<sup>38</sup></span>
+        לבין <span dir="ltr">3.40282x10<sup>38</sup></span>.
+    </div>
 
 
+    <!-- short -->
+    <br>
+    <h1 class="head-right">short</h1>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    הצהרה - כאשר אנחנו רוצים ליצור משתנה מסוג short אנחנו נרשום את הקוד הבא:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>short</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="para">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
 
-    <p class=top-right>
-        משתנים הינם עצמים שמטרתם היא לאחוז בסוגי נתונים שונים , כל סוג משתנה טופס סוג שונה של מקום בזיכרון ויכול להחזיק
-        נתונים שונים.
-        <br>
-        <br>
-        <span class="h3-int-headline">int</span>
-        <br> 
-        משתנה מסוג int הוא משתנה שתופס 4 בתים בזיכרון והוא מכיל מספרים שלמים כמו 8,9,12, 12345 וכו'
-        <br>
-        הצהרה -  כדי ליצור משתנה מסוג int  אנחנו צריכים לרשום את ההצהרה הבאה:       
-        <br>
-        <!--CODE
-
-        int name;
-
-        END CODE-->
-        <br>
-        int – אומר בעצם למחשב שעכשיו אנחנו יוצרים משתנה מסוג int  שיכול להכיל מספרים שלמים.
-        <br>
-        name – זה השם של המשתנה ומסוג int.
-        <br>
-        ישנה דרך נוספת להצהיר על משתנה int  וזה על ידי signed unsigned וההצהרה שלהם תהיה בצורה הזאת:
-        <br>
-         <!--CODE
-
-        signed int name; 
-        unsigned int name;
-
-        END CODE-->
-        <br>
-        <br>
-        כאשר אנחנו רושמים signed int אנחנו אומרים למחשב שזה משתנה מסוג int אשר יכול להכיל גם מספרים חיובים וגם מספרים שלילים.
-        <br>
-        כאשר אנחנו רושמים unsigned int  אנחנו אומרים למחשב שזה משתנה שיכול להכיל רק מספרים חיובים.
-        <br>
-        טווח מספרים- כאשר אנחנו משתמשים ב int  טווח המספרים שלו נע בין  -2,147,483,648 ל 2,147,483,647 
-        וunsigned int נע בין0  ל 4,294,967,295 
-        <br>
-        חשוב לציין ש int name  שקול להצהרה של signed int name לכן טווח המספרים כאן זהה
-        <br>
-        <br>
-        <span class="h3-double-headline">double</span>
-        <br>
-        משתנה מסוג double   הוא משתנה שתופס 8 בתים בזיכרון והוא מכיל מספרים שלמים ועשרוניים כמו: 1 2 3 4.5 7.010 וכו'.
-        <br>
-        הצהרה-כדי ליצור משתנה מסוג double   אנחנו נרשום את ההצהרה הבאה:
-        <!--CODE
-        
-        double name;
-        
-        END CODE-->
-        <br>
-        גם כאן יש את האופציה להצהיר עליו כ signed ו unsigned וההצהרות יהיו כך:
-        <br>
-        <!--CODE
-        
-        signed double name;
-        unsigned double name;
-        
-        END CODE-->
-        <br>
-        טווח מספרים - טווח המספרים של double נע בין  -9,223,372,036,854,775,808ל 9,223,372,036,854,775,807 
-        ו unsigned double טווח המספרים שלנו ינוע בין 0 ל – 18,446,744,073,709,551,615
-        <br>
-        <br>
-        <span class="h3-char-headline ">char</span>
-        <br>
-        משתנה מסוג char הוא משתנה שתופס ביט אחד בזיכרון והוא מכיל תווים כמו: a A , : ; 1 2 ^.
-        <br>
-        הצהרה - כדי ליצור משתנה מסוג char אנחנו נרשום את ההצהרה הבאה:
-        <!--CODE
-        
-        char name;
-        
-        END CODE-->
-        <br>
-        משתנים מסוג char הם אומנם תווים אבל ניתן לייצג אותם גם בעזרת מספרים מתוך טבלת ascii לדוגמה:
-        <br>
-        <!--CODE
-        
-        char name = 'A';
-        
-        END CODE-->
-        <br>
-        כעת יצרנו משתנה שמכיל תו A , תו זה מוכר בטבלת ה ascii כמספר 65 , אם אנחנו נרשום את הדבר הבא:
-        <br>
-        <!--CODE
-        
-        char name = 65;
-        
-        END CODE-->
-        <br>
-        גם כאן אפשר להצהיר על משתנה זה בעזרת signed  ו unsigned  וזה מתבצע כך:
-        <br>
-        <!--CODE
-        
-        signed char name;
-        unsigned char name;
-
-        END CODE-->
-        <br>
-        המחשב יודע להמיר את זה ישירות ל תו A.
-        <br>
-        <br>
-        טבלת ascii + טווח מספרים - קישור לאתר שמראה ומסביר על טבלת האסקי: https://www.idogendel.com/whitebyte/tools/ascii-table ,
-        טווח המספרים של char  רגיל נע בין 127  ל 128- וunsigned char  נע בין 0 ל 255
-        <br>
-        <br>
-        <span class="h3-float-headline ">float</span>
-        <br>
-        משתנה מסוג float  זהה למשתנה מסוג double , ההבדל בין סוגי משתנים אלה זה שfloat  נותן לנו עד 7 מספרים אחרי הנקודה העשרונית ו double  נותן לנו 15. 
-        <br>
-        הצהרה - צורת ההצהרה של float יהיה בצורה הבאה:
-        <br>
-        <!--CODE
-        
-        float name;
-
-        END CODE-->
-        <br>
-        בדומה ל int  ו double גם את float אפשר להגדיר כ signed  אבל בשפת C אי אפשר להגדיר אותו עם unsigned ורושמים את ההצהרה כך:
-        <br>
-        <!--CODE
-        
-        signed float name;
-        unsigned float name;
-
-        END CODE-->
-        <br>
-        טווח מספרים - טווח המספרים של float  רגיל נע בין 1.175494351 E – 38 ל 3.402823466 E + 38
-        <br>
-        <br>
-        <span class="h3-short-headline">short</span>
-        <br>
-        הצהרה - כאשר אנחנו רוצים ליצור משתנה מסוג short אנחנו נרשום את הקוד הבא:
-        <br>
-        <!--CODE
-        
-        short name;
-
-        END CODE-->
-        <br>
-        גם כאן short אפשר להצהיר עליו עם signed  ו unsigned וזה יתבצע בדרך הבאה:
-        <br>
-        <!--CODE
-        
-        signed short name;
-        unsigned short name;
-
-        END CODE-->
-        <br>
+                    גם כאן short אפשר להצהיר עליו עם signed ו unsigned וזה יתבצע בדרך הבאה:
+                </p>
+            </div>
+            <div class="col-md-6">
+                <figure class="code">
+                    <figcaption id="example1-caption">CODE:</figcaption>
+                    <pre aria-describedby="example1-description" aria-labelledby="example1-caption"
+                        class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>signed short</b> name; 
+  <b>unsigned short</b> name;
+}
+                </code></pre>
+                </figure>
+            </div>
+        </div>
+    </div>
+   <div class="para">
+       <p>
         טווח - טווח המספרים של short רגיל הוא בין 32,767 לבין 32,768- ו unsigned short נע בין 0 ל 65,535
-    </p>
+       </p>
+       <br>
+   </div>
 
 
 </body>
