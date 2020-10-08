@@ -7,153 +7,256 @@
 
   <title>Learning C PrintAndScan</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- CSS -->
+
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/code.css">
-  <link rel="stylesheet" href="css/printAndScan-style.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+
 </head>
 
-<body>
-  <div class="bg-two">
+<body class="bg-two">
 
-    <div class="container">
-      <!--Side bar-->
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="index.html" class="w3-bar-item w3-button">מי אנחנו?</a>
-            <a href="firstProgram.html" class="w3-bar-item w3-button">התוכנית הראשונה</a>
-            <a href="variables.html" class="w3-bar-item w3-button">משתנים</a>
-            <a href="printAndScan.html" class="w3-bar-item w3-button">קלט ופלט</a>
-            <a href="mathOperator.html" class="w3-bar-item w3-button">אופרטורים חשבוניים</a>
-            <a href="statments.html" class="w3-bar-item w3-button">משפטי בקרה</a>
-            <a href="oneDimLoops.html" class="w3-bar-item w3-button">לולאות</a>
-            <a href="twoDimLoops.html" class="w3-bar-item w3-button">לולאות דו מימדיות</a>
-            <a href="casting.html" class="w3-bar-item w3-button">קסטינג </a>
-            <a href="sizeOf.html" class="w3-bar-item w3-button">סייז אוף </a>
-            <a href="typeDef.html" class="w3-bar-item w3-button">טייפ דפ</a>
-            <a href="functions.html" class="w3-bar-item w3-button">פונקציות</a>
-            <a href="recursion.html" class="w3-bar-item w3-button">רקורסיות</a>
-            <a href="pointers.html" class="w3-bar-item w3-button">מצביעים</a>
-            <a href="doublePointer.html" class="w3-bar-item w3-button">מצביע כפול</a>
-            <a href="arrays.html" class="w3-bar-item w3-button">מערכים</a>
-            <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
-            <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
-            <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
-            <a href="twoDimArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
-            <a href="bubbleSort.html" class="w3-bar-item w3-button">מיון בועות</a>
-            <a href="selectionSort.html" class="w3-bar-item w3-button">מיון בחירה</a>
-            <a href="insertionSort.html" class="w3-bar-item w3-button">מיון הכנסה</a>
-            <a href="quickSort.html" class="w3-bar-item w3-button">מיון מהיר</a>
-            <a href="mergeSort.html" class="w3-bar-item w3-button">מיון מיזוג</a>
-          </ul>
-        </div>
-      </nav>
-      <!--End of Side bar-->
-
-    </div>
+  <div class="container">
+    <!--Side bar-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html" class="w3-bar-item w3-button">מי אנחנו?</a>
+          <a href="firstProgram.html" class="w3-bar-item w3-button">התוכנית הראשונה</a>
+          <a href="variables.html" class="w3-bar-item w3-button">משתנים</a>
+          <a href="printAndScan.html" class="w3-bar-item w3-button">קלט ופלט</a>
+          <a href="mathOperator.html" class="w3-bar-item w3-button">אופרטורים חשבוניים</a>
+          <a href="statments.html" class="w3-bar-item w3-button">משפטי בקרה</a>
+          <a href="oneDimLoops.html" class="w3-bar-item w3-button">לולאות</a>
+          <a href="twoDimLoops.html" class="w3-bar-item w3-button">לולאות דו מימדיות</a>
+          <a href="casting.html" class="w3-bar-item w3-button">קסטינג </a>
+          <a href="sizeOf.html" class="w3-bar-item w3-button">סייז אוף </a>
+          <a href="typeDef.html" class="w3-bar-item w3-button">טייפ דפ</a>
+          <a href="functions.html" class="w3-bar-item w3-button">פונקציות</a>
+          <a href="recursion.html" class="w3-bar-item w3-button">רקורסיות</a>
+          <a href="pointers.html" class="w3-bar-item w3-button">מצביעים</a>
+          <a href="doublePointer.html" class="w3-bar-item w3-button">מצביע כפול</a>
+          <a href="arrays.html" class="w3-bar-item w3-button">מערכים</a>
+          <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
+          <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
+          <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
+          <a href="twoDimArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
+          <a href="bubbleSort.html" class="w3-bar-item w3-button">מיון בועות</a>
+          <a href="selectionSort.html" class="w3-bar-item w3-button">מיון בחירה</a>
+          <a href="insertionSort.html" class="w3-bar-item w3-button">מיון הכנסה</a>
+          <a href="quickSort.html" class="w3-bar-item w3-button">מיון מהיר</a>
+          <a href="mergeSort.html" class="w3-bar-item w3-button">מיון מיזוג</a>
+        </ul>
+      </div>
+    </nav>
+    <!--End of Side bar-->
 
   </div>
 
-  <h1 class="top-left">Learning C</h1>
+  <h1 class="head-left">Learning C</h1>
+  <h1 class="head-right">קלט ופלט</h1>
+
+
+  <h3 class="head-right">קלט</h3>
+  <!--First paragraph-->
+  <div class="First-Para">
+
+    <p>
+      
+      בשפת c יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה
+      הסברנו
+      <a href="firstProgram.html">בתוכנית הראשונה שלנו</a>).
+      <br>
+      בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו בעמוד <a href="variables.html">משתנים</a>
+      ) בצורה הבאה:
+      <br>
+      <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
+      <br>
+      הסבר:
+      <br>
+      <span dir="ltr">printf("%left",right)</span> = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג
+      המשתנה
+      שאותו אנו מדפיסים ובצד
+      ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
+      <br>
+    </p>
 
   </div>
+  <!--END FIRST PARA-->
 
-  <h2 class="top-right-head">קלט ופלט</h2>
 
-  <p class=top-right>
-    בשפת סי יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה הסברנו ב"תוכנית הראשונה שלנו").
-    <br>
-    בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו "משתנים") בצורה הבאה:
-    <br>
-    <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
-    <br>
-    הסבר:
-    <br>
-    <span dir="ltr">printf("%left",right)</span> = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג המשתנה שאותו אנו מדפיסים ובצד
-    ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
-    <br>
-    לדוגמה:
-    <br><br><br><br><br><br>
-    printf = הפקודה שאנו מבצעים
-    <br>
-    "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
-    <br>
-    x = שם המשתנה שאותו אנו מדפיסים
-    <br>
-    אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
-    <br>
-    קלט:
-    <br>
-    בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
-    <br>
-    <span dir="ltr">scanf("%kind", &name_of_variable);</span>
-    <br>
-    הסבר:
-    <br>
-    פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
-    <span dir="ltr">scanf("%left",&right);</span> .
-    <br>
-    לדוגמה:<!-- code 2 -->
-    <br><br><br><br><br><br><br><br><br>
-      <br>
-      ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
-      <br>
-      לאחר שנכניס ערך יודפס לנו:
-      <br>
-      The value is: הערך
-      <br>
 
-      <!--TABLE-->
-      מה רושמים? מה מדפיסים?
-      <br>
-     <span dir="ltr"> %d -> int</span>
-     <br>
-    <span dir="ltr"> %c -> char</span>
-    <br> 
-    <span dir="ltr"> %f -> float</span>
-    <br>
-    <span dir="ltr"> %lf -> double</span>
-    <br> 
-    <span dir="ltr"> %s -> String</span>
-    <br> 
-    <span dir="ltr"> %u -> Unsigned int</span>
-    <br> 
-    <span dir="ltr"> %ld -> long</span>
-      <!--END TABLE-->
+  <!--Second paragraph-->
 
-  </p>
-  <figure id="code-1">
-    <!--CODE-->
-    <figcaption id="example1-caption">CODE 1:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+  <div class="para">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+
+        <p>
+          לדוגמה:
+          <br>
+          printf = הפקודה שאנו מבצעים
+          <br>
+          "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+          <br>
+          x = שם המשתנה שאותו אנו מדפיסים
+          <br>
+          אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
+          <br>
+
+        </p>
+
+      </div>
+
+      <div class="col-md-6">
+
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> x = 7;
   printf(<u>"%d"</u>,x);
 }
             </code></pre>
-  </figure>
-  <!--END CODE-->
-  <figure id="code-2">
-    <!--CODE-->
-    <figcaption id="example1-caption">CODE 2:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
-<b>void</b> main()
-{
-  <b>int</b> x;
-  printf(<u>"Please enter a value"</u>);
-  scanf(<u>"%d"</u>,&amp;x);
-  printf(<u>"The value is: %d"</u>,x);
-}
-            </code></pre>
-  </figure>
+        </figure>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--END SECOND PARAGRAPH-->
+
+  <!--Third paragraph-->
+  <h3 class="head-right">קלט</h3>
+  
+  <div class="First-Para">
+
+        <p>
+          קלט:
+          <br>
+          בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
+          <br>
+          <span dir="ltr">scanf("%kind", &name_of_variable);</span>
+          <br>
+          הסבר:
+          <br>
+          פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
+          <span dir="ltr">scanf("%left",&right);</span> .
+          <br>
+        
+        </p>
+
+  </div>
+
+  <!--END THIRD PARAGRAPH-->
+
+
+  <!--fourth paragraph-->
+
+  <div class="para">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+
+        <p>
+          לדוגמה:
+          <br>
+          ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
+          <br>
+          לאחר שנכניס ערך יודפס לנו:
+          <br>
+          The value is: הערך
+          <br>
+      
+        </p>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <figure class="code">
+    
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+      <b>void</b> main()
+      {
+        <b>int</b> x;
+        printf(<u>"Please enter a value"</u>);
+        scanf(<u>"%d"</u>,&amp;x);
+        printf(<u>"The value is: %d"</u>,x);
+      }
+                  </code></pre>
+        </figure>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--END Fourth pargaraph-->
+
+  <!--Fifth paragraph-->
+
+  <div class="First-Para">
+
+    <p>
+     <!--TABLE-->
+     מה רושמים? מה מדפיסים?
+     <br>
+     <span dir="ltr"> %d -> int</span>
+     <br>
+     <span dir="ltr"> %c -> char</span>
+     <br>
+     <span dir="ltr"> %f -> float</span>
+     <br>
+     <span dir="ltr"> %lf -> double</span>
+     <br>
+     <span dir="ltr"> %s -> String</span>
+     <br>
+     <span dir="ltr"> %u -> Unsigned int</span>
+     <br>
+     <span dir="ltr"> %ld -> long</span>
+     <!--END TABLE-->
+ 
+    </p>
+
+</div>
+
+<!--End fifth pargraph-->
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!--CODE2
+  
+END CODE-->
