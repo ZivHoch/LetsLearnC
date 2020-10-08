@@ -1,3 +1,4 @@
+/***************CODE FUNCTIONS************* */
 (function()
 	{
 		for(var tags = ['main','figure','figcaption'], i = 0; i < tags.length; i ++)
@@ -40,3 +41,12 @@
 		}	
 	
 	})();
+
+/**************SIDENAVBAR FUNCTIONS*********** */
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+  }

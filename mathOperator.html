@@ -6,67 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learning C FirstProgram</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
- 
-  <!-- CSS -->
-  
-   <!-- Bootstrap Scripts -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/firstprogram-style.css">
+ <!-- Font Awesome -->
+ <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-  <!-- Java Script -->
-  <script src="js/code.js"></script>
+ <!-- CSS -->
+
+ <!-- Bootstrap Scripts -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/styles.css">
+
+ <!-- Java Script -->
+ <script src="js/code.js"></script>
 
 
 </head>
 
-<body class="bg">
-  <section id="top">
-    <div>
-      <div class="container">
-        <!--Side bar-->
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-              <a href="index.html" class="w3-bar-item w3-button">מי אנחנו?</a>
-              <a href="firstProgram.html" class="w3-bar-item w3-button">התוכנית הראשונה</a>
-              <a href="variables.html" class="w3-bar-item w3-button">משתנים</a>
-              <a href="printAndScan.html" class="w3-bar-item w3-button">קלט ופלט</a>
-              <a href="mathOperator.html" class="w3-bar-item w3-button">אופרטורים חשבוניים</a>
-              <a href="statments.html" class="w3-bar-item w3-button">משפטי בקרה</a>
-              <a href="oneDimLoops.html" class="w3-bar-item w3-button">לולאות</a>
-              <a href="twoDimLoops.html" class="w3-bar-item w3-button">לולאות דו מימדיות</a>
-              <a href="casting.html" class="w3-bar-item w3-button">קסטינג </a>
-              <a href="sizeOf.html" class="w3-bar-item w3-button">סייז אוף </a>
-              <a href="typeDef.html" class="w3-bar-item w3-button">טייפ דפ</a>
-              <a href="functions.html" class="w3-bar-item w3-button">פונקציות</a>
-              <a href="recursion.html" class="w3-bar-item w3-button">רקורסיות</a>
-              <a href="pointers.html" class="w3-bar-item w3-button">מצביעים</a>
-              <a href="doublePointer.html" class="w3-bar-item w3-button">מצביע כפול</a>
-              <a href="arrays.html" class="w3-bar-item w3-button">מערכים</a>
-              <a href="dinArrays.html" class="w3-bar-item w3-button">מערכים דינאמיים</a>
-              <a href="string.html" class="w3-bar-item w3-button">מחרוזות</a>
-              <a href="binSearch.html" class="w3-bar-item w3-button">חיפוש בינארי</a>
-              <a href="twoDimArrays.html" class="w3-bar-item w3-button">מערכים דו ממדיים</a>
-              <a href="bubbleSort.html" class="w3-bar-item w3-button">מיון בועות</a>
-              <a href="selectionSort.html" class="w3-bar-item w3-button">מיון בחירה</a>
-              <a href="insertionSort.html" class="w3-bar-item w3-button">מיון הכנסה</a>
-              <a href="quickSort.html" class="w3-bar-item w3-button">מיון מהיר</a>
-              <a href="mergeSort.html" class="w3-bar-item w3-button">מיון מיזוג</a>
-            </ul>
-          </div>
-        </nav>
-        <!--End of Side bar-->
-      </div>
-    </div>
-  </section>
+<body class="bg-oneAndHalf">
+  
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
+  </div>
   <h1 class="head-left">Learning C</h1>
   <h1 class="head-right">אופרטורים חשבוניים</h1>
 
@@ -128,11 +115,14 @@
       <div class="col-md-6">
 
         <figure class="code">
-
           <figcaption id="example1-caption">CODE:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> x;
-x = 7;
-            </code></pre>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+ <b>int</b> x;
+ x = 7;
+}
+          </code></pre>
         </figure>
       
         
@@ -148,50 +138,5 @@ x = 7;
 </body>
 
 </html>
-    <!--
-    + פעולת חיבור
-    <br>
-    - פעולת חיסור
-    <br>
-    / פעולה חילוק
-    <br>
-    * פעולת כפל
-    <br>
-    % מודולו - אופרטור שבעצם אומר לנו מהי שארית החלוקה של מספר במספר אחר.
-    <br>
-    () סוגריים
-    <br>
-    = השמה - זוהי בעצם פעולה שאומרת בתכנות שמה שנמצא בצד שמאל מקבל את הערך שנמצא בצד ימין.
-    <br>
-    דוגמה למודולו:
-    <br>
-    7%3 = 1
-    <br>
-    כי:
-    <br>
-    7/3 = 2.3333
-    <br>
-    ושארית החלוקה שלנו היא בעצם 1 מתוך 3 (שליש) -> 1
-    <br>
-    מהי שארית החלוקה של 12 ב4 ?
-    <br>
-    באותה הדרך אנו נעשה קודם כל :
-    <br>
-    12/4 = 3.0
-    <br>
-    ניקח את ה0/4 שיש לנו ובעצם שארית החלוקה שלנו היא 0.
-    <br>
-    דוגמה להשמה:
-    <br>
-    <br><br><br><br><br>
-    בעצם מה שקורה פה זה שאנחנו מצהירים על משתנה בשם x ואנחנו משווים אותו ל5, כלומר עשינו פה השמה.
   
-    <br>
-    במקרה הזה, לקחנו את x (שכבר מוכר לנו כ-int), וביצענו השמה אצלו של הערך 7.
-
-
-
-  </p>
-
--->
 
