@@ -11,8 +11,9 @@ body {
   color: #232323;
   background: #cdcdcd;
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
   font-size: 25px;
+  height: 100%;
+ 
 }
 
 h1 {
@@ -48,7 +49,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: -1;
+  width: 99%;
 }
 
 .bg {
@@ -93,7 +94,7 @@ a:hover {
 
 /* Top left text */
 .head-left {
-  margin: 8px 0 0 30px;
+  margin-left:30px;
   font-weight: bold;
   text-align: left;
 }
@@ -300,8 +301,7 @@ pre samp {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
-  overflow-x: auto;
+  z-index: -1;
 }
 
 /* additional focus rules to provide a visual cue */
@@ -381,17 +381,22 @@ pre.line-numbers > div > span:nth-child(odd) {
 }
 
 /* double-up the syntax elements for cross-browser RTF-keystroke support */
+
+/* blue paint for types, if, else, etc */
+
 pre b,
 pre strong {
   font-weight: normal;
   color: blue;
 }
+/* red paint for text and header file */
 pre u,
 pre u b,
 pre u strong {
   text-decoration: none;
   color: red;
 }
+/* gray paint for include*/
 pre i,pre i *,pre i * *
 {
   letter-spacing: -0.1em;
@@ -399,6 +404,7 @@ pre i,pre i *,pre i * *
   font-style: normal;
   color: gray;
 }
+/* orange paint for comments */
 pre em,pre em *,pre em * * {
 
   letter-spacing: -0.1em;
