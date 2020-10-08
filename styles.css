@@ -13,6 +13,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   height: 100%;
+ 
 }
 
 h1 {
@@ -48,6 +49,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 99%;
 }
 
 .bg {
@@ -92,7 +94,7 @@ a:hover {
 
 /* Top left text */
 .head-left {
-  margin: 8px 0 0 30px;
+  margin-left:30px;
   font-weight: bold;
   text-align: left;
 }
@@ -379,17 +381,22 @@ pre.line-numbers > div > span:nth-child(odd) {
 }
 
 /* double-up the syntax elements for cross-browser RTF-keystroke support */
+
+/* blue paint for types, if, else, etc */
+
 pre b,
 pre strong {
   font-weight: normal;
   color: blue;
 }
+/* red paint for text and header file */
 pre u,
 pre u b,
 pre u strong {
   text-decoration: none;
   color: red;
 }
+/* gray paint for include*/
 pre i,pre i *,pre i * *
 {
   letter-spacing: -0.1em;
@@ -397,6 +404,7 @@ pre i,pre i *,pre i * *
   font-style: normal;
   color: gray;
 }
+/* orange paint for comments */
 pre em,pre em *,pre em * * {
 
   letter-spacing: -0.1em;
