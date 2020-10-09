@@ -7,25 +7,25 @@
 
   <title>Learning C TwoDimLoops</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-   <!-- Font Awesome -->
-   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-   <!-- CSS -->
- 
-   <!-- Bootstrap Scripts -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/styles.css">
- 
-   <!-- Java Script -->
-   <script src="js/code.js"></script>
- 
- 
- 
+  <!-- CSS -->
+
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
+
+
+
 </head>
 
-<body class="bg-two">
+<body class="bg-twoAndHalf">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -55,41 +55,56 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-  <h1 class="head-left">Learning C</h1>
 
-  </div>
 
-  <h2 class="top-right-head">לולאות דו מימדיות</h2>
+  <section id="main">
 
-  <p class=top-right>
-    לולאות מקוננות (לולאה בתוך לולאה)
-    <br>
-    כפי שלמדנו בנושא "לולאות" , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל לולאות WHILE , שרצה עד התנאי שאנו
-    ניתן לה).
-    <br>
-    קיימת הרחבה לנושא הלולאות והיא נפוצה מאוד בעולם התכנות.
-    לולאה דו מימדית הינה לולאה בעלת שני מימדים והיא מורכבת מלולאה שמריצה בתוכה לולאה אחרת.
-    אחת מהמטרות של לולאה דו מימדית הוא לעבור על מערך דו מימדי / לבצע מיון / לבצע חיפוש.
-    חשוב לציין שלולאה דו מימדית סטנדרטית רצה בסדר גודל של n^2 , כלומר היא תבצע n*n פעולות (כאשר n הוא הנתון הראשי).
-    נניח שאנו רוצים להדפיס משולש שעשוי מכוכביות:
-    <br>
-    במקום לרשום:
-    <br><br><br><br><br><br><br><br><br><br>
+    <h1 class="head-left">Learning C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">לולאות דו מימדיות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-    נוכל לרשום:
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="First-Para">
 
-    הסבר:
-    <br>
-    בדוגמא זו יש לנו לולאה בתוך לולאה,
-    הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5. בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
-    הנוכחי. בתול הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה). בכל פעם שאנו מסיימים את הלולאה השנייה
-    אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
-  </p>
+     
 
-  <figure id="code-1">
-    <figcaption id="example1-caption">CODE 1:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+      <p>
+        כפי שלמדנו בנושא  <a href="oneDimLoops.html">לולאות</a> , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל לולאות WHILE , שרצה עד התנאי
+        שאנו
+        ניתן לה).
+        <br>
+        קיימת הרחבה לנושא הלולאות והיא נפוצה מאוד בעולם התכנות.
+        לולאה דו מימדית הינה לולאה בעלת שני מימדים והיא מורכבת מלולאה שמריצה בתוכה לולאה אחרת.
+        אחת מהמטרות של לולאה דו מימדית הוא לעבור על מערך דו מימדי / לבצע מיון / לבצע חיפוש.
+        חשוב לציין שלולאה דו מימדית סטנדרטית רצה בסדר גודל של n^2 , כלומר היא תבצע n*n פעולות (כאשר n הוא הנתון הראשי).
+        נניח שאנו רוצים להדפיס משולש שעשוי מכוכביות:
+        <br>
+      </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            במקום לרשום:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
 {
   printf(<u>"*"</u>);
@@ -97,29 +112,108 @@
   printf(<u>"***"</u>);
   printf(<u>"****"</u>);
   printf(<u>"*****"</u>);
+
 }
-      </code></pre>
-  </figure>
-  <figure id="code-2">
+            </code></pre>
+        </figure>
 
-    <figcaption id="example1-caption">CODE 2:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
-<b>void</b> main()
-{
-  <b>int</b> i,j;
-  <b>for</b>(i=1 ; i &lt; 6; i++)
-  {
-    <b>for</b>(j=1 ; j &lt;= i; j++)
-    {
-      printf(<u>"*"</u>); 
-    }
-    printf(<u>"/n"</u>);
-  }</code></pre>
-  </figure>
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+    </div>
+
+    <br>
+    <br>
+    
+
+    </div>
+    <!--ROW-->
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            <br>
+            נוכל לרשום:
+          </p>
 
 
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+      <b>void</b> main()
+      {
+        <b>int</b> i,j;
+        <b>for</b>(i=1 ; i &lt; 6; i++)
+        {
+          <b>for</b>(j=1 ; j &lt;= i; j++)
+          {
+            printf(<u>"*"</u>); 
+          }
+          printf(<u>"/n"</u>);
+        }</code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <div class="First-Para">
+      <p>
+        הסבר:
+        <br>
+        בדוגמא זו יש לנו לולאה בתוך לולאה,
+        הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5. בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
+        הנוכחי. בתול הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה). בכל פעם שאנו מסיימים את הלולאה השנייה
+        אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
+      
+      </p>
+    </div>
+
+  </section>
 
 </body>
 
 
 </html>
+
+
+<!--
+
+
+
+   
+
+ 
+
+
+-->
+
+<!--
+
+
+
+-->
+
+<!--
+
+
+
+-->
