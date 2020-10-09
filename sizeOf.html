@@ -7,24 +7,24 @@
 
   <title>Learning C HomePage</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-   <!-- Font Awesome -->
-   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-   <!-- CSS -->
- 
-   <!-- Bootstrap Scripts -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/styles.css">
- 
-   <!-- Java Script -->
-   <script src="js/code.js"></script>
- 
+  <!-- CSS -->
+
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
+
 </head>
 
-<body class="bg">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+<body class="bg-two">
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -54,14 +54,220 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-    <h1 class="top-left">Learning C</h1>
+  <section id="main">
 
-    <h2 class="top-right-head">NULL</h2>
+    <h1 class="head-left">Learning C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">sizeof</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-    <p class="top-right">
+    <h3 class="head-right"> למה אנו צריכים את זה?</h3>
+    <div class="First-Para">
+
+      <p>
+        נניח שאנחנו רוצים לעבוד על מערך בפונקציה מסויימת אבל שכחנו לשלוח לפונקציה את גודל המערך .
+        ניתן לצאת מהבעיה הזאת על ידי שימוש ב- sizeof
+      </p>
+    </div>
+
+    <h3 class="head-right">מה sizeof עושה ?</h3>
+    <div class="First-Para">
+      <p>
+        מחזיר לנו את הגודל של משתנה מסויים בבתים.
+      </p>
+    </div>
+
+    <h3 class="head-right">צורת השימוש:</h3>
+    <div class="First-Para">
+
+      <p>
+        sizeof(name);
+        name – מציין את העצם או משתנה שעליו אנחנו רוצים לדעת את הגודל
+        מה שקורה כאן הוא מאוד פשוט , סכה בתוך הסוגריים אנחנו רושמים את סוג העצם שעליו אנחנו רוצים לדעת את הגודל בבתים או
+        שרושמים את השם של המשתנה והפקודה תחזיר לנו את הגודל שלה בבתים
+      </p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 1:
+          </p>
 
 
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <!--FIRST CODE HERE-->
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג int תופס 4 בתים , במידה והוא היה דאבל אז
+            היה מודפס לנו 8 כי דאב טופס 8 בתים , לכן כדי שאנחנו נקבל את גודל המערך לא בבתים אלה כמספר שמציין את הגודל
+            שלו עלינו אחרי הפקודה לבצע חילוק בסוג של המערך , כלומר אם המערך שלנו הוא מסוג int אז כדי לדעת את גודל המערך
+            מסוג int עלינו לבצע את השורה הבאה :
+            <br>
+            <br>
+            דוגמה 2:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <!--SECOND CODE HERE-->
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            בגלל שאנחנו מדברים כאן על מערך אז sizeof יתן לנו את הגודל של double ככמות הפעמים של התאים שלנו,
+            כלומר יש לנו 5 תאים וכל תא הוא 8 בתים בגלל ש double הוא 8 בתים , לכן סכה יודפס לנו 40 בגלל יש לנו 5
+            איברים בגודל 8.
+            <br>
+            כדי להשיג את גודל המערך בתאים:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <!--THIRD CODE HERE-->
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+
+            מה שעשינו פה, לקחנו את הsizeof(arr) שלנו וחילקנו אותו בסוג הדאטה שלו (כלומר במקרה הזה בdouble).
+            <br>
+            באופן כללי זה יראה כך:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <!--FOURTH CODE HERE-->
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+
+  </section>
 
 </body>
 
 </html>
+
+
+<!-- FIRST CODE
+#include <stdio.h>
+void main()
+{
+  int number;
+  printf (%d ,sizeof(number));
+}
+
+_________________
+END FIRST CODE-->
+
+<!-- SECOND CODE
+
+#include <stdio.h>
+void main()
+{
+  double arr[5];
+  printf(“the size in bytes is: %d”,sizeof(arr));
+}
+_________________
+END SECOND CODE-->
+
+
+<!-- THIRD CODE
+
+#include <stdio.h>
+void main()
+{
+  printf(“size of array is: %d\n” , sizeof(arr) / double);
+}
+_________________
+END THIRD CODE-->
+
+<!--FOURTH CODE
+#include <stdio.h>
+void main()
+{
+  sizeof(arr_name) / data_type;
+}
+_________________
+END FOURTH CODE-->

@@ -13,7 +13,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   height: 100%;
- 
+
 }
 
 h1 {
@@ -94,7 +94,7 @@ a:hover {
 
 /* Top left text */
 .head-left {
-  margin-left:30px;
+  margin-left: 30px;
   font-weight: bold;
   text-align: left;
 }
@@ -105,8 +105,9 @@ a:hover {
   margin-right: 50px;
   text-align: right;
 }
+
 /******** Id ********/
-.sidenav-icon{
+.sidenav-icon {
   margin: 18px 24px 0 0;
   font-size: 20px;
   color: #818181;
@@ -146,23 +147,65 @@ a:hover {
   margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
 }
 
-/*paragraph*/
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/***********************SCROLLBAR******************/
+
+
+
+
+.style-7::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+.style-7::-webkit-scrollbar {
+
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.style-7::-webkit-scrollbar-thumb {
+
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(122, 153, 217)),
+      color-stop(0.72, rgb(73, 125, 189)),
+      color-stop(0.86, rgb(28, 58, 148)));
+}
+
+
+
+
+/******************paragraph*******************/
 .para {
   text-align: right;
   direction: rtl;
   margin-top: 20px;
   margin-right: 50px;
 }
+
 .First-Para {
   width: 60%;
   margin-top: 20px;
   margin-right: 50px;
 }
+
 /*****************************CODE STYLE***************************/
 
 /*code*/
@@ -170,7 +213,7 @@ a:hover {
   color: black;
   text-align: left;
   direction: ltr;
- margin: 0 0 0 30px;
+  margin: 0 0 0 30px;
 }
 
 figure {
@@ -200,9 +243,11 @@ pre,
 pre * {
   font: normal normal normal 1em/1.4 monaco, courier, monospace;
 }
+
 pre {
   font-size: 0.8em;
 }
+
 pre,
 pre code,
 pre samp {
@@ -211,6 +256,7 @@ pre samp {
 
   cursor: text;
 }
+
 pre code,
 pre samp {
   /* enforce white-space for IE7 */
@@ -241,6 +287,7 @@ pre [contenteditable]:focus {
 pre.line-numbers {
   position: relative;
 }
+
 pre.line-numbers code,
 pre.line-numbers samp {
   margin-left: 3em;
@@ -248,7 +295,7 @@ pre.line-numbers samp {
   border-left: 1px solid #ccc;
 }
 
-pre.line-numbers > div {
+pre.line-numbers>div {
   display: block;
 
   position: absolute;
@@ -266,7 +313,7 @@ pre.line-numbers > div {
   counter-reset: line;
 }
 
-pre.line-numbers > div > span {
+pre.line-numbers>div>span {
   display: block;
   width: 2.5em;
   padding: 0 0.5em 0 0;
@@ -279,13 +326,16 @@ pre.line-numbers > div > span {
 
   counter-increment: line;
 }
-pre.line-numbers > div > span::before {
+
+pre.line-numbers>div>span::before {
   content: counter(line);
 }
-pre.line-numbers > div > span:first-child {
+
+pre.line-numbers>div>span:first-child {
   margin-top: 10px;
 }
-pre.line-numbers > div > span:nth-child(odd) {
+
+pre.line-numbers>div>span:nth-child(odd) {
   background: #dfdfdf;
 }
 
@@ -294,11 +344,13 @@ pre.line-numbers > div > span:nth-child(odd) {
     overflow-x: visible;
     white-space: pre-wrap;
   }
+
   pre.line-numbers div {
     display: none;
   }
-  pre.line-numbers > code,
-  pre.line-numbers > samp {
+
+  pre.line-numbers>code,
+  pre.line-numbers>samp {
     margin-left: 0;
   }
 }
@@ -312,6 +364,7 @@ pre strong {
   font-weight: normal;
   color: blue;
 }
+
 /* red paint for text and header file */
 pre u,
 pre u b,
@@ -319,16 +372,21 @@ pre u strong {
   text-decoration: none;
   color: red;
 }
+
 /* gray paint for include*/
-pre i,pre i *,pre i * *
-{
+pre i,
+pre i *,
+pre i * * {
   letter-spacing: -0.1em;
   text-decoration: none;
   font-style: normal;
   color: gray;
 }
+
 /* orange paint for comments */
-pre em,pre em *,pre em * * {
+pre em,
+pre em *,
+pre em * * {
 
   letter-spacing: -0.1em;
   text-decoration: none;
@@ -342,6 +400,7 @@ pre em,pre em *,pre em * * {
     color: #0099ff;
   }
 }
+
 @media screen and (max-width: 768px) {
   #menu {
     transform: none;

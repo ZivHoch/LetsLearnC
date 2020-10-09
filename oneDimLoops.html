@@ -25,88 +25,153 @@
 </head>
 
 <body class="bg-oneAndHalf">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו מימדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדיים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
-    </div>
-  <h1 class="top-left">Learning C</h1>
-
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h2 class="top-right-head">לולאות</h2>
+  <h1 class="head-left">Learning C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+  <h1 class="head-right">לולאות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-  <p class=top-right>
+
+  <div class="row">
+
+    <div class="col-md-6">
+
+      <div class="para">
+
+        <p>
+
+          לולאות
+          תפקיד הלולאה היא לקצר את הקוד. כלומר במקום שנרשום 5 פעמים את אותה השורה אז אנחנו יכולים לרשום קוד אחר אשר
+          יעזור לנו לקצר אותו. כלומר, במקום לרשום את הקוד הבא:
+          <br><br><br><br>
+
+        </p>
 
 
-    לולאות
-    תפקיד הלולאה היא לקצר את הקוד. כלומר במקום שנרשום 5 פעמים את אותה השורה אז אנחנו יכולים לרשום קוד אחר אשר יעזור לנו לקצר אותו. כלומר, במקום לרשום את הקוד הבא:
-    <br><br><br><br><br><br><br>
-    <br>
-    נוכל לרשום:
-    <br><br><br><br><br><br><br>
-    <br>
+      </div>
+      <!--para-->
 
-  אם נסתכל על שורת הקוד ה2 נוכל לראות שלושה דברים:
-  <br>
-  1.	תנאי התחלה <span dir="ltr">(i=0) </span>-> מאיפה להתחיל את הספירה.
-  <br>
-  2.	התנאי שדואג לכך שכל עוד הוא נכון נמשיך להיכנס ללולאה (i&lt;5).
-  <br>
-  3.	השינוי בין כל ריצה לריצה <span dir="ltr">(i++)</span>-> מגדיל ב1 את הערך של i.
-  <br>
-  אנו נוכל להשתמש בלולאה בכל מקום שנרצה בקוד כל עוד יש חוקיות מסוימת בקוד, כלומר, בדוגמא שלעיל החוקיות היא הדפסה של מספרים עוקבים.
-  <br><br>
-*  ניתן לרשום יותר מתנאי אחד בכל אחד מחלקי הלולאה (1,2,3) אשר אותם נפריד בפסיקים.
 
-  </p>
+    </div>
+    <!--COL MD 6 - FOR TEXT-->
 
-  <figure id="code-1">
 
-    <figcaption id="example1-caption">CODE 1:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false">printf(<u>"1"</u>);
-printf(<u>"2"</u>);
-printf(<u>"3"</u>);
-printf(<u>"4"</u>);
-printf(<u>"5"</u>);
-      </code></pre>
-  </figure>
-  <figure id="code-2">
+    <div class="col-md-6">
 
-    <figcaption id="example1-caption">CODE 2:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> i;
+      <figure class="code">
+
+        <figcaption id="example1-caption">CODE 1:</figcaption>
+        <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> main()
+{
+    printf(<u>"1"</u>);
+    printf(<u>"2"</u>);
+    printf(<u>"3"</u>);
+    printf(<u>"4"</u>);
+    printf(<u>"5"</u>);
+}    
+            </code></pre>
+      </figure>
+
+    </div>
+    <!--COL MD 6 - FOR CODE-->
+
+
+  </div>
+  <!--ROW-->
+
+  <div class="row">
+
+    <div class="col-md-6">
+
+      <div class="para">
+
+        <p>
+          נוכל לרשום:
+          <br><br><br><br><br>
+      
+        אם נסתכל על שורת הקוד ה2 נוכל לראות שלושה דברים:
+        <br>
+        1.	תנאי התחלה <span dir="ltr">(i=0) </span>-> מאיפה להתחיל את הספירה.
+        <br>
+        2.	התנאי שדואג לכך שכל עוד הוא נכון נמשיך להיכנס ללולאה (i&lt;5).
+        <br>
+        3.	השינוי בין כל ריצה לריצה <span dir="ltr">(i++)</span>-> מגדיל ב1 את הערך של i.
+        <br>
+        אנו נוכל להשתמש בלולאה בכל מקום שנרצה בקוד כל עוד יש חוקיות מסוימת בקוד, כלומר, בדוגמא שלעיל החוקיות היא הדפסה של מספרים עוקבים.
+        <br><br>
+      *  ניתן לרשום יותר מתנאי אחד בכל אחד מחלקי הלולאה (1,2,3) אשר אותם נפריד בפסיקים.
+        </p>
+
+
+      </div>
+      <!--para-->
+
+
+    </div>
+    <!--COL MD 6 - FOR TEXT-->
+
+
+    <div class="col-md-6">
+
+      <figure class="code">
+        <figcaption id="example1-caption">CODE 2:</figcaption>
+        <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> i;
 <b>for</b>(i=0 ; i &lt; 5 ;i++)
 {
   printf(<u>"%d"</u>, i);
 }
-      </code></pre>
-  </figure>
+          </code></pre>
+      </figure>
+
+    </div>
+    <!--COL MD 6 - FOR CODE-->
+
+
+  </div>
+  <!--ROW-->
+
+
+
+
 
 
 </body>
 
 </html>
+
+
+<!--
+
+
+
+
+
+-->

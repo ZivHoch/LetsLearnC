@@ -23,84 +23,95 @@
 
 </head>
 
-<body  class="bg-oneAndHalf">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו מימדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדיים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
+<body class="bg-oneAndHalf">
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
+  </div>
+
+  <section id="main">
+
+    <h1 class="head-left">Learning C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">התוכנית הראשונה שלנו</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
+
+    <div class="First-Para">
+      <p>
+        קסטינג = המרה בין משתנה למשתנה.
+        <br>
+        לפעמים אנחנו נרשום במשתנה מסוים ונרצה להמיר אותו למשתנה אחר בהמשך הדרך (או למשל לעבוד במשתנה מסוים ולהדפיס את
+        התוצאה
+        במשתנה אחר).
+      </p>
     </div>
-    <h1 class="head-left">Learning C</h1>
 
-  <h2 class="head-right">המרה - קסטינג</h2>
+    <div class="row">
 
-  <p class=top-right>
+      <div class="col-md-6">
 
-    קסטינג = המרה בין משתנה למשתנה.
-    <br>
-    לפעמים אנחנו נרשום במשתנה מסוים ונרצה להמיר אותו למשתנה אחר בהמשך הדרך (או למשל לעבוד במשתנה מסוים ולהדפיס את התוצאה
-    במשתנה אחר).
-    <br>
-    לדוגמה:
-    <br>
-    <!--CODE-->
-    <br><br><br><br> 
-    <br>
-    <!--END CODE-->
-    <br> <br>
-    <br> <br>
-    <br><br>
-    מה שעשינו פה:
-    <br>
-    ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
-    <br>
-    לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
-    <br>
-    <br>
-    casting עובד בצורה הבאה:
-    <br>
-    לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו להציג אותו / להמיר אותו זמנית לint כדי להציג את המספר ללא הנקודה
-    העשרונית.
-    <br>
-    ניתן לבצע המרה בצורה רגעית כמו שביצענו עכשיו כלומר, num אינו מושפע מהתהליך אלא רק מודפס בצורת int ולאחר מכן חוזר
-    לעצמו.
-    <br>
-    ניתן גם לבצע המרה באופן קבוע למשל:
-    <br>
-    <!--CODE-->
-    <br><br>
-    <!--END CODE-->
-    <br>
-    במקרה הזה בעצם ביצענו המרה קבועה מdouble לint ושמרנו אותו בnew_num.
-  </p>
-  
-  <figure id="code-1">
+        <div class="para">
 
-    <figcaption id="example1-caption">CODE 1:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <p>
+            לדוגמה:
+            <br>
+            מה עשינו פה?
+            <br>
+            ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
+            <br>
+            לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
+            <br>
+            <br>
+            casting עובד בצורה הבאה:
+            <br>
+            לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו להציג אותו / להמיר אותו זמנית לint כדי להציג את המספר ללא
+            הנקודה
+            העשרונית.
+            <br>
+            ניתן לבצע המרה בצורה רגעית כמו שביצענו עכשיו כלומר, num אינו מושפע מהתהליך אלא רק מודפס בצורת int ולאחר מכן
+            חוזר
+            לעצמו.
+
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
 {
   <b>double</b> num = 0;
@@ -108,14 +119,60 @@
   scanf_s(<u>"%lf"</u>,&amp;num);
   printf(<u>"your number without decimal point is: %d"</u>, (<b>int</b>)num );
 }
-      </code></pre>
-  </figure>
-  <figure id="code-2">
+            </code></pre>
+        </figure>
 
-    <figcaption id="example1-caption">CODE 2:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>double</b> num = 8.325;
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+
+            ניתן גם לבצע המרה באופן קבוע למשל:
+            <br>
+            במקרה הזה בעצם ביצענו המרה קבועה מdouble לint ושמרנו אותו בnew_num.
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>double</b> num = 8.325;
 <b>int</b> new_num = (<b>int</b>)num;
-      </code></pre>
-  </figure>
+            </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+
+  </section>
+
 </body>
+
 </html>
+

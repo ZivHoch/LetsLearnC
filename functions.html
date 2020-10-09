@@ -7,186 +7,227 @@
 
   <title>Learning C Functions</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-   <!-- Font Awesome -->
-   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-   <!-- CSS -->
- 
-   <!-- Bootstrap Scripts -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/styles.css">
- 
-   <!-- Java Script -->
-   <script src="js/code.js"></script>
- 
+  <!-- CSS -->
+
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
+
 </head>
 
 <body class="bg-fiveAndHalf">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו מימדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדיים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
-    </div>
-  
-
-  <h1 class="top-left">Learning C</h1>
-
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h2 class="top-right-head">פונקציות</h2>
+  <section id="main">
 
-  <p class="top-right">
+    <h1 class="head-left">Learning C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">פונקציות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-    פונקציות זו שיטה לחלק את הקוד שלנו לחלקים קטנים וקריאים יותר.
-    <br>
-    עיקרון ששווה ליישם בתור מתכנתים זה לנסות לדאוג שהקוד שלנו יהיה מחולק בצורה טובה לחתיכות קטנות יותר ובעצם לחבר את הכל
-    בסוף.
-    <br>
-    פונקציות מאוד נוחות לעבודה משום שהן עוזרות לנו לכתוב פחות קוד מיותר.
-    <br>
-    נראה תוכנית שלוקחת חמישה תלמידים – בודקת מה הממוצע שלהם ולאחר מכן בודקת כמה תלמידים נמצאים מעל הממוצע , מתחת לממוצע
-    ובדיוק על הממוצע:
-    <br>
-    <br>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    אז מה יש לנו פה ?
-    הרבה קוד שהוא לא מאוד קריא ולא הכי נוח לעבוד איתו.
-    <br>
-    <br>
-    דוגמה איך אפשר לעשות את זה קצת יותר פשוט לקריאה:
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br>
-    יתרונות:
-    <br>
-    כתבנו הרבה פחות קוד ב main והפכנו את הכל לנקי ומסודר יותר.
-    <br>
-    רוב הפונקציות שכתבנו יכולות לעבוד ליותר מקרים מאשר אם היינו כותבים הכל ב main.
-    <br>
-    דגשים שחשוב לדעת בעבודה עם פונקציות:
-    <br>
-    1. הצהרת הפונקציה צריכה להיות מעל פונקציית ה main.
-    <br>
-    הכוונה היא שאם אנחנו רוצים לרשום למשל פונקציה שמחשבת ממוצעים אז צריך להצהיר עליה לפני שהצהרנו על ה main שלנו ז"א
-    לרשום למשל <span dir="ltr">avg(int *arr , int sizeOfArr);</span>
-    <br>
-    ניתן לרשום את כל הקוד של הפונקציה לפני ה main, אבל השיטה שאנו נעבוד בה אומרת
-    שאנחנו רק רושמים את ההצהרות של הפונקציה מעל ה main ואת כל הקוד למטה.
-    <br>
-    למשל:
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <br>
-    2. מתי נשתמש בפונקציות ?
-    <br>
-    אם יש לנו יותר מידי קוד ודברים הופכים להיות קצת לא קריאים.
-    <br>
-    אם יש לנו הרבה מידי קוד שחוזר על עצמו.
-    <br>
-    באופן כללי כדאי לנסות לרשום את כל הקוד בפונקציות ורק לאחר מכן לחבר דברים ב main.
-    <br>
-    איך נראית הצהרת הפונקציה שלנו ?
-    <br>
-    <span dir="ltr"> nameOfTheFunction (What the function receives);</span>
-    <br>
-    <span dir="ltr">Variable/Void </span>= איזה משתנה הפונקציה שלנו מחזירה או void אם היא לא מחזירה כלום
-    <br>
-    <span dir="ltr">nameOfTheFunction</span> = שם הפונקציה – רצוי שתהיה ברורה
-    <br>
 
-    <span dir="ltr">(What the function receives); </span>= אילו משתנים הפונקציה מקבלת ?
-    <br>
-    למשל:
-    <br>
+    <div class="First-Para">
+      <p>
+        פונקציות זו שיטה לחלק את הקוד שלנו לחלקים קטנים וקריאים יותר.
+        <br>
+        עיקרון ששווה ליישם בתור מתכנתים זה לנסות לדאוג שהקוד שלנו יהיה מחולק בצורה טובה לחתיכות קטנות יותר ובעצם לחבר את
+        הכל
+        בסוף.
+        <br>
+        פונקציות מאוד נוחות לעבודה משום שהן עוזרות לנו לכתוב פחות קוד מיותר.
+        <br>
+      </p>
+    </div>
 
-    <!--CODE
-void printMsg(char *s1);
+    <div class="row">
 
-int returnSumNumbers(int *arr , int sizeOfArr);
+      <div class="col-md-6">
 
-double returnSum(double *arr , int sizeOfArr);
+        <div class="para">
 
-END CODE-->
-  </p>
-  <figure id="code-1">
+          <p>
 
-    <figcaption id="example1-caption">CODE 1:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+            נראה תוכנית שלוקחת חמישה תלמידים – בודקת מה הממוצע שלהם ולאחר מכן בודקת כמה תלמידים נמצאים מעל הממוצע , מתחת
+            לממוצע
+            ובדיוק על הממוצע:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
 {
-  <b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};
-  <b>double</b> avg;
-  <b>int</b> i,moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
-  avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
-  avg = avg/4;
-  <b>for</b>( i=0 ; i &lt; 5 ;i++)
+<b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};
+<b>double</b> avg;
+<b>int</b> i,moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
+avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
+avg = avg/4;
+<b>for</b>( i=0 ; i &lt; 5 ;i++)
+{
+  <b>if</b>(avg &lt; studentGrades[i])
   {
-    <b>if</b>(avg &lt; studentGrades[i])
-    {
-      lessThanAvg++;
-    }
-    <b>else if</b>(studentGrades[i] &lt; avg)
-    {
-      moreThanAvg++;
-    }
-    <b>else</b>
-    {
-      onTheAvg++;
-    }
+    lessThanAvg++;
   }
-  printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, moreThanAvg);
-  printf(<u>"amount of students with lower grades than avg is: %d\n"</u>, lessThanAvg);
-  printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAvg);
+  <b>else if</b>(studentGrades[i] &lt; avg)
+  {
+    moreThanAvg++;
+  }
+  <b>else</b>
+  {
+    onTheAvg++;
+  }
 }
-      </code></pre>
-  </figure>
+printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, moreThanAvg);
+printf(<u>"amount of students with lower grades than avg is: %d\n"</u>, lessThanAvg);
+printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAvg);
+}
+    </code></pre>
+        </figure>
 
-  <figure id="code-2">
+      </div>
+      <!--COL MD 6 - FOR CODE-->
 
-    <figcaption id="example1-caption">CODE 2:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+    </div>
+    <!--CODE-->
+    <br>
+    <br>
+
+
+    </div>
+    <!--ROW-->
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+
+            אז מה יש לנו פה ?
+            הרבה קוד שהוא לא מאוד קריא ולא הכי נוח לעבוד איתו.
+            <br>
+            דוגמה איך אפשר לעשות את זה קצת יותר פשוט לקריאה:
+
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+      <div class="col-md-6">
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>double</b> calculateAvg(<b>int</b> *arr , <b>int</b> sizeOfArr);
 <b>void</b>fillAnArrayWithDetails(<b>int</b> *OriginalArr, <b>int</b> sizeOfArr , <b>int</b> *res);
 <b>void</b> printRes(<b>int</b> *res);
-
+      
 <b>void</b> main()
 {
   <b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};<em>// declaring an array variable.</em>
   <b>int</b> res[] = {0,0,0}; <em>// declaring an array variable</em>
   <b>int</b> i ,moreThanAvg = 0 ,lessThanAvg = 0 ,onTheAvg = 0;
-  <b>double</b> avg=calculateAvg(studentGrades,5); <em>// Calculating the avg.</em>
+  <b>double</b> avg = calculateAvg(studentGrades,5); <em>// Calculating the avg.</em>
   fillAnArrayWithDetails(studentGrades,5,res); <em>// filling our res array with values.</em>
   printRes(res);<em>// printing values inside res.</em>
 }
+
+     </code> 
+
+     </pre>
+
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <br>
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            כמובן שמאחורי הקלעים נצטרך לרשום את הקוד עבור הפונקציות שהגדרנו.
+            <br>
+            אבל לפי הרעיון של פונקציות אנו יכולים להבין טוב יותר מה קורה בתוך הmain ואפילו לדבג את הקוד בצורה מהירה יותר
+            (בגלל שאנחנו יכולים להריץ עם דיבאגר ולהבין באיזה פונקציה אנו לא מקבלים את התוצאה הרצויה).
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 2 - CONTINUED:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false">
 <b>double</b> calculateAvg(<b>int</b> *arr,<b>int</b> sizeOfArr)
 {
   <b>double</b> avg=0;
@@ -196,7 +237,7 @@ END CODE-->
     avg += arr[i];
   }
   avg = avg/sizeOfArr;
-	<b>return</b> avg;
+  <b>return</b> avg;
 }
 <b>void</b> fillAnArrayWithDetails(<b>int</b> *originalArr, <b>int</b> sizeOfArr , <b>int</b> *res)
 {
@@ -223,34 +264,214 @@ END CODE-->
   printf(<u>"amount of students with lower grades than avg is: %d\n"</u>,  res[0]);
   printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, res[2]);
 }
-      </code></pre>
-  </figure>
+ </code></pre>
+        </figure>
 
-  <figure id="code-3">
+      </div>
+      <!--COL MD 6 - FOR CODE-->
 
-    <figcaption id="example1-caption">CODE 3:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
-<b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr); <em>// Before main function.</em>
-<b>void</b> main()
-{
-  <em>//code</em>
-}
-<b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr)
-{
-  <em>//code</em>
-}
-      </code></pre>
-  </figure>
-  <figure id="code-4">
 
-    <figcaption id="example1-caption">CODE 4:</figcaption>
-    <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+    </div>
+    <!--ROW-->
+
+    <br>
+    <br>
+
+    <div class="First-Para">
+
+
+
+      <p>
+        יתרונות:
+        <br>
+        כתבנו הרבה פחות קוד ב main והפכנו את הכל לנקי ומסודר יותר.
+        <br>
+        רוב הפונקציות שכתבנו יכולות לעבוד ליותר מקרים מאשר אם היינו כותבים הכל ב main.
+        <br>
+        <br>
+        דגשים שחשוב לדעת בעבודה עם פונקציות:
+        <br>
+        1. הצהרת הפונקציה צריכה להיות מעל פונקציית ה main.
+        <br>
+        הכוונה היא שאם אנחנו רוצים לרשום למשל פונקציה שמחשבת ממוצעים אז צריך להצהיר עליה לפני שהצהרנו על ה main שלנו ז"א
+        לרשום למשל <span dir="ltr">avg(int *arr , int sizeOfArr);</span>
+        <br>
+        ניתן לרשום את כל הקוד של הפונקציה לפני ה main, אבל השיטה שאנו נעבוד בה אומרת
+        שאנחנו רק רושמים את ההצהרות של הפונקציה מעל ה main ואת כל הקוד למטה.
+        <br>
+        <br>
+      </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            למשל:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 3:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+      <b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr); <em>// Before main function.</em>
+      <b>void</b> main()
+      {
+        <em>//code</em>
+      }
+      <b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr)
+      {
+        <em>//code</em>
+      }
+            </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+   
+
+    <div class="First-Para">
+
+
+
+      <p>
+        2. מתי נשתמש בפונקציות ?
+        <br>
+        אם יש לנו יותר מידי קוד ודברים הופכים להיות קצת לא קריאים.
+        <br>
+        אם יש לנו הרבה מידי קוד שחוזר על עצמו.
+        <br>
+        באופן כללי כדאי לנסות לרשום את כל הקוד בפונקציות ורק לאחר מכן לחבר דברים ב main.
+        <br>
+        <br>
+        איך נראית הצהרת הפונקציה שלנו ?
+        <br>
+        <span dir="ltr">nameOfTheFunction (What the function receives);</span>
+        <br>
+        <span dir="ltr">Variable/void</span>= איזה משתנה הפונקציה שלנו מחזירה או void אם היא לא מחזירה כלום
+        <br>
+        <span dir="ltr">nameOfTheFunction</span> = שם הפונקציה – רצוי שתהיה ברורה
+        <br>
+    
+        <span dir="ltr">(What the function receives); </span>= אילו משתנים הפונקציה מקבלת ?
+        <br>
+      </p>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            למשל:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 4:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false">
 <b>void</b> printMsg(<b>char</b> *s1);
 <b>int</b> returnSumNumbers(<b>int</b> *arr , <b>int</b> sizeOfArr);
 <b>double</b> returnSum(<b>double</b> *arr , <b>int</b> sizeOfArr);
-      </code></pre>
-  </figure>
+            </code></pre>
+        </figure>
+      
 
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+
+
+
+  </section>
 </body>
 
 </html>
+
+
+<!--
+
+
+   
+   
+
+    ____________________________
+ 
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br>
+
+
+
+
+-->
+
+
+<!--FIRST CODE
+
+
+
+-->
+
+<!--SECOND CODE
+
+
+    <figure>
+
+        </figure>
+
+
+-->
+
+<!--THIRD CODE
+
+
+
+-->
+
+<!--FOURTH CODE
+
+
+
+
+-->
