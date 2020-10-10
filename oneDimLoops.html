@@ -55,40 +55,81 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
-  <h1 class="head-right">לולאות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
+  <section id="main">
+
+    <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">לולאות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
+
+    <div class="First-Para">
+      <p>
+        אנו משתמשים בלולאות כאשר יש צורך ברשימת קוד רב ש"חוזר על עצמו" או כמעט "חוזר על עצמו".
+        לולאה בודקת תנאי מסוים בהתחלה ולאחר מכן במידה והטענה התקבלה כלא שגויה מתבצע קטע קוד שנמצא בתוך סוגריים מסולסלות
+        (בדרך כלל, קיימת החרגה אם הלולאה מבצעת פעולה אחת בלבד).
+
+      </p>
+
+    </div>
+
+    <h3 class="head-right">סוגי לולאות:</h3>
+
+    <div class="First-Para">
+
+      <p>
+        לולאת for – לולאה שרצה מהגודל של האינדקס i עד לתנאי העצירה וגדלה בקצב קבוע.
+        <br>
+        לולאת while – לולאה שרצה עד שהתנאי שבתוך הסוגריים העגולים לא מתקיים.
+        <br>
+        לולאת do while – לולאת while שהתוספת שלה היא שמתבצע קוד לפני הבדיקה (do = תעשה , while = תבדוק).
+      </p>
+
+    </div>
+
+    <h3 class="head-right">חותמת הלולאות תיראה כך:</h3>
+
+    <div class="First-Para">
+
+      <p>
+        <span dir="ltr">while(something){ CODE };</span>
+      
+        <br>
+        <span dir="ltr">do { CODE } while(something){ CODE };</span>
+       
+        <br>
+        <span dir="ltr">for(int i=0; i < number; i++){ CODE };</span>
+       
+
+      </p>
+
+    </div>
+
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה ללולאת for:
+            במקום לרשום:            
+          </p>
 
 
-  <div class="row">
-
-    <div class="col-md-6">
-
-      <div class="para">
-
-        <p>
-
-          לולאות
-          תפקיד הלולאה היא לקצר את הקוד. כלומר במקום שנרשום 5 פעמים את אותה השורה אז אנחנו יכולים לרשום קוד אחר אשר
-          יעזור לנו לקצר אותו. כלומר, במקום לרשום את הקוד הבא:
-          <br><br><br><br>
-
-        </p>
+        </div>
+        <!--para-->
 
 
       </div>
-      <!--para-->
+      <!--COL MD 6 - FOR TEXT-->
 
 
-    </div>
-    <!--COL MD 6 - FOR TEXT-->
+      <div class="col-md-6">
 
+        <figure class="code">
 
-    <div class="col-md-6">
-
-      <figure class="code">
-
-        <figcaption id="example1-caption">CODE 1:</figcaption>
-        <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
 {
     printf(<u>"1"</u>);
@@ -98,80 +139,123 @@
     printf(<u>"5"</u>);
 }    
             </code></pre>
-      </figure>
+        </figure>
+      </div>
+      <!--COL MD 6 - FOR CODE-->
 
     </div>
-    <!--COL MD 6 - FOR CODE-->
+    <!--ROW-->
+
+    <br>
 
 
-  </div>
-  <!--ROW-->
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-md-6">
+      <div class="col-md-6">
 
-      <div class="para">
+        <div class="para">
 
-        <p>
-          נוכל לרשום:
-          <br><br><br><br><br>
-      
-        אם נסתכל על שורת הקוד ה2 נוכל לראות שלושה דברים:
-        <br>
-        1.	תנאי התחלה <span dir="ltr">(i=0) </span>-> מאיפה להתחיל את הספירה.
-        <br>
-        2.	התנאי שדואג לכך שכל עוד הוא נכון נמשיך להיכנס ללולאה (i&lt;5).
-        <br>
-        3.	השינוי בין כל ריצה לריצה <span dir="ltr">(i++)</span>-> מגדיל ב1 את הערך של i.
-        <br>
-        אנו נוכל להשתמש בלולאה בכל מקום שנרצה בקוד כל עוד יש חוקיות מסוימת בקוד, כלומר, בדוגמא שלעיל החוקיות היא הדפסה של מספרים עוקבים.
-        <br><br>
-      *  ניתן לרשום יותר מתנאי אחד בכל אחד מחלקי הלולאה (1,2,3) אשר אותם נפריד בפסיקים.
-        </p>
+          <p>
+            נוכל לרשום:
+            <br>
+            אם נסתכל על שורת הקוד השנייה נוכל לראות שלושה דברים:
+            <br>
+            1.	תנאי התחלה (i=0): מראה לנו מאיפה להתחיל את הספירה.
+            <br>
+            2.	תנאי עצירה (i < 5): מראה לנו מתי עלינו לעצור.
+            <br>
+            3.	מהו השינוי (i++): מראה לנו שבכל סיבוב של הלולאה (איטרציה) אנו מגדילים את המשתנה i באחד בדיוק.
+            
+          </p>
+
+
+        </div>
+        <!--para-->
 
 
       </div>
-      <!--para-->
+      <!--COL MD 6 - FOR TEXT-->
 
 
-    </div>
-    <!--COL MD 6 - FOR TEXT-->
+      <div class="col-md-6">
 
-
-    <div class="col-md-6">
-
-      <figure class="code">
-        <figcaption id="example1-caption">CODE 2:</figcaption>
-        <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> i;
-<b>for</b>(i=0 ; i &lt; 5 ;i++)
-{
-  printf(<u>"%d"</u>, i);
-}
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>void</b> main()
+{  
+  <b>int</b> i;
+  <b>for</b>(i=0 ; i &lt; 5 ;i++)
+  {
+    printf(<u>"%d"</u>, i);
+  }
+}  
           </code></pre>
-      </figure>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
 
     </div>
-    <!--COL MD 6 - FOR CODE-->
+    <!--ROW-->
+
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה ללולאת  while:
+            <br>
+            פה אנו מגדירים משתנה בשם flag ו counter והלולאה תיעצר רק אם counter יהיה גדול או שווה ל10 וזאת משום שflag ישתנה ל0 ולולאת הwhile שלנו תפסיק להתקיים.            
+          </p>
 
 
-  </div>
-  <!--ROW-->
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>void</b> main()
+{  
+  <b>int</b> flag = 1 , counter = 0;
+  <b>while</b>(flag != 0)
+  {
+    <b>if</b>(10 <= counter)
+    {
+      flag = 0;
+    }
+    <b>else</b>
+    {
+      counter++;
+    }
+  }
+}  
+          </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
 
 
 
-
-
+  </section>
 
 </body>
 
 </html>
-
-
-<!--
-
-
-
-
-
--->
