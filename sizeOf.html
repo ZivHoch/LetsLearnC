@@ -59,31 +59,39 @@
     <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">sizeof</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-    <h3 class="head-right"> למה אנו צריכים את זה?</h3>
+    <h3 class="head-right"> למה אנו צריכים את sizeof?</h3>
     <div class="First-Para">
 
       <p>
         נניח שאנחנו רוצים לעבוד על מערך בפונקציה מסויימת אבל שכחנו לשלוח לפונקציה את גודל המערך .
         ניתן לצאת מהבעיה הזאת על ידי שימוש ב- sizeof
       </p>
+
     </div>
 
-    <h3 class="head-right">מה sizeof עושה ?</h3>
+    <h3 class="head-right">מה sizeof עושה ? </h3>
+
     <div class="First-Para">
+
       <p>
         מחזיר לנו את הגודל של משתנה מסויים בבתים.
       </p>
+
     </div>
 
-    <h3 class="head-right">צורת השימוש:</h3>
+    <h3 class="head-right">צורת השימוש בפקודה:</h3>
+
     <div class="First-Para">
 
       <p>
-        sizeof(name);
+        <span dir="ltr">sizeof(name);</span>
+        <br>
         name – מציין את העצם או משתנה שעליו אנחנו רוצים לדעת את הגודל
-        מה שקורה כאן הוא מאוד פשוט , סכה בתוך הסוגריים אנחנו רושמים את סוג העצם שעליו אנחנו רוצים לדעת את הגודל בבתים או
-        שרושמים את השם של המשתנה והפקודה תחזיר לנו את הגודל שלה בבתים
+        <br>
+        הפקודה לוקחת את שם המשתנה name מבינה מה סוג הנתונים שלו ולפי זה מחזירה כמות בתים.
+        למשל, אם name הוא char אז היא תחזיר בית יחיד.
       </p>
+
     </div>
 
     <div class="row">
@@ -94,6 +102,8 @@
 
           <p>
             דוגמה 1:
+            <br>
+            הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג זה תופס 4 בתים.
           </p>
 
 
@@ -107,14 +117,23 @@
 
       <div class="col-md-6">
 
-        <!--FIRST CODE HERE-->
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number;
+  printf(<u>"%d\n"</u>,sizeof(number));
+}
+      </code></pre>
+        </figure>
 
       </div>
       <!--COL MD 6 - FOR CODE-->
 
-
     </div>
-    <!--ROW-->
+
+    <br>
 
 
     <div class="row">
@@ -124,47 +143,12 @@
         <div class="para">
 
           <p>
-            הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג int תופס 4 בתים , במידה והוא היה דאבל אז
-            היה מודפס לנו 8 כי דאב טופס 8 בתים , לכן כדי שאנחנו נקבל את גודל המערך לא בבתים אלה כמספר שמציין את הגודל
-            שלו עלינו אחרי הפקודה לבצע חילוק בסוג של המערך , כלומר אם המערך שלנו הוא מסוג int אז כדי לדעת את גודל המערך
-            מסוג int עלינו לבצע את השורה הבאה :
-            <br>
-            <br>
             דוגמה 2:
-          </p>
-
-
-        </div>
-        <!--para-->
-
-
-      </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
-      <div class="col-md-6">
-
-        <!--SECOND CODE HERE-->
-
-      </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
-    </div>
-    <!--ROW-->
-
-    <div class="row">
-
-      <div class="col-md-6">
-
-        <div class="para">
-
-          <p>
-            בגלל שאנחנו מדברים כאן על מערך אז sizeof יתן לנו את הגודל של double ככמות הפעמים של התאים שלנו,
-            כלומר יש לנו 5 תאים וכל תא הוא 8 בתים בגלל ש double הוא 8 בתים , לכן סכה יודפס לנו 40 בגלל יש לנו 5
-            איברים בגודל 8.
             <br>
-            כדי להשיג את גודל המערך בתאים:
+            בגלל שבדוגמה זו יש מערך הפקודה תחזיר לנו את כל כמות הבתים שיש בתוכו (כלומר 8 בתים בכל אחד מתאיו כפול 5
+            תאים).
+            זאת אומרת שנקבל פה חזרה 40, שזו תשובה נכונה אבל לנו היא לא מאוד עוזרת כי בתור מתכנתים אנו רוצים לדעת כמה
+            תאים יש ולא כמה בתים.
           </p>
 
 
@@ -178,14 +162,25 @@
 
       <div class="col-md-6">
 
-        <!--THIRD CODE HERE-->
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>double</b> arr[5];
+  printf(<u>"the size in bytes is: %d\n"</u>,sizeof(arr));
+}
+      </code></pre>
+        </figure>
 
       </div>
       <!--COL MD 6 - FOR CODE-->
 
-
     </div>
-    <!--ROW-->
+
+
+    <br>
+
 
 
     <div class="row">
@@ -195,10 +190,11 @@
         <div class="para">
 
           <p>
-
-            מה שעשינו פה, לקחנו את הsizeof(arr) שלנו וחילקנו אותו בסוג הדאטה שלו (כלומר במקרה הזה בdouble).
+            תיקון לדוגמה 2:
             <br>
-            באופן כללי זה יראה כך:
+            כדי לתקן את זה, כל שעלינו לעשות הוא לחלק את מה שקיבלנו חזרה מsizeof בסוג הנתונים שלנו.
+            <br>
+            <span dir="ltr">sizeof(arr_name) / data_type;</span>
           </p>
 
 
@@ -212,14 +208,27 @@
 
       <div class="col-md-6">
 
-        <!--FOURTH CODE HERE-->
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2 - FIXED:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>double</b> arr[5];
+  printf(<u>"the size in bytes is: %d\n"</u>,sizeof(arr)/double);
+}
+      </code></pre>
+        </figure>
 
       </div>
       <!--COL MD 6 - FOR CODE-->
 
-
     </div>
-    <!--ROW-->
+
+
+
+
+
+
 
 
 
@@ -231,12 +240,7 @@
 
 
 <!-- FIRST CODE
-#include <stdio.h>
-void main()
-{
-  int number;
-  printf (%d ,sizeof(number));
-}
+
 
 _________________
 END FIRST CODE-->
