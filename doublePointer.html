@@ -7,61 +7,216 @@
 
   <title>Lets learn C: doublePointer</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-   <!-- Font Awesome -->
-   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-   <!-- CSS -->
- 
-   <!-- Bootstrap Scripts -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/styles.css">
- 
-   <!-- Java Script -->
-   <script src="js/code.js"></script>
- 
+  <!-- CSS -->
+
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
+
 
 </head>
 
 <body class="bg">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו ממדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו ממדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
+  </div>
+
+  <section id="main">
+
+    <h1 class="head-left">Lets learn C</h1>
+    <h1 class="head-right">מצביע כפול</h1>
+
+    <div class="First-Para">
+      <p>
+        ראינו שמצביע יכול להצביע לכל משתנה וכעת נראה מצביע שנקרא מצביע כפול שיכול להצביע למשתנה מסוג מצביע.
+        לשם נוחות נציין שכאשר אנו מדברים על מצביע כפול אנחנו נרשום פה לעיתים דאבל-פוינטר כדי למנוע בלבול עם מצביעים
+        רגילים.
+
+      </p>
     </div>
-  
-    <h1 class="top-left">Lets learn C</h1>
 
-    <h2 class="top-right-head">NULL</h2>
+    <h3 class="head-right">הצהרה של מצביע כפול / דאבל-פוינטר</h3>
 
-    <p class="top-right">
+    <div class="First-Para">
+      <p>
+        אם בשביל מצביע למשתנה היינו צריכים כוכבית אחת אז בשביל דאבל-פוינטר (שהוא בעצם מצביע למצביע) אנחנו צריכים שתי
+        כוכביות מה שאומר שנוצרת לנו מעין חוקיות שקשורה לכוכביות.
+        החוקיות אומרת שבשביל ליצור משתנה שיצביע למשתנה אחר, על המשתנה המצביע להיות בעל כוכבית אחת יותר מאשר המשתנה שאליו
+        אנו מצביעים.
+        <br>
+        למשל, אם היינו מצביעים למשתנה מסוג int היינו נדרשים להשתמש בכוכבית אחת.
+        <br>
+        אם היינו רוצים להצביע למשתנה מסוג <span dir="ltr">int*</span>
+        היינו משתמשים בשתי כוכביות (דאבל-פוינטר).
+        <br>
+        אם היינו רוצים להצביע למשתנה מסוג <span dir="ltr">int**</span> היינו משתמשים בשלושה כוכביות (טריפל-פוינטר).
+        <br>
+        וכך הלאה.
+
+        <br>
+        הצהרה של מצביע כפול תהיה בדרך הבאה:
+        <br>
+        <span dir="ltr">type ** name;</span>
+
+      </p>
+    </div>
 
 
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמא 1 למצביע כפול:
+            <br>
+            <br>
+            שורה 5 – ptr מצביע על הכתובת של number.
+            <br>
+            שורה 6 – double-ptr מצביע על ptr שהוא מצביע
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number = 10 , *ptr , **double_ptr;
+  ptr = &number;
+  double_ptr =&ptr;
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <br>
+
+    <div class="First-Para">
+      <p>
+        ישנם כמה דברים שונים בין מצביע למצביע לבין מצביע רגיל:
+        <br>
+        כאשר אנחנו רושמים רק את השם של המצביע למצביע printf(“%d”, double-ptr) דבר זה ידפיס את הכתובת של המצביע. <br>
+        <br>
+        כאשר אנחנו נרשום printf(“%d”,* double-ptr) הוא ידפיס את התוכן שנמצא בכתובת שאליו אנחנו מצביעים, לכן אם אנחנו
+        עכשיו מצביעים לכתובת של המצביע ptr ואמרנו שהערכים היחידים שמצביעים יכולים לשמור זה כתובות אז כאשר אנחנו נרשום
+        *double-ptr אנחנו בעצם נקבל את הכתובת של המשתנה המקורי.
+        <br>
+        <br>
+        כאשר אנחנו נרשום printf(“%d”,*(* double-ptr)); אנחנו נקבל כאן את הערך של המשתנה המקורי (כלומר הערך המספרי שנמצא
+        בפנים ולא הכתובת).
+
+      </p>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמאות 2 למצביע כפול:
+            <br>
+            <br>
+            <span dir="ltr">inc_by_one(&ptr)</span> – שליחה של פוינטר כפול מתבצעת בצורה הזו (במיין).
+            <br>
+            <span dir="ltr">*(*double_ptr)++</span>
+            – שינוי ערך של מצביע כפול תתבצע בצורה הזו.            
+          </p>
+
+          
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> inc_by_one(int **double_ptr);
+
+<b>void</b> main()
+{
+  <b>int</b> number = 10 , *ptr;
+  ptr = &number;
+  inc_by_one(&ptr);
+}
+
+<b>void</b> inc_by_one(int **double_ptr)
+{
+  *(*double_ptr)++;
+}
+
+
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+
+
+  </section>
 
 </body>
 
