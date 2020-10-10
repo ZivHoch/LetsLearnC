@@ -24,113 +24,164 @@
 </head>
 
 <body class="bg-oneAndHalf">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו ממדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
-    </div>
-  
-
-    <h1 class="top-left">Lets learn C</h1>
-
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו ממדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h2 class="top-right-head">מחרוזות</h2>
+  <section id="main">
 
-  <p class="top-right">
+    <h1 class="head-left">Lets learn C</h1>
+    <h1 class="head-right">מחרוזות</h1>
 
-    מהי מחרוזת ?
-    <br>
-    אוסף של תווים (char 's ) שיוצרים לנו מילה , משפט או בעצם כל דבר אחר.
-    <br>
-    למשל: "1252s!@#" היא מחרוזת.
-    <br>
-    לצערנו , בשפת סי טיפוס בשם מחרוזת לא קיים ואנו צריכים לעבוד עם מערך של charים ולקרוא לספריית <string.h> כדי לקבל את כל היכולות של מחרוזות לקוד שלנו.
-    <br>
-    דוגמאות ליצירת משתנה של מחרוזת:
-    <br>
-    char s[6] = {'H' , 'e' , 'l' , 'l' , 'o' ,'\0' };
-    <br>
-    char s = "Hello";
-    <br>
-    /0	
-    <br>
-    נקרא גם null terminator ובעצם אומר לקוד שלנו מתי לעצור לקרוא תווים מהמחרוזת. 
-    <br>
-    פונקציות שימושיות לסטרינגים:
-    <br>
-    strcpy(s1,s2)  = מעתיקה ממחרוזת 2 למחרוזת 1
-    <br>
-    strcat(s1,s2) = מעתיקה את 2 לקצה של 1
-    <br>
-    strlen(s1) = מוצאת את הגודל של המחרוזת
-    <br>
-    strcmp(s1,s2) = מחריזה 0 אם המחרוזות שוות , מספר שלילי אם האות הראשונה (ששונה) במחרוזת 1 קטנה מ2 , מחזירה מספר חיובי אם האות הראשונה (ששונה) במחרוזת 1 גדולה מ2
-    <br>
-    strchr(s1,ch) = מחזירה פוינטר לפעם הראשונה שהאות הופיעה בתוך המחרוזת
-    <br>
-    strstr(s1,s2) = מחזירה פוינטר לפעם הראשונה שמחרוזת 2 הופיעה ב1
-    <br>
-    <!--CODE
-    #include <stdio.h>
+    <h3 class="head-right">מהי מחרוזת ?</h3>
+    <div class="First-Para">
+      <p>
+        אוסף של תווים (char 's ) שיוצרים לנו מילה , משפט או בעצם כל דבר אחר.
+        <br>
+        למשל: "1252s!@#" היא מחרוזת.
+        <br>
+        לצערנו , בשפת c טיפוס בשם מחרוזת לא קיים ואנו צריכים לעבוד עם מערך של chars ולקרוא לספרייה בשם string.h כדי לקבל
+        את כל היכולות של מחרוזות לקוד שלנו.
+      </p>
 
-    #include <string.h>
+    </div>
+
+    <h3 class="head-right">דוגמאות ליצירת משתנה של מחרוזת:</h3>
+    <div class="First-Para">
+      <p>
+        דוגמאות ליצירת משתנה של מחרוזת:
+        <br>
+        <span dir="ltr">char s[6] = {'H' , 'e' , 'l' , 'l' , 'o' ,'\0' };</span>
+        <br>
+        <span dir="ltr">char s = "Hello";</span>
       
-    void main()
-    
-    {
-    
-      char s1[10] = "hello";	
-      
-      char s2[10] ="world";
-    
-      char s3[20];
-    
-      int length;
-    
-      strcpy(s3,s1); // copied s1 into s3.
-    
-      printf("%s\n",s3); // prints hello 
-    
-      strcat(s1,s2); 
-    
-      printf("s/n" , s1); // helloworld
-    
-      
-      len = strlen(s1);
-    
-      printf("%d",len); // prints 10. (helloworld = 10 letters)
-    
-    }
-    -->
-    
-  </p>
+      </p>
 
+    </div>
+
+    <h3 class="head-right"><span dir="ltr">/0</span></h3>
+    <div class="First-Para">
+      <p>
+        נקרא גם null terminator ובעצם אומר לקוד שלנו מתי לעצור לקרוא תווים מהמחרוזת.
+      </p>
+
+    </div>
+
+    <h3 class="head-right">פונקציות שימושיות למחרוזות:</h3>
+    <div class="First-Para">
+      <p>
+        strcpy(s1,s2)  = מעתיקה ממחרוזת 2 למחרוזת 1
+        <br>
+        strcat(s1,s2) = מעתיקה את 2 לקצה של 1
+        <br>
+        strlen(s1) = מוצאת את הגודל של המחרוזת
+        <br>
+        strcmp(s1,s2) = מחריזה 0 אם המחרוזות שוות , מספר שלילי אם האות הראשונה (ששונה) במחרוזת 1 קטנה מ2 , מחזירה מספר חיובי אם האות הראשונה (ששונה) במחרוזת 1 גדולה מ2
+        <br>
+        strchr(s1,ch) = מחזירה פוינטר לפעם הראשונה שהאות הופיעה בתוך המחרוזת
+        <br>
+        strstr(s1,s2) = מחזירה פוינטר לפעם הראשונה שמחרוזת 2 הופיעה ב1
+      </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמאות לשימוש בכמה מהפוקנציות:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#include</i> <u>&lt;string.h&gt;</u>
+
+<b>void</b> main()
+{
+
+  <b>char</b> s1[10] = <u>"hello"</u>;
+  <b>char</b> s2[10] = <u>"world"</u>;
+  <b>char</b> s3[20];
+  <b>int</b> length;
+
+  strcpy(s3,s1); <em>// copied s1 into s3.</em>
+  printf("%s\n",s3); <em>// prints hello</em> 
+    
+  strcat(s1,s2); 
+  printf("s/n" , s1); <em>// helloworld </em>
+
+  
+  len = strlen(s1);
+  printf("%d",len); <em>// prints 10. (helloworld = 10 letters)</em>
+
+
+}    
+            </code></pre>
+        </figure>
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+    </div>
+    <!--ROW-->
+
+
+
+  </section>
 
 </body>
 
 </html>
+
+
+
+<!--CODE
+
+    
+       
+    
+
+    
+    }
+    -->
