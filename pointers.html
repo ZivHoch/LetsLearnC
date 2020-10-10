@@ -24,45 +24,502 @@
 
 </head>
 
-<body class="bg">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו מימדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדיים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
-    </div>
-    <h1 class="top-left">Learning C</h1>
-
+<body class="bg-four">
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h2 class="top-right-head">מצביעים</h2>
+  <section id="main">
 
-  <p class=top-right>
-    כרגע, אין מה להציג
-  </p>
+    <h1 class="head-left">Learning C</h1>
+    <h1 class="head-right">מצביעים</h1>
+
+    <h3 class="head-right">למה צריך מצביע?</h3>
+    <div class="First-Para">
+      <p>
+
+        נגיד שאנחנו רוצים לבנות פונקציה שמחזירה לנו יותר מערך אחד , או לשנות את הערכים של כמה משתנים שנשלחים לפונקציה .
+        עד עכשיו לא יכולנו לעשות דבר כזה, אבל לאחר שנלמד על מצביעים נוכל.
+      </p>
+
+    </div>
+
+    <h3 class="head-right">מה זה מצביע?</h3>
+    <div class="First-Para">
+
+      <p>
+        מצביע הינו משתנה אשר מכיל כתובת של משתנים אחרים ובעזרתו אנחנו יכולים לשנות ערכים של משתנים.
+      </p>
+
+    </div>
+
+    <h3 class="head-right">יצירת משתנה מסוג מצביע:</h3>
+    <div class="First-Para">
+
+      <p>
+        אנו יוצרים משתנה מסוג מצביע בצורה הבאה:
+        <br>
+        Type *name;
+        <br>
+        Type – אומר מאיזה מסוג המצביע שלנו (int , double וכו...)
+        <br>
+        Name – השם של המצביע
+      </p>
+
+    </div>
+
+    <h3 class="head-right">סימון:</h3>
+    <div class="First-Para">
+
+      <p>
+        סימון * - הסימן של הכוכבית מבדיל את המשתנה מהמשתנים האחרים ואומר למחשב שזה משתנה מסוג מצביע.
+        <br>
+        סימון & - בעזרת הסימון הזה אנחנו יכולים לקבל כתובת של משתנה מסויים וניתן להדפיס אותה בתור מספר בעזרת %d או כתובת
+        hex בעזרת %x. </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 1 – הדפסה של מקום בזיכרון:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number = 8;
+  printf(<u>"%d"</u>,&number)
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+    </div>
+    <!--ROW-->
+
+    <div class="First-Para">
+
+      <p>
+        בשורה זאת תתבצע הדפסה אבל לא של המשתנה number אלה את הכתובת שלו בגלל הסימון & , אם לדוגמה המשתנה number נמצא
+        בכתובת 1000 אז שורת הקוד הזאת תדפיס לנו 1000.
+        בלי הסימן & היינו מדפיסים את הערך בתוך המשתנה.
+      </p>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 2 – קוד עם מצביעים:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number = 10;
+  <b>int</b> *ptr = &number;
+  *ptr = *ptr + 5;
+  printf(<u>"%d"</u>,ptr)
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+    </div>
+    <!--ROW-->
+
+    <div class="First-Para">
+
+      <p>
+        בשורה הראשונה יצרנו משתנה מסוג int שערכו הוא 10.
+        <br>
+        בשורה השנייה יצרנו מצביע מסוג int ונתנו לו את הכתובת של number.
+        <br>
+        בשורה השלישית אנחנו מגדילים את הערך שנמצא ב number ב5 בעזרת המצביע (בגלל ש-ptr מצביע על הכתובת של number יש לנו
+        שליטה על הערך שנמצא בתוכו).
+        <br>
+        כאשר אנחנו רושמים <span dir="ltr">*ptr</span> אנחנו מתייחסים לערך שנמצע בתוך number כאשר אנחנו רושמים ptr בלי *
+        אנחנו מתייחסים לכתובת
+        של המשתנה עליו אנחנו מצביעים.
+        <br>
+        לכן בשורה הרביעית אנחנו מדפיסים את הכתובת של number ואין צורך ב & כי מצביע נחשב לכתובת , הוא שקול ל-<span
+          dir="ltr">&number</span>.
+
+      </p>
+
+    </div>
+
+
+    <h3 class="head-right">שליחת ערכים לפונקציה by value:</h3>
+
+    <div class="First-Para">
+
+      <p>
+        עד עכשיו כאשר שלחנו ערכים לתוך פונקציה שלחנו בשיטה שנקראת <span dir="ltr"> by value </span>.
+        <br>
+        שיטה זו אומרת שאנו לא שולחים את המשתנה עצמו אלא העתק מדויק (מבחינת ערכים) של המשתנה שלנו, וכל שינוי שביצענו על
+        המשתנה לא נשמר בפונקציית הmain (כלומר, התבצע שינוי זמני בלבד).
+      </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה לשליחה<span dir="ltr"> by value </span>:
+            <br>
+            בשליחה בצורה הזו, הערכים שלנו ישארו 11 ו31 ולא ישתנו מחוץ לפונקציה.
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 3:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> inc_by_one(<b>int</b> num_a , <b>int</b> num_b);
+<b>void</b> main()
+{
+  <b>int</b> num_a = 11;
+  <b>int</b> num_b = 31;
+  inc_by_one(num_a,num_b);
+}
+<b>void</b> inc_by_one(<b>int</b> num_a , <b>int</b> num_b)
+{
+  num_a++;
+  num_b++;
+}
+            </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <h3 class="head-right">שליחת ערכים לפונקציה by reference:</h3>
+
+    <div class="First-Para">
+
+      <p>
+
+        כדי להתגבר על הבעיה הזו ישנו פתרון של שליחה שנקראת <span dir="ltr"> by reference </span>.
+        <br>
+        בשליחה מסוג זה, אנו שולחים את הכתובת בזיכרון של המשתנה שלנו, וכל שינוי שנעשה בתוך הפונקציה על המשתנה שלנו נשמר
+        (כי לא שלחנו העתק).
+        <br>
+        חשוב לציין – יש שקוראים לשליחת ערכים מהסוג הזה "העברה" , וזאת משום שאנו מעבירים את המשתנה האמיתי ולא העתק שלו.
+      </p>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה לשליחה <span dir="ltr"> by reference </span>:
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 4:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+<b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b);
+<b>void</b> main()
+{
+<b>int</b> num_a = 11;
+<b>int</b> num_b = 31;
+inc_by_one(&num_a,&num_b);
+}
+<b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b)
+{
+  *num_a++;
+  *num_b++;
+}
+          </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <h3 class="head-right">ברירת מחדל של מצביע</h3>
+    <div class="First-Para">
+      <p>
+        אם אנחנו ננסה לבצע פעולה כלשהיא על מצביע שלא ביצענו עליו פעולת השמה לכתובת של משתנה אנחנו נקבל שגיאה ולכן חשוב
+        לעשות השמה של המצביע לכתובת של משתנה לפני שאנחנו מנסים לבצע את הנ"ל:
+
+      </p>
+    </div>
+
+    <h3 class="head-right">גודל של מצביע</h3>
+    <div class="First-Para">
+      <p>
+        כל מצביע לא משנה מאיזה סוג יהיה בעל גודל של 4 בתים.
+      </p>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 5 – השמה לא תקינה של מצביע:
+            <br>
+            אנו נקבל שגיאה בשורה 5 בגלל שאנו מנסים להכניס ערך לכתובת שלא קיימת.
+            התיקון יעשה ע"י לקיחת המשתנה ptr לפני שמתבצעת השורה הבעייתית ולהצביע איתו על משתנה בעל ערך קיים.
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 5:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> *ptr;
+  *ptr = 1000000;
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 6 - תיקון לדוגמה הקודמת:
+            <br>
+            פה קודם כל הצבענו על number ולאחר מכן שינינו את ערכו ל1,000,000 בעזרת המצביע שלנו.
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 6:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> number = 6;
+  <b>int</b> *ptr = &number;
+  *ptr = 1000000;
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+
+          <p>
+            דוגמה 7 – פעולות עם מצביעים (דוגמה לעבודה תקינה ולא תקינה עם מצביעים):
+            <br>
+            שורה 6 – אנו גורמים לp1 להצביע לnumber.
+            <br>
+            שורה 8 – לוקחים את p2 ומצביעים בעזרתו לp1 (שנכון לעכשיו, מצביע ל-number).
+            <br>
+            שורה 10 – בשורה זו פנינו בעזרת מצביע p2 לערך שנמצא בתוך number והחסרנו ממנו 10.
+            משמע , הערך בתוך number עכשיו יהיה שווה ל 0.
+            <br>
+            שורה 12 – מה שאנו עושים פה נקרא "חיסור כתובות" – הסיבה לכך היא בגלל שאנו לא משתמשים בכוכבית על המשתנה p2
+            ולכן בעצם מחסרים 10 מהכתובת של p2.
+            כלומר, נניח וp2 הצביע למקום 1000 בזיכרון אז לאחר שורה הפעלת הקוד בשורה הזו p2 יצביע אל עבר כתובת 990.
+            <br>
+            שורה 14 – משנים את הערך של number להיות שווה לערך שנמצא בתוך המשתנה שמצביע אליו p1.
+            <br>
+            בשורה 16 – משנים את הערך של המשתנה שאליו מצביע p1 להיות שווה לערך של number.
+            <br>
+            שורה 20  - לא אפשרית בגלל שמשתנה רגיל לא יכול להכיל כתובת.
+            <br>
+            שורה 22  – תקפיץ שגיאת ריצה משום שאנו לוקחים ערך מספרי ושומרים אותו בתור כתובת. 
+
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 6:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> *p1 , *p2 , number = 10;
+
+  p1 = &number; 
+
+  p2 = p1; 	
+
+  *p2 = *p2 – 10;
+    
+  p2 = p2 -10;
+
+  number = *p1;
+
+  *p1 = number;
+
+  <em>//errors!</em>
+
+  number = p2;	
+
+  p1 = *p2;	
+  
+}
+      </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
 
 </body>
 

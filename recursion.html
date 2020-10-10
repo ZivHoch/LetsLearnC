@@ -23,119 +23,173 @@
 
 </head>
 
-<body class="bg-two">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">מי אנחנו?</a>
-      <a href="firstProgram.html">התוכנית הראשונה</a>
-      <a href="variables.html">משתנים</a>
-      <a href="printAndScan.html">קלט ופלט</a>
-      <a href="mathOperator.html">אופרטורים חשבוניים</a>
-      <a href="statments.html">משפטי בקרה</a>
-      <a href="oneDimLoops.html">לולאות</a>
-      <a href="twoDimLoops.html">לולאות דו מימדיות</a>
-      <a href="casting.html">casting </a>
-      <a href="sizeOf.html">sizeof</a>
-      <a href="typeDef.html">typedef</a>
-      <a href="functions.html">פונקציות</a>
-      <a href="recursion.html">רקורסיות</a>
-      <a href="pointers.html">מצביעים</a>
-      <a href="doublePointer.html">מצביע כפול</a>
-      <a href="arrays.html">מערכים</a>
-      <a href="dinArrays.html">מערכים דינאמיים</a>
-      <a href="string.html">מחרוזות</a>
-      <a href="binSearch.html">חיפוש בינארי</a>
-      <a href="twoDimArrays.html">מערכים דו ממדיים</a>
-      <a href="bubbleSort.html">מיון בועות</a>
-      <a href="selectionSort.html">מיון בחירה</a>
-      <a href="insertionSort.html">מיון הכנסה</a>
-      <a href="quickSort.html">מיון מהיר</a>
-      <a href="mergeSort.html">מיון מיזוג</a>
-    </div>
-  <h1 class="top-left">Learning C</h1>
-
+<body class="bg-three">
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">מי אנחנו?</a>
+    <a href="firstProgram.html">התוכנית הראשונה</a>
+    <a href="variables.html">משתנים</a>
+    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="mathOperator.html">אופרטורים חשבוניים</a>
+    <a href="statments.html">משפטי בקרה</a>
+    <a href="oneDimLoops.html">לולאות</a>
+    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="casting.html">casting </a>
+    <a href="sizeOf.html">sizeof</a>
+    <a href="typeDef.html">typedef</a>
+    <a href="functions.html">פונקציות</a>
+    <a href="recursion.html">רקורסיות</a>
+    <a href="pointers.html">מצביעים</a>
+    <a href="doublePointer.html">מצביע כפול</a>
+    <a href="arrays.html">מערכים</a>
+    <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="string.html">מחרוזות</a>
+    <a href="binSearch.html">חיפוש בינארי</a>
+    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="bubbleSort.html">מיון בועות</a>
+    <a href="selectionSort.html">מיון בחירה</a>
+    <a href="insertionSort.html">מיון הכנסה</a>
+    <a href="quickSort.html">מיון מהיר</a>
+    <a href="mergeSort.html">מיון מיזוג</a>
   </div>
 
-  <h2 class="top-right-head">רקורסיה</h2>
+  <h1 class="head-left">Learning C</h1>
+  <h1 class="head-right">רקורסיות</h1>
 
-  <p class="top-right">
+  <section id="main">
 
-    רקורסיה היא שיטה לפתרון בעיות גדולות באמצעות פתרון של בעיות קטנות יותר.
-    <br>
-    ננסה להבין את ההסבר על הרקורסיה באמצעות דוגמא:
-    <br>
-    נניח שאנו רוצים לבדוק כמה פעמים המספר 32 מתחלק ב 2.
-    <br>
-    אנו נניח שאנחנו לא יודעים כמה פעמים 32 מתחלק ב 2 ואז ננסה לפתור את הבעיה הגדולה הזאת עם בעיה קטנה יותר.
-    <br>
-     כלומר, אם
-    נחלק את 32 ב-2 פעם אחת נקבל 16.
-    <br>
-    כעת, הבעיה שלנו היא לא כמה פעמים 32 מתחלק ב 2 אלא כמה פעמים 16 מתחלק ב-2.
-    <br>
-    כי אם אנו נדע כמה פעמים 16 מתחלק ב2 אז נדע כמה פעמים 32 מתחלק ב2.
-    <br>
-    כי 16*2=32.
-    <br>
-    בשלב זה, אנו נניח שאני לא יודעים כמה פעמים 16 מתחלק ב2 אז אנו נחלק ב2 פעם נוספת ונקבל 8.
-    <br>
-    ואם נחלק את 8 ב-2 פעם נוספת נקבל 4. אחר כך נקבל 2 ואז 1.
-    <br>
-    כעת, הגענו ל 1 -> אנו לא יכולים לחלק ב2 יותר ולכן נספור כמה פעמים ביצענו את החילוק.
-    <br>
-    1->2->4->8->16->32 כלומר, ביצענו את החילוק 5 פעמים ולכן 32 מתחלק ב-2 חמש פעמים.
-    <br>
-    איך ממשים דבר כזה?
-    <br>
-    אז לפני שנקפוץ לפתרון אני רוצה שנחשוב על כמה דברים:
-    <br>
-    1. מהו תנאי העצירה?
-    <br>
-    2. מה השינוי שאנו עושים בכל פעם כדי לצמצם את גודל הבעיה?
-    <br>
-    3. איך אנו קורא לפונקציה שוב?
-    <br>
-    <br>
-    1* אם אתם נתקעים על השאלה "מהו תנאי העצירה?" נסו לחשוב "מתי אני מפסיק לעשות את הפעולה הזאת?" או "מה הבעיה הקטנה
-    ביותר שמסתתרת מאחורי השאלה?"
-    <br>
-    2* אם אתם נתקעים בשאלה השנייה תנסו לחשוב "מה שונה בין כל שלב ושלב?"
-    <br>
-    אחרי שחשבנו נסתכל על השאלה וננסה להבין מה אנחנו אמורים לקבל חזרה? -> מה הפונקציה מחזירה?
-    האם זה מספר? תו? או בכלל כלום?
-    <br>
-    <br>
-    בשאלה שלנו:
-    <br>
-    1. תנאי העצירה הוא כשהמספר הוא 1, כלומר אי אפשר לחלק ב2 יותר.
-    <br>
-    2. השינוי הוא חילוק ב2 פעם אחת בכל פעם.
-    <br>
-    3. אנו קוראים לפונקציה שוב בכל פעם רק עם תוספת של הצלחה אחת.
-    <br>
-    <br>
-    כעת, לאחר שאנחנו יודעים את כל השלבים נסתכל על המבנה הבא:
 
-    <!--CODE-->
+    <div class="First-Para">
+      <p>
+        רקורסיה היא שיטה לפתרון בעיות גדולות באמצעות פתרון של בעיות קטנות יותר.
+        <br>
+        ננסה להבין את ההסבר על הרקורסיה באמצעות דוגמא:
+        <br>
+        נניח שאנו רוצים לבדוק כמה פעמים המספר 32 מתחלק ב 2.
+        <br>
+        אנו נניח שאנחנו לא יודעים כמה פעמים 32 מתחלק ב 2 ואז ננסה לפתור את הבעיה הגדולה הזאת עם בעיה קטנה יותר.
+        <br>
+        כלומר, אם
+        נחלק את 32 ב-2 פעם אחת נקבל 16.
+        <br>
+        כעת, הבעיה שלנו היא לא כמה פעמים 32 מתחלק ב 2 אלא כמה פעמים 16 מתחלק ב-2.
+        <br>
+        כי אם אנו נדע כמה פעמים 16 מתחלק ב2 אז נדע כמה פעמים 32 מתחלק ב2.
+        <br>
+        כי 16*2=32.
+        <br>
+        בשלב זה, אנו נניח שאני לא יודעים כמה פעמים 16 מתחלק ב2 אז אנו נחלק ב2 פעם נוספת ונקבל 8.
+        <br>
+        ואם נחלק את 8 ב-2 פעם נוספת נקבל 4. אחר כך נקבל 2 ואז 1.
+        <br>
+        כעת, הגענו ל 1 -> אנו לא יכולים לחלק ב2 יותר ולכן נספור כמה פעמים ביצענו את החילוק.
+        <br>
+        1->2->4->8->16->32 כלומר, ביצענו את החילוק 5 פעמים ולכן 32 מתחלק ב-2 חמש פעמים.
+        <br>
+        איך ממשים דבר כזה?
+        <br>
+        אז לפני שנקפוץ לפתרון כדאי שנחשוב על כמה דברים:
+        <br>
+        1. מהו תנאי העצירה?
+        <br>
+        2. מה השינוי שאנו עושים בכל פעם כדי לצמצם את גודל הבעיה?
+        <br>
+        3. איך אנו קורא לפונקציה שוב?
+        <br>
+        <br>
+        1* אם אתם נתקעים על השאלה "מהו תנאי העצירה?" נסו לחשוב "מתי אני מפסיק לעשות את הפעולה הזאת?" או "מה הבעיה הקטנה
+        ביותר שמסתתרת מאחורי השאלה?"
+        <br>
+        2* אם אתם נתקעים בשאלה השנייה תנסו לחשוב "מה שונה בין כל שלב ושלב?"
+        <br>
+        אחרי שחשבנו נסתכל על השאלה וננסה להבין מה אנחנו אמורים לקבל חזרה? -> מה הפונקציה מחזירה?
+        האם זה מספר? תו? או בכלל כלום?
+        <br>
+        <br>
+        בשאלה שלנו:
+        <br>
+        1. תנאי העצירה הוא כשהמספר הוא 1, כלומר אי אפשר לחלק ב2 יותר.
+        <br>
+        2. השינוי הוא חילוק ב2 פעם אחת בכל פעם.
+        <br>
+        3. אנו קוראים לפונקציה שוב בכל פעם רק עם תוספת של הצלחה אחת.
+        <br>
+        <br>
+        כעת, לאחר שאנחנו יודעים את כל השלבים נסתכל על המבנה הבא:
+      </p>
+    </div>
 
-    
-    <!--END CODE-->
+    <div class="row">
 
-    <br>
-    <br>
-    מספר הערות:
-    <br>
-    אחרי שעלינו על פתרון מסוים אנחנו צריכים לבדוק אם הפתרון שלנו עונה על תנאי השאלה.
-    <br>
-    כלומר, האם הקלט מותאם למה שהתבקש? האם הפלט של התוכנית הוא כמו הפלט שרצינו שיהיה?
-    <br>
-    הדרך הכי טובה לבדוק את זה היא לקחת מספר קטן שאנחנו יודעים את התוצאה שאמורה להיות או את הדוגמא שאנחנו מקבלים,
-    <br> 
-    להריץ אותה על הקוד שלנו ולראות מה יהיה הפלט.
-    <br>
-  </p>
+      <div class="col-md-6">
 
+        <div class="para">
+
+          <p>
+            מספר הערות:
+            <br>
+            אחרי שעלינו על פתרון מסוים אנחנו צריכים לבדוק אם הפתרון שלנו עונה על תנאי השאלה.
+            <br>
+            כלומר, האם הקלט מותאם למה שהתבקש? האם הפלט של התוכנית הוא כמו הפלט שרצינו שיהיה?
+            <br>
+            הדרך הכי טובה לבדוק את זה היא לקחת מספר קטן שאנחנו יודעים את התוצאה שאמורה להיות או את הדוגמא שאנחנו מקבלים,
+            <br>
+            להריץ אותה על הקוד שלנו ולראות מה יהיה הפלט.
+            <br>
+          </p>
+
+
+        </div>
+        <!--para-->
+
+
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+
+
+      <div class="col-md-6">
+
+        <figure class="code">
+
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> DevideByTwo(<b>int</b> n)
+{
+  
+  <b>if</b>(n == 1)
+  {
+    <b>return</b> 0; <em>// base case.</em>
+  }
+  <b>else</b>
+  {
+    <b>return</b> 1 + DevideByTwo(n/2); <em>// Making the problem</em>
+    <em>smaller</em>
+  }
+
+}
+            </code></pre>
+        </figure>
+
+      </div>
+      <!--COL MD 6 - FOR CODE-->
+
+
+    </div>
+    <!--ROW-->
+
+
+
+  </section>
 </body>
 
 </html>
+
+
+<!--
+
+
+
+
+
+
+-->
