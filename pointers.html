@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Learning C Pointers</title>
+  <title>Lets learn C: pointers</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -35,7 +35,7 @@
     <a href="mathOperator.html">אופרטורים חשבוניים</a>
     <a href="statments.html">משפטי בקרה</a>
     <a href="oneDimLoops.html">לולאות</a>
-    <a href="twoDimLoops.html">לולאות דו מימדיות</a>
+    <a href="twoDimLoops.html">לולאות דו ממדיות</a>
     <a href="casting.html">casting </a>
     <a href="sizeOf.html">sizeof</a>
     <a href="typeDef.html">typedef</a>
@@ -47,7 +47,7 @@
     <a href="dinArrays.html">מערכים דינאמיים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
@@ -57,7 +57,7 @@
 
   <section id="main">
 
-    <h1 class="head-left">Learning C</h1>
+    <h1 class="head-left">Lets learn C</h1>
     <h1 class="head-right">מצביעים</h1>
 
     <h3 class="head-right">למה צריך מצביע?</h3>
@@ -320,9 +320,9 @@
 <b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b);
 <b>void</b> main()
 {
-<b>int</b> num_a = 11;
-<b>int</b> num_b = 31;
-inc_by_one(&num_a,&num_b);
+  <b>int</b> num_a = 11;
+  <b>int</b> num_b = 31;
+  inc_by_one(&num_a,&num_b);
 }
 <b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b)
 {
@@ -486,7 +486,7 @@ inc_by_one(&num_a,&num_b);
       <div class="col-md-6">
 
         <figure class="code">
-          <figcaption id="example1-caption">CODE 6:</figcaption>
+          <figcaption id="example1-caption">CODE 7:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
