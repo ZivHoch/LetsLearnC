@@ -25,9 +25,9 @@
 </head>
 
 <body class="bg-four scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
@@ -41,24 +41,22 @@
     <a href="typeDef.html">typedef</a>
     <a href="functions.html">פונקציות</a>
     <a href="recursion.html">רקורסיות</a>
-    <a href="pointers.html">מצביעים</a>
+    <a href="pointers.html"><span class="colorcheck">מצביעים</span></a>
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
+  <section id="main" onclick="openOrCloseNav(0)">
 
-
-  <section id="main">
-
-    <h1 class="head-left">Lets learn C</h1>
+    <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">מצביעים</h1>
 
     <h3 class="head-right">למה צריך מצביע?</h3>
@@ -85,25 +83,32 @@
 
       <p>
         אנו יוצרים משתנה מסוג מצביע בצורה הבאה:
-        <br>
-        Type *name;
-        <br>
-        Type – אומר מאיזה מסוג המצביע שלנו (int , double וכו...)
-        <br>
-        Name – השם של המצביע
+        <ul>
+          <li>
+            <span dir="ltr">Type *name;</span>
+          </li>
+          <li>
+            Type – אומר מאיזה מסוג המצביע שלנו (int , double וכו...)
+          </li>
+          <li>
+            Name – השם של המצביע
+          </li>
+        </ul>
       </p>
 
     </div>
 
     <h3 class="head-right">סימון:</h3>
     <div class="First-Para">
-
       <p>
-        סימון * - הסימן של הכוכבית מבדיל את המשתנה מהמשתנים האחרים ואומר למחשב שזה משתנה מסוג מצביע.
-        <br>
-        סימון &amp; - בעזרת הסימון הזה אנחנו יכולים לקבל כתובת של משתנה מסויים וניתן להדפיס אותה בתור מספר בעזרת %d או
-        כתובת
-        hex בעזרת %x. </p>
+        <ul>
+          <li> סימון * - הסימן של הכוכבית מבדיל את המשתנה מהמשתנים האחרים ואומר למחשב שזה משתנה מסוג מצביע.</li>
+          <li>סימון &amp; - בעזרת הסימון הזה אנחנו יכולים לקבל כתובת של משתנה מסויים וניתן להדפיס אותה בתור מספר בעזרת
+            %d או
+            כתובת
+            hex בעזרת %x.</li>
+        </ul>
+      </p>
 
     </div>
 
@@ -257,7 +262,7 @@
         <figure class="code">
 
           <figcaption id="example1-caption">CODE 3:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> inc_by_one(<b>int</b> num_a , <b>int</b> num_b);
 <b>void</b> main()
 {
@@ -318,7 +323,7 @@
 
         <figure class="code">
           <figcaption id="example1-caption">CODE 4:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b);
 <b>void</b> main()
 {

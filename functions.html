@@ -24,9 +24,9 @@
 </head>
 
 <body class="bg-fiveAndHalf scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
@@ -38,25 +38,23 @@
     <a href="casting.html">casting </a>
     <a href="sizeOf.html">sizeof</a>
     <a href="typeDef.html">typedef</a>
-    <a href="functions.html">פונקציות</a>
+    <a href="functions.html"><span class="colorcheck">פונקציות</span></a>
     <a href="recursion.html">רקורסיות</a>
     <a href="pointers.html">מצביעים</a>
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-
-  <section id="main">
-
-    <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+  <section id="main" onclick="openOrCloseNav(0)">
+    <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">פונקציות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
 
@@ -100,32 +98,32 @@
         <figure class="code">
 
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-<b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};
-<b>double</b> avg;
-<b>int</b> i,moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
-avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
-avg = avg/4;
-<b>for</b>( i=0 ; i &lt; 5 ;i++)
-{
-  <b>if</b>(avg &lt; studentGrades[i])
+  <b>int</b> studentGrades[] = {100 , 90 , 80 , 70 , 60};
+  <b>double</b> avg;
+  <b>int</b> i,moreThanAvg = 0 , lessThanAvg = 0 , onTheAvg = 0;
+  avg = studentGrades[0] + studentGrades[1] + studentGrades[2] + studentGrades[3] + studentGrades[4];
+  avg = avg/4;
+  <b>for</b>( i=0 ; i &lt; 5 ;i++)
   {
-    lessThanAvg++;
+    <b>if</b>(avg &lt; studentGrades[i])
+    {
+      lessThanAvg++;
+    }
+    <b>else if</b>(studentGrades[i] &lt; avg)
+    {
+      moreThanAvg++;
+    }
+    <b>else</b>
+    {
+      onTheAvg++;
+    }
   }
-  <b>else if</b>(studentGrades[i] &lt; avg)
-  {
-    moreThanAvg++;
-  }
-  <b>else</b>
-  {
-    onTheAvg++;
-  }
-}
-printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, moreThanAvg);
-printf(<u>"amount of students with lower grades than avg is: %d\n"</u>, lessThanAvg);
-printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAvg);
+  printf(<u>"amount of students with higher grades than avg is: %d\n"</u>, moreThanAvg);
+  printf(<u>"amount of students with lower grades than avg is: %d\n"</u>, lessThanAvg);
+  printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAvg);
 }
     </code></pre>
         </figure>
@@ -169,7 +167,7 @@ printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAv
         <figure class="code">
 
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>double</b> calculateAvg(<b>int</b> *arr , <b>int</b> sizeOfArr);
 <b>void</b>fillAnArrayWithDetails(<b>int</b> *OriginalArr, <b>int</b> sizeOfArr , <b>int</b> *res);
 <b>void</b> printRes(<b>int</b> *res);
@@ -231,7 +229,7 @@ printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAv
 <b>double</b> calculateAvg(<b>int</b> *arr,<b>int</b> sizeOfArr)
 {
   <b>double</b> avg=0;
-  <b>int</b> i=0;
+  <b>int</b> i;
   <b>for</b>( i=0; i &lt; sizeOfArr ;i++)
   {
     avg += arr[i];
@@ -330,7 +328,7 @@ printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAv
         <figure class="code">
 
           <figcaption id="example1-caption">CODE 3:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>int</b> avg(<b>int</b> *arr , <b>int</b> sizeOfArr); <em>// Before main function.</em>
 <b>void</b> main()
 {
@@ -353,9 +351,6 @@ printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAv
 
 
     <div class="First-Para">
-
-
-
       <p>
         2. מתי נשתמש בפונקציות ?
         <br>
@@ -374,106 +369,30 @@ printf(<u>"amount of students with same grades as the avg is: %d\n"</u>, onTheAv
         <br>
         <span dir="ltr">nameOfTheFunction</span> = שם הפונקציה – רצוי שתהיה ברורה
         <br>
-
         <span dir="ltr">(What the function receives); </span>= אילו משתנים הפונקציה מקבלת ?
         <br>
       </p>
-
     </div>
-
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             למשל:
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
-
           <figcaption id="example1-caption">CODE 4:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false">
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> printMsg(<b>char</b> *s1);
 <b>int</b> returnSumNumbers(<b>int</b> *arr , <b>int</b> sizeOfArr);
 <b>double</b> returnSum(<b>double</b> *arr , <b>int</b> sizeOfArr);
             </code></pre>
         </figure>
-
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
-
-
-
-
   </section>
 </body>
 
 </html>
-
-
-<!--
-
-
-   
-   
-
-    ____________________________
- 
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <br>
-
-
-
-
--->
-
-
-<!--FIRST CODE
-
-
-
--->
-
-<!--SECOND CODE
-
-
-    <figure>
-
-        </figure>
-
-
--->
-
-<!--THIRD CODE
-
-
-
--->
-
-<!--FOURTH CODE
-
-
-
-
--->

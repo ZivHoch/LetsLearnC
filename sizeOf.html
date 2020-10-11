@@ -24,9 +24,9 @@
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
@@ -36,7 +36,7 @@
     <a href="oneDimLoops.html">לולאות</a>
     <a href="twoDimLoops.html">לולאות דו ממדיות</a>
     <a href="casting.html">casting </a>
-    <a href="sizeOf.html">sizeof</a>
+    <a href="sizeOf.html"><span class="colorcheck">sizeof</span></a>
     <a href="typeDef.html">typedef</a>
     <a href="functions.html">פונקציות</a>
     <a href="recursion.html">רקורסיות</a>
@@ -44,18 +44,17 @@
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-
-  <section id="main">
-    <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+  <section id="main" onclick="openOrCloseNav(0)">
+    <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">sizeof</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
     <h3 class="head-right"> למה אנו צריכים את sizeof?</h3>
     <div class="First-Para">
