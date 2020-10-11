@@ -26,15 +26,15 @@
 
 <body class="bg-twoAndHalf scrollbar scrollbar_style">
 
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
     <a href="printAndScan.html">קלט ופלט</a>
     <a href="mathOperator.html">אופרטורים חשבוניים</a>
-    <a href="statments.html">משפטי בקרה</a>
+    <a href="statments.html"><span class="colorcheck">משפטי בקרה</span></a>
     <a href="oneDimLoops.html">לולאות</a>
     <a href="twoDimLoops.html">לולאות דו ממדיות</a>
     <a href="casting.html">casting </a>
@@ -46,18 +46,17 @@
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-  <section id="main">
-
-    <h1 class="head-left">Lets learn C</h1>
+  <section id="main" onclick="openOrCloseNav(0)">
+    <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">משפטי בקרה</h1>
 
     <!--first paragraph-->
@@ -147,20 +146,19 @@
         <figure class="code">
 
           <figcaption id="example1-caption">CODE:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
-  <b>void</b> main() <em>// main function - this is the code that will be executed when we click f5.</em>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main() <em>// main function - this is the code that will be executed when we click f5.</em>
+{
+  <b>int</b> age = 15; <em>// declaring an integer variable named age and setting in to 15.</em>
+  <b>if</b>(age >= 15) <em>// checking if our age variable is greater or equal to 15.</em>
   {
-    <b>int</b> age = 15; <em>// declaring an integer variable named age and setting in to 15.</em>
-    
-    <b>if</b>(age >= 15) <em>// checking if our age variable is greater or equal to 15.</em>
-    {
-      printf(<u>"You can enter\n"</u>);<em> // this code will be executed only if our if statement is true.</em>
-    }
-    <b>else</b><em>// the code inside the curly brackets will be executed only if our if statement is false.</em>
-    {
-      printf(<u>"You can't enter\n"</u>);
-    }
-  } <em>// End of main function</em>
+    printf(<u>"You can enter\n"</u>);<em> // this code will be executed only if our if statement is true.</em>
+  }
+  <b>else</b><em>// the code inside the curly brackets will be executed only if our if statement is false.</em>
+  {
+    printf(<u>"You can't enter\n"</u>);
+  }
+} <em>// End of main function</em>
           </code></pre>
         </figure>
       </div>

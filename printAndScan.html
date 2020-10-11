@@ -25,14 +25,13 @@
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
-    <a href="printAndScan.html">קלט ופלט</a>
+    <a href="printAndScan.html"><span class="colorcheck">קלט ופלט</span></a>
     <a href="mathOperator.html">אופרטורים חשבוניים</a>
     <a href="statments.html">משפטי בקרה</a>
     <a href="oneDimLoops.html">לולאות</a>
@@ -46,17 +45,17 @@
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-  <section id="main">
-    <h1 class="head-left">Lets learn C</h1>
+  <section id="main" onclick="openOrCloseNav(0)">
+    <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">קלט ופלט</h1>
 
     <h3 class="head-right">פלט</h3>
@@ -114,7 +113,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> x = 7;
@@ -167,7 +166,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> x;
@@ -182,25 +181,19 @@
     <!--END Fourth pargaraph-->
     <!--Fifth paragraph-->
     <div class="First-Para">
-      <p>
-        <!--TABLE-->
-        מה רושמים? מה מדפיסים?
-        <br>
-        <span dir="ltr"> %d -> int</span>
-        <br>
-        <span dir="ltr"> %c -> char</span>
-        <br>
-        <span dir="ltr"> %f -> float</span>
-        <br>
-        <span dir="ltr"> %lf -> double</span>
-        <br>
-        <span dir="ltr"> %s -> String</span>
-        <br>
-        <span dir="ltr"> %u -> Unsigned int</span>
-        <br>
-        <span dir="ltr"> %ld -> long</span>
-        <!--END TABLE-->
+      <p>מה רושמים? מה מדפיסים?
       </p>
+      <ul>
+        <li><span dir="ltr">%d -&gt; int</span></li>
+        <li><span dir="ltr">%c -&gt; char</span></li>
+        <li><span dir="ltr">%f -&gt; float</span></li>
+        <li><span dir="ltr">%lf -&gt; double</span></li>
+        <li><span dir="ltr">%s -&gt; String</span></li>
+        <li><span dir="ltr">%u -&gt; Unsigned int</span></li>
+        <li><span dir="ltr"> %ld -&gt; long</span></li>
+      </ul>
+      <!--TABLE-->
+
     </div>
     <!--End fifth pargraph-->
   </section>

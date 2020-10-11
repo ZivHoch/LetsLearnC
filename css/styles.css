@@ -106,7 +106,6 @@ a:hover {
   text-align: right;
 }
 
-/******** Id ********/
 .sidenav-icon {
   margin: 18px 24px 0 0;
   font-size: 20px;
@@ -145,6 +144,10 @@ a:hover {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.colorcheck {
+  color: #03c4a1;
 }
 
 #main {

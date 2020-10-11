@@ -24,9 +24,9 @@
 </head>
 
 <body class="bg scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
@@ -44,32 +44,32 @@
     <a href="doublePointer.html">מצביע כפול</a>
     <a href="arrays.html">מערכים</a>
     <a href="dinArrays.html">מערכים דינאמיים</a>
+    <a href="twoDimArrays.html"><span class="colorcheck">מערכים דו ממדים</span></a>
     <a href="string.html">מחרוזות</a>
     <a href="binSearch.html">חיפוש בינארי</a>
-    <a href="twoDimArrays.html">מערכים דו ממדים</a>
     <a href="bubbleSort.html">מיון בועות</a>
     <a href="selectionSort.html">מיון בחירה</a>
     <a href="insertionSort.html">מיון הכנסה</a>
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
+  <section id="main" onclick="openOrCloseNav(0)">
+    <h1 class="top-left">Let's learn C</h1>
 
-  <h1 class="top-left">Lets learn C</h1>
+    <h2 class="top-right-head">מערך דו ממדים (מטריצה)</h2>
 
-  <h2 class="top-right-head">מערך דו ממדים (מטריצה)</h2>
+    <p class="top-right">
 
-  <p class="top-right">
-
-    כמו שלמדו על "מערכים" ולאחר שהבנו לעומק את היעילות שבשימוש במערכים, אנו נראה שיש מבנה נתונים מתקדם יותר שנקרא מערך
-    דו ממדי.
-    תפקידו של מבנה זה הוא לאחסן נתונים במעין טבלה.
-    אל הטבלה ניגש בצורה הבאה:
-    mat[x][y];
-    כפי שראינו אם הטבלה אנו ניגשים בעזרת שני אינדקסים (נהוג i,j) נראה איך זה נראה מאחורי הקלעים:
-    <br>
-    <br>
-    <br>
-    <!--TABLE
+      כמו שלמדו על "מערכים" ולאחר שהבנו לעומק את היעילות שבשימוש במערכים, אנו נראה שיש מבנה נתונים מתקדם יותר שנקרא מערך
+      דו ממדי.
+      תפקידו של מבנה זה הוא לאחסן נתונים במעין טבלה.
+      אל הטבלה ניגש בצורה הבאה:
+      mat[x][y];
+      כפי שראינו אם הטבלה אנו ניגשים בעזרת שני אינדקסים (נהוג i,j) נראה איך זה נראה מאחורי הקלעים:
+      <br>
+      <br>
+      <br>
+      <!--TABLE
       
       0 63 4 1
       
@@ -81,21 +81,21 @@
       <br>
       -->
 
-    כמו במערכים רגילים (ובתכנות בכלל) המטריצה מתחילה ב0,0.
-    <br>
-    הערך במקום [0,3] הוא 0
-    <br>
-    הערך במקום [2,2] הוא 9
-    <br>
-    הערך במקום [3,1] הוא 87
-    <br>
-    הערך במקום [2,1] הוא 8
-    <br>
+      כמו במערכים רגילים (ובתכנות בכלל) המטריצה מתחילה ב0,0.
+      <br>
+      הערך במקום [0,3] הוא 0
+      <br>
+      הערך במקום [2,2] הוא 9
+      <br>
+      הערך במקום [3,1] הוא 87
+      <br>
+      הערך במקום [2,1] הוא 8
+      <br>
 
-    <br>
-    נניח שנרצה לחשב את הסכום כל ערכי המערך נוכל לעשות זאת באמצעות לולאה דו ממדית:
+      <br>
+      נניח שנרצה לחשב את הסכום כל ערכי המערך נוכל לעשות זאת באמצעות לולאה דו ממדית:
 
-    <!--CODE
+      <!--CODE
       int i,j,sum;
       sum=0;
 
@@ -106,7 +106,7 @@
       
         printf("the sum of the matrix is %d",sum);
         -->
-  </p>
+    </p>
 
 
 
