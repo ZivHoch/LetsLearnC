@@ -191,7 +191,7 @@
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
-<b>void</b> inc_by_one(int **double_ptr);
+<b>void</b> inc_by_one(<b>int</b> **double_ptr);
 
 <b>void</b> main()
 {
@@ -200,7 +200,7 @@
   inc_by_one(&amp;ptr);
 }
 
-<b>void</b> inc_by_one(int **double_ptr)
+<b>void</b> inc_by_one(<b>int</b> **double_ptr)
 {
   *(*double_ptr)++;
 }
