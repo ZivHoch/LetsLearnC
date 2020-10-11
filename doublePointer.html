@@ -24,9 +24,9 @@
 
 </head>
 
-<body class="bg">
+<body class="bg scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -128,8 +128,8 @@
 <b>void</b> main()
 {
   <b>int</b> number = 10 , *ptr , **double_ptr;
-  ptr = &number;
-  double_ptr =&ptr;
+  ptr = &amp;number;
+  double_ptr =&amp;ptr;
 }
       </code></pre>
         </figure>
@@ -171,13 +171,13 @@
             דוגמאות 2 למצביע כפול:
             <br>
             <br>
-            <span dir="ltr">inc_by_one(&ptr)</span> – שליחה של פוינטר כפול מתבצעת בצורה הזו (במיין).
+            <span dir="ltr">inc_by_one(&amp;ptr)</span> – שליחה של פוינטר כפול מתבצעת בצורה הזו (בתוך ה main).
             <br>
             <span dir="ltr">*(*double_ptr)++</span>
-            – שינוי ערך של מצביע כפול תתבצע בצורה הזו.            
+            – שינוי ערך של מצביע כפול תתבצע בצורה הזו.
           </p>
 
-          
+
         </div>
         <!--para-->
 
@@ -196,8 +196,8 @@
 <b>void</b> main()
 {
   <b>int</b> number = 10 , *ptr;
-  ptr = &number;
-  inc_by_one(&ptr);
+  ptr = &amp;number;
+  inc_by_one(&amp;ptr);
 }
 
 <b>void</b> inc_by_one(int **double_ptr)
@@ -217,6 +217,7 @@
 
 
   </section>
+
 
 </body>
 

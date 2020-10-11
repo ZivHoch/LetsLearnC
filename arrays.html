@@ -23,9 +23,9 @@
 
 </head>
 
-<body class="bg-twoAndHalf">
-    <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+<body class="bg-twoAndHalf scrollbar scrollbar_style">
+  <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -53,119 +53,184 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
+
+  <section id="main">
+
+
     <h1 class="head-left">Lets learn C</h1>
-  </div>
+    <h2 class="head-right">מערכים</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          בשביל מה אנחנו צריכים מערך?
+          <br>
+          מערך הוא מבנה נתונים שביכולתו לאסוף הרבה מאוד נתונים מאותו הסוג באותו
+          המקום.
+          <br>
+          נראה דוגמה למתי נוח לנו לעבוד עם מערך:
+          <br>
+          עלינו ליצור תוכנה שבה יש כיתה שלמה של סטודנטים שמהם אנחנו קולטים ציון
+          ומחזירים ממוצע כיתתי.
+          <br>
+          כדי לעשות זאת עלינו ליצור כ-30 תלמידים, לעשות קליטה של כ-30 ציונים ולאחר
+          מכן לחשב את הממוצע ולהחזיר אותו:
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>double</b> return_sum()
+{
+  <b>double</b> student1 , student2 , student3 , … , student30;
+  scanf(<u>"%lf"</u>, &amp;student1); scanf(<u>"%lf"</u>, &amp;student2); … scanf(<u>"%lf"</u>, &amp;student30);  
+  <b>double</b> sum = (student1 + … + student30) / 30;
+  <b>return</b> sum;
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
 
-  <h2 class="head-right">מערכים</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          כרגע קיצרנו קצת את הדוגמה אבל כמובן שכדי לעשות זאת עלינו באמת לרשום 30
+          משתנים, לבצע 30 קליטות ולאחר מכן לחשב את הממוצע ולהחזירו, מדובר בהרבה מאוד
+          קוד שממש חוזר על עצמו.
+          <br />
+          ניתן לעשות זאת ביותר קלות ע"י שימוש במערך בצורה הבאה:
+          <br />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>double</b> return_sum()
+{
+  <b>int</b> i;
+  <b>double</b> students_array[30] , sum = 0;
+  <b>for</b> ( i = 0; i &lt; 30; i++ )
+  {
+    scanf_s(<u>"%lf"</u>,students_array[i]);
+    sum += students_array[i];
+  }
+  <b>return</b> (sum/30);
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
 
-  <p class="top-right">
-    בשביל מה אנחנו צריכים מערך?
-    <br />
-    מערך הוא מבנה נתונים שביכולתו לאסוף הרבה מאוד נתונים מאותו הסוג באותו
-    המקום.
-    <br />
-    נראה דוגמה למתי נוח לנו לעבוד עם מערך:
-    <br />
-    עלינו ליצור תוכנה שבה יש כיתה שלמה של סטודנטים שמהם אנחנו קולטים ציון
-    ומחזירים ממוצע כיתתי.
-    <br />
-    כדי לעשות זאת עלינו ליצור כ-30 תלמידים, לעשות קליטה של כ-30 ציונים ולאחר
-    מכן לחשב את הממוצע ולהחזיר אותו:
-    <br />
-    <!--CODE
-      double return_sum()
-      {
-      double student1 , student2 , student3 , … , student30;
-      scanf("%lf", &student1); , scanf("%lf", &student2); … scanf("%lf", &student30);  
-      double sum = (student1 + … + student30) / 30;
-      return sum;
-      }
-      END CODE-->
-    <br />
-    כרגע קיצרנו קצת את הדוגמה אבל כמובן שכדי לעשות זאת עלינו באמת לרשום 30
-    משתנים, לבצע 30 קליטות ולאחר מכן לחשב את הממוצע ולהחזירו, מדובר בהרבה מאוד
-    קוד שממש חוזר על עצמו.
-    <br />
-    ניתן לעשות זאת ביותר קלות ע"י שימוש במערך בצורה הבאה:
-    <br />
-    <!--CODE
-      double return_sum()
-      {
-      double students_array[30] , sum = 0;
-       for(int i=0; i<30;i++)
-      {
-        scanf_s("%lf",students_array[i]);
-        sum += students_array[i];
-      }
-        return (sum/30);
-      }
-      END CODE-->
-    <br />
-    בדוגמה שפה השגנו בדיוק את אותה התוצאה, עם הרבה פחות קוד והרבה יותר סדר.
-    <br />
-    <br />
-    דברים שחשוב לציין בנוגע למערכים בשפת סי:
-    <br />
-    1. מערך בגודל 5 (שלא אמרנו מה גודלו במהלך ההצהרה אלא רק הכנסנו את האיברים
-    שלו). int arr[] = {1,2,3,4,5};
-    <br />
-    2. מערך בגודל 3 שבו הכנסנו ערכים לשני האיברים הראשונים, באיבר השלישי קיים
-    ערך שנקרא "ערך זבל" – שמשמעותו אומרת שזה ערך שאין להתייחס אליו ללא אתחול.
-    double arr[3] = {1,2};
-    <br />
-    3. מערך בגודל 20 שכל אבריו מאופסים. double zeroArr[20] = {0};
-    <br />
-    <br />
-    איך ניגשים לאיבר במערך?
-    <br />
-    לאחר יצירת המערך אנו נעבוד בעזרת מספר / משתנה שישמש אותנו כאינדקס המצביע
-    על האזור במערך שעליו אנחנו רוצים לעבוד.
-    <br />
-    הספירה שלנו במערכים (ובתכנות באופן כללי) מתחיל מ-0 , כך שהאיבר במקום
-    הראשון במערך שלנו יקרא האיבר במקום ה0.
-    <br />
-    דוגמה לכך:
-    <br />
-    אם נרצה לשנות לאיבר האחרון במערך בין חמשת האיברים הבא את הערך נעשה זאת
-    בצורה הבאה:
-    <br />
 
-    <!--CODE
-      int arr[5] = {1,2,3,4,5};  // Before
-      arr[5] = 8; 
-      // After, the array will look like that: {1,2,3,4,8}
-      END CODE-->
-    <br />
-    ניתן גם לגשת בצורה הבאה:
-    <br />
-    <!--CODE
-      int arr[5] = {1,2,3,4,5}; // before
-      *(arr+4) = 8;
-      // After, the array will look like that: {1,2,3,4,8}
-      END CODE-->
-    <br />
-    בצורה הראשונה ניגשנו לאיבר ה5 בתוך המערך בעזרת הסוגריים המרובעים ושינינו
-    את הערך שלו. בצורה השנייה לקחנו את המערך (שמצביע תמיד על האיבר הראשון)
-    והלכנו ארבעה צעדים קדימה לסופו ושם שינינו את הערך (כלומר 1+4 = 5 , ניגשנו
-    לאיבר ה5 במערך).
-    <br />
-    <br />
-    יתרונות במערך סטטי:
-    <br />
-    1. עשוי לחסוך לנו הרבה מאוד זמן ביצירת משתנים (למשל כמו בדוגמה הראשונה ,
-    30 משתנים בעלי אותו התפקיד – נכנסים טוב בתוך מערך יחיד בגודל 30).
-    <br />
-    2. הופך את הקוד לקריא יותר (משתנה אחד , קצר מ30 משתנים)
-    <br />
-    3. . הגישה אליו מאוד נוחה , רק צריך לגשת באמצעות אינדקס מספרי
-    <br />
-    <br />
-    חסרונות:
-    <br />
-    1. מגדירים פעם אחת את הגודל, לא ניתן לשנות אותו לאחר מכן (כלומר אם היו לנו
-    30 תלמידים בכיתה ולפתע הכיתה גדלה ל31 אין לנו אופציה להשתמש במערך הקיים).
-    <br/>
-  </p>
+    <div class="First-Para">
+      <p>
+        בדוגמה שפה השגנו בדיוק את אותה התוצאה, עם הרבה פחות קוד והרבה יותר סדר.
+        <br>דברים שחשוב לציין בנוגע למערכים בשפת סי:
+      </p>
+      <ol>
+        <li>
+          מערך בגודל 5 (שלא אמרנו מה גודלו במהלך ההצהרה אלא רק הכנסנו את האיברים
+          שלו).<br> <span dir="ltr">int arr[] = {1,2,3,4,5};</span>
+        </li>
+        <li>
+          מערך בגודל 3 שבו הכנסנו ערכים לשני האיברים הראשונים, באיבר השלישי קיים
+          ערך שנקרא "ערך זבל" – שמשמעותו אומרת שזה ערך שאין להתייחס אליו ללא אתחול.
+          <span dir="ltr">double arr[3] = {1,2};</span>
+        </li>
+        <li>
+          מערך בגודל 20 שכל אבריו מאופסים. <span dir="ltr"> double zeroArr[20] = {0};</span>
+        </li>
+      </ol>
+    </div>
+    <div class="First-Para">
+      <p>
+        איך ניגשים לאיבר במערך?
+        <br>
+        לאחר יצירת המערך אנו נעבוד בעזרת מספר / משתנה שישמש אותנו כאינדקס המצביע
+        על האזור במערך שעליו אנחנו רוצים לעבוד.
+        <br>
+        הספירה שלנו במערכים (ובתכנות באופן כללי) מתחיל מ-0 , כך שהאיבר במקום
+        הראשון במערך שלנו יקרא האיבר במקום ה0.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            דוגמה לכך:
+            <br />
+            אם נרצה לשנות לאיבר האחרון במערך בין חמשת האיברים הבא את הערך נעשה זאת
+            בצורה הבאה:
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 3:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> arr[5] = {1,2,3,4,5}; <em>// Before</em>
+  arr[5] = 8; 
+  <em>// After, the array will look like that: {1,2,3,4,8}</em>
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            ניתן גם לגשת בצורה הבאה:
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 4:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> arr[5] = {1,2,3,4,5}; <em>// Before</em>
+  *(arr+4) = 8;
+  <em>// After, the array will look like that: {1,2,3,4,8}</em>
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
+    <div class="First-Para">
+      בצורה הראשונה ניגשנו לאיבר ה5 בתוך המערך בעזרת הסוגריים המרובעים ושינינו
+      את הערך שלו. בצורה השנייה לקחנו את המערך (שמצביע תמיד על האיבר הראשון)
+      והלכנו ארבעה צעדים קדימה לסופו ושם שינינו את הערך (כלומר 1+4 = 5 , ניגשנו
+      לאיבר ה5 במערך).<br><br>
+      יתרונות במערך סטטי:
+      <ol>
+        <li>
+          עשוי לחסוך לנו הרבה מאוד זמן ביצירת משתנים (למשל כמו בדוגמה הראשונה ,
+          30 משתנים בעלי אותו<br> התפקיד – נכנסים טוב בתוך מערך יחיד בגודל 30).
+        </li>
+        <li>
+          הופך את הקוד לקריא יותר (משתנה אחד , קצר מ30 משתנים)
+        </li>
+        <li>
+          . הגישה אליו מאוד נוחה , רק צריך לגשת באמצעות אינדקס מספרי
+        </li>
+      </ol>
+      <br>
+      חסרונות:
+      <ol>
+        <li>
+          מגדירים פעם אחת את הגודל, לא ניתן לשנות אותו לאחר מכן (כלומר אם היו לנו
+          30 תלמידים בכיתה ולפתע הכיתה גדלה ל31 אין לנו אופציה להשתמש במערך הקיים).
+        </li>
+      </ol>
+    </div>
+  </section>
 </body>
 
 </html>
