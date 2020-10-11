@@ -24,9 +24,9 @@
 
 </head>
 
-<body class="bg-two">
+<body class="bg-two scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -71,16 +71,16 @@
         int על ידי שם אחר, לדוגמא positive_only.
         <br>
         כעת כאשר אנו נצטרך להשתמש ב unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר קריא.
-       
+
         באופן דומה אנו יכולים להגדיר גם רצף של מילים (או מילה) או פונקציות על ידי שמות שאנחנו נגדיר.
-      
+
         לדוגמא, אנו נוכל להגדיר את 1 להיות ODD ואת 0 להיות EVEN על ידי הגדרת define.
-       <br>
-        הסינטקס של typedef & define:
         <br>
-        <span dir="ltr">typedef unsigned int positive_only;</span>
+
+        <br>
+        <span dir="ltr"></span>
       </p>
-    
+
     </div>
 
     <div class="row">
@@ -88,64 +88,66 @@
       <div class="col-md-6">
 
         <div class="para">
-
           <p>
-
-            לדוגמה:
-            <br>
-            <br>
-            typedef מסמן לקומפיילר שיש פה "הגדרה חדשה".
+            הסינטקס של typedef & define:<br>
+            typedef מסמן לקומפיילר שיש פה "הגדרה חדשה".<br>
             unsigned int מסמן לקומפיילר למה המחשב מתייחס.
             positive_only מה המתכנת רואה.
             חשוב לזכור: typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה. נהוג לרשום define ו typedef
             בתחילת הקוד (אחרי הinclude 'ים).
-
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
-        <!--Enter  FIRST CODE here-->
-
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#define</i> <strong>ODD</strong> 1
+<b>typedef unsigned int</b> positive_only;
+<b>void</b> main()
+{
+  <em>//code</em>
+}
+          </code></pre>
+        </figure>
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-
             שימוש בקוד:
-
           </p>
-
-
         </div>
         <!--para-->
-
-
       </div>
       <!--COL MD 6 - FOR TEXT-->
 
 
       <div class="col-md-6">
 
-        <!--Enter figure here-->
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#define</i> <strong>ODD</strong> 1
+<i>#define</i> <strong>EVEN</strong> 0
+<b>typedef unsigned int</b> <span class="colorgold">positive_only</span>;
+<b>void</b> main()
+{
+  <span class="colorgold">positive_only</span> x;
+  printf(<u>"please enter number"</u>);
+  scanf_s(<u>"%u"</u>,&amp;x);
+  <b>if</b> (x%2 == <strong>ODD</strong>)
+  {
+    printf(<u>"the number is ODD"</u>);
+  }
+  <b>if</b> (x%2 == <strong>EVEN</strong>)
+  {
+    printf(<u>"the number is EVEN"</u>);
+  }
+}
+          </code></pre>
+        </figure>
 
       </div>
       <!--COL MD 6 - FOR CODE-->
@@ -161,8 +163,8 @@
 
 </html>
 
-  
- 
+
+
 
 
 <!--FIRST CODE

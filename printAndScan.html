@@ -8,26 +8,26 @@
   <title>Lets learn C: printAndScan</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
 
- <!-- Font Awesome -->
- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
- <!-- CSS -->
+  <!-- CSS -->
 
- <!-- Bootstrap Scripts -->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
- <!-- Java Script -->
- <script src="js/code.js"></script>
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
 
 </head>
 
-<body class="bg-two">
+<body class="bg-two scrollbar scrollbar_style">
 
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -55,70 +55,64 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
+  <section id="main">
+    <h1 class="head-left">Lets learn C</h1>
+    <h1 class="head-right">קלט ופלט</h1>
 
-  <h1 class="head-left">Lets learn C</h1>
-  <h1 class="head-right">קלט ופלט</h1>
+    <h3 class="head-right">פלט</h3>
+    <!--First paragraph-->
+    <div class="First-Para">
 
+      <p>
 
-  <h3 class="head-right">פלט</h3>
-  <!--First paragraph-->
-  <div class="First-Para">
+        בשפת c יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה
+        הסברנו
+        <a href="firstProgram.html">בתוכנית הראשונה שלנו</a>).
+        <br>
+        בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו בעמוד <a href="variables.html">משתנים</a>
+        ) בצורה הבאה:
+        <br>
+        <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
+        <br>
+        הסבר:
+        <br>
+        <span dir="ltr">printf("%left",right)</span> = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג
+        המשתנה
+        שאותו אנו מדפיסים ובצד
+        ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
+        <br>
+      </p>
 
-    <p>
-      
-      בשפת c יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה
-      הסברנו
-      <a href="firstProgram.html">בתוכנית הראשונה שלנו</a>).
-      <br>
-      בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו בעמוד <a href="variables.html">משתנים</a>
-      ) בצורה הבאה:
-      <br>
-      <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
-      <br>
-      הסבר:
-      <br>
-      <span dir="ltr">printf("%left",right)</span> = פקודת ההדפסה שלנו – במקרה שלנו אנחנו רושמים בצד שמאל % ואת סוג
-      המשתנה
-      שאותו אנו מדפיסים ובצד
-      ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
-      <br>
-    </p>
-
-  </div>
-  <!--END FIRST PARA-->
-
+    </div>
+    <!--END FIRST PARA-->
 
 
-  <!--Second paragraph-->
 
-  <div class="para">
+    <!--Second paragraph-->
 
     <div class="row">
 
       <div class="col-md-6">
 
+        <div class="para">
 
-        <p>
-          לדוגמה:
-          <br>
-          printf = הפקודה שאנו מבצעים
-          <br>
-          "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
-          <br>
-          x = שם המשתנה שאותו אנו מדפיסים
-          <br>
-          אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
-          <br>
 
-        </p>
-
+          <p>
+            לדוגמה:
+            <br>
+            printf = הפקודה שאנו מבצעים
+            <br>
+            "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+            <br>
+            x = שם המשתנה שאותו אנו מדפיסים
+            <br>
+            אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int<br> בשם x.
+            <br>
+          </p>
+        </div>
       </div>
-
       <div class="col-md-6">
-
-
         <figure class="code">
-
           <figcaption id="example1-caption">CODE 1:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
@@ -128,67 +122,50 @@
 }
             </code></pre>
         </figure>
-
-
-
       </div>
-
     </div>
 
-  </div>
 
-  <!--END SECOND PARAGRAPH-->
+    <!--END SECOND PARAGRAPH-->
 
-  <!--Third paragraph-->
-  <h3 class="head-right">קלט</h3>
-  
-  <div class="First-Para">
+    <!--Third paragraph-->
+    <h3 class="head-right">קלט</h3>
+    <div class="First-Para">
+      <p>
+        בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
+        <br>
+        <span dir="ltr">scanf("%kind", &name_of_variable);</span>
+        <br>
+        הסבר:
+        <br>
+        פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
+        <span dir="ltr">scanf("%left",&right);</span> .
+        <br>
+      </p>
+    </div>
 
-        <p>
-          בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
-          <br>
-          <span dir="ltr">scanf("%kind", &name_of_variable);</span>
-          <br>
-          הסבר:
-          <br>
-          פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
-          <span dir="ltr">scanf("%left",&right);</span> .
-          <br>
-        
-        </p>
-
-  </div>
-
-  <!--END THIRD PARAGRAPH-->
+    <!--END THIRD PARAGRAPH-->
 
 
-  <!--fourth paragraph-->
-
-  <div class="para">
+    <!--fourth paragraph-->
 
     <div class="row">
-
       <div class="col-md-6">
-
-
-        <p>
-          לדוגמה:
-          <br>
-          ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
-          <br>
-          לאחר שנכניס ערך יודפס לנו:
-          <br>
-          The value is: הערך
-          <br>
-      
-        </p>
-
+        <div class="para">
+          <p>
+            לדוגמה:
+            <br>
+            ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
+            <br>
+            לאחר שנכניס ערך יודפס לנו:
+            <br>
+            The value is: הערך
+            <br>
+          </p>
+        </div>
       </div>
-
       <div class="col-md-6">
-
         <figure class="code">
-    
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
@@ -200,44 +177,33 @@
 }
 </code></pre>
         </figure>
-
       </div>
-
     </div>
-
-  </div>
-
-  <!--END Fourth pargaraph-->
-
-  <!--Fifth paragraph-->
-
-  <div class="First-Para">
-
-    <p>
-     <!--TABLE-->
-     מה רושמים? מה מדפיסים?
-     <br>
-     <span dir="ltr"> %d -> int</span>
-     <br>
-     <span dir="ltr"> %c -> char</span>
-     <br>
-     <span dir="ltr"> %f -> float</span>
-     <br>
-     <span dir="ltr"> %lf -> double</span>
-     <br>
-     <span dir="ltr"> %s -> String</span>
-     <br>
-     <span dir="ltr"> %u -> Unsigned int</span>
-     <br>
-     <span dir="ltr"> %ld -> long</span>
-     <!--END TABLE-->
- 
-    </p>
-
-</div>
-
-<!--End fifth pargraph-->
-
+    <!--END Fourth pargaraph-->
+    <!--Fifth paragraph-->
+    <div class="First-Para">
+      <p>
+        <!--TABLE-->
+        מה רושמים? מה מדפיסים?
+        <br>
+        <span dir="ltr"> %d -> int</span>
+        <br>
+        <span dir="ltr"> %c -> char</span>
+        <br>
+        <span dir="ltr"> %f -> float</span>
+        <br>
+        <span dir="ltr"> %lf -> double</span>
+        <br>
+        <span dir="ltr"> %s -> String</span>
+        <br>
+        <span dir="ltr"> %u -> Unsigned int</span>
+        <br>
+        <span dir="ltr"> %ld -> long</span>
+        <!--END TABLE-->
+      </p>
+    </div>
+    <!--End fifth pargraph-->
+  </section>
 </body>
 
 </html>

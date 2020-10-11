@@ -24,9 +24,9 @@
 
 </head>
 
-<body class="bg-oneAndHalf">
+<body class="bg-oneAndHalf scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -65,15 +65,12 @@
         אנו משתמשים בלולאות כאשר יש צורך ברשימת קוד רב ש"חוזר על עצמו" או כמעט "חוזר על עצמו".
         לולאה בודקת תנאי מסוים בהתחלה ולאחר מכן במידה והטענה התקבלה כלא שגויה מתבצע קטע קוד שנמצא בתוך סוגריים מסולסלות
         (בדרך כלל, קיימת החרגה אם הלולאה מבצעת פעולה אחת בלבד).
-
       </p>
-
     </div>
 
     <h3 class="head-right">סוגי לולאות:</h3>
 
     <div class="First-Para">
-
       <p>
         לולאת for – לולאה שרצה מהגודל של האינדקס i עד לתנאי העצירה וגדלה בקצב קבוע.
         <br>
@@ -81,51 +78,33 @@
         <br>
         לולאת do while – לולאת while שהתוספת שלה היא שמתבצע קוד לפני הבדיקה (do = תעשה , while = תבדוק).
       </p>
-
     </div>
 
     <h3 class="head-right">חותמת הלולאות תיראה כך:</h3>
 
     <div class="First-Para">
-
       <p>
         <span dir="ltr">while(something){ CODE };</span>
-      
+
         <br>
         <span dir="ltr">do { CODE } while(something){ CODE };</span>
-       
+
         <br>
-        <span dir="ltr">for(int i=0; i < number; i++){ CODE };</span>
-       
-
-      </p>
-
-    </div>
-
-    <br>
+        <span dir="ltr">for(int i=0; i &lt; number; i++){ CODE };</span> </p>
+    </div> <br>
 
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             דוגמה ללולאת for:
-            במקום לרשום:            
+            במקום לרשום:
           </p>
-
-
         </div>
         <!--para-->
-
-
       </div>
       <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
 
           <figcaption id="example1-caption">CODE 1:</figcaption>
@@ -142,7 +121,6 @@
         </figure>
       </div>
       <!--COL MD 6 - FOR CODE-->
-
     </div>
     <!--ROW-->
 
@@ -161,12 +139,11 @@
             <br>
             אם נסתכל על שורת הקוד השנייה נוכל לראות שלושה דברים:
             <br>
-            1.	תנאי התחלה (i=0): מראה לנו מאיפה להתחיל את הספירה.
+            1. תנאי התחלה (i=0): מראה לנו מאיפה להתחיל את הספירה.
             <br>
-            2.	תנאי עצירה (i < 5): מראה לנו מתי עלינו לעצור.
-            <br>
-            3.	מהו השינוי (i++): מראה לנו שבכל סיבוב של הלולאה (איטרציה) אנו מגדילים את המשתנה i באחד בדיוק.
-            
+            2. תנאי עצירה (i &lt; 5): מראה לנו מתי עלינו לעצור. <br>
+            3. מהו השינוי (i++): מראה לנו שבכל סיבוב של הלולאה (איטרציה) אנו מגדילים את המשתנה i באחד בדיוק.
+
           </p>
 
 
@@ -209,9 +186,10 @@
         <div class="para">
 
           <p>
-            דוגמה ללולאת  while:
+            דוגמה ללולאת while:
             <br>
-            פה אנו מגדירים משתנה בשם flag ו counter והלולאה תיעצר רק אם counter יהיה גדול או שווה ל10 וזאת משום שflag ישתנה ל0 ולולאת הwhile שלנו תפסיק להתקיים.            
+            פה אנו מגדירים משתנה בשם flag ו counter והלולאה תיעצר רק אם counter יהיה גדול או שווה ל10 וזאת משום
+            שflag ישתנה ל0 ולולאת הwhile שלנו תפסיק להתקיים.
           </p>
 
 
@@ -226,13 +204,13 @@
       <div class="col-md-6">
 
         <figure class="code">
-          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <figcaption id="example1-caption">CODE 3:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>void</b> main()
 {  
   <b>int</b> flag = 1 , counter = 0;
   <b>while</b>(flag != 0)
   {
-    <b>if</b>(10 <= counter)
+    <b>if</b>(10 &lt;= counter)
     {
       flag = 0;
     }
@@ -256,6 +234,16 @@
 
   </section>
 
+
 </body>
 
 </html>
+
+
+<!--
+
+
+
+
+
+-->

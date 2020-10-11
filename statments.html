@@ -8,26 +8,26 @@
   <title>Lets learn C: statments</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
 
- <!-- Font Awesome -->
- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
- <!-- CSS -->
+  <!-- CSS -->
 
- <!-- Bootstrap Scripts -->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
- <!-- Java Script -->
- <script src="js/code.js"></script>
+  <!-- Java Script -->
+  <script src="js/code.js"></script>
 
 </head>
 
-<body class="bg-twoAndHalf">
+<body class="bg-twoAndHalf scrollbar scrollbar_style">
 
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -55,93 +55,92 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-  <h1 class="head-left">Lets learn C</h1>
-  <h1 class="head-right">משפטי בקרה</h1>
+  <section id="main">
 
-  <!--first paragraph-->
+    <h1 class="head-left">Lets learn C</h1>
+    <h1 class="head-right">משפטי בקרה</h1>
 
-  <div class="para">
+    <!--first paragraph-->
+    <div class="First-Para">
+      <p>
+        משפט שעל פיו אפשר לקבוע אמת / שקר נקרא - משפט בוליאני.
+        <br>
+        לדוגמה:
+        <ol>
+          <li>
+            גשם יורד בחוץ כרגע.
+          </li>
+          <li>
+            x>0
+          </li>
+          <li>
+            grade >= 60
+          </li>
+        </ol>
 
-    <div class="row">
+        פעולות שניתן להשתמש בהן בשפת סי לצורך בדיקה בקרה:
+        <ol>
+          <li>
+            &gt; (קטן / גדול מ..)
+          </li>
+          <li>
+            &lt; (קטן / גדול מ..)</li>
+          <li>
+            &gt;= (קטן שווה / גדול שווה מ..)
+          </li>
+          <li>
+            &lt;= (קטן שווה / גדול שווה מ..)
+          </li>
+          <li>
+            == (שווה)
+          </li>
+          <li>
+            != (שונה)
+          </li>
+        </ol>
 
-      <div class="col-md-6">
-
-
-        <p>
-
-          משפט שעל פיו אפשר לקבוע אמת / שקר נקרא - משפט בוליאני.
-          <br>
-          לדוגמה:
-          <br>
-          1. גשם יורד בחוץ כרגע.
-          <br>
-          2. x>0
-          <br>
-          3. grade >= 60
-          <br>
-
-          פעולות שניתן להשתמש בהן בשפת סי לצורך בדיקה בקרה:
-          <br>
-          1. > (קטן / גדול מ..)
-          <br>
-          2. < (קטן / גדול מ..) <br>
-            3. >= (קטן שווה / גדול שווה מ..)
-            <br>
-            4. <= (קטן שווה / גדול שווה מ..) <br>
-              5. == (שווה)
-              <br>
-              6. != (שונה)
-              <br>
-              <br>
-              משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
-              <br>
-              <span dir="ltr">if()</span> - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד שימצא בתוך סוגריים
-              מסולסלות.
-              <br>
-              <br>
-              else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים
-              אנחנו נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
-              <br>
-              <br>
-              <span dir="ltr">else if()</span> - זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם שלנו לא התקיים.
-              <br>
-              <br>
-              לדוגמה:
-              <br>
-              printf = הפקודה שאנו מבצעים
-              <br>
-              "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו int)
-              <br>
-              x = שם המשתנה שאותו אנו מדפיסים
-              <br>
-              אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
-              <br>
-
-
-
-        </p>
-
-      </div>
-
+        משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
+        <ul>
+          <li>
+            <span dir="ltr">if()</span> - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד
+            שימצא בתוך סוגריים
+            מסולסלות.
+          </li>
+          <li>
+            else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים
+            אנחנו נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
+          </li>
+          <li>
+            <span dir="ltr">else if()</span> - זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם
+            שלנו לא התקיים.
+          </li>
+        </ul>
+        לדוגמה:
+        <br>
+        printf = הפקודה שאנו מבצעים
+        <br>
+        "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו int)
+        <br>
+        x = שם המשתנה שאותו אנו מדפיסים
+        <br>
+        אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int בשם x.
+        <br>
+      </p>
     </div>
-
-  </div>
-
-  <!--Second paragraph-->
-
-  <div class="para">
+    <!--Second paragraph-->
 
     <div class="row">
-
       <div class="col-md-6">
-        <p>
- 
-          נראה דוגמה במילים ולאחר מכן נפתור אותה בקוד: <br>
-          נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם שעולה על המתקן צריך להיות 15. <br>
-          ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15. 
-          <br>
-          פתרון בקוד:
-        </p>
+        <div class="para">
+          <p>
+            נראה דוגמה במילים ולאחר מכן נפתור אותה בקוד: <br>
+            נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם
+            שעולה על המתקן צריך להיות 15. <br>
+            ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15.
+            <br>
+            פתרון בקוד:
+          </p>
+        </div>
       </div>
       <div class="col-md-6">
 
@@ -164,26 +163,9 @@
   } <em>// End of main function</em>
           </code></pre>
         </figure>
-
       </div>
-
+    </div>
+  </section>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-<!--CODE
-  
-נראה דוגמה במילים ולאחר מכן נפתור אותה בקוד: 
-          נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם שעולה על המתקן צריך להיות 15. 
-          ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15. 
-          <br>
-          פתרון בקוד:
--->

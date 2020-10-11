@@ -24,9 +24,9 @@
 
 </head>
 
-<body class="bg-four">
+<body class="bg-four scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -54,6 +54,7 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
+
 
   <section id="main">
 
@@ -100,7 +101,8 @@
       <p>
         סימון * - הסימן של הכוכבית מבדיל את המשתנה מהמשתנים האחרים ואומר למחשב שזה משתנה מסוג מצביע.
         <br>
-        סימון & - בעזרת הסימון הזה אנחנו יכולים לקבל כתובת של משתנה מסויים וניתן להדפיס אותה בתור מספר בעזרת %d או כתובת
+        סימון &amp; - בעזרת הסימון הזה אנחנו יכולים לקבל כתובת של משתנה מסויים וניתן להדפיס אותה בתור מספר בעזרת %d או
+        כתובת
         hex בעזרת %x. </p>
 
     </div>
@@ -146,9 +148,9 @@
     <div class="First-Para">
 
       <p>
-        בשורה זאת תתבצע הדפסה אבל לא של המשתנה number אלה את הכתובת שלו בגלל הסימון & , אם לדוגמה המשתנה number נמצא
+        בשורה זאת תתבצע הדפסה אבל לא של המשתנה number אלה את הכתובת שלו בגלל הסימון &amp; , אם לדוגמה המשתנה number נמצא
         בכתובת 1000 אז שורת הקוד הזאת תדפיס לנו 1000.
-        בלי הסימן & היינו מדפיסים את הערך בתוך המשתנה.
+        בלי הסימן &amp; היינו מדפיסים את הערך בתוך המשתנה.
       </p>
 
     </div>
@@ -181,7 +183,7 @@
 <b>void</b> main()
 {
   <b>int</b> number = 10;
-  <b>int</b> *ptr = &number;
+  <b>int</b> *ptr = &amp;number;
   *ptr = *ptr + 5;
   printf(<u>"%d"</u>,ptr)
 }
@@ -209,7 +211,7 @@
         של המשתנה עליו אנחנו מצביעים.
         <br>
         לכן בשורה הרביעית אנחנו מדפיסים את הכתובת של number ואין צורך ב & כי מצביע נחשב לכתובת , הוא שקול ל-<span
-          dir="ltr">&number</span>.
+          dir="ltr">&amp;number</span>.
 
       </p>
 
@@ -322,7 +324,7 @@
 {
   <b>int</b> num_a = 11;
   <b>int</b> num_b = 31;
-  inc_by_one(&num_a,&num_b);
+  inc_by_one(&amp;num_a,&amp;num_b);
 }
 <b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b)
 {
@@ -428,7 +430,7 @@
 <b>void</b> main()
 {
   <b>int</b> number = 6;
-  <b>int</b> *ptr = &number;
+  <b>int</b> *ptr = &amp;number;
   *ptr = 1000000;
 }
       </code></pre>
@@ -468,9 +470,9 @@
             <br>
             בשורה 16 – משנים את הערך של המשתנה שאליו מצביע p1 להיות שווה לערך של number.
             <br>
-            שורה 20  - לא אפשרית בגלל שמשתנה רגיל לא יכול להכיל כתובת.
+            שורה 20 - לא אפשרית בגלל שמשתנה רגיל לא יכול להכיל כתובת.
             <br>
-            שורה 22  – תקפיץ שגיאת ריצה משום שאנו לוקחים ערך מספרי ושומרים אותו בתור כתובת. 
+            שורה 22 – תקפיץ שגיאת ריצה משום שאנו לוקחים ערך מספרי ושומרים אותו בתור כתובת.
 
           </p>
 
@@ -492,7 +494,7 @@
 {
   <b>int</b> *p1 , *p2 , number = 10;
 
-  p1 = &number; 
+  p1 = &amp;number; 
 
   p2 = p1; 	
 
@@ -520,6 +522,7 @@
 
     </div>
     <!--ROW-->
+  </section>
 
 </body>
 

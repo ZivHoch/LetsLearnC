@@ -1,1 +1,1 @@
-# Lets learn C
+# LearningC

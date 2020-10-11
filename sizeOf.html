@@ -23,9 +23,9 @@
 
 </head>
 
-<body class="bg-two">
+<body class="bg-two scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -55,18 +55,14 @@
   </div>
 
   <section id="main">
-
     <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">sizeof</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
-
     <h3 class="head-right"> למה אנו צריכים את sizeof?</h3>
     <div class="First-Para">
-
       <p>
         נניח שאנחנו רוצים לעבוד על מערך בפונקציה מסויימת אבל שכחנו לשלוח לפונקציה את גודל המערך .
         ניתן לצאת מהבעיה הזאת על ידי שימוש ב- sizeof
       </p>
-
     </div>
 
     <h3 class="head-right">מה sizeof עושה ? </h3>
@@ -99,22 +95,15 @@
       <div class="col-md-6">
 
         <div class="para">
-
           <p>
             דוגמה 1:
             <br>
             הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג זה תופס 4 בתים.
           </p>
-
-
         </div>
         <!--para-->
-
-
       </div>
       <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
 
         <figure class="code">
@@ -123,7 +112,7 @@
 <b>void</b> main()
 {
   <b>int</b> number;
-  printf(<u>"%d\n"</u>,sizeof(number));
+  printf(<u>"%d\n"</u>,<b>sizeof</b>(number));
 }
       </code></pre>
         </figure>
@@ -168,7 +157,7 @@
 <b>void</b> main()
 {
   <b>double</b> arr[5];
-  printf(<u>"the size in bytes is: %d\n"</u>,sizeof(arr));
+  printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr));
 }
       </code></pre>
         </figure>
@@ -214,24 +203,14 @@
 <b>void</b> main()
 {
   <b>double</b> arr[5];
-  printf(<u>"the size in bytes is: %d\n"</u>,sizeof(arr)/double);
+  printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr)/<b>double</b>);
 }
       </code></pre>
         </figure>
 
       </div>
       <!--COL MD 6 - FOR CODE-->
-
     </div>
-
-
-
-
-
-
-
-
-
   </section>
 
 </body>

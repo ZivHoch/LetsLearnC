@@ -167,18 +167,18 @@ a:hover {
 
 
 
-.style-7::-webkit-scrollbar-track {
+.scrollbar_style::-webkit-scrollbar-track {
   background-color: #F5F5F5;
   border-radius: 10px;
 }
 
-.style-7::-webkit-scrollbar {
+.scrollbar_style::-webkit-scrollbar {
 
   width: 10px;
   background-color: #F5F5F5;
 }
 
-.style-7::-webkit-scrollbar-thumb {
+.scrollbar_style::-webkit-scrollbar-thumb {
 
   border-radius: 10px;
   background-image: -webkit-gradient(linear,
@@ -357,20 +357,30 @@ pre.line-numbers>div>span:nth-child(odd) {
 
 /* double-up the syntax elements for cross-browser RTF-keystroke support */
 
+/************FOR THE INCLUDE TYPE***********/
+pre strong {
+  font-weight: normal;
+  color: rgb(214, 147, 214);
+}
+
 /* blue paint for types, if, else, etc */
 
-pre b,
-pre strong {
+pre b {
   font-weight: normal;
   color: blue;
 }
 
 /* red paint for text and header file */
 pre u,
-pre u b,
-pre u strong {
+pre u b {
   text-decoration: none;
+  font-weight: normal;
   color: red;
+}
+
+.colorgold {
+  font-weight: normal;
+  color: gold;
 }
 
 /* gray paint for include*/

@@ -25,9 +25,9 @@
 
 </head>
 
-<body class="bg-twoAndHalf">
+<body class="bg-twoAndHalf scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -64,10 +64,11 @@
 
     <div class="First-Para">
 
-     
+
 
       <p>
-        כפי שלמדנו בנושא  <a href="oneDimLoops.html">לולאות</a> , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל לולאות WHILE , שרצה עד התנאי
+        כפי שלמדנו בנושא <a href="oneDimLoops.html">לולאות</a> , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל
+        לולאות WHILE , שרצה עד התנאי
         שאנו
         ניתן לה).
         <br>
@@ -124,7 +125,7 @@
 
     <br>
     <br>
-    
+
 
     </div>
     <!--ROW-->
@@ -155,17 +156,17 @@
 
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
-      <b>void</b> main()
-      {
-        <b>int</b> i,j;
-        <b>for</b>(i=1 ; i &lt; 6; i++)
-        {
-          <b>for</b>(j=1 ; j &lt;= i; j++)
-          {
-            printf(<u>"*"</u>); 
-          }
-          printf(<u>"/n"</u>);
-        }</code></pre>
+<b>void</b> main()
+{
+  <b>int</b> i,j;
+  <b>for</b>( i=1 ; i &lt; 6; i++)
+  {
+    <b>for</b>( j=1 ; j &lt;= i; j++)
+    {
+      printf(<u>"*"</u>); 
+    }
+    printf(<u>"/n"</u>);
+  }</code></pre>
         </figure>
 
       </div>
@@ -183,7 +184,7 @@
         הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5. בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
         הנוכחי. בתול הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה). בכל פעם שאנו מסיימים את הלולאה השנייה
         אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
-      
+
       </p>
     </div>
 

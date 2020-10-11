@@ -23,9 +23,9 @@
 
 </head>
 
-<body class="bg-oneAndHalf">
+<body class="bg-oneAndHalf  scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav  scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -70,46 +70,15 @@
     </div>
 
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             לדוגמה:
-            <br>
-            מה עשינו פה?
-            <br>
-            ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
-            <br>
-            לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
-            <br>
-            <br>
-            casting עובד בצורה הבאה:
-            <br>
-            לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו להציג אותו / להמיר אותו זמנית לint כדי להציג את המספר ללא
-            הנקודה
-            העשרונית.
-            <br>
-            ניתן לבצע המרה בצורה רגעית כמו שביצענו עכשיו כלומר, num אינו מושפע מהתהליך אלא רק מודפס בצורת int ולאחר מכן
-            חוזר
-            לעצמו.
-
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
-
           <figcaption id="example1-caption">CODE 1:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.io&gt;</u>
 <b>void</b> main()
@@ -121,13 +90,28 @@
 }
             </code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
+    <div class="First-Para">
+      <p>
+
+        מה עשינו פה?
+        <br>
+        ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
+        <br>
+        לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
+        <br><br>
+        casting עובד בצורה הבאה:
+        <br>
+        לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו להציג אותו / להמיר אותו זמנית לint כדי להציג את המספר ללא
+        הנקודה
+        העשרונית.<br>
+        ניתן לבצע המרה בצורה רגעית כמו שביצענו עכשיו כלומר, num אינו מושפע מהתהליך אלא רק מודפס בצורת int ולאחר מכן
+        חוזר
+        לעצמו.
+      </p>
+    </div>
+
 
     <div class="row">
 
@@ -153,12 +137,16 @@
 
       <div class="col-md-6">
 
-        <figure class="code">
 
+        <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>double</b> num = 8.325;
-<b>int</b> new_num = (<b>int</b>)num;
-            </code></pre>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <b>double</b> num = 8.325;
+  <b>int</b> new_num = (<b>int</b>)num;
+}
+  </code></pre>
         </figure>
 
       </div>
@@ -175,4 +163,3 @@
 </body>
 
 </html>
-

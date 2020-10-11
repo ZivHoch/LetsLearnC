@@ -23,9 +23,9 @@
 
 </head>
 
-<body class="bg-oneAndHalf">
+<body class="bg-oneAndHalf scrollbar scrollbar_style">
   <span class="sidenav-icon" onclick="openNav()"><i class="sidenav-icon fas fa-bars"></i></span>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
@@ -80,7 +80,7 @@
         <span dir="ltr">char s[6] = {'H' , 'e' , 'l' , 'l' , 'o' ,'\0' };</span>
         <br>
         <span dir="ltr">char s = "Hello";</span>
-      
+
       </p>
 
     </div>
@@ -96,13 +96,14 @@
     <h3 class="head-right">פונקציות שימושיות למחרוזות:</h3>
     <div class="First-Para">
       <p>
-        strcpy(s1,s2)  = מעתיקה ממחרוזת 2 למחרוזת 1
+        strcpy(s1,s2) = מעתיקה ממחרוזת 2 למחרוזת 1
         <br>
         strcat(s1,s2) = מעתיקה את 2 לקצה של 1
         <br>
         strlen(s1) = מוצאת את הגודל של המחרוזת
         <br>
-        strcmp(s1,s2) = מחריזה 0 אם המחרוזות שוות , מספר שלילי אם האות הראשונה (ששונה) במחרוזת 1 קטנה מ2 , מחזירה מספר חיובי אם האות הראשונה (ששונה) במחרוזת 1 גדולה מ2
+        strcmp(s1,s2) = מחריזה 0 אם המחרוזות שוות , מספר שלילי אם האות הראשונה (ששונה) במחרוזת 1 קטנה מ2 , מחזירה מספר
+        חיובי אם האות הראשונה (ששונה) במחרוזת 1 גדולה מ2
         <br>
         strchr(s1,ch) = מחזירה פוינטר לפעם הראשונה שהאות הופיעה בתוך המחרוזת
         <br>
@@ -134,7 +135,7 @@
 
         <figure class="code">
 
-          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <figcaption id="example1-caption">CODE :</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <i>#include</i> <u>&lt;string.h&gt;</u>
 
@@ -173,15 +174,3 @@
 </body>
 
 </html>
-
-
-
-<!--CODE
-
-    
-       
-    
-
-    
-    }
-    -->
