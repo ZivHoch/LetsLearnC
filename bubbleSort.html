@@ -55,158 +55,158 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
+
     <h1 class="head-left">Let's learn C</h1>
-
-    <h2 class="head-right">מיון בועות</h2>
-
-    <p class="top-right">
-
-      מיון בועות דומה טיפה למיון בחירה אבל עובד בצורה שונה .
-      <br>
-      מיון בועות גם הוא עובד על השוואה אבל אנחנו מתחילים את ההשוואה מסוף המערך ואנחנו משווים בין שני איברים צמודים
-      ובמידת הצורך מחליפים בין הערכים של שני האיברים כך שהאיברים הגדולים של המערך יהיו בצד שמאל והאיברים הקטנים יהיו בצד
-      ימין של המערך ואנחנו ממשיכים את ההשוואות עד שאנחנו מגיעים לאיבר השמאלי ביותר בצד שמאל לפי n מינוס i (זה יהיה ברור
-      בהמשך)
-      <br>
-      <br>
-      דוגמה: נתבונן במערך הלא ממוין הבא
-      <br>
-      <img src="assest/tablesForBubleSort/1.png" alt="table_1_image">
-      <br>
-      <br>
-      <br>
-      כעת נבצע עליו מיון בועות. ראשית אנחנו מתחילים מהתא האחרון במערך שהוא יהיה גודל המערך פחות אחד:
-      n-1 כאשר n מציג את גודל המערך.
-      <br>
-      <br>
-      כעת אנו מתחילים להשוות את הערך 9 לערך 25:
-      <br>
-      <img src="assest/tablesForBubleSort/2.png" alt="">
-      <br>
-      <br>
-      <br>
-      בגלל ש 25 גדול יותר מ 9 ו25 כבר נמצא בצד השמאלי של המערך אז אין סיבה לבצע החלפה , לאחר מכן אנחנו מתקדמים לתא הבא
-      ומשווים בין 25 ל 12:
-      <br>
-      <img src="assest/tablesForBubleSort/3.png" alt="">
-      <br>
-      <br>
-      <br>
-      בגלל ש 12 קטן יותר מ 25 אנחנו נבצע החלפה ביניהם ונקבל את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/4.png" alt="">
-      <br>
-      <br>
-      <br>
-      לאחר מכן אנו עוברים לתא הבא תא מספר 4 ותא מספר 3 אנחנו משווים בין הערכים 25 ו 3:
-      <br>
-      <img src="assest/tablesForBubleSort/5.png" alt="">
-      <br>
-      <br>
-      <br>
-      בגלל ש 25 גדול יותר אז גם כאן עלינו לבצע החלפה ולכן נקבל את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/6.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת אנו עוברים לתאים הבאים שהם תא מספר 3 ותא מספר 2 ושנית בגלל ש 25 גדול יותר מ 2 אז אנו נבצע החלפה:
-      <br>
-      <img src="assest/tablesForBubleSort/7.png" alt="">
-      <br>
-      <br>
-      <br>
-      לאחר מכן נקבל את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/8.png" alt="">
-      <br>
-      <br>
-      <br>
-      נמשיך לתאים הסמוכים הבאים שהם תא 2 ו תא 1 ורואים ש 25 גדול יותר מ 5:
-      <br>
-      <img src="assest/tablesForBubleSort/9.png" alt="">
-      <br>
-      <br>
-      <br>
-      לכן נבצע כאן החלפה ונקבל את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/10.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת נמשיך ל 2 תאים הסמוכים האחרונים שהם 1 ו 0 ורואים ש 25 גדול מ 1:
-      <br>
-      <img src="assest/tablesForBubleSort/11.png" alt="">
-      <br>
-      <br>
-      <br>
-      לכן נבצע החלפה ונקבל את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/12.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת סיימנו את הסבב הראשון וכעת נעבור לסבב השני רק שהפעם אנחנו לא בודקים עד התא ה 0 אלה אנחנו בודקים עד תא מספר 1
-      בגלל שאנחנו כבר יודעים שבתא 0 יש את המספר הגדול ביותר במערך ואחרי שנבצע את הסבב השני אנחנו מקבל את המערך הבא :
-      <br>
-      <img src="assest/tablesForBubleSort/13.png" alt="">
-      <br>
-      <br>
-      <br>
-      ואז אנחנו נבצע סבב שלישי עד שהמערך שלנו יהיה ממוין ועברנו על כל 7 התאים שלנו והשוונו אותם מול כולם ונקבל את המערך
-      הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/14.png" alt="">
-      <br>
-      <br>
-      <br>
-      לאחר הסבב השלישי אנחנו נבצע עוד סבב ועוד סבב עד שאנחנו נגיע ל תא n-1 ושם נסיים.
-      <br>
-      לאחר ביצוע כל ההשוואות אנחנו נקבל בסוף את המערך הבא:
-      <br>
-      <img src="assest/tablesForBubleSort/15.png" alt="">
-      <br>
-      <br>
-      <br>
-      והנה כאן המערך שלנו ממוין וניתן לסיים את התוכנית.
-      <br>
-      <br>
-      <br>
-      דוגמה לקוד של מיון בועות:
-      <br>
-      <!--CODE
-       
-        void swap(int *first, int *second)
-        {
-	        int temp;
-	        temp = *first;
-	        *first = *second;
-	        *second = temp;
-        }
-       
-      END CODE-->
-
-      <!--CODE
-      
-
-          void bubble_sort(int *array, int array_size)
-         {
-	          int i, j;
-	          for (i = 0; i < array_size-1; i++)
-	         {
-		          for ( j = 0; j < array_size -(i+1); j++)
-		         {
-			         if (array[j] > array[j + 1])
-			         {
-				        swap(array + j, array + j + 1);
-			         }
-		         }
-	         }
-         }
+    <h1 class="head-right">מיון בועות</h1>
 
 
-      END CODE-->
-    </p>
+    <div class="First-Para">
+      <p>
+        מיון בועות נחשב למיון "מבוסס השוואות" , תפקידו לסדר את ערכי המערך מהקטן לגדול (ולהיפך).
+        <br>
+        <br>
+
+      </p>
+    </div>
+
+    <h3 class="head-right">מיון זה עובד בצורה הבאה:</h3>
+    <div class="First-Para">
+
+      ראשית, ניקח את שני הערכים הראשונים במערך ונשווה ביניהם (הערכים בתא 0 ו 1).
+      <br>
+      שנית, נבדוק אם האיבר בתא הראשון גדול יותר מהאיבר בתא השני ונבצע החלפה במידת הצורך.
+      <br>
+      נתקדם איבר אחד ונחזור על התהליך שלעיל עד שהמערך יהיה ממוין.
+      <br>
+      <br>
+      <br>
+
+    </div>
+
+    <h3 class="head-right">תהליך המיון:</h3>
+    <div class="First-Para">
+
+      נראה תהליך זה על ידי דוגמה על המערך הבא:
+      <br>
+      <img src="assest/TablesForBubbleSort/1.png" alt="table_1">
+      <br>
+      <br>
+      נבצע עליו מיון בועות.
+      <br>
+      <br>
+      ראשית, נשווה בין הערכים בתא 0 (1) לתא 1 (5).
+      <br>
+      <img src="assest/TablesForBubbleSort/2.png" alt="table_2">
+      <br>
+      בגלל ש 5 גדול יותר מ 1 לא מתבצעת החלפה והמערך נשאר ללא שינוי.
+      <br>
+      <br>
+      נשווה בין הערכים בתא 1 (5) לתא 2 (2).
+      <br>
+      <img src="assest/TablesForBubbleSort/3.png" alt="table_3">
+      <br>
+      בגלל ש 5 גדול מ 2 מתבצעת החלפה והמערך יראה כך:
+      <br>
+      <img src="assest/TablesForBubbleSort/4.png" alt="table_4">
+      <br>
+      <br>
+      נשווה בין הערכים בתא 2 (5) לתא 3 (3).
+      <br>
+      <img src="assest/TablesForBubbleSort/5.png" alt="table_5">
+      <br>
+      בגלל ש 5 גדול מ 3 מתבצעת החלפה והמערך יראה כך:
+      <br>
+      <img src="assest/TablesForBubbleSort/6.png" alt="table_6">
+      <br>
+      <br>
+      נשווה בין הערכים בתא 3 (5) לתא 4 (12).
+      <br>
+      <img src="assest/TablesForBubbleSort/7.png" alt="table_7">
+      <br>
+      בגלל ש12 גדול מ 5 לא מתבצעת החלפה והמערך נשאר ללא שינוי.
+      <br>
+      <br>
+      נשווה בין הערכים בתא 4 (12) לתא 5 (25).
+      <br>
+      <img src="assest/TablesForBubbleSort/8.png" alt="table_8">
+      <br>
+      בגלל ש25 גדול מ 12 לא מתבצעת החלפה והמערך נשאר ללא שינוי.
+      <br>
+      <br>
+      נשווה בין הערכים בתא 5 (25) לתא 6 (9).
+      <br>
+      <img src="assest/TablesForBubbleSort/9.png" alt="table_9">
+      <br>
+      בגלל ש25 גדול מ 9 מתבצעת החלפה והמערך יראה כך:
+      <br>
+      <img src="assest/TablesForBubbleSort/10.png" alt="table_10">
+      <br>
+      <br>
+      כעת, אנו רואים כי האיבר הגדול ביותר נמצא בתא האחרון (תא 6), אך אנו לא יודעים אם המערך ממוין.
+      <br>
+      לכן, נתחיל שוב את סבב הבדיקות ללא התא השישי, מכיוון שהוא נמצא במקומו.
+      <br>
+      כלומר, נבצע כעת את ההשוואות של המערך מתא 0 עד תא 5.
+      <br>
+      לאחר שנסיים את הסבב השני אנו נדע כי שני הערכים האחרונים ממוינים.
+      <br>
+      נמשיך כך עד שהמערך יהיה ממוין.
+      <br>
+      <br>
+      לאחר הסבב השני המערך שלנו יראה כך:
+      <br>
+      <img src="assest/TablesForBubbleSort/11.png" alt="table_11">
+      <br>
+      כעת ניתן לראות שהמערך ממוין ואין צורך להמשיך בבדיקות.
+    </div>
+
+    <br>
+    <br>
+
+    <h3 class="head-right">דוגמה לקוד של מיון בועות:</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            זמן ריצה של מיון בועות במקרה הטוב והגרוע עומד בסדר גודל של O(n<sup>2</sup>).
+            <br>
+            ראוי לציין שזה אינו האלגוריתם היחיד שמממש מיון בועות, כמובן שקיים עוד אלגוריתמים אבל זה האחד שבחרנו להציג.
+          </p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+
+<b>void</b> swap(<b>int</b> *first,<b>int</b> *second) <em>//swap between two variables.</em>
+{
+  <b>int</b> temp;
+  temp = *<i>first</i>;
+  *<i>first</i> = *<i>second</i>;
+  *<i>second</i> = temp;
+} 
+
+<b>void</b> bubble_sort(<b>int</b> *array,<b>int</b> array_size)
+{
+  <b>int</b> i ,j;
+  <b>for</b>(i=0;i&lt;<i>array_size</i>-1;i++)<em>//in each loop the size of the array is decreased by 1</em>
+  {
+    <b>for</b>(j=0;j&lt;<i>array_size</i> -(i+1);j++)
+    {
+      <b>if</b>(<i>array</i>[j] &gt; <i>array</i>[j+1])
+      {
+        swap(<i>array</i> + j , <i>array</i> + j +1);
+      }
+    }
+  }
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
 </body>
 
 </html>
