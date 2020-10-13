@@ -209,6 +209,11 @@ a:hover {
   margin-right: 50px;
 }
 
+.pic {
+  width: 60%;
+  margin-right: 50px;
+}
+
 /*****************************CODE STYLE***************************/
 
 /*code*/
@@ -408,9 +413,13 @@ pre em * * {
 }
 
 /******************MEDIA***************/
-@media (max-width:900px) {
+@media (max-width:1100px) {
   h1 {
     color: #0099ff;
+  }
+
+  .pic {
+    width: 80%;
   }
 }
 

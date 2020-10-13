@@ -55,14 +55,155 @@
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
 
-    <h1 class="top-left">Let's learn C</h1>
+    <h1 class="head-left">Let's learn C</h1>
 
-    <h2 class="top-right-head">NULL</h2>
+    <h2 class="head-right">מיון בחירה</h2>
 
-    <p class="top-right">
+    <div class="First-Para">
+      <p>
+        מיון בחירה נחשב למיון "מבוסס השוואות" , תפקידו לסדר את ערכי המערך מהקטן לגדול (ניתן לשנות את האלגוריתם כך שימיין
+        מהגדול לקטן).
+        מיון זה עובד בצורה הבאה:<br>
+        נחפש כל פעם את הערך המינימלי.<br>
+        לאחר שעברנו על כל המערך נחליף את הערך המינימלי באיבר הראשון*.<br>
+        *בכל פעם האיבר הראשון מתקדם תא אחד במערך עד שנעבור על כולו.<br>
+        כלומר, במעבר הראשון על המערך האיבר הראשון יהיה האיבר בתא 0.<br>
+        במעבר השני על המערך האיבר הראשון יהיה האיבר בתא 1.<br>
+        וכן הלאה עד שנגיע לאיבר הn-1.
+        <br>
+        תהליך המיון – דוגמה עם מערך בגודל 6 (n=6):
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_1.png" alt="first_array_no_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=0 ,j=1 ,min=0</spam><br>
+        בסבב הראשון i מתחיל מ0 ו j מתחיל מ 1 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).<br>
+        נגדיר את min להיות מספר האיבר בתא 0.
+        כעת, אנו נעבור על כל המערך ונחפש את האיבר המינימלי.<br>
+        (נשווה את ערך התא שבתוך המשתנה min לבין שאר הערכים ובמידת הצורך נשנה את הערך של min בהתאם).
+        לאחר שעברנו על כל המערך בפעם הראשונה גילינו כי האיבר המינימלי נמצא בתא מספר 5.
+        לכן , נחליף ביניהם.
 
-
-
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_2.png" alt="first_array_1_change">
+    <div class="First-Para">
+      <p>
+        לאחר ההחלפה המערך יראה כך:
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_3.png" alt="first_array_2_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=1 ,j=2 ,min=1</spam><br>
+        בסבב השני נגדיל את i ב1 (כי אנחנו יודעים שערך הכי קטן נמצא כבר במיקום שלו), נשווה את הערך שבmin אליו (min=1)
+        כלומר, אנו מחפשים כעת את האיבר השני הכי קטן.
+        ונגדיר את j להיות 2 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
+        לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 1 הוא עצמו המינימלי ולכן לא נבצע החלפה.
+        כלומר המערך ישאר כך:
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_3.png" alt="first_array_2_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=2 ,j=3 ,min=2</spam><br>
+        בסבב השלישי נגדיל את i ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=2) כלומר,
+        אנו מחפשים כעת את האיבר השלישי הכי קטן.
+        ונגדיר את j להיות 3 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
+        לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 4 הוא המינימלי ולכן נחליף אותו עם תא מספר 2.
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_4.png" alt="first_array_3_change">
+    <div class="First-Para">
+      <p>
+        לאחר ההחלפה המערך יראה כך:
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_5.png" alt="first_array_4_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=3 ,j=4 ,min=3</spam><br>
+        בסבב הרביעי נגדיל את i ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=3) כלומר,
+        אנו מחפשים כעת את האיבר הרביעי הכי קטן.
+        ונגדיר את j להיות 4 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
+        לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 5 הוא המינימלי ולכן נחליף אותו עם תא מספר 3.
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_6.png" alt="first_array_5_change">
+    <div class="First-Para">
+      <p>
+        לאחר ההחלפה המערך יראה כך:
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_7.png" alt="first_array_6_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=4 ,j=5 ,min=4</spam><br>
+        בסבב החמישי נגדיל את i ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=4) כלומר,
+        אנו מחפשים כעת את האיבר החמישי הכי קטן.
+        ונגדיר את j להיות 5 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
+        לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 4 הוא עצמו המינימלי ולכן לא נבצע החלפה.
+        כלומר המערך ישאר כך:
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_7.png" alt="first_array_6_change">
+    <div class="First-Para">
+      <p>
+        <spam dir="ltr"> Current Parameters:
+          i=5 ,j=6 ,min=5</spam><br>
+        בסבב השישי (והאחרון) נגדיל את i ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=5)
+        כלומר, אנו מחפשים כעת את האיבר השישי הכי קטן.
+        ונגדיר את j להיות 6 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
+        כעת, אנו רואים כי j שווה לגודל המערך ולכן אין צורך לרוץ על המערך כי אנחנו יודעים שאין יותר ערכים לא ממוינים.
+        כלומר המערך שלנו ממוין!
+      </p>
+    </div>
+    <img class="pic" src="assest/selection_sort/selection_sort_7.png" alt="first_array_6_change">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            מיון בחירה נראה כך בקוד:
+            זמן ריצה של מיון בחירה עומד בסדר גודל של O(n<sup>2</sup>).<br>
+            ראוי לציין שזה אינו האלגוריתם היחיד שמממש מיון בחירה.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> selection_sort(<b>int</b> *array, <b>int</b> n)
+{
+  <b>int</b> i, j, min;
+  <b>for</b> (i = 0; i &lt; n - 1; i++)
+  {
+    min = i;	
+    j=i+1;
+    <b>while</b> (j&lt;n)
+    {
+      <b>if</b> (array[j] &lt; array[min])
+      {
+        min = j;
+      }
+      j++;
+    }
+    <b>if</b> (min!=i)
+    {
+      Swap(&amp;array[min], &amp;array[i]);
+    }
+  }
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
 </body>
 
 </html>
