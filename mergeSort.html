@@ -54,201 +54,408 @@
     <a href="mergeSort.html"><span class="colorcheck">מיון מיזוג</span></a>
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
-    <h1 class="top-left">Let's learn C</h1>
 
-    <h2 class="top-right-head">מיון מיזוג</h2>
+    <h1 class="head-left">Lets learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
+    <h1 class="head-right">מיון מיזוג</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
 
-    <p class="top-right">
-      <br>
-      מיון מיזוג הינו מיון מבוסס השוואות והוא עובד בשיטה הבאה :
-      <br>
-      חשוב לציין, שסדר הגודל של מיון מיזוג עומד על O(nlog(n)) מבחינת יעילות זמן ריצה.
-      <br>
-      <br>
-      אנו מקבלים מערך ומתחילים למיין אותו על ידי פירוק הבעיה לחלקים קטנים יותר ועבודה עליהם.
-      <br>
-      אם למשל יש לנו מערך בגודל 8 אז אנו "חותכים" את המערך ל חצי כלומר שני מערכים בגודל 4 ועובדים עליהם.
-      <br>
-      לאחר מכן על כל אחד מהמערכים האלה אנו "חותכים אותם" שוב לחצי כלומר נקבל ארבעה מערכים בגודל 2.
-      <br>
-      ברגע שהגענו למערכים בגודל 2 אנו נעשה השוואות
-      <br>
-      (אם משהו לא מובן בחלק הזה, אנו ממליצים לחזור לדף <a class="recursion" href="recursion.html">רקורסיה</a> ולנסות
-      להבין
-      קצת יותר לעומק על איך רקורסיה עובדת).
-      <br>
-      <br>
-      אחרי שסיימנו "לחצות" את המערכים ועשינו את ההשוואות הראשונות אנו כעת מתחילים עם פעולת המיזוג בין
-      <br>
-      המערכים , כלומר מתוך ארבעת המערכים בגודל 2 אנו עכשיו מתחילים למזג ביניהם בצורה הבאה :
-      <br>
-      השוואה תתבצע בצורה הבאה – לשם הנוחות נקרא למערכים שלנו א' וב'.
-      <br>
-      האיבר באינדקס 0 של מערך א' אל מול האיבר באינדקס 0 של מערך ב'.
-      <br>
-      האינדקס של הקטן מבין הערכים יתקדם (כלומר, אם היה לנו במערך א' אינדקס 0 את הערך 8 אל מול מערך ב' באינדקס 0 שבו 6
-      – האינדקס של מערך ב' יתקדם).
-      <br>
-      לאחר שאחד מהמערכים שלנו הסתיים (כלומר, האינדקס שלו חרג מגבולות גודל המערך) , תיעשה העתקה של שאר האיברים שנותרו
-      במערך השני (כמובן, תוך כדי שמירה על המיון).
-      <br>
-      נסביר במילים את מה שקורה בחלק הזה ולאחר מכן נראה דוגמה:
-      <br>
-      <br>
-      באופן רקורסיבי - פירקנו את כל המערך שלנו לתתי מערכים בגודל 2.
-      <br>
-      לאחר מכן, ביצענו מיון על המערכים הללו.
-      <br>
-      לאחר מכן, מיזגנו בין מערכים כדי לחזור לגודל 4 – תוך כדי שמירה על המיון.
-      <br>
-      בשלב הבא , אנו חוזרים למערך שלם בגודל 8 – ומכיוון שבכל תת שלב במיזוג המערכים שלנו היו ממוינים אז גם
-      <br>
-      המערך השלם שלנו הוא ממוין.
-      <br>
-      ובכך מיינו את המערך.
-      <br>
-      <br>
-      דוגמה לביצוע:
-      <br>
-      <img src="assest/tableForMergeSort/1.png" alt="">
-      <br>
-      <br>
-      התחלנו עם מערך בגודל 8 וכעת אנו נחצה את המערך לשני מערכים ונקבל:
-      <br>
-      <img src="assest/tableForMergeSort/3.png" alt=""> <img src="assest/tableForMergeSort/2.png" alt="">
-      <br>
-      את שני המערכים שלנו נחצה שוב ונקבל:
-      <br>
-      <img src="assest/tableForMergeSort/4.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת אנו נתחיל בהשוואות:
-      <br>
-      <img src="assest/tableForMergeSort/5.png" alt="">
-      <br>
-      מערך א' – 2 קטן מ16 ולכן יהיה באינדקס 0 , 16 גדול מ 2 ולכן יהיה באינדקס 1.
-      <br>
-      מערך ב' – 4 קטן מ7 ולכן יהיה באינדקס 0 , 7 גדול מ 4 ולכן יהיה באינדקס 1.
-      <br>
-      <img src="assest/tableForMergeSort/6.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת אנו נתחיל להשוות בין שני המערכים האלה ולהכניס אותם לתוך מערך בגודל 4 (כאן מתבצע המיזוג).
-      נשווה את שני האיברים הראשונים בכל מערך (אינדקס 0) ונגלה ש2 קטן מ4 ולכן נכניס את 2 לתא הראשון(אינדקס 0) ונקדם את
-      האינדקס של מערך א':
-      <br>
-      <img src="assest/tableForMergeSort/7.png" alt="">
-      <br>
-      נמשיך באותה הצורה:
-      מערך א' – האיבר באינדקס 1 (16) גדול מהאיבר באינדקס 0 (4) של המערך השני, ולכן נכניס את 4 לתוך המערך החדש שלנו,
-      ונקדם את האינדקס של מערך ב'.
-      <br>
-      <img src="assest/tableForMergeSort/8.png" alt="">
-      <br>
-      נמשיך בצורה הזאת עד לקבלת:
-      <br>
-      <img src="assest/tableForMergeSort/9.png" alt="">
-      <br>
-      <br>
-      <br>
-      כעת סיימנו עם החלק השמאלי של המערך ועכשיו נעבור לחלק הימני של מערך ונבצע בדיוק את אותן הפעולות.
-      <br>
-      המערכים שלנו הינם המערכים :
-      <br>
-      <img src="assest/tableForMergeSort/10.png" alt="">
-      <br>
-      אחרי ההשוואות אצל כל אחד המערכים שלנו יראו ככה :
-      <br>
-      <img src="assest/tableForMergeSort/11.png" alt="">
-      <br>
-      כאשר אנו נכניס אותם למערך חדש אנו נקבל את המערך הבא:
-      <br>
-      <img src="assest/tableForMergeSort/12.png" alt="">
-      <br>
-      <br>
-      <br>
-      נותרנו עם שני מערכים ממויינים בגודל 4 וכל שנותר לעשות הוא למזג אותם.
-      המערכים הם:
-      <br>
-      <img src="assest/tableForMergeSort/13.png" alt="">
-      <br>
-      <br>
-      <br>
-      כמו שעשינו קודם לכן, ניצור מיזוג בין שני המערכים האלו לתוך מערך בגודל 8:
-      (נבדוק אינדקס מול אינדקס ונקדם את האינדקס שערך איברו היה הנמוך יותר).
-      <br>
-      <img src="assest/tableForMergeSort/14.png" alt="">
-      <br>
-      <br>
-      <br>
-      דוגמה לקוד של מיון מיזוג:
-      <br>
-      זה דוגמה לקוד שמבצע את חציית המערך ל2 חלקים – חלק שמאלי וחלק ימני.
-      <br>
-      רואים שהקוד הזה בנוי כרקורסיה וזו הדרך לבצע את המיון הזה.
-      <br>
-      <!--CODE
-      
-          void merge(int *arr, int left_side, int middle, int right_side)
-         {
-           int i = left_side, j = middle + 1, k = 0;
-           int *temp_array = (int*)calloc((right_side - left_side) + 1, sizeof(int));
-           while (i <= middle && j <= right_side)
-           {
-             if (arr[i] < arr[j])
-             {
-                temp_array[k] = arr[i];
-                i++;
-             }
-             else
-             {
-                temp_array[k] = arr[j];
-                j++;
-             }
-             k++;
-           }
-           while (j <= right_side)
-           {
-             temp_array[k] = arr[j];
-             k++;
-             j++;
-           }
-           while (i <= middle)
-           {
-             temp_array[k] = arr[i];
-             k++;
-             i++;
-           }
-           for (i = left_side, k = 0; i <= right_side; i++, k++)
-           {
-             arr[i] = temp_array[k];
-           }
-           free(temp_array);
-         }
+    <!-- אם אתה רוצה להכין פסקה לבד (בלי קוד) אז תשתמש בספרייה הבאה -->
+    <div class="First-Para">
+      <p>
+        מיון מיזוג נחשב למיון "מבוסס השוואות", תפקידו לסדר את ערכי המערך מהקטן לגדול (ניתן לשנות את האלגוריתם כך שימיין
+        מהגדול לקטן).
+      </p>
+    </div>
 
-        END CODE-->
+    <!--הוא עובד בצורה הבאה:-->
+    <h3 class="head-right">הוא עובד בצורה הבאה:</h3>
+    <div class="First-Para">
+      <p>
+        ראשית, מקבלים מערך ומתחילים לפרק אותו עד שמגיעים לתתי מערכים בגודל 1.
+        <br>
+        (הפירוק מתבצע בעזרת אינדקסים left_side , middle וright_side שמציינים את התאים ההתחלתיים והסופיים של המערכים אך
+        כל זה מתבצע על המערך המקורי).
+        <br>
+        שנית ,לוקחים שני מערכים ממוינים, ממזגים אותם לתוך מערך חדש (יוצרים מערך חדש ממוין) על ידי השוואה בין ערכיהם
+        ולאחר מכן מעתיקים אותם למערך המקורי
+        <br>
+        (לוקחים 2 מערכים בגודל 1 וממזגים אותם למערך בגודל 2, לוקחים 2 מערכים ממוינים בגודל 2 וממזגים אותם למערך בגודל 4,
+        לוקחים שני מערכים ממוינים בגודל 4 וממזגים אותם למערך בגודל 8 וכך הלאה).
+        <br>
+        שלבים אלו מתבצעים באופן רקורסיבי (במידה ואינכם לגמרי מבינים את הנושא עדיין כדאי לחזור לנושא <a
+          href="recursion.html">רקורסיות</a> עד לקבלת מערך ממוין.
+      </p>
+    </div>
+
+    <!--ניהול תהליך ההשוואה:-->
+    <h3 class="head-right">ניהול תהליך ההשוואה:</h3>
+    <div class="First-Para">
+      <p>
+        ניקח מערך בגודל 8.
+        <br>
+        באופן רקורסיבי - נפרק את כל המערך שלנו לתתי מערכים בגודל 1.
+        <br>
+        בשלב הבא, נמזג בין מערכים כדי לחזור לגודל 2 – תוך כדי שמירה על המיון.
+        <br>
+        לאחר מכן, אנו חוזרים למערך שלם בגודל 4 – תוך כדי שמירה על המיון.
+        <br>
+        לבסוף , אנו חוזרים למערך בגודל 8 – ומכיוון שבכל תת שלב במיזוג המערכים שלנו היו ממוינים אז גם המערך השלם שלנו הוא
+        ממוין.
+        <br>
+        ובכך מיינו את המערך.
+      </p>
+    </div>
 
 
-      <!--CODE
+    <div class="First-Para">
+      <p>
+        ההשוואה תתבצע בצורה הבאה – לשם הנוחות נקרא למערכים שלנו א' ו ב'.
+        <br>
+        האיבר באינדקס 0 של מערך א' אל מול האיבר באינדקס 0 של מערך ב'.
+        <br>
+        האינדקס של הקטן מבין הערכים יתקדם (כלומר, אם היה לנו במערך א' אינדקס 0 את הערך 8 אל מול מערך ב' באינדקס 0 שבו 6
+        – האינדקס של מערך ב' יתקדם).
+        <br>
+        לאחר שאחד מהמערכים שלנו הסתיים (כלומר, האינדקס שלו חרג מגבולות גודל המערך), תיעשה העתקה של שאר האיברים שנותרו
+        במערך השני (כמובן, תוך כדי שמירה על המיון).
+        <br>
+        לאחר מכן נבצע את אותם פעולות עד לקבלת מערך ממוין.
+      </p>
+    </div>
 
-        void mergeSort(int *arr, int left_side, int right_side
-        {
-          int middle;
-          if (left_side < right_side)
-          {
-            middle = (left_side + right_side) / 2;
-            mergeSort(arr, left_side, middle);
-            mergeSort(arr, middle + 1, right_side);
-            merge(arr, left_side, middle, right_side);
-          }
-        }
-               
-         END CODE-->
+    <!--דוגמה לתהליך המיון -->
+    <h3 class="head-right">דוגמה לתהליך:</h3>
+    <div class="First-Para">
+      <p>
+        ניקח מערך בגודל 8.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_1.png" alt="">
+
+
+    <!--דוגמה לתהליך המיון-->
+    <div class="First-Para">
+      <p>
+        המערך מתפרק לשני תתי מערכים בגודל 4.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_2.png" alt="">
+
+
+    <!--דוגמה לתהליך המיון-->
+    <div class="First-Para">
+      <p>
+        שני מערכים אלה מתפרקים לארבע תתי מערכים בגודל 2.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_3.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_4.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_5.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_6.png" alt="">
+
+
+
+
+
+    <div class="First-Para">
+      <p>
+        ארבע מערכים אלה מתפרקים לשמונה תתי מערכים בגודל 1.
+      </p>
+    </div>
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_23.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_24.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_25.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_26.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_27.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_28.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_29.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_30.png" alt="">
+    <br>
+
+
+
+    <div class="First-Para">
+      <p>
+        כעת נבצע מיון ומיזוג על שני המערכים הראשונים (תא 0 נקרא לו מערך א', תא 1 נקרא לו מערך ב').
+        <br>
+        בגלל שהערך במערך א' (16) גדול יותר משל מערך ב' (2) אנו מכניסים את הערך 2 לתוך המערך החדש וכעת הגענו לסוף מערך
+        ב', לכן מעתיקים את כל הערכים במערך א' למערך החדש (נבצע את אותם פעולות על תא 2 עם תא 3).
+        <br>
+        <br>
+        לאחר מיון ומיזוג תא 0 עם 1 ותא 2 עם 3 נקבל את שני המערכים הבאים:
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_7.png" alt="">
+
+
+    <!--דוגמה לתהליך המיון-->
+    <div class="First-Para">
+      <p>
+        כעת נמזג בין המערכים (נקרא למערך עם הערכים 2 ו 16 א' והמערך עם הערכים 4 ו 7 ב') נתחיל מאינדקס 0 של שני המערכים:
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_8.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_9.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        בגלל שהערך באינדקס 0 של מערך ב' (4) גדול יותר משל מערך א' (2) אנו מכניסים את הערך 2 לתוך המערך החדש ומתקדמים לתא
+        הבא במערך א'.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_10.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        <br>
+        נמשיך באותה הצורה:
+        <br>
+        מערך א' – האיבר באינדקס 1 (16) גדול מהאיבר באינדקס 0 (4) של המערך השני.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_11.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_9.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        <br>
+        לכן נכניס את 4 לתוך המערך החדש שלנו, ונקדם את האינדקס של מערך ב'.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_12.png" alt="">
+
+
+    <!--דוגמה לתהליך מיון-->
+    <div class="First-Para">
+      <p>
+        <br>
+        <br>
+        מערך א'-האיבר באינדקס 1 (16) גדול מהאיבר באינדקס 1 (7) של מערך ב'.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_11.png" alt="">
+    <br>
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_13.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        לכן נכניס את 7 לתוך המערך החדש שלנו.
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_14.png" alt="">
+
+
+    <!--דוגמה לתהליך מיון-->
+    <div class="First-Para">
+      <p>
+        <br>
+        הגענו לסוף של מערך ב' אבל במערך א' עדיין נשארו איברים , כעת מכניסים אותם לפי הסדר ויתקבל המערך הבא:
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_15.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        החלק השמאלי ביותר של המערך כרגע ממוין.
+        <br>
+        כעת נשאר לבצע את אותם פעולות על המערך השלישי (עם ערכים 19 ו1) והמערך הרביעי (עם ערכים 3 ו28).
+      </p>
+    </div>
+
+    <!--דוגמה לתהליך המיון-->
+    <div class="First-Para">
+      <p>
+        <br>
+        נבצע מיון ומיזוג בין הערך 3 ל-28 ולאחר מכן יתקבל  מערך חדש בגודל 2:
+      </p>
+    </div>
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_16.png" alt="">
+    
+    <div class="First-Para">
+      <p>
+        נבצע מיון ומיזוג בין הערך 1 ל-19 ולאחר מכן יתקבל מערך חדש בגודל 2:
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_18.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        לאחר ביצוע מיזוג בין שני המערכים יתקבל המערך הבא:
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_19.png" alt="">
+
+
+    <div class="First-Para">
+      <p>
+        <br>
+        כעת יש לנו שני מערכים ממוינים בגודל 4 .
+      </p>
+    </div>
+
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_20.png" alt="">
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_21.png" alt="">
+
+    <div class="First-Para">
+      <p>
+        כמו שעשינו קודם לכן, נבצע מיזוג בין שני המערכים האלו לתוך מערך בגודל 8
+        <br>
+        (נבדוק אינדקס מול אינדקס ונקדם את האינדקס שערך איברו היה הנמוך יותר) ויתקבל המערך הבא:
+      </p>
+    </div>
+    <br>
+
+    <img class="pic" src="assest/TablesForMergeSort/Merge_sort_22.png" alt="">
+
+
+
+    <br>
+    <br>
+    <br>
+    <!--דוגמה לקוד של מיון מיזוג:-->
+    <h3 class="head-right">דוגמה לקוד של מיון מיזוג:</h3>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="para">
+          <p>
+            זמן ריצה של מיון מיזוג עומד בסדר גודל של O(nlog(n)).
+            <br>
+            ראוי לציין שזה אינו האלגוריתם היחיד שמממש מיון מיזוג.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#include</i> <u>&lt;stdlib.h&gt;</u>
+<b>void</b> merge(<b>int</b> <i>*array</i> ,<b>int</b> <i>left_side</i> , <b>int</b> <i>middle</i> ,<b>int</b> <i>right_side</i>)
+{
+  <b>int</b> i = <i>left_side</i> , j = <i>middle</i> + 1 , k = 0;
+  <b>int</b> *temp_array = (<b>int</b>*)malloc((<i>right_side</i> - <i>left_side</i>) + 1 * <b>sizeof(<b>int</b>)</b>);
+  <b>while</b>(i &lt;= <i>middle</i> && j &lt;= <i>right_side</i>)
+  {
+    <b>if</b>(<i>array</i>[i] &lt; <i>array</i>[j])
+    {
+      temp_array[k] = <i>array</i>[i];
+      i = i + 1;
+    }
+    <b>else</b>
+    {
+      temp_array[k] = <i>array</i>[j];
+      j = j + 1;
+    }
+    k = k + 1;
+  }
+  <b>while</b>(i &lt;= <i>middle</i>) <em>//if values are left in the left array copy them to temp_array</em>
+  {
+    temp_array[k] = <i>array</i>[i];
+    k = k + 1;
+    i = i + 1;
+  }
+  <b>while</b>(j &lt;= <i>right_side</i>) <em>//if values are left in the right array copy them temp_array</em>
+  {
+    temp_array[k] = <i>array</i>[j];
+    k = k + 1;
+    j = j + 1;
+  }
+  <em>//this for copies the values from the temp array to the original array</em>
+  <b>for</b>(i = <i>left_side</i> , k = 0 ; i &lt;= right_side ; i++ , k++)
+  {
+    <i>array</i>[i] = temp_array[k];
+  }
+  free(temp_array);
+}
+
+<b>void</b> mergeSort(<b>int</b> <i>*array</i> ,<b>int</b> <i>left_side</i> , <b>int</b> right_side)
+{
+  <b>int</b> middle;
+  <b>if</b>(<i>left_side</i> &lt; <i>right_side</i>)
+  {
+    middle = (<i>left_side</i> + <i>right_side</i>)/2;
+    mergeSort(<i>array</i> , <i>left_side</i> , middle); <em>//call mergesort on the left array</em>
+    mergeSort(<i>array</i> , middle + 1 , <i>right_side</i>); <em>//call mergesort on the right array</em>
+    merge(<i>array</i> , <i>left_side</i> , middle , <i>right_side</i>);
+  }
+}
+          </code></pre>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="First-Para">
+    <p>
+      void merge(int *array, int left_side, int middle, int right_side) – פונקציה אשר מבצעת את המיון והמיזוג המערכים.
+
+      <br>
+      temp_array – מערך עזר שנועד בשביל מיזוג תתי המערכים ולאחר מכן מעתיקים את הערכים למערך המקורי.
+
+      <br>
+      left_side – מציין את תא ההתחלה של המערך השמאלי.
+
+      <br>
+      middle – middle מציין את התא האחרון של המערך השמאלי ותא middle +1 מציין את התא ההתחלתי של המערך הימני.
+
+      <br>
+      right_side – מציין את התא האחרון במערך הימני.
+
+      <br>
+      void mergeSort(int *array, int left_side, int right_side) – הפונקציה הרקורסיבית שמקבלת מערך את התא הראשון במערך
+      ואת התא האחרון במערך.
     </p>
-
-
+  </div>
 
 </body>
 
