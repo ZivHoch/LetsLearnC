@@ -9,13 +9,12 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Java Script -->
@@ -25,7 +24,9 @@
 </head>
 
 <body class="bg-four scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -188,8 +189,8 @@
 <b>void</b> main()
 {
   <b>int</b> number = 10;
-  <b>int</b> *ptr = &amp;number;
-  *ptr = *ptr + 5;
+  <b>int</b> *<i>ptr</i> = &amp;number;
+  *<i>ptr</i> = *<i>ptr</i> + 5;
   printf(<u>"%d"</u>,ptr)
 }
       </code></pre>
@@ -324,17 +325,17 @@
         <figure class="code">
           <figcaption id="example1-caption">CODE 4:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
-<b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b);
+<b>void</b> inc_by_one(<b>int</b> *<i>num_a</i> , <b>int</b> *<i>num_b</i>);
 <b>void</b> main()
 {
   <b>int</b> num_a = 11;
   <b>int</b> num_b = 31;
   inc_by_one(&amp;num_a,&amp;num_b);
 }
-<b>void</b> inc_by_one(<b>int</b> *num_a , <b>int</b> *num_b)
+<b>void</b> inc_by_one(<b>int</b> *<i>num_a</i> , <b>int</b> *<i>num_b</i>)
 {
-  *num_a++;
-  *num_b++;
+  *<i>num_a</i>++;
+  *<i>num_b</i>++;
 }
           </code></pre>
         </figure>
@@ -392,8 +393,8 @@
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>int</b> *ptr;
-  *ptr = 1000000;
+  <b>int</b> *<i>ptr</i>;
+  *<i>ptr</i> = 1000000;
 }
       </code></pre>
         </figure>
@@ -435,8 +436,8 @@
 <b>void</b> main()
 {
   <b>int</b> number = 6;
-  <b>int</b> *ptr = &amp;number;
-  *ptr = 1000000;
+  <b>int</b> *<i>ptr</i> = &amp;number;
+  *<i>ptr</i> = 1000000;
 }
       </code></pre>
         </figure>
@@ -497,25 +498,25 @@
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>int</b> *p1 , *p2 , number = 10;
+  <b>int</b> *<i>p1</i> , *<i>p2</i> , number = 10;
 
   p1 = &amp;number; 
 
   p2 = p1; 	
 
-  *p2 = *p2 – 10;
+  *<i>p2</i> = *<i>p2</i> – 10;
     
   p2 = p2 -10;
 
-  number = *p1;
+  number = *<i>p1</i>;
 
-  *p1 = number;
+  *<i>p1</i> = number;
 
   <em>//errors!</em>
 
   number = p2;	
 
-  p1 = *p2;	
+  p1 = *<i>p2</i>;	
   
 }
       </code></pre>

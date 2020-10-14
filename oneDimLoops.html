@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
@@ -24,7 +24,9 @@
 </head>
 
 <body class="bg-oneAndHalf scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -60,8 +62,8 @@
 
     <div class="First-Para">
       <p>
-        אנו משתמשים בלולאות כאשר יש צורך ברשימת קוד רב ש"חוזר על עצמו" או כמעט "חוזר על עצמו".
-        לולאה בודקת תנאי מסוים בהתחלה ולאחר מכן במידה והטענה התקבלה כלא שגויה מתבצע קטע קוד שנמצא בתוך סוגריים מסולסלות
+        אנו משתמשים בלולאות כאשר יש צורך ברשימת קוד רב ש"חוזר על עצמו" או כמעט "חוזר על עצמו".<br>
+        לולאה בודקת תנאי מסוים בהתחלה ולאחר מכן במידה והטענה התקבלה כלא שגויה מתבצע קטע קוד שנמצא בתוך סוגריים מסולסלים
         (בדרך כלל, קיימת החרגה אם הלולאה מבצעת פעולה אחת בלבד).
       </p>
     </div>
@@ -69,33 +71,110 @@
     <h3 class="head-right">סוגי לולאות:</h3>
 
     <div class="First-Para">
-      <p>
-        לולאת for – לולאה שרצה מהגודל של האינדקס i עד לתנאי העצירה וגדלה בקצב קבוע.
-        <br>
-        לולאת while – לולאה שרצה עד שהתנאי שבתוך הסוגריים העגולים לא מתקיים.
-        <br>
-        לולאת do while – לולאת while שהתוספת שלה היא שמתבצע קוד לפני הבדיקה (do = תעשה , while = תבדוק).
+      <ul>
+        <li>
+          לולאת for – לולאה שרצה מהגודל של האינדקס i עד לתנאי העצירה וגדלה בקצב קבוע.
+        </li>
+        <li>
+          לולאת while – לולאה שרצה עד שהתנאי שבתוך הסוגריים העגולים לא מתקיים.
+        </li>
+        <li>
+          לולאת do while – לולאת while שהתוספת שלה היא שמתבצע קוד לפני הבדיקה<br> (do = תעשה , while = תבדוק).
+        </li>
+      </ul>
       </p>
     </div>
-
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
     <h3 class="head-right">חותמת הלולאות תיראה כך:</h3>
-
-    <div class="First-Para">
-      <p>
-        <span dir="ltr">while(something){ CODE };</span>
-
-        <br>
-        <span dir="ltr">do { CODE } while(something){ CODE };</span>
-
-        <br>
-        <span dir="ltr">for(int i=0; i &lt; number; i++){ CODE };</span> </p>
-    </div> <br>
-
+    
+    <br>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
           <p>
-            דוגמה ללולאת for:<br>
+            חותמת של for:
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <em>//for decleration</em>
+  <b>int</b> i;
+  <b>for</b> (i = 0; i &lt; number; i++)
+  {
+    <em>// code</em>
+  }
+}    
+        </code></pre>
+        </figure>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            חותמת של while:
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <em>//while decleration</em>
+  <b>while</b> (something)
+  {
+    <em>// code</em>
+  }
+}    
+        </code></pre>
+        </figure>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            חותמת של do-while:
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 3:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{
+  <em>//do-while decleration</em>
+  <b>do</b>
+  {
+    <em>// code</em>
+  } <b>while</b> (something);
+}    
+        </code></pre>
+        </figure>
+      </div>
+    </div>
+    <br>
+    <h3 class="head-right">דוגמה ללולאת for:</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
             במקום לרשום:
           </p>
         </div>
@@ -104,8 +183,7 @@
       <!--COL MD 6 - FOR TEXT-->
       <div class="col-md-6">
         <figure class="code">
-
-          <figcaption id="example1-caption">CODE 1:</figcaption>
+          <figcaption id="example1-caption">CODE 4:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
@@ -139,7 +217,8 @@
             <ol>
               <li>תנאי התחלה (i=0): מראה לנו מאיפה להתחיל את הספירה.</li>
               <li>תנאי עצירה (i &lt; 5): מראה לנו מתי עלינו לעצור.</li>
-              <li>מהו השינוי (i++): מראה לנו שבכל סיבוב של הלולאה (איטרציה) אנו מגדילים את המשתנה i באחד בדיוק.</li>
+              <li>מהו השינוי <span dir="ltr">(i++)</span>: מראה לנו שבכל סיבוב של הלולאה (איטרציה) אנו מגדילים את המשתנה
+                i באחד בדיוק.</li>
             </ol>
           </p>
 
@@ -155,7 +234,7 @@
       <div class="col-md-6">
 
         <figure class="code">
-          <figcaption id="example1-caption">CODE 2:</figcaption>
+          <figcaption id="example1-caption">CODE 5:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {  
@@ -173,36 +252,22 @@
 
 
     </div>
-    <!--ROW-->
-
     <br>
-
+    <h3 class="head-right">דוגמה ללולאת while:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-            דוגמה ללולאת while:
-            <br>
             פה אנו מגדירים משתנה בשם flag ו counter והלולאה תיעצר רק אם counter יהיה גדול או שווה ל10 וזאת משום
             שflag ישתנה ל0 ולולאת הwhile שלנו תפסיק להתקיים.
           </p>
-
-
         </div>
         <!--para-->
-
-
       </div>
       <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
-          <figcaption id="example1-caption">CODE 3:</figcaption>
+          <figcaption id="example1-caption">CODE 6:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {  
@@ -221,28 +286,44 @@
 }  
           </code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
-
-
+    <h3 class="head-right">דוגמה ללולאת do-while:</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            פה אנו מגדירים שני משתנים number, sum.<br>
+            המחשב יקלוט מספרים עד שאנו נכניס לו את המספר 0.<br>
+            כלומר, הלולאה תעצר רק כשאשר נכניס לו את המספר 0.<br>
+            ולאחר שאנו נכניס את הערך 0 המחשב ידפיס את הסכום.<br>
+            *אין צורך לתת ערך התחלתי למשתנה number כי הלולאה תרוץ פעם אחת לפחות.
+          </p>
+        </div>
+        <!--para-->
+      </div>
+      <!--COL MD 6 - FOR TEXT-->
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE 7:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>void</b> main()
+{  
+  <b>int</b> number ,sum = 0;
+  <b>do</b> 
+  {
+    printf(<u>"Please enter number (enter 0 to stop)/n"</u>);
+    <em>//for visual studio 2017 or above use scanf_s</em>
+    scanf(<u>"%d"</u>,&amp;number);
+    sum += number;
+  } <b>while</b> (number != 0)
+  printf(<u>"the sum is : %d"</u>,sum);
+}  
+          </code></pre>
+        </figure>
+      </div>
+    </div>
   </section>
-
-
 </body>
 
 </html>
-
-
-<!--
-
-
-
-
-
--->
