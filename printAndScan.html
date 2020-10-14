@@ -71,7 +71,7 @@
         בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו בעמוד <a href="variables.html">משתנים</a>
         ) בצורה הבאה:
         <br>
-        <span dir="ltr">printf("%(kind)",name_of_variable);</span>&lrm;
+        <span dir="ltr">printf("%kind",name_of_variable);</span>&lrm;
         <br>
         הסבר:
         <br>
@@ -101,11 +101,11 @@
             <br>
             printf = הפקודה שאנו מבצעים
             <br>
-            "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו אינט)
+            "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו int)
             <br>
             x = שם המשתנה שאותו אנו מדפיסים
             <br>
-            אפשר לחשוב שבאמצעות הקוד שלנו אנחנו בעצם אומרים – תדפיס את הערך של int<br> בשם x.
+            כאשר המחשב רואה את שורת הקוד הזאת (5) הוא מבין כי הוא צריך להדפיס למסך ערך מסוג int שמאוחסן במשתנה ששמו x.
             <br>
           </p>
         </div>
@@ -131,14 +131,14 @@
     <h3 class="head-right">קלט</h3>
     <div class="First-Para">
       <p>
-        בשפת סי יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
+        בשפת c יש אופציה לקלוט מידע מהמשתמש שלנו באמצעות פקודת <span dir="ltr"> scanf()</span> שעליה נסביר:
         <br>
-        <span dir="ltr">scanf("%kind", &name_of_variable);</span>
+        <span dir="ltr">scanf("%kind", &amp;name_of_variable);</span>
         <br>
         הסבר:
         <br>
         פקודה שבה אנו מכניסים ערך לתוך המשתנה שנמצא בצד ימין, גם פה אנו צריכים להגיד מאיזה סוג משתנה אנחנו מקבלים מידע
-        <span dir="ltr">scanf("%left",&right);</span> .
+        <span dir="ltr">scanf("%left",&amp;right);</span> .
         <br>
       </p>
     </div>
@@ -154,11 +154,11 @@
           <p>
             לדוגמה:
             <br>
-            ברגע שנריץ את התוכנית הזו הקונסול שלנו ימתין עד שניתן לו ערך.
+            ברגע שנריץ את התוכנית הזו המחשב שלנו ימתין עד שניתן לו ערך.
             <br>
             לאחר שנכניס ערך יודפס לנו:
             <br>
-            The value is: הערך
+            <span dir="ltr">The value is: 8</span>
             <br>
           </p>
         </div>
@@ -171,7 +171,7 @@
 {
   <b>int</b> x;
   printf(<u>"Please enter a value"</u>);
-  scanf(<u>"%d"</u>,&amp;x);
+  scanf(<u>"%d"</u>,&amp;x); <em>// lets assume that we entered the number 8</em>
   printf(<u>"The value is: %d"</u>,x);
 }
 </code></pre>
