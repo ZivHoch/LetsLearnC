@@ -70,23 +70,30 @@
       </ul>
       דוגמה למודולו:
       <br>
-      7%3 = 1
+      <span dir="ltr"> 7%3 = 1</span>
       <br>
       כי:
       <br>
-      7/3 = 2.3333
+      <p dir="ltr">
+        2&nbsp;<span class="frac"><sup>1</sup><span>&frasl;</span><sub>3</sub></span> = <span
+          class="frac"><sup>7</sup><span>&frasl;</span><sub>3</sub></span>
+      </p>
       <br>
-      ושארית החלוקה שלנו היא בעצם 1 מתוך 3 (שליש) -> 1
+      כדי להגיע לשארית החלוקה אנו נכפיל את השבר שנשאר לנו ( <span
+        class="frac"><sup>1</sup><span>&frasl;</span><sub>3</sub></span> ) בערך שחילקנו בו את המספר ( 3 ).
       <br>
       מהי שארית החלוקה של 12 ב4 ?
       <br>
       באותה הדרך אנו נעשה קודם כל :
       <br>
-      12/4 = 3.0
+      <span class="frac"><sup>12</sup><span>&frasl;</span><sub>4</sub></span> = 3.0
       <br>
-      ניקח את ה0/4 שיש לנו ובעצם שארית החלוקה שלנו היא 0.
+      ניקח את ה <span class="frac"><sup>0</sup><span>&frasl;</span><sub>4</sub></span> שיש לנו ובעצם שארית החלוקה שלנו
+      היא 0.
       <br>
-
+      באופן כללי כדי לחשב מודולו של מספר אנו נפעל לפי הנוסחא הבאה:
+      x - ( ( <span class="frac"><sup>x</sup><span>&frasl;</span><sub>y</sub></span> ) * y)
+      כך ש x הוא המספר ההתחלתי <br>ו y הוא המספר עליו אנחנו רוצים לעשות עליו את המודולו
     </div>
     <!--Second paragraph-->
     <div class="row">
@@ -95,8 +102,10 @@
           <p>
             דוגמה להשמה:
             <br>
-            בעצם מה שקורה פה זה שאנחנו מצהירים על משתנה בשם x ואנחנו משווים אותו ל5, כלומר עשינו פה השמה.
-            במקרה הזה, לקחנו את x (שכבר מוכר לנו כ-int), וביצענו השמה אצלו של הערך 7.
+            בעצם מה שקורה פה זה שאנחנו מצהירים על משתנה בשם x ואנחנו נותנים לו את הערך 5, כלומר עשינו פה השמה.<br>
+            במקרה הזה, לקחנו את x (שכבר מוכר לנו כ-int), וביצענו עליו השמה של הערך 7.<br>
+            כאשר אנו עושים השמה, הערך שהיה במשתנה לפני "נדרס".<br>
+            כלומר, אחרי שורה 5 יש במשתנה x רק את הערך 7.
           </p>
         </div>
       </div>
@@ -107,7 +116,7 @@
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>int</b> x;
+  <b>int</b> x = 5;
   x = 7;
 }
           </code></pre>
