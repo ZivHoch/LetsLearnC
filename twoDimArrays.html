@@ -54,62 +54,140 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
-    <h1 class="top-left">Let's learn C</h1>
+    <section id="main">
 
-    <h2 class="top-right-head">מערך דו ממדים (מטריצה)</h2>
+      <h1 class="head-left">Lets learn C</h1>
+      <h1 class="head-right">מערכים דו ממדים (מטריצות)</h1>
 
-    <p class="top-right">
+      <div class="First-Para">
+        <p>
+          כמו שלמדו על "מערכים" ולאחר שהבנו לעומק את היעילות שבשימוש במערכים, אנו נראה שיש מבנה נתונים מתקדם יותר שנקרא
+          מערך
+          דו ממדי.
+          תפקידו של מבנה זה הוא לאחסן נתונים במעין טבלה.
+          אל הטבלה ניגש בצורה הבאה:
+          mat[x][y]
+          כפי שראינו אם הטבלה אנו ניגשים בעזרת שני אינדקסים (נהוג i,j) נראה איך זה נראה מאחורי הקלעים:
+          <br>
 
-      כמו שלמדו על "מערכים" ולאחר שהבנו לעומק את היעילות שבשימוש במערכים, אנו נראה שיש מבנה נתונים מתקדם יותר שנקרא מערך
-      דו ממדי.
-      תפקידו של מבנה זה הוא לאחסן נתונים במעין טבלה.
-      אל הטבלה ניגש בצורה הבאה:
-      mat[x][y];
-      כפי שראינו אם הטבלה אנו ניגשים בעזרת שני אינדקסים (נהוג i,j) נראה איך זה נראה מאחורי הקלעים:
-      <br>
-      <br>
-      <br>
-      <!--TABLE
+        </p>
+      </div>
+
+      <img class="pic" src="assest/TabelsForTwoDimArrays/two_dim_arrays_1.png" alt="table">
+
+
       
-      0 63 4 1
+      <div class="First-Para">
+        <p>
+          כמו במערכים רגילים (ובתכנות בכלל) המטריצה מתחילה ב0,0.
+          <br>
+          הערך במקום [0,3] הוא 0
+          <br>
+          הערך במקום [2,2] הוא 9
+          <br>
+          הערך במקום [3,1] הוא 87
+          <br>
+          הערך במקום [2,1] הוא 8
+          <br>
+
+        </p>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-md-6">
+  
+          <div class="para">
+  
+            <p>
+              נניח שנרצה לחשב את הסכום כל ערכי המערך נוכל לעשות זאת באמצעות לולאה דו ממדית:
+            </p>
+  
+  
+          </div> <!--para-->
+          
+  
+        </div>   <!--COL MD 6 - FOR TEXT-->
       
-      87 8 6 3
+  
+        <div class="col-md-6">
+  
+          <figure class="code">
+            <figcaption id="example1-caption">CODE 1:</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+  <b>void</b> main()
+  {
+    <b>int</b>i ,j ,sum;
+    sum = 0;
+
+    <b>for</b>(i=0; i&lt;4; i++)
+    {
+      <b>for</b>(i=0; i&lt;4; i++)
+      {
+        sum+=mat[i,j]; 
+      }
+    }
+    printf(<u>"%d"</u>,sum);
+  }
+              </code></pre>
+          </figure>
+  
+        </div>  <!--COL MD 6 - FOR CODE-->
+  
+      </div> <!--ROW-->
+
+      <br>
+
+      <div class="row">
+
+        <div class="col-md-6">
+  
+          <div class="para">
+  
+            <p>
+              הדפסה של כל איברי המערך תתבצע בצורה הבאה:
+            </p>
+  
+  
+          </div> <!--para-->
+          
+  
+        </div>   <!--COL MD 6 - FOR TEXT-->
       
-      25 9 45 4
-      
-      6 7 2 1
-      <br>
-      -->
+  
+        <div class="col-md-6">
+  
+          <figure class="code">
+            <figcaption id="example1-caption">CODE 1:</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"> <b>void</b> printMat(<b>int</b> **arr ,<b>int</b> row ,<b>int</b> col)
+{
+  <b>int</b> i = 0 ,j = 0;
 
-      כמו במערכים רגילים (ובתכנות בכלל) המטריצה מתחילה ב0,0.
-      <br>
-      הערך במקום [0,3] הוא 0
-      <br>
-      הערך במקום [2,2] הוא 9
-      <br>
-      הערך במקום [3,1] הוא 87
-      <br>
-      הערך במקום [2,1] הוא 8
-      <br>
+  <b>for</b>(i=0; i &lt; row; i++)
+  {
+    <b>for</b>(i=0; i &lt; col; i++)
+    {
+      printf(<u>"%d"</u>,arr[i][j]);     
+    }
+  }
+    
+}
+              </code></pre>
+          </figure>
+  
+        </div>  <!--COL MD 6 - FOR CODE-->
+       
+  
 
-      <br>
-      נניח שנרצה לחשב את הסכום כל ערכי המערך נוכל לעשות זאת באמצעות לולאה דו ממדית:
-
-      <!--CODE
-      int i,j,sum;
-      sum=0;
-
-      for(i=0;i<4;i++){ For(j=0;j<4;j++)
-        {
-           Sum+=mat[i,j]; 
-        } 
-      
-        printf("the sum of the matrix is %d",sum);
-        -->
-    </p>
-
-
+</section>
 
 </body>
 
 </html>
+
+
+<!--CODE
+
+
+-->
