@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,7 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
@@ -20,10 +21,13 @@
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
+
 </head>
 
 <body class="bg-twoAndHalf scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -80,6 +84,7 @@
 <b>double</b> return_sum()
 {
   <b>double</b> student1 , student2 , student3 , … , student30;
+  <em>//for visual studio 2017 or above use scanf_s</em>
   scanf(<u>"%lf"</u>, &amp;student1); scanf(<u>"%lf"</u>, &amp;student2); … scanf(<u>"%lf"</u>, &amp;student30);  
   <b>double</b> sum = (student1 + … + student30) / 30;
   <b>return</b> sum;
@@ -110,6 +115,7 @@
   <b>double</b> students_array[30] , sum = 0;
   <b>for</b> ( i = 0; i &lt; 30; i++ )
   {
+    <em>//for visual studio 2017 or above use scanf_s</em>
     scanf_s(<u>"%lf"</u>,students_array[i]);
     sum += students_array[i];
   }

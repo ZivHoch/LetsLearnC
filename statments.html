@@ -7,10 +7,9 @@
 
   <title>Lets learn C: statments</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
@@ -21,11 +20,13 @@
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
+
 </head>
 
-<body class="bg-twoAndHalf scrollbar scrollbar_style">
-
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+<body class="bg-oneAndHalf scrollbar scrollbar_style">
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -69,52 +70,56 @@
             גשם יורד בחוץ כרגע.
           </li>
           <li>
-            x>0
+            x&gt;0.
           </li>
           <li>
-            grade >= 60
-          </li>
-        </ol>
-
-        פעולות שניתן להשתמש בהן בשפת סי לצורך בדיקה בקרה:
-        <ol>
-          <li>
-            &gt; (קטן / גדול מ..)
-          </li>
-          <li>
-            &lt; (קטן / גדול מ..)</li>
-          <li>
-            &gt;= (קטן שווה / גדול שווה מ..)
-          </li>
-          <li>
-            &lt;= (קטן שווה / גדול שווה מ..)
-          </li>
-          <li>
-            == (שווה)
-          </li>
-          <li>
-            != (שונה)
+            grade &gt;= 60.
           </li>
         </ol>
-
-        משפטים בשפת סי שניתן להשתמש בהן לצורך בדיקת בקרה:
-        <ul>
-          <li>
-            <span dir="ltr">if()</span> - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד
-            שימצא בתוך סוגריים
-            מסולסלות.
-          </li>
-          <li>
-            else - פעולה שנעשית אם ורק אם פעולת הif שקדה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים
-            אנחנו נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלות.
-          </li>
-          <li>
-            <span dir="ltr">else if()</span> - זוהי בדיקה שעובדת לאחר שיש if לפניה. הבדיקה תיעשה אם ורק אם הif הקודם
-            שלנו לא התקיים.
-          </li>
-        </ul>
       </p>
     </div>
+    <h3 class="head-right">פעולות שניתן להשתמש בהן בשפת c לצורך בדיקת בקרה:</h3>
+    <div class="First-Para">
+      <ol>
+        <li>
+          &gt; (קטן / גדול מ..).
+        </li>
+        <li>
+          &lt; (קטן / גדול מ..).
+        </li>
+        <li>
+          &gt;= (קטן שווה / גדול שווה מ..).
+        </li>
+        <li>
+          &lt;= (קטן שווה / גדול שווה מ..).
+        </li>
+        <li>
+          == (שווה).
+        </li>
+        <li>
+          != (שונה).
+        </li>
+      </ol>
+    </div>
+    <h3 class="head-right"> משפטים בשפת c שניתן להשתמש בהן לצורך בדיקת בקרה:</h3>
+    <div class="First-Para">
+      <ul>
+        <li>
+          <span dir="ltr">if()</span> - פעולה שבודקת האם מה שבתוך הסוגריים מתקיים - אם כן אנחנו נכנסים לתוך הקוד
+          שימצא בתוך סוגריים
+          מסולסלים.
+        </li>
+        <li>
+          else - פעולה שנעשית אם ורק אם פעולת הif שקדמה לה לא התקיימה - גם פה , במידה ואנחנו מגלים שה else התקיים
+          אנחנו נכנסים לתוך קטע הקוד שימצא בתוך סוגרים מסולסלים.
+        </li>
+        <li>
+          <span dir="ltr">else if()</span> - זוהי בדיקה שעובדת לאחר שיש if לפניה.<br> הבדיקה תיעשה אם ורק אם הif הקודם
+          שלנו לא התקיים.
+        </li>
+      </ul>
+    </div>
+
     <!--Second paragraph-->
     <br>
 
@@ -123,7 +128,8 @@
       <div class="col-md-6">
         <div class="para">
           <p>
-                        נניח שאנחנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של אדם
+            נניח שאנו בודקים האם גילו של אדם הוא מספיק מבוגר כדי לעלות על מתקן בלונה פארק ונניח שגילו המינימלי של
+            אדם
             שעולה על המתקן צריך להיות 15. <br>
             ז"א - כדי שאדם יוכל לעלות על המתקן אנו נצטרך לוודא שהוא לפחות בן 15.
             <br>
@@ -136,11 +142,11 @@
         <figure class="code">
 
           <figcaption id="example1-caption">CODE:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main() <em>// main function - this is the code that will be executed when we click f5.</em>
 {
   <b>int</b> age = 15; <em>// declaring an integer variable named age and setting in to 15.</em>
-  <b>if</b>(age >= 15) <em>// checking if our age variable is greater or equal to 15.</em>
+  <b>if</b>(age &gt;= 15) <em>// checking if our age variable is greater or equal to 15.</em>
   {
     printf(<u>"You can enter\n"</u>);<em> // this code will be executed only if our if statement is true.</em>
   }

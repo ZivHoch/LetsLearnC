@@ -9,22 +9,24 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
+
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -56,20 +58,13 @@
   <section id="main" onclick="openOrCloseNav(0)">
     <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">sizeof</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
-    <h3 class="head-right"> למה אנו צריכים את sizeof?</h3>
-    <div class="First-Para">
-      <p>
-        נניח שאנחנו רוצים לעבוד על מערך בפונקציה מסויימת אבל שכחנו לשלוח לפונקציה את גודל המערך .
-        ניתן לצאת מהבעיה הזאת על ידי שימוש ב- sizeof
-      </p>
-    </div>
-
+    
     <h3 class="head-right">מה sizeof עושה ? </h3>
 
     <div class="First-Para">
 
       <p>
-        מחזיר לנו את הגודל של משתנה מסויים בבתים.
+        מחזיר לנו את הגודל של משתנה או עצם מסויים בבתים.
       </p>
 
     </div>
@@ -81,22 +76,21 @@
       <p>
         <span dir="ltr">sizeof(name);</span>
         <br>
-        name – מציין את העצם או משתנה שעליו אנחנו רוצים לדעת את הגודל
+        name – מציין את העצם או משתנה שעליו אנחנו רוצים לדעת את הגודל.
         <br>
-        הפקודה לוקחת את שם המשתנה name מבינה מה סוג הנתונים שלו ולפי זה מחזירה כמות בתים.
-        למשל, אם name הוא char אז היא תחזיר בית יחיד.
+        הפקודה לוקחת את שם המשתנה name מבינה מה סוג הנתונים שלו ולפי זה מחזירה כמות בתים.<br>
+        למשל, אם name הוא char אז היא תחזיר בית יחיד.<br>*
+        ניתן למצוא גודל של מערך על ידי sizeof אך ורק באותה הפונקציה שבו המערך מוגדר.
       </p>
 
     </div>
-
+<h3 class="head-right">  דוגמה 1:</h3>
     <div class="row">
 
       <div class="col-md-6">
 
         <div class="para">
           <p>
-            דוגמה 1:
-            <br>
             הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג זה תופס 4 בתים.
           </p>
         </div>
@@ -112,8 +106,7 @@
 {
   <b>int</b> number;
   printf(<u>"%d\n"</u>,<b>sizeof</b>(number));
-}
-      </code></pre>
+}</code></pre>
         </figure>
 
       </div>
@@ -123,23 +116,16 @@
 
     <br>
 
-
+<h3 class="head-right"> דוגמה 2:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-            דוגמה 2:
-            <br>
             בגלל שבדוגמה זו יש מערך הפקודה תחזיר לנו את כל כמות הבתים שיש בתוכו (כלומר 8 בתים בכל אחד מתאיו כפול 5
-            תאים).
-            זאת אומרת שנקבל פה חזרה 40, שזו תשובה נכונה אבל לנו היא לא מאוד עוזרת כי בתור מתכנתים אנו רוצים לדעת כמה
+            תאים).<br>
+            זאת אומרת שנקבל פה 40, אך לנו זה לא מאוד עוזר כי בתור מתכנתים אנו רוצים לדעת כמה
             תאים יש ולא כמה בתים.
           </p>
-
-
         </div>
         <!--para-->
 
@@ -157,8 +143,7 @@
 {
   <b>double</b> arr[5];
   printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr));
-}
-      </code></pre>
+}</code></pre>
         </figure>
 
       </div>
@@ -170,86 +155,28 @@
     <br>
 
 
-
+<h3 class="head-right">תיקון לדוגמה 2:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-            תיקון לדוגמה 2:
-            <br>
-            כדי לתקן את זה, כל שעלינו לעשות הוא לחלק את מה שקיבלנו חזרה מsizeof בסוג הנתונים שלנו.
-            <br>
-            <span dir="ltr">sizeof(arr_name) / data_type;</span>
+             כדי לתקן זאת, כל שעלינו לעשות הוא לחלק את מה שקיבלנו חזרה מ sizeof בסוג הנתונים שלנו.
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 2 - FIXED:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>double</b> arr[5];
-  printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr)/<b>double</b>);
-}
-      </code></pre>
+  printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr)/<b>sizeof</b>(arr[0]));
+}</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
     </div>
   </section>
-
 </body>
 
 </html>
-
-
-<!-- FIRST CODE
-
-
-_________________
-END FIRST CODE-->
-
-<!-- SECOND CODE
-
-#include <stdio.h>
-void main()
-{
-  double arr[5];
-  printf(“the size in bytes is: %d”,sizeof(arr));
-}
-_________________
-END SECOND CODE-->
-
-
-<!-- THIRD CODE
-
-#include <stdio.h>
-void main()
-{
-  printf(“size of array is: %d\n” , sizeof(arr) / double);
-}
-_________________
-END THIRD CODE-->
-
-<!--FOURTH CODE
-#include <stdio.h>
-void main()
-{
-  sizeof(arr_name) / data_type;
-}
-_________________
-END FOURTH CODE-->

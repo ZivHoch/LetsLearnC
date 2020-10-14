@@ -7,25 +7,26 @@
 
   <title>Lets learn C: printAndScan</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
-
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
+
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -61,9 +62,7 @@
     <h3 class="head-right">פלט</h3>
     <!--First paragraph-->
     <div class="First-Para">
-
       <p>
-
         בשפת c יש לנו אופציה להדפיס למסך / למשתמש שלנו דברים באמצעות פקודת<span dir="ltr"> printf() </span> (שעליה
         הסברנו
         <a href="firstProgram.html">בתוכנית הראשונה שלנו</a>).
@@ -71,7 +70,7 @@
         בנוסף יש לנו אופציה להדפיס משתנים (שעליהם הסברנו בעמוד <a href="variables.html">משתנים</a>
         ) בצורה הבאה:
         <br>
-        <span dir="ltr">printf("%kind",name_of_variable);</span>&lrm;
+        <span dir="ltr">printf("%kind",var);</span>&lrm;
         <br>
         הסבר:
         <br>
@@ -81,29 +80,23 @@
         ימין אנו רושמים את שם המשתנה שאותו אנו מדפיסים.
         <br>
       </p>
-
     </div>
     <!--END FIRST PARA-->
-
-
 
     <!--Second paragraph-->
 
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
 
           <p>
             לדוגמה:
             <br>
-            printf = הפקודה שאנו מבצעים
+            printf = הפקודה שאנו מבצעים.
             <br>
-            "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו int)
+            "%d" = סוג המשתנה שאותו אנו מדפיסים (במקרה שלנו int).
             <br>
-            x = שם המשתנה שאותו אנו מדפיסים
+            x = שם המשתנה שאותו אנו מדפיסים.
             <br>
             כאשר המחשב רואה את שורת הקוד הזאת (5) הוא מבין כי הוא צריך להדפיס למסך ערך מסוג int שמאוחסן במשתנה ששמו x.
             <br>
@@ -113,7 +106,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> x = 7;
@@ -166,11 +159,12 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> x;
   printf(<u>"Please enter a value"</u>);
+  <em>//for visual studio 2017 or above use scanf_s</em>
   scanf(<u>"%d"</u>,&amp;x); <em>// lets assume that we entered the number 8</em>
   printf(<u>"The value is: %d"</u>,x);
 }
@@ -181,15 +175,14 @@
     <!--END Fourth pargaraph-->
     <!--Fifth paragraph-->
     <div class="First-Para">
-      <p>מה רושמים? מה מדפיסים?
-      </p>
+      <p>מה רושמים? מה מדפיסים?</p>
       <ul>
         <li><span dir="ltr">%d -&gt; int</span></li>
         <li><span dir="ltr">%c -&gt; char</span></li>
         <li><span dir="ltr">%f -&gt; float</span></li>
         <li><span dir="ltr">%lf -&gt; double</span></li>
-        <li><span dir="ltr">%s -&gt; String</span></li>
-        <li><span dir="ltr">%u -&gt; Unsigned int</span></li>
+        <li><span dir="ltr">%s -&gt; string</span></li>
+        <li><span dir="ltr">%u -&gt; unsigned int</span></li>
         <li><span dir="ltr"> %ld -&gt; long</span></li>
       </ul>
       <!--TABLE-->

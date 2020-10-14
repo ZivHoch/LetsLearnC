@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +10,24 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
+
 </head>
 
-<body class="bg-oneAndHalf  scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+<body class="bg scrollbar scrollbar_style">
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -54,89 +57,61 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
-
     <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">Casting</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
-
     <div class="First-Para">
       <p>
         קסטינג = המרה בין משתנה למשתנה.
         <br>
-        לפעמים אנחנו נרשום במשתנה מסוים ונרצה להמיר אותו למשתנה אחר בהמשך הדרך (או למשל לעבוד במשתנה מסוים ולהדפיס את
-        התוצאה
-        במשתנה אחר).
+        לפעמים אנחנו נרשום משתנה מסוג מסוים ונרצה להמיר אותו לסוג משתנה אחר בהמשך הדרך (או למשל לעבוד עם סוג משתנה מסוים ולהדפיס את
+        התוצאה תוך שימוש בסוג משתנה אחר).
       </p>
     </div>
-
+<h3 class="head-right">לדוגמא:</h3>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
           <p>
-            לדוגמה:
+            מה עשינו פה?
+            <br>
+            ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
+            <br>
+            לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
+            <br><br>
+            casting עובד בצורה הבאה:
+            <br>
+            לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו לצור עותק זמני מסוג int כדי להציג את המספר ללא
+            הנקודה
+            העשרונית.
           </p>
         </div>
       </div>
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>double</b> num = 0;
   printf(<u>"please enter a number\n"</u>);
-  scanf_s(<u>"%lf"</u>,&amp;num);
-  printf(<u>"your number without decimal point is: %d"</u>, (<b>int</b>)num );
-}
-            </code></pre>
+  <em>//for visual studio 2017 or above use scanf_s</em>
+  scanf(<u>"%lf"</u>,&amp;num);
+  printf( <u>"your number without decimal point is: %d"</u> ,(<b>int</b>)num );
+}</code></pre>
         </figure>
       </div>
     </div>
-    <div class="First-Para">
-      <p>
-
-        מה עשינו פה?
-        <br>
-        ביקשנו מהמשתמש מספר ושמרנו אותו בתוך משתנה num מסוג double.
-        <br>
-        לאחר מכן הדפסנו את המספר שלו ללא הנקודה העשרונית בעזרת שימוש בcasting.
-        <br><br>
-        casting עובד בצורה הבאה:
-        <br>
-        לקחנו את המשתנה שלנו num שהוא מסוג double ובחרנו להציג אותו / להמיר אותו זמנית לint כדי להציג את המספר ללא
-        הנקודה
-        העשרונית.<br>
-        ניתן לבצע המרה בצורה רגעית כמו שביצענו עכשיו כלומר, num אינו מושפע מהתהליך אלא רק מודפס בצורת int ולאחר מכן
-        חוזר
-        לעצמו.
-      </p>
-    </div>
-
-
+    <br>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-
-            ניתן גם לבצע המרה באופן קבוע למשל:
-            <br>
-            במקרה הזה בעצם ביצענו המרה קבועה מdouble לint ושמרנו אותו בnew_num.
+            ניתן גם לבצע המרה באופן קבוע למשל:<br>
+            במקרה הזה בעצם ביצענו המרה קבועה מdouble לint ושמרנו אותו במשתנה new_num.
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -144,19 +119,10 @@
 {
   <b>double</b> num = 8.325;
   <b>int</b> new_num = (<b>int</b>)num;
-}
-  </code></pre>
+}</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
-
-
   </section>
 
 </body>

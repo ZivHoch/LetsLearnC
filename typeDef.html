@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,7 @@
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
@@ -24,7 +25,9 @@
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -60,16 +63,16 @@
 
     <div class="First-Para">
       <p>
-        שפת C נותנת לנו אפשרות להגדיר לפונקציה / משתנה / רצף מילים / מילה שם נוסף אשר תפקידו הוא להפוך את הטקסט להיות יותר
-        קריא.
+        שפת c נותנת לנו אפשרות להגדיר לפונקציה / משתנה / רצף מילים / מילה / שם נוסף אשר תפקידו הוא להפוך את הטקסט להיות
+        נוח לקריאה.
         <br>
         כלומר, נגיד ואנחנו רוצים להשתמש במשתנה unsigned int (רק מספרים חיוביים ושלמים), אנו נוכל להגדיר typedef של
         unsigned
         int על ידי שם אחר, לדוגמא positive_only.
         <br>
-        כעת כאשר אנו נצטרך להשתמש ב unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר קריא.
+        כעת כאשר אנו נצטרך להשתמש במשתנה מסוג unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר קריא.<br>
 
-        באופן דומה אנו יכולים להגדיר גם רצף של מילים (או מילה) או פונקציות על ידי שמות שאנחנו נגדיר.
+        באופן דומה אנו יכולים להגדיר גם רצף של מילים (או מילה) או פונקציות על ידי שמות שאנחנו נגדיר.<br>
 
         לדוגמא, אנו נוכל להגדיר את 1 להיות ODD ואת 0 להיות EVEN על ידי הגדרת define.
         <br>
@@ -79,18 +82,17 @@
       </p>
 
     </div>
-
+<h3 class="head-right">הסינטקס של typedef & define:</h3>
     <div class="row">
 
       <div class="col-md-6">
 
         <div class="para">
           <p>
-            הסינטקס של typedef & define:<br>
             typedef מסמן לקומפיילר שיש פה "הגדרה חדשה".<br>
-            unsigned int מסמן לקומפיילר למה המחשב מתייחס.
-            positive_only מה המתכנת רואה.
-            חשוב לזכור: typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה. נהוג לרשום define ו typedef
+            unsigned int מסמן לקומפיילר למה המחשב מתייחס.<br>
+            positive_only מה המתכנת רואה.<br>
+            חשוב לזכור:<br> typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה.<br> נהוג לרשום define ו typedef
             בתחילת הקוד (אחרי הinclude 'ים).
           </p>
         </div>
@@ -104,17 +106,17 @@
 <b>void</b> main()
 {
   <em>//code</em>
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
     <br>
+    <h3 class="head-right">שימוש בקוד:</h3>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
           <p>
-            שימוש בקוד:
+            בקוד זה אנו רואים את השימוש ב typedef ו define כדי לבדוק אם מספר הוא זוגי או אי-זוגי בצורה קריאה הרבה יותר.
           </p>
         </div>
         <!--para-->
@@ -134,6 +136,7 @@
 {
   <span class="colorgold">positive_only</span> x;
   printf(<u>"please enter number"</u>);
+  <em>//for visual studio 2017 or above use scanf_s</em>
   scanf_s(<u>"%u"</u>,&amp;x);
   <b>if</b> (x%2 == <strong>ODD</strong>)
   {
@@ -143,8 +146,7 @@
   {
     printf(<u>"the number is EVEN"</u>);
   }
-}
-          </code></pre>
+}</code></pre>
         </figure>
 
       </div>

@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Lets learn C: variables</title>
+    <title>Lets learn C: varialbe</title>
     <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
 
     <!-- Bootstrap Scripts -->
@@ -24,7 +24,9 @@
 </head>
 
 <body class="bg-two scrollbar scrollbar_style">
-    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+    <section id="topPage">
+        <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+    </section>
     <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
         <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
         <a href="index.html">מי אנחנו?</a>
@@ -111,8 +113,8 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>signed int</b> name; 
-  <b>unsigned int</b> name;
+  <b>signed int</b> var_one; 
+  <b>unsigned int</b> var_two;
 }
                 </code></pre>
                 </figure>
@@ -155,7 +157,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>double</b> name;
+  <b>double</b> var;
 }
                 </code></pre>
                 </figure>
@@ -176,8 +178,8 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>signed double</b> name; 
-  <b>unsigned double</b> name;
+  <b>signed double</b> var_one; 
+  <b>unsigned double</b> var_two;
 }
                 </code></pre>
                 </figure>
@@ -216,7 +218,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>char</b> name;
+  <b>char</b> var;
 }
                 </code></pre>
                 </figure>
@@ -238,7 +240,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>char</b> name = <u>'A'</u>;
+  <b>char</b> var = <u>'A'</u>;
 }
         </code></pre>
                 </figure>
@@ -261,7 +263,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>char</b> name = 65;
+  <b>char</b> var = 65;
 }
         </code></pre>
                 </figure>
@@ -282,8 +284,8 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>signed char</b> name; 
-  <b>unsigned char</b> name;
+  <b>signed char</b> var_one; 
+  <b>unsigned char</b> var_two;
 }
         </code></pre>
                 </figure>
@@ -323,7 +325,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>float</b> name;
+  <b>float</b> var;
 }
                 </code></pre>
                 </figure>
@@ -349,8 +351,8 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>signed float</b> name; 
-  <b>unsigned float</b> name;
+  <b>signed float</b> var_one; 
+  <b>unsigned float</b> var_two;
 }
                 </code></pre>
                 </figure>
@@ -381,7 +383,7 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>short</b> name;
+  <b>short</b> var;
 }
                 </code></pre>
                 </figure>
@@ -404,8 +406,8 @@
                         class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>signed short</b> name; 
-  <b>unsigned short</b> name;
+  <b>signed short</b> var_one; 
+  <b>unsigned short</b> var_two;
 }
                 </code></pre>
                 </figure>

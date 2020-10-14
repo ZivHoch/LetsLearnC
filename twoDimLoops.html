@@ -5,28 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Lets learn C: TwoDimLoops</title>
+  <title>Lets learn C: twoDimLoops</title>
   <link rel="icon" type="image/x-icon" href="assest/favicon.ico" />
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
 
   <!-- Bootstrap Scripts -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Java Script -->
   <script src="js/code.js"></script>
 
 
-
 </head>
 
-<body class="bg-twoAndHalf scrollbar scrollbar_style">
-  <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+<body class="bg-oneAndHalf scrollbar scrollbar_style">
+  <section id="topPage">
+    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+  </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -66,14 +66,12 @@
 
       <p>
         כפי שלמדנו בנושא <a href="oneDimLoops.html">לולאות</a> , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל
-        לולאות WHILE , שרצה עד התנאי
-        שאנו
-        ניתן לה).
+        לולאות while , שרצה עד שהתנאי שניתן לה יהיה שיקרי).
         <br>
-        קיימת הרחבה לנושא הלולאות והיא נפוצה מאוד בעולם התכנות.
-        לולאה דו ממדית הינה לולאה בעלת שני ממדים והיא מורכבת מלולאה שמריצה בתוכה לולאה אחרת.
-        אחת מהמטרות של לולאה דו ממדית הוא לעבור על מערך דו ממדי / לבצע מיון / לבצע חיפוש.
-        חשוב לציין שלולאה דו ממדית סטנדרטית רצה בסדר גודל של n^2 , כלומר היא תבצע n*n פעולות (כאשר n הוא הנתון הראשי).
+        קיימת הרחבה לנושא הלולאות והיא נפוצה מאוד בעולם התכנות.<br>
+        לולאה דו ממדית מורכבת מלולאה שמריצה בתוכה לולאה אחרת.<br>
+        אחת מהמטרות של לולאה דו ממדית הוא לעבור על מערך דו ממדי / לבצע מיון / לבצע חיפוש.<br>
+        חשוב לציין שלולאה דו ממדית סטנדרטית רצה בסדר גודל של n<sup>2</sup> , כלומר היא תבצע n*n פעולות <br>(כאשר n הוא הנתון הראשי).<br>
         נניח שאנו רוצים להדפיס משולש שעשוי מכוכביות:
         <br>
       </p>
@@ -103,15 +101,14 @@
 
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  printf(<u>"*/n"</u>);
-  printf(<u>"**/n"</u>);
-  printf(<u>"***/n"</u>);
-  printf(<u>"****/n"</u>);
-  printf(<u>"*****/n"</u>);
-
+  printf(<u>"*\n"</u>);
+  printf(<u>"**\n"</u>);
+  printf(<u>"***\n"</u>);
+  printf(<u>"****\n"</u>);
+  printf(<u>"*****\n"</u>);
 }
             </code></pre>
         </figure>
@@ -163,7 +160,7 @@
     {
       printf(<u>"*"</u>); 
     }
-    printf(<u>"/n"</u>);
+    printf(<u>"\n"</u>);
   }
 }</code></pre>
         </figure>
@@ -180,8 +177,8 @@
         הסבר:
         <br>
         בדוגמא זו יש לנו לולאה בתוך לולאה,
-        הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5. בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
-        הנוכחי. בתול הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה). בכל פעם שאנו מסיימים את הלולאה השנייה
+        הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5.<br> בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
+        הנוכחי.<br> בתוך הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה).<br> בכל פעם שאנו מסיימים את הלולאה השנייה
         אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
 
       </p>
@@ -193,4 +190,3 @@
 
 
 </html>
-

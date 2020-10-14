@@ -108,8 +108,9 @@ a:hover {
   text-align: right;
 }
 
+/*****************SIDE-BAR***************/
 .sidenav-icon {
-  margin: 18px 24px 0 0;
+  margin: 18px 15px 0 0;
   font-size: 20px;
   color: #818181;
 }
@@ -118,7 +119,7 @@ a:hover {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   right: 0;
   background-color: #658DBC;
@@ -143,7 +144,7 @@ a:hover {
 .sidenav .closebtn {
   position: absolute;
   top: -30px;
-  right: 25px;
+  right: 10px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -165,6 +166,11 @@ a:hover {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+#topPage {
+  position: fixed;
+  z-index: 2;
 }
 
 /************MATH FRACTION************/
@@ -424,7 +430,7 @@ pre u b {
 
 .colorgold {
   font-weight: normal;
-  color: gold;
+  color: brown;
 }
 
 /* gray paint for include*/
@@ -478,6 +484,10 @@ pre em * * {
   .pic_sm {
     width: 40%;
     margin-right: 70px;
+  }
+
+  #title {
+    visibility: hidden;
   }
 }
 
