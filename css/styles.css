@@ -6,6 +6,7 @@ html {
   text-align: right;
 }
 
+
 body {
   text-align: right;
   color: #232323;
@@ -22,12 +23,13 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #232323;
+  color: #03c4a1;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: tomato;
+  color: darkblue;
+  text-decoration: none;
 }
 
 
@@ -165,6 +167,29 @@ a:hover {
   }
 }
 
+/************MATH FRACTION************/
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.frac>sup,
+span.frac>sub {
+  display: block;
+  font: inherit;
+
+}
+
+span.frac>sup {
+  top: 0;
+  border-bottom: 0.08rem solid;
+}
+
+span.frac>span {
+  display: none;
+}
+
 /***********************SCROLLBAR******************/
 
 
@@ -209,10 +234,21 @@ a:hover {
   margin-right: 50px;
 }
 
-.pic {
+.pic_big {
   width: 60%;
   margin-right: 50px;
 }
+
+.pic_med {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.pic_sm {
+  width: 20%;
+  margin-right: 50px;
+}
+
 
 /*****************************CODE STYLE***************************/
 
@@ -418,8 +454,30 @@ pre em * * {
     color: #0099ff;
   }
 
-  .pic {
-    width: 80%;
+  .pic_big {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pic_sm {
+    width: 30%;
+    margin-right: 350px;
+  }
+}
+
+@media (max-width:768px) {
+  .pic_big {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pic_med {
+    width: 80%
+  }
+
+  .pic_sm {
+    width: 40%;
+    margin-right: 70px;
   }
 }
 
