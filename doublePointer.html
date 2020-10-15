@@ -29,7 +29,7 @@
   </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
-    <a href="index.html">מי אנחנו?</a>
+    <a href="index.html">מי אנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
     <a href="printAndScan.html">קלט ופלט</a>
@@ -63,7 +63,7 @@
     <div class="First-Para">
       <p>
         ראינו שמצביע יכול להצביע לכל משתנה וכעת נראה מצביע שנקרא מצביע כפול שיכול להצביע למשתנה מסוג מצביע.
-        לשם נוחות נציין שכאשר אנו מדברים על מצביע כפול אנחנו נרשום פה לעיתים דאבל-פוינטר כדי למנוע בלבול עם מצביעים
+        לשם נוחות נציין שכאשר אנו מדברים על מצביע כפול אנו נרשום פה לעיתים דאבל-פוינטר כדי למנוע בלבול עם מצביעים
         רגילים.
 
       </p>
@@ -73,7 +73,7 @@
 
     <div class="First-Para">
       <p>
-        אם בשביל מצביע למשתנה היינו צריכים כוכבית אחת אז בשביל דאבל-פוינטר (שהוא בעצם מצביע למצביע) אנחנו צריכים שתי
+        אם בשביל מצביע למשתנה היינו צריכים כוכבית אחת אז בשביל דאבל-פוינטר (שהוא בעצם מצביע למצביע) אנו צריכים שתי
         כוכביות מה שאומר שנוצרת לנו מעין חוקיות שקשורה לכוכביות.
         החוקיות אומרת שבשביל ליצור משתנה שיצביע למשתנה אחר, על המשתנה המצביע להיות בעל כוכבית אחת יותר מאשר המשתנה שאליו
         אנו מצביעים.
@@ -103,12 +103,12 @@
         <div class="para">
 
           <p>
-            דוגמא 1 למצביע כפול:
+            דוגמא ראשונה למצביע כפול:
             <br>
             <br>
             שורה 5 – ptr מצביע על הכתובת של number.
             <br>
-            שורה 6 – double-ptr מצביע על ptr שהוא מצביע
+            שורה 6 – double_ptr מצביע על ptr שהוא מצביע
           </p>
 
 
@@ -127,11 +127,10 @@
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
-  <b>int</b> number = 10 , *ptr , **double_ptr;
+  <b>int</b> number = 10, *ptr, **double_ptr;
   ptr = &amp;number;
   double_ptr =&amp;ptr;
-}
-      </code></pre>
+}</code></pre>
         </figure>
 
       </div>
@@ -147,14 +146,14 @@
       <p>
         ישנם כמה דברים שונים בין מצביע למצביע לבין מצביע רגיל:
         <br>
-        כאשר אנחנו רושמים רק את השם של המצביע למצביע printf(“%d”, double-ptr) דבר זה ידפיס את הכתובת של המצביע. <br>
+        כאשר אנו רושמים רק את השם של המצביע למצביע printf(“%d”, double_ptr) דבר זה ידפיס את הכתובת של המצביע. <br>
         <br>
-        כאשר אנחנו נרשום printf(“%d”,* double-ptr) הוא ידפיס את התוכן שנמצא בכתובת שאליו אנחנו מצביעים, לכן אם אנחנו
-        עכשיו מצביעים לכתובת של המצביע ptr ואמרנו שהערכים היחידים שמצביעים יכולים לשמור זה כתובות אז כאשר אנחנו נרשום
-        *double-ptr אנחנו בעצם נקבל את הכתובת של המשתנה המקורי.
+        כאשר אנו נרשום printf(“%d”,*double_ptr) הוא ידפיס את התוכן שנמצא בכתובת שאליו אנו מצביעים.<br>
+        לכן, אם אנו מצביעים לכתובת של ptr אז כאשר נרשום <span dir="ltr">*double_ptr</span> נקבל את הכתובת של
+        המשתנה המקורי.<br>
+        כפי שכבר ציינו <a href="pointers.html">במצביעים</a> הערכים היחידים שמצביעים יכולים לשמור הם כתובות.<br>
         <br>
-        <br>
-        כאשר אנחנו נרשום printf(“%d”,*(* double-ptr)); אנחנו נקבל כאן את הערך של המשתנה המקורי (כלומר הערך המספרי שנמצא
+        כאשר אנו נרשום printf(“%d”,*(*double_ptr)) אנו נקבל כאן את הערך של המשתנה המקורי (כלומר הערך המספרי שנמצא
         בפנים ולא הכתובת).
 
       </p>
@@ -168,12 +167,12 @@
         <div class="para">
 
           <p>
-            דוגמאות 2 למצביע כפול:
+            דוגמא שנייה למצביע כפול:
             <br>
             <br>
             <span dir="ltr">inc_by_one(&amp;ptr)</span> – שליחה של פוינטר כפול מתבצעת בצורה הזו (בתוך ה main).
             <br>
-            <span dir="ltr">*(*double_ptr)++</span>
+            <span dir="ltr">(*(*double_ptr))++</span>
             – שינוי ערך של מצביע כפול תתבצע בצורה הזו.
           </p>
 
@@ -191,7 +190,7 @@
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
-<b>void</b> inc_by_one(<b>int</b> **double_ptr);
+<b>void</b> inc_by_one(<b>int</b> **<i>double_ptr</i>);
 
 <b>void</b> main()
 {
@@ -200,13 +199,10 @@
   inc_by_one(&amp;ptr);
 }
 
-<b>void</b> inc_by_one(<b>int</b> **double_ptr)
+<b>void</b> inc_by_one(<b>int</b> **<i>double_ptr</i>)
 {
-  *(*double_ptr)++;
-}
-
-
-      </code></pre>
+  (*(*<i>double_ptr</i>))++;
+}</code></pre>
         </figure>
 
       </div>

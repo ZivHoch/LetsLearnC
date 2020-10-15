@@ -56,18 +56,13 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
-
     <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">רקורסיות</h1>
-
     <div class="First-Para">
       <p>
-        רקורסיה היא שיטה לפתרון בעיות גדולות באמצעות פתרון של בעיות קטנות יותר.
-        <br>
-        ננסה להבין את ההסבר על הרקורסיה באמצעות דוגמא:
-        <br>
-        נניח שאנו רוצים לבדוק כמה פעמים המספר 32 מתחלק ב 2.
-        <br>
+        רקורסיה היא שיטה לפתרון בעיות גדולות באמצעות פתרון של בעיות קטנות יותר.<br>
+        ננסה להבין את ההסבר על הרקורסיה באמצעות דוגמא:<br>
+        נניח שאנו רוצים לבדוק כמה פעמים המספר 32 מתחלק ב 2.<br>
         אנו נניח שאנחנו לא יודעים כמה פעמים 32 מתחלק ב 2 ואז ננסה לפתור את הבעיה הגדולה הזאת עם בעיה קטנה יותר.
         <br>
         כלומר, אם
@@ -75,11 +70,10 @@
         <br>
         כעת, הבעיה שלנו היא לא כמה פעמים 32 מתחלק ב 2 אלא כמה פעמים 16 מתחלק ב-2.
         <br>
-        כי אם אנו נדע כמה פעמים 16 מתחלק ב2 אז נדע כמה פעמים 32 מתחלק ב2.
-        <br>
+        אם נדע כמה פעמים 16 מתחלק ב2 אזי נדע כמה פעמים 32 מתחלק ב2,
         כי 16*2=32.
         <br>
-        בשלב זה, אנו נניח שאני לא יודעים כמה פעמים 16 מתחלק ב2 אז אנו נחלק ב2 פעם נוספת ונקבל 8.
+        בשלב זה, נניח שאנו לא יודעים כמה פעמים 16 מתחלק ב2 אז אנו נחלק ב2 פעם נוספת ונקבל 8.
         <br>
         ואם נחלק את 8 ב-2 פעם נוספת נקבל 4. אחר כך נקבל 2 ואז 1.
         <br>
@@ -87,46 +81,51 @@
         <br>
         1-&gt;2-&gt;4-&gt;8-&gt;16-&gt;32 כלומר, ביצענו את החילוק 5 פעמים ולכן 32 מתחלק ב-2 חמש פעמים.
         <br>
-        איך ממשים דבר כזה?
-        <br>
-        אז לפני שנקפוץ לפתרון כדאי שנחשוב על כמה דברים:
+      </p>
+    </div>
+    <h3 class="head-right">איך מממשים דבר כזה?</h3>
+    <h4 class="head-right">אז לפני שנקפוץ לפתרון כדאי שנחשוב על כמה דברים:</h4>
+    <div class="First-Para">
+      <p>
         <ol>
           <li>מהו תנאי העצירה?</li>
           <li>מה השינוי שאנו עושים בכל פעם כדי לצמצם את גודל הבעיה?</li>
-          <li>איך אנו קורא לפונקציה שוב?</li>
+          <li>איך אנו קוראים לפונקציה שוב?</li>
         </ol>
-        <br>
-        1* אם אתם נתקעים על השאלה "מהו תנאי העצירה?" נסו לחשוב "מתי אני מפסיק לעשות את הפעולה הזאת?" או "מה הבעיה
-        הקטנה
-        ביותר שמסתתרת מאחורי השאלה?"
-        <br>
-        2* אם אתם נתקעים בשאלה השנייה תנסו לחשוב "מה שונה בין כל שלב ושלב?"
-        <br>
-        אחרי שחשבנו נסתכל על השאלה וננסה להבין מה אנחנו אמורים לקבל חזרה? -&gt; מה הפונקציה מחזירה?
-        האם זה מספר? תו? או בכלל כלום?
-        <br>
-        <br>
-        בשאלה שלנו:
-        <br>
-        <br>
+      </p>
+    </div>
+    <h3 class="head-right">שימו לב!</h3>
+    <div class="First-Para">
+      <ol>
+        <li>
+          אם אתם נתקעים על השאלה "מהו תנאי העצירה?" נסו לחשוב "מתי אני מפסיק לעשות את הפעולה הזאת?" או "מה הבעיה
+          הקטנה
+          ביותר שמסתתרת מאחורי השאלה?"
+        </li>
+        <li>
+          אם אתם נתקעים בשאלה השנייה תנסו לחשוב "מה שונה בין כל שלב ושלב?"
+          אחרי שחשבנו נסתכל על השאלה וננסה להבין מה אנחנו אמורים לקבל חזרה? -&gt; מה הפונקציה מחזירה?
+          האם זה מספר? תו? או בכלל כלום?
+        </li>
+      </ol>
+    </div>
+    <h3 class="head-right">בשאלה שלנו:</h3>
+    <div class="First-Para">
+      <p>
         <ol>
           <li>תנאי העצירה הוא כשהמספר הוא 1, כלומר אי אפשר לחלק ב2 יותר.</li>
-          <li>השינוי הוא חילוק ב2 פעם אחת בכל פעם.</li>
-          <li>אנו קוראים לפונקציה שוב בכל פעם רק עם תוספת של הצלחה אחת.</li>
+          <li>השינוי הוא חלוקה ב2 פעם אחת בכל פעם.</li>
+          <li>אנו קוראים לפונקציה בכל פעם מחדש רק עם תוספת של הצלחה אחת.</li>
         </ol>
         <br>
         כעת, לאחר שאנחנו יודעים את כל השלבים נסתכל על המבנה הבא:
       </p>
     </div>
-
+    <h3 class="head-right"> מספר הערות:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
-            מספר הערות:
             <ul>
               <li>
                 אחרי שעלינו על פתרון מסוים אנחנו צריכים לבדוק אם הפתרון שלנו עונה על תנאי השאלה.
@@ -139,57 +138,27 @@
               </li>
             </ul>
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
-
           <figcaption id="example1-caption">CODE:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> DevideByTwo(<b>int</b> n)
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<b>int</b> DevideByTwo(<b>int</b> <i>n</i>)
 {
-  
-  <b>if</b>(n == 1)
+  <b>if</b>(<i>n</i> == 1)
   {
     <b>return</b> 0; <em>// base case.</em>
   }
   <b>else</b>
   {
-    <b>return</b> 1 + DevideByTwo(n/2); <em>// Making the problem smaller</em>
+    <b>return</b> 1 + DevideByTwo(<i>n</i>/2); <em>// Making the problem smaller</em>
   }
-
-}
-            </code></pre>
+}</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
-
-
   </section>
 </body>
 
 </html>
-
-
-<!--
-
-
-
-
-
-
--->
