@@ -63,16 +63,11 @@
 
       <div class="First-Para">
         <p>
-          כמו שלמדו על "מערכים" ולאחר שהבנו לעומק את היעילות שבשימוש במערכים, אנו נראה שיש מבנה נתונים מתקדם יותר שנקרא
-          מערך
-          דו ממדי.
-          תפקידו של מבנה זה הוא לאחסן נתונים במעין טבלה.
-          אל הטבלה ניגש בצורה הבאה:
+          מערך דו ממדי הינו מבנה נתונים מתקדם יותר ממערך רגיל, אנו ממליצים לפני שמתחילים ללמוד על הנושא הזה לחזור אחורה
+          ל<a href="arrays.html">מערכים</a> במידה ומשהו עדיין לא לגמרי מסתדר לכם.
           <br>
-          <span dir="ltr">mat[x][y];</span>
-          <br>
-          כפי שראינו אם הטבלה אנו ניגשים בעזרת שני אינדקסים (נהוג i,j) נראה איך זה נראה מאחורי הקלעים:
-          <br>
+          ניתן להסתכל על מערך דו ממדי כעל מערך שמכיל בתוכו מערכים אחרים.
+          דוגמה לאיך נראה מערך דו ממדי:
 
         </p>
       </div>
@@ -83,20 +78,135 @@
 
       <div class="First-Para">
         <p>
-          כמו במערכים רגילים (ובתכנות בכלל) המטריצה מתחילה ב0,0.
+          שימו לב שהגישה לערכים בתוך המערך הדו ממדי מאוד דומה למערך רגיל.
+          למשל:
           <br>
-          הערך במקום [0,3] הוא 0
+          הערך במקום [3][0] הוא 1.
           <br>
-          הערך במקום [2,2] הוא 9
+          הערך במקום [2][2] הוא 9.
           <br>
-          הערך במקום [3,1] הוא 87
+          הערך במקום [1][3] הוא 87.
           <br>
-          הערך במקום [2,1] הוא 8
+          הערך במקום [1][2] הוא 8.
           <br>
 
         </p>
       </div>
 
+      
+      <div class="First-Para">
+        <p>
+          
+          חשוב לציין שכמו בנושא <a href="arrays.html">מערכים</a> גם מערכים דו ממדים יכולים להיות סטטיים או דינמיים.
+
+        </p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+
+          <div class="para">
+
+            <p>
+              נראה דוגמה ליצירת מערך סטטי:
+              <br>
+              בדרך זו יצרנו מערך בגודל 4 על 4. 
+              <br>
+              כלומר, כמות התאים במערך שלנו תהיה 16.
+            </p>
+
+          </div>
+          <!--para-->
+
+
+        </div>
+        <!--COL MD 6 - FOR TEXT-->
+
+
+        <div class="col-md-6">
+
+          <figure class="code">
+            <figcaption id="example1-caption">CODE 1: static array declaration</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+  <b>void</b> main()
+  {
+    <b>int</b> arr[4][4];
+  }
+              </code></pre>
+          </figure>
+
+        </div>
+        <!--COL MD 6 - FOR CODE-->
+
+      </div>
+      <!--ROW-->
+
+      <br>
+
+      <div class="row">
+
+        <div class="col-md-6">
+
+          <div class="para">
+
+            <p>
+              נראה דוגמה ליצירת מערך דינמי:
+              <br>
+              שימו לב שפה אנו משתמשים <a href="doublePointer.html">במצביע כפול</a> (כלומר דאבל-פוינטר).
+              <br>
+              לאחר יצירת המצביע הכפול, אנו עושים הקצאה דינאמית ראשונה שיוצרת לנו מערך של מצביעים.
+              <br>
+              לכל אחד מהמצביעים במערך אנו עושים הקצאה דינאמית ובכך משיגים מערך שמכיל בתוכו מערכים.
+              <br>
+              הערה: ניתן להשתמש בcalloc במקום malloc ובכך לדאוג שהמערך יהיה מאופס.
+            </p>
+
+          </div>
+          <!--para-->
+
+
+        </div>
+        <!--COL MD 6 - FOR TEXT-->
+
+
+        <div class="col-md-6">
+
+          <figure class="code">
+            <figcaption id="example1-caption">CODE 2: dynamic array declaration</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+  <b>void</b> main()
+  {
+    <b>int</b> rows, cols;
+    <b>int</b> **arr; <em>//double pointer declaration</em>
+
+    printf(<u>"enter amount of rows: "</u>);
+    scanf("%d",&rows);
+
+    printf(<u>"enter amount of cols: "</u>);
+    scanf("%d",&cols);
+
+    <em>// first allocation - array of pointers</em>
+    arr = (<b>int</b>**)malloc(<b>sizeof</b>(<b>int</b>*) * rows);
+
+    for(int i=0; i&lt;rows; i++)
+    {
+      <em>// each one of the pointers points towards an array.</em>
+      arr[i] = (<b>int</b>*)malloc(<b>sizeof</b>(<b>int</b>) * cols);
+    }
+
+
+  }
+              </code></pre>
+          </figure>
+
+        </div>
+        <!--COL MD 6 - FOR CODE-->
+
+      </div>
+      <!--ROW-->
+
+      <br>
 
       <div class="row">
 
@@ -120,22 +230,21 @@
         <div class="col-md-6">
 
           <figure class="code">
-            <figcaption id="example1-caption">CODE 1:</figcaption>
-            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
-  <b>void</b> main()
-  {
-    <b>int</b> i ,j ,sum;
-    sum = 0;
+            <figcaption id="example1-caption">CODE 3: sum matrix values</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> returnSum(<b>int</b> **arr, <b>int</b> rows, <b>int</b> cols)
+{
+  <b>int</b> i=0 ,j=0 ,sum=0;
 
-    <b>for</b>(i=0; i&lt;4; i++)
+  <b>for</b>(i=0; i &lt; rows; i++)
+  {
+    <b>for</b>(j=0; i &lt; cols; j++)
     {
-      <b>for</b>(i=0; i&lt;4; i++)
-      {
-        sum+=mat[i,j]; 
-      }
+      sum += mat[i,j]; 
     }
-    printf(<u>"%d"</u>,sum);
   }
+    
+  <b>return</b> sum;
+}
               </code></pre>
           </figure>
 
@@ -169,17 +278,18 @@
         <div class="col-md-6">
 
           <figure class="code">
-            <figcaption id="example1-caption">CODE 2:</figcaption>
-            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"> <b>void</b> printMat(<b>int</b> **arr ,<b>int</b> row ,<b>int</b> col)
+            <figcaption id="example1-caption">CODE 4: print matrix values</figcaption>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"> <b>void</b> printMat(<b>int</b> **arr ,<b>int</b> rows ,<b>int</b> cols)
 {
   <b>int</b> i = 0 ,j = 0;
 
-  <b>for</b>(i=0; i &lt; row; i++)
+  <b>for</b>(i=0; i &lt; rows; i++)
   {
-    <b>for</b>(i=0; i &lt; col; i++)
+    <b>for</b>(i=0; i &lt; cols; i++)
     {
-      printf(<u>"%d"</u>,arr[i][j]);     
+      printf(<u>"%d "</u> , arr[i][j]);     
     }
+    printf(<u>"\n"</u>);
   }
     
 }
