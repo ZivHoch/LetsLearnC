@@ -63,8 +63,6 @@
     <div class="row">
       <div class="col-md-6">
         <div class="para">
-          בשביל מה אנחנו צריכים מערך?
-          <br>
           מערך הוא מבנה נתונים שביכולתו לאסוף הרבה מאוד נתונים מאותו הסוג באותו
           המקום.
           <br>
@@ -80,7 +78,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>double</b> return_sum()
 {
   <b>double</b> student1 , student2 , student3 , … , student30;
@@ -88,12 +86,11 @@
   scanf(<u>"%lf"</u>, &amp;student1); scanf(<u>"%lf"</u>, &amp;student2); … scanf(<u>"%lf"</u>, &amp;student30);  
   <b>double</b> sum = (student1 + … + student30) / 30;
   <b>return</b> sum;
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
-
+    <br>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
@@ -108,7 +105,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>double</b> return_sum()
 {
   <b>int</b> i;
@@ -120,8 +117,7 @@
     sum += students_array[i];
   }
   <b>return</b> (sum/30);
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
@@ -130,7 +126,7 @@
     <div class="First-Para">
       <p>
         בדוגמה שפה השגנו בדיוק את אותה התוצאה, עם הרבה פחות קוד והרבה יותר סדר.
-        <br>דברים שחשוב לציין בנוגע למערכים בשפת סי:
+        <br>דברים שחשוב לציין בנוגע למערכים בשפת c:
       </p>
       <ol>
         <li>
@@ -143,14 +139,13 @@
           <span dir="ltr">double arr[3] = {1,2};</span>
         </li>
         <li>
-          מערך בגודל 20 שכל אבריו מאופסים. <span dir="ltr"> double zeroArr[20] = {0};</span>
+          מערך בגודל 20 שכל אבריו מאופסים.<br> <span dir="ltr"> double zeroArr[20] = {0};</span>
         </li>
       </ol>
     </div>
+    <h3 class="head-right"> איך ניגשים לאיבר במערך?</h3>
     <div class="First-Para">
       <p>
-        איך ניגשים לאיבר במערך?
-        <br>
         לאחר יצירת המערך אנו נעבוד בעזרת מספר / משתנה שישמש אותנו כאינדקס המצביע
         על האזור במערך שעליו אנחנו רוצים לעבוד.
         <br>
@@ -172,14 +167,13 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 3:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> arr[5] = {1,2,3,4,5}; <em>// Before</em>
-  arr[5] = 8; 
+  arr[4] = 8; 
   <em>// After, the array will look like that: {1,2,3,4,8}</em>
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
@@ -195,37 +189,39 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 4:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> arr[5] = {1,2,3,4,5}; <em>// Before</em>
   *(arr+4) = 8;
   <em>// After, the array will look like that: {1,2,3,4,8}</em>
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
     <div class="First-Para">
-      בצורה הראשונה ניגשנו לאיבר ה5 בתוך המערך בעזרת הסוגריים המרובעים ושינינו
-      את הערך שלו. בצורה השנייה לקחנו את המערך (שמצביע תמיד על האיבר הראשון)
-      והלכנו ארבעה צעדים קדימה לסופו ושם שינינו את הערך (כלומר 1+4 = 5 , ניגשנו
-      לאיבר ה5 במערך).<br><br>
-      יתרונות במערך סטטי:
+      בקוד 3 ניגשנו לאיבר החמישי בתוך המערך בעזרת הסוגריים המרובעים ושינינו
+      את הערך שלו.<br> בקוד 4 לקחנו את המערך (שמצביע תמיד על האיבר הראשון)
+      והלכנו ארבעה צעדים קדימה לסופו ושם שינינו את הערך (כלומר 1 + 4 = 5 , ניגשנו
+      לאיבר החמישי במערך).<br><br>
+    </div>
+    <h3 class="head-right">יתרונות במערך סטטי:</h3>
+    <div class="First-Para">
       <ol>
         <li>
-          עשוי לחסוך לנו הרבה מאוד זמן ביצירת משתנים (למשל כמו בדוגמה הראשונה,
+          עשוי לחסוך לנו הרבה מאוד זמן ביצירת משתנים (למשל כמו בדוגמה הראשונה, <br>
           30 משתנים בעלי אותו התפקיד – נכנסים טוב בתוך מערך יחיד בגודל 30).
         </li>
         <li>
-          הופך את הקוד לקריא יותר (משתנה אחד , קצר מ30 משתנים)
+          הופך את הקוד לקריא יותר (משתנה אחד , קצר מ30 משתנים).
         </li>
         <li>
           הגישה אליו מאוד נוחה, רק צריך לגשת באמצעות אינדקס מספרי.
         </li>
       </ol>
-      <br>
-      חסרונות:
+    </div>
+    <h3 class="head-right">חסרונות במערך סטטי:</h3>
+    <div class="First-Para">
       <ol>
         <li>
           מגדירים פעם אחת את הגודל, לא ניתן לשנות אותו לאחר מכן (כלומר אם היו לנו
