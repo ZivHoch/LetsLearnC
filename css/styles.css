@@ -521,7 +521,14 @@ pre em * * {
   }
 
   figure {
+
     font-size: 15px;
+    width: 100%;
+  }
+
+  .col-md-6 {
+    padding-left: 0;
+    margin-bottom: 20px;
   }
 
   #mySidenav a {

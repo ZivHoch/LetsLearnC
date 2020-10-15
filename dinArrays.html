@@ -25,7 +25,7 @@
 
 <body class="bg scrollbar scrollbar_style">
   <section id="topPage">
-    <span class="sidenav-icon" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1)"><i class="sidenav-icon fas fa-bars"></i></span>
   </section>
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
@@ -57,200 +57,289 @@
   </div>
   <section id="main" onclick="openOrCloseNav(0)">
     <h1 class="head-left">Let's learn C</h1>
-    <h1 class="head-right">מערכים דינאמיים</h2>
+    <h2 class="head-right">מערכים דינאמיים</h2>
 
-      <!--למה צריכים מערכים דינאמיים-->
-      <h3 class="head-right">למה אנחנו צריכים מערכים דינאמיים ?</h3>
-      <div class="First-Para">
-        <p>
-          הכרנו את המבנה מערך סטטי והבנו שהוא מאוד שימושי במקרה של קליטת מידע רב, אבל רק כאשר אנחנו יודעים כבר מראש מה
-          גודל המידע שלנו.
+    <!--למה צריכים מערכים דינאמיים-->
+    <h3 class="head-right">למה אנו צריכים מערכים דינאמיים ?</h3>
+    <div class="First-Para">
+      <p>
+        הכרנו את המבנה מערך סטטי והבנו שהוא מאוד שימושי במקרה של קליטת מידע רב, אבל רק כאשר אנו יודעים כבר מראש מה
+        גודל המידע שלנו.
 
-          <br>
-          אבל מה קורה כאשר אנחנו צריכים להוסיף או להוריד מידע מהמערך שלנו ?
-        </p>
-      </div>
-
-
-      <div class="First-Para">
-        <p>
-          הבעיה שלנו עם מערך סטטי הוא שאנחנו יכולים לבזבז מקום או שאנחנו יכולים להקצות מעט מדי מקום ואז אנחנו לא יכולים
-          להכיל יותר מידע , לשם כך יש לנו את המערכים הדינאמיים.
-        </p>
-      </div>
-
-      <h3 class="head-right">יצירת מערך דינאמי</h3>
-      <div class="First-Para">
-        <p>
-          השימוש של מערך דינאמי מתאפשר בעזרת שימוש במצביעים (פוינטר) ומוצהר כך:
-
-          <br>
-          ;type *name
-        </p>
-      </div>
+        <br>
+        אבל מה קורה כאשר אנו צריכים להוסיף או להוריד מידע מהמערך שלנו ?
+      </p>
+    </div>
 
 
-      <div class="First-Para">
-        <p>
-          כדי שניצור מערך דינאמי אנחנו צריכים מצביע ועליו נפעיל את אחת מהפקודות של הקצאת זיכרון דינאמי:
-          malloc או calloc
-        </p>
-      </div>
+    <div class="First-Para">
+      <p>
+        הבעיה שלנו עם מערך סטטי הוא שאנו יכולים לבזבז מקום או שאנו יכולים להקצות מעט מדי מקום ואז אנו לא יכולים
+        להכיל יותר מידע , לשם כך יש לנו את המערכים הדינאמיים.
+      </p>
+    </div>
 
-      <!--malloc & calloc-->
-      <h4 class="head-right">malloc & calloc</h4>
-      <div class="First-Para">
-        <p>
-          פקודות אלו שייכות לספריות בשם: stdlib.h ו malloc.h ואנו משתמשים בהם כך:
+    <h3 class="head-right">יצירת מערך דינאמי</h3>
+    <div class="First-Para">
+      <p>
+        השימוש של מערך דינאמי מתאפשר בעזרת שימוש <a href="pointers.html">במצביעים</a> ומוצהר כך:
 
-          <br>
-          ;dynamic_array = (type*)malloc(amount*(sizeof(type))
-
-          <br>
-          ;dynamic_array = (type*)calloc(amount , sizeof(type))
-        </p>
-      </div>
-
-      <div class="First-Para">
-        <p>
-          (*type) – אומר מאיזה סוג אנו ניצור את המערך הדינאמי שלנו.
-
-          <br>
-          amount – מציין את כמות התאים שאנו רוצים במערך.
-
-          <br>
-          sizeof(type) - מציין את הגודל של סוג המערך (הכוונה שאם אנו רוצים ליצור מערך דינאמי מסוג int אז אנחנו נרשום.
-          sizeof(int))
-
-          <br>
-          בעזרת 2 נתונים אלו (amount וsizeof(type) ) המחשב יודע כמה מקום בבתים הוא צריך להקצות למערך שלנו.
-        </p>
-
-      </div>
+        <br>
+        ;type *name
+      </p>
+    </div>
 
 
-      <div class="First-Para">
-        <p>
-          מערך דינאמי עובד כמו מערך רגיל מלבד העובדה שניתן לקבוע את גודלו בזמן ריצת התוכנית.
+    <div class="First-Para">
+      <p>
+        כדי שניצור מערך דינאמי אנו צריכים מצביע ועליו נפעיל את אחת מהפקודות של הקצאת זיכרון דינאמי:<br>
+        malloc או calloc
+      </p>
+    </div>
 
-          <br>
-          בנוסף לכך גישה לתאים במערך הדינאמי זהה לגישה לתאים של מערך רגיל.
+    <!--malloc & calloc-->
+    <h4 class="head-right">malloc & calloc</h4>
+    <div class="First-Para">
+      <p>
+        פקודות אלו שייכות לספריות בשם: stdlib.h ו malloc.h ואנו משתמשים בהם כך:
+        <ul>
+          <li> ;dynamic_array = (type*)malloc(amount*(sizeof(type))</li>
+          <li> ;dynamic_array = (type*)calloc(amount , sizeof(type))</li>
+        </ul>
 
-          <br>
-          במידה ואתם מרגישים חלשים בחלק זה, כדאי לחזור על הנושא של <a href="arrays.html">מערכים</a>
-        </p>
-      </div>
+      </p>
+    </div>
+    <h4 class="head-right">הסבר:</h4>
+    <div class="First-Para">
+      <p>
+        <ol>
+          <li> (*type) – אומר מאיזה סוג אנו ניצור את המערך הדינאמי שלנו.</li>
+          <li> amount – מציין את כמות התאים שאנו רוצים במערך.</li>
+          <li> sizeof(type) - מציין את הגודל של סוג המערך (הכוונה שאם אנו רוצים ליצור מערך דינאמי מסוג int אז אנו
+            נרשום
+            sizeof(int)).</li>
+        </ol>
+        בעזרת sizeof ו amount המחשב יודע כמה מקום בבתים הוא צריך להקצות למערך שלנו בזיכרון.
+      </p>
+    </div>
+    <h4 class="head-right">ההבדל בין malloc ל calloc</h4>
+    <div class="First-Para">
+      <p>
+        <ul>
+          <li>
+            כאשר אנו יוצרים מערך דינאמי באמצעות calloc, כל הערכים במערך החדש שיצרנו מכילים את הערך 0.
+          </li>
+          <li>
+            בניגוד לכך, כאשר אנו יוצרים מערך דינאמי באמצעות malloc כל הערכים במערך החדש מכילים ערכי זבל.
+          </li>
+        </ul>
+        במילים אחרות ניתן לומר כי כאשר אנו יוצרים מערך דינאמי עם calloc אנחנו בעצם יוצרים את מערך עם malloc ואז
+        עוברים על כל המערך
+        בלולאה ומאפסים את כל התאים,
+        ולכן ניתן לומר כי malloc יותר יעיל מ calloc.
+      </p>
+    </div>
+    <br>
+    <h4 class="head-right">ההבדל בין מערך דינאמי ללא דינאמי</h4>
+    <div class="First-Para">
+      <p>
+        מערך דינאמי עובד כמו מערך רגיל מלבד העובדה שניתן לקבוע את גודלו בזמן ריצת התוכנית.<br>
+        בנוסף לכך גישה לתאים במערך הדינאמי זהה לגישה לתאים של מערך רגיל.<br>
+        במידה ואתם מרגישים חלשים בחלק זה, כדאי לחזור על הנושא של <a href="arrays.html">מערכים</a>
+      </p>
+    </div>
+    <!--שליחת מערך דינאמי לפונקציה-->
+    <br>
+    <h3 class="head-right">שליחת מערך דינאמי לפונקציה</h3>
+    <div class="First-Para">
+      <p>
+        שליחת מערך דינאמי לפונקציה זהה לשליחת מערך רגיל.
+        שליחת מערך רגיל:
+        <br>
+        ;name_of_function(array , amount)
+      </p>
+    </div>
 
-      <!--שליחת מערך דינאמי לפונקציה-->
-      <br>
-      <h3 class="head-right">שליחת מערך דינאמי לפונקציה</h3>
-      <div class="First-Para">
-        <p>
-          שליחת מערך דינאמי לפונקציה זהה לשליחת מערך רגיל.
+    <div class="First-Para">
+      <p>
+        לעומת זאת חותמת הפונקציה במערך דינאמי בפונקציה תהיה שונה משל מערך רגיל:
+        <ul>
+          <li>
+            קבלת מערך רגיל:<br>
+            ;name_of_function(type* pointer_to_array , type amount)
+          </li>
+          <li>
+            קבלת מערך דינאמי:<br>
+            ;name_of_functions(type **double_pointer_to_dynamic_array , type amount)
+          </li>
+        </ul>
+        <br>
+      </p>
+    </div>
 
-          <br>
-          שליחת מערך רגיל:
+    <div class="First-Para">
+      <p>
+        הכוונה לכך היא כדי שנוכל לבצע שינויים בכתובת זיכרון של מערך בתוך פונקציה עלינו ליצור חותמת פונקציה שמקבלת
+        שני כוכביות (שעליו עשינו נושא בנפרד <a href="doublePointer.html">מצביע כפול</a>).
 
-          <br>
-          ;name_of_function(array , amount)
-        </p>
-      </div>
+        <br>
+        כאשר אנו רושמים בmain שלנו את הקוד אנו נשלח כתובת של המערך שלנו כלומר:
 
-      <div class="First-Para">
-        <p>
-          לעומת זאת חותמת הפונקציה במערך דינאמי בפונקציה תהיה שונה משל מערך רגיל.
+        <br>
+        <span dir="ltr">&amp;arr</span>
+      </p>
+    </div>
 
-          <br>
-          קבלת מערך רגיל:
-
-          <br>
-          ;name_of_function(type* pointer_to_array , type amount)
-        </p>
-      </div>
-
-
-      <div class="First-Para">
-        <p>
-          קבלת מערך דינאמי:
-
-          <br>
-          ;name_of_functions(type **double_pointer_to_dynamic_array , type amount)
-        </p>
-      </div>
-
-      <div class="First-Para">
-        <p>
-          הכוונה לכך היא כדי שנוכל לבצע שינויים בכתובת זיכרון של מערך בתוך פונקציה עלינו ליצור חותמת פונקציה שמקבלת
-          שני כוכביות (שעליו עשינו נושא בנפרד <a href="doublePointer.html">מצביע כפול</a>).
-
-          <br>
-          כאשר אנו רושמים בmain שלנו את הקוד אנו נשלח כתובת של המערך שלנו כלומר:
-
-          <br>
-          &arr
-        </p>
-      </div>
-
-      <!--realloc-->
-      <h3 class="head-right">שינוי הקצאה של מערך דינאמי בעזרת realloc</h3>
-      <div class="First-Para">
-        <p>
-          פונקציית realloc מאפשרת לנו להגדיל או להקטין את גודל המערך.
-
-          <br>
-          שימוש בפקודה זו יתבצע כך:
-
-          <br>
-          ;array_name = (type*)realloc(array_name ,sizeof(type)*amount)
-        </p>
-      </div>
-
-      <div class="First-Para">
-        <p>
-          array_name – מציין את המערך אותו אנו רוצים להקטין או להגדיל.
-
-          <br>
-          sizeof(type) - מציין את הגודל של סוג המערך (הכוונה שאם אנו רוצים ליצור מערך דינאמי מסוג int אז אנחנו נרשום.
-          sizeof(int))
-
-          <br>
-          בעזרת 2 נתונים אלו (amount , sizeof) אנחנו מציינים את הגודל החדש של המערך בבתים. חשוב לציין שאם אנחנו מקטינים
-          מערך (לדוגמה ממערך בגודל 5 למערך בגודל 3 ) אז הנתונים ב שני התאים האחרונים של המערך נאבדים לנו.
-        </p>
-      </div>
-
-      <!--דוגמה ליצירת מערך בגודל שהמשתמש רוצה-->
-      <h3 class="head-right">דוגמה ליצירת מערך בגודל שהמשתמש רוצה</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="para">
-            <p>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-
-          <figure class="code">
-            <figcaption id="example1-caption">CODE:</figcaption>
-            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
-
+    <h3 class="head-right">חשוב לציין!</h3>
+    <h4 class="head-right">()free</h4>
+    <div class="First-Para">
+      <p>
+        לפני שאנו קופצים לדוגמאות חשוב לזכור שזיכרון דינאמי לא משוחרר באופן אוטומטי מהזיכרון, ולכן זה התפקיד שלנו
+        כמתכנתים לשחרר אותו.<br>
+        נעשה זאת בכך שבכל פונקציה שאנחנו מגדירים מערך דינאמי אנו נדאג לכך שבסוף התוכנית
+        זיכרון זה
+        ישוחרר.<br>
+        נשחרר את המערך כך:<br>
+        ;free(the_name_of_the_array)<br>
+        אנו ברגע שפקודה זו מתבצעת היא משחררת מהזיכרון את <b>כל</b> המערך (אי אפשר לשחרר רק חלק מסויים).<br>
+        אם ננסה לשחרר פעמיים את אותו הזיכרון תקפוץ לנו הודעת שגיאה.
+      </p>
+    </div>
+    <h4 class="head-right">()assert</h4>
+    <div class="First-Para">
+      <p>
+        אחרי שאנו עושים calloc, malloc או realloc אנו נשתמש בפונקציה בשם assert שתפקידה הוא להודיע לנו אם המחשב הצליח
+        להגדיר בזיכרון את המערך עם הגודל המבוקש.<br>
+        נשתמש בפונקציה זו בכך שאחרי שנשתמש ב calloc, malloc או realloc נרשום:<br>
+        ;assert(the_name_of_the_array)<br><br>
+        כדי להשתמש ב assert נצטרך להוסיף בתחילת הקוד:<br>
+        <span dir="ltr">#include &lt;assert.h&gt;</span>
+      </p>
+    </div>
+    <!--דוגמה ליצירת מערך בגודל שהמשתמש רוצה-->
+    <h3 class="head-right">דוגמה ליצירת מערך בגודל שהמשתמש רוצה:</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE WITH CALLOC:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#include</i> <u>&lt;stdlib.h&gt;</u>
+<i>#include</i> <u>&lt;assert.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> *dynamic_array, amount;
   printf(<u>"please enter the size you want for the array:"</u>);
   <em>//for visual studio 2017 or above use scanf_s</em>
-  scanf(<u>"%d"</u>, &amount); <em>//if you are using visual studio 17 or above use scanf_s</em>
+  scanf(<u>"%d"</u>, &amp;amount); <em>//lets assume that we entered the number 4</em>
+  dynamic_array = (<b>int</b>*)calloc(amount , <b>sizeof</b>(<b>int</b>));
+  <strong>assert</strong>(dynamic_array); <em>//succeeded</em>
+  <em>//the array that we created is: [0,0,0,0]</em>
+  free(dynamic_array);
+}</code></pre>
+        </figure>
+      </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE WITH MALLOC:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#include</i> <u>&lt;stdlib.h&gt;</u>
+<i>#include</i> <u>&lt;assert.h&gt;</u>
+<b>void</b> main()
+{
+  <b>int</b> *dynamic_array, amount;
+  printf(<u>"please enter the size you want for the array:"</u>);
+  <em>//for visual studio 2017 or above use scanf_s</em>
+  scanf(<u>"%d"</u>, &amp;amount);<em>//lets assume that we entered the number 4</em>
   dynamic_array = (<b>int</b>*)malloc(amount * <b>sizeof</b>(<b>int</b>));
-}
-          </code></pre>
-          </figure>
+  <strong>assert</strong>(dynamic_array); <em>//succeeded</em>
+  <em>//the array that we created is: [-8421,50451,-32131,94321]</em>
+  free(dynamic_array);
+}</code></pre>
+        </figure>
+      </div>
+    </div>
+
+
+
+
+    <!--realloc-->
+    <h3 class="head-right">שינוי הקצאה של מערך דינאמי בעזרת realloc</h3>
+    <div class="First-Para">
+      <p>
+        פונקציית realloc מאפשרת לנו להגדיל או להקטין את גודל המערך.
+
+        <br>
+        שימוש בפקודה זו יתבצע כך:
+
+        <br>
+        ;array_name = (type*)realloc(array_name ,sizeof(type)*amount)
+      </p>
+    </div>
+    <div class="First-Para">
+      <p>
+        <ol>
+          <li>
+            array_name – מציין את המערך אותו אנו רוצים להקטין או להגדיל.
+          </li>
+          <li>
+            sizeof(type) -במידה ואינכם לגמרי מבינים את הנושא עדיין כדאי לחזור לנושא <a href="sizeOf.html">
+              sizeof</a>.
+          </li>
+          <li>
+            amount - הגודל החדש של המערך.
+          </li>
+        </ol>
+        בעזרת sizeof ו amount אנו מציינים את הגודל החדש של המערך בבתים.<br>
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="para">
+          <p>
+            לדוגמא:<br>
+            אם נקטין את גודל המערך מחמש לשלוש שני הערכים האחרונים שלנו הולכים לאיבוד.<br>
+            כלומר, לא נוכל לגשת לשני תאים אלו בזיכרון.
+          </p>
         </div>
       </div>
+      <div class="col-md-6">
+        <figure class="code">
+          <figcaption id="example1-caption">CODE WITH REALLOC:</figcaption>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+<i>#include</i> <u>&lt;stdlib.h&gt;</u>
+<i>#include</i> <u>&lt;assert.h&gt;</u>
+<b>void</b> enterValues(<b>int</b> **<i>arr</i>, <b>int</b> <i>amount</i>);
+<b>void</b> main()
+{
+  <b>int</b> *dynamic_array, amount;
+  printf(<u>"please enter the size you want for the array:"</u>);
+  <em>//for visual studio 2017 or above use scanf_s</em>
+  scanf(<u>"%d"</u>, &amp;amount);<em>//lets assume that we entered the number 5</em>
+  dynamic_array = (<b>int</b>*)malloc(amount * <b>sizeof</b>(<b>int</b>));
+  <strong>assert</strong>(dynamic_array); <em>//succeeded</em>
+  enterValues(dynamic_array,amount);
+  <em>//the array before the realloc is: [1,2,3,4,5]</em>
+  dynamic_array =(<b>int</b>*)realloc(dynamic_array,<b>sizeof</b>(<b>int</b>)*3);
+  <strong>assert</strong>(dynamic_array); <em>//succeeded</em>
+  <em>//the array after the realloc is: [1,2,3]</em>
+  free(dynamic_array);
+}
+<b>void</b> enterValues(<b>int</b>**<i>arr</i>,<b>int</b> <i>amount</i>)
+{ 
+  <em>//the values that entered are: 1,2,3,4,5</em>
+  <b>int</b> i;
+  <b>for</b> (i = 0; i &lt; <i>amount</i>; i++)
+  {
+    printf(<u>"please enter number:\n"</u>);
+    <em>//for visual studio 2017 or above use scanf_s</em>
+    scanf(<u>"%d"</u>,&amp;<i>arr</i>[i]);
+  }
+}</code></pre>
+        </figure>
+      </div>
+    </div>
+
   </section>
-
-
-
 </body>
 
 </html>
