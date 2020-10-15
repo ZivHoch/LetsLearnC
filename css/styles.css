@@ -489,6 +489,8 @@ pre em * * {
   #title {
     visibility: hidden;
   }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -496,5 +498,33 @@ pre em * * {
     transform: none;
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #main {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  figure {
+    font-size: 15px;
+  }
+
+  #mySidenav a {
+    font-size: 20px;
   }
 }
