@@ -1,4 +1,5 @@
 /******** Tag ********/
+
 html {
   margin: 0;
   direction: rtl;
@@ -14,7 +15,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   height: 100%;
-
+  width: auto !important;
+  overflow-x: hidden !important;
 }
 
 h1 {
@@ -119,13 +121,14 @@ a:hover {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   right: 0;
   background-color: #658DBC;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .sidenav a {
@@ -143,7 +146,7 @@ a:hover {
 
 .sidenav .closebtn {
   position: absolute;
-  top: -30px;
+  top: 0;
   right: 10px;
   font-size: 36px;
   margin-left: 50px;
@@ -153,24 +156,25 @@ a:hover {
   color: #03c4a1;
 }
 
+/* the place of the content of the page */
 #main {
   transition: margin-right .5s;
   padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
+/* for the swipeLeft trigger( open the sidebar with swipe left) */
 #topPage {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
+  height: 100%;
+  width: 20px;
+}
+
+/* for the side nav bar button */
+#topPageIcon {
+  position: fixed;
+  z-index: 3;
+  margin-top: 15px;
 }
 
 /************MATH FRACTION************/
@@ -455,7 +459,9 @@ pre em * * {
 }
 
 /******************MEDIA***************/
-@media (max-width:1100px) {
+
+/* for Ipad Pro <-> Ipad */
+@media screen and (max-width:1100px) and (min-width:768px) {
   h1 {
     color: #0099ff;
   }
@@ -465,35 +471,60 @@ pre em * * {
     margin-right: 0;
   }
 
+  .pic_med {
+    width: 60%;
+    margin-right: 40px;
+  }
+
   .pic_sm {
     width: 30%;
-    margin-right: 350px;
+    margin-right: 35px;
   }
+
+  .para {
+    margin-top: 0;
+  }
+
 }
 
-@media (max-width:768px) {
+/* for phones */
+@media screen and (max-width:767px) {
+  .para {
+    margin-right: 15px;
+  }
+
+  .First-Para {
+    margin-right: 15px;
+    width: 85%;
+  }
+
+  .head-left {
+    margin-left: 15px;
+  }
+
+  .head-right {
+    margin-right: 15px;
+  }
+
   .pic_big {
     width: 100%;
     margin-right: 0;
   }
 
   .pic_med {
-    width: 80%
+    width: 90%;
+    margin-right: 25px;
   }
 
   .pic_sm {
-    width: 40%;
-    margin-right: 70px;
+    width: 25%;
+    margin-right: 25px;
   }
 
   #title {
     visibility: hidden;
   }
 
-
-}
-
-@media screen and (max-width: 768px) {
   #menu {
     transform: none;
     opacity: 0;
@@ -501,10 +532,13 @@ pre em * * {
   }
 
   #main {
+    width: 100%;
     font-size: 15px;
+    margin-right: 0;
   }
 
   h1 {
+    color: #0099ff;
     font-size: 20px;
   }
 
@@ -532,6 +566,23 @@ pre em * * {
   }
 
   #mySidenav a {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  #mySidenav .closebtn {
+    display: none;
+    visibility: hidden;
+  }
+
+  #mySidenav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
+
+  #topPageIcon {
+    display: none;
+    visibility: hidden;
   }
 }
