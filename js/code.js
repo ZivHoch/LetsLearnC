@@ -35,12 +35,31 @@
 })();
 
 /**************SIDENAVBAR FUNCTIONS*********** */
-function openOrCloseNav(flag) {
-	if (flag) {
-		document.getElementById("mySidenav").style.width = "250px";
-		document.getElementById("main").style.marginRight = "250px";
-	} else {
-		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("main").style.marginRight = "0";
+function openOrCloseNav(flag, flag2) {
+	document.getElementById("mySidenav").style.width = (flag) ? ("250px") : ("0");
+	document.getElementById("main").style.marginRight = (flag2) ? ("250px") : ("0");
+}
+
+var imgs;
+var swipeOptions = {
+	triggerOnTouchEnd: true,
+	swipeStatus: swipeStatus,
+	allowPageScroll: "vertical",
+	threshold: 75
+};
+
+$(function () {
+	if (document.getElementById("the_main_id").style.width <= 1024) {
+		imgs = $("#topPage");
+		imgs.swipe(swipeOptions);
+	}
+});
+
+function swipeStatus(event, phase, direction, distance) {
+	if ((phase == "move") && (direction == "left")) {
+		var duration = 0;
+		if (direction == "left") {
+			openOrCloseNav(1, 0);
+		}
 	}
 }
