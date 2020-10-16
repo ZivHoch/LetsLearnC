@@ -71,9 +71,12 @@
     <br>
     <h3 class="head-right">נראה תהליך זה על ידי דוגמה על המערך הבא:</h3>
 
+    <img class="pic_big" src="assest/TablesForInsertionSort/Insertion_sort_1.png" alt="">
+
     <!--מיון זה מתבצע בצורה הבאה-->
     <div class="First-Para">
       <p>
+        <br>
         ראשית, אנו מתחילים מתא מספר אחד במערך (כלומר התא השני – כפי שזכור לנו הספירה בתכנות מתבצעת לעיתים קרובות מאוד
         מ0).
         <br>
@@ -96,16 +99,14 @@
     <h3 class="head-right">תהליך המיון:</h3>
 
 
-    <img class="pic_big" src="assest/TablesForInsertionSort/Insertion_sort_1.png" alt="">
-
-
     <!--תהליך המיון-->
     <div class="First-Para">
       <p>
         משתנה העזר שלנו temp יכיל כעת את הערך שנמצא בתא מספר 1 במערך (7).
         <br>
         <br>
-        כעת אנחנו מתחילים לבצע את ההשוואה בין הערכים מתא מספר 0 לצד שמאל.
+        כעת אנחנו מתחילים לבצע את ההשוואה בין הערך שנמצא בtemp אל מול הערך שנמצא באינדקס 0.
+      
       </p>
     </div>
 
@@ -119,9 +120,9 @@
     <!--תהליך מיון-->
     <div class="First-Para">
       <p>
-        בגלל ש 7 גדול מ 2 אז אנחנו יודעים בוודאות שכל האיברים בצד השמאלי יהיו קטנים יותר מ 7.
+        משום שאינדקס 0 הינו האינדקס האחרון במערך נעצור את הבדיקות.
         <br>
-        לכן עוצרים כאן את הסבב הראשון של הבדיקות והמערך נשאר ללא שינוי.
+        בגלל שהערך 7 גדול מהערך 2 אז אנחנו יודעים בוודאות שכל האיברים בצד השמאלי יהיו קטנים יותר מ 7.
       </p>
     </div>
 
@@ -131,7 +132,7 @@
       <p>
         <br>
         <br>
-        כעת אנו עוברים ל תא מספר 2 ומכניסים את הערך שלו (4) למשתנה temp ומתחילים השוואות אל מול התאים משמאלו.
+        כעת אנו עוברים לתא מספר 2 ומכניסים את הערך שלו (4) למשתנה temp ומתחילים השוואות אל מול התאים משמאלו.
       </p>
     </div>
 
@@ -184,7 +185,7 @@
       <p>
         כעת אנו נתחיל את הסבב השלישי שלנו ונכניס לתוך המשתנה temp את הערך שנמצא בתוך תא מספר 3 (3).
         <br>
-        כעת נתחיל להשוות את הערך 3 למה שנמצא בתא מספר 2 שזה הערך 7.
+        כעת נתחיל להשוות את הערך ב-temp לערך שנמצא בתא מספר 2 (7).
       </p>
     </div>
 
@@ -199,7 +200,9 @@
 
     <div class="First-Para">
       <p>
-        בגלל שהערך 3 קטן מהערך 7 אנו נבצע החלפה. הערך 7 יכנס לתא מספר 3 והמערך יראה כך:
+        בגלל שהערך 3 קטן מהערך 7 אנו נבצע החלפה. 
+        <br>
+        הערך 7 יכנס לתא מספר 3 והמערך יראה כך:
       </p>
     </div>
 
@@ -207,11 +210,13 @@
     <img class="pic_big" src="assest/TablesForInsertionSort/Insertion_sort_10.png" alt="">
 
 
+    <br>
+    <br>
     <!--תהליך מיון-->
     <div class="First-Para">
       <p>
         <br>
-        לאחר מכן אנחנו משווים את הערך 3 לערך שבתא מספר 1 שהוא 4.
+        לאחר מכן אנחנו משווים את הערך שב-temp לערך שבתא מספר 1 (4).
       </p>
     </div>
 
@@ -319,7 +324,7 @@
 
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> insertion_sort(<b>int</b> *<i>arr</i>,<b>int</b> <i>size</i>)
 {
   <b>int</b> temp, i, j;
