@@ -29,12 +29,11 @@
 
   <section id="topPageIcon">
 
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
 
   </section>
-  
+
   <section id="topPage">
   </section>
 
@@ -68,24 +67,16 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0,0)">
-
     <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">sizeof</h1>
-    
     <h3 class="head-right">מה sizeof עושה ? </h3>
-
     <div class="First-Para">
-
       <p>
         מחזיר לנו את הגודל של משתנה או עצם מסויים בבתים.
       </p>
-
     </div>
-
     <h3 class="head-right">צורת השימוש בפקודה:</h3>
-
     <div class="First-Para">
-
       <p>
         <span dir="ltr">sizeof(name);</span>
         <br>
@@ -95,23 +86,17 @@
         למשל, אם name הוא char אז היא תחזיר בית יחיד.<br>*
         ניתן למצוא גודל של מערך על ידי sizeof אך ורק באותה הפונקציה שבו המערך מוגדר.
       </p>
-
     </div>
-<h3 class="head-right">  דוגמה 1:</h3>
+    <h3 class="head-right"> דוגמה 1:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
           <p>
             הפקודה תדפיס את הערך 4 בגלל שהמשתנה שלנו הוא מסוג int ומשתנה מסוג זה תופס 4 בתים.
           </p>
         </div>
-        <!--para-->
       </div>
-      <!--COL MD 6 - FOR TEXT-->
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -121,15 +106,10 @@
   printf(<u>"%d\n"</u>,<b>sizeof</b>(number));
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
     </div>
-
     <br>
-
-<h3 class="head-right"> דוגמה 2:</h3>
+    <h3 class="head-right"> דוגמה 2:</h3>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
@@ -140,15 +120,8 @@
             תאים יש ולא כמה בתים.
           </p>
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -158,22 +131,15 @@
   printf(<u>"the size in bytes is: %d\n"</u>,<b>sizeof</b>(arr));
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
     </div>
-
-
     <br>
-
-
-<h3 class="head-right">תיקון לדוגמה 2:</h3>
+    <h3 class="head-right">תיקון לדוגמה 2:</h3>
     <div class="row">
       <div class="col-md-6">
         <div class="para">
           <p>
-             כדי לתקן זאת, כל שעלינו לעשות הוא לחלק את מה שקיבלנו חזרה מ sizeof בסוג הנתונים שלנו.
+            כדי לתקן זאת, כל שעלינו לעשות הוא לחלק את מה שקיבלנו חזרה מ sizeof בסוג הנתונים שלנו.
           </p>
         </div>
       </div>

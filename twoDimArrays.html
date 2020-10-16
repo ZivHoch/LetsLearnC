@@ -30,12 +30,11 @@
 
   <section id="topPageIcon">
 
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
 
   </section>
-  
+
   <section id="topPage">
   </section>
 
@@ -69,12 +68,9 @@
   </div>
 
   <section id="main" onclick="openOrCloseNav(0,0)">
-    
     <section id="main">
-
       <h1 class="head-left">Lets learn C</h1>
       <h1 class="head-right">מערכים דו ממדים (מטריצות)</h1>
-
       <div class="First-Para">
         <p>
           מערך דו ממדי הינו מבנה נתונים מתקדם יותר ממערך רגיל, אנו ממליצים לפני שמתחילים ללמוד על הנושא הזה לחזור אחורה
@@ -82,14 +78,9 @@
           <br>
           ניתן להסתכל על מערך דו ממדי כעל מערך שמכיל בתוכו מערכים אחרים.
           דוגמה לאיך נראה מערך דו ממדי:
-
         </p>
       </div>
-
       <img class="pic_big" src="assest/TabelsForTwoDimArrays/two_dim_arrays_1.png" alt="table">
-
-
-
       <div class="First-Para">
         <p>
           שימו לב שהגישה לערכים בתוך המערך הדו ממדי מאוד דומה למערך רגיל.
@@ -103,67 +94,40 @@
           <br>
           הערך במקום [1][2] הוא 8.
           <br>
-
         </p>
       </div>
-
-      
       <div class="First-Para">
         <p>
-          
           חשוב לציין שכמו בנושא <a href="arrays.html">מערכים</a> גם מערכים דו ממדים יכולים להיות סטטיים או דינמיים.
-
         </p>
       </div>
-
       <div class="row">
-
         <div class="col-md-6">
-
           <div class="para">
-
             <p>
               נראה דוגמה ליצירת מערך סטטי:
               <br>
-              בדרך זו יצרנו מערך בגודל 4 על 4. 
+              בדרך זו יצרנו מערך בגודל 4 על 4.
               <br>
               כלומר, כמות התאים במערך שלנו תהיה 16.
             </p>
-
           </div>
-          <!--para-->
-
-
         </div>
-        <!--COL MD 6 - FOR TEXT-->
-
-
         <div class="col-md-6">
-
           <figure class="code">
             <figcaption id="example1-caption">CODE 1: static array declaration</figcaption>
             <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
   <b>void</b> main()
   {
     <b>int</b> arr[4][4];
-  }
-              </code></pre>
+  }</code></pre>
           </figure>
-
         </div>
-        <!--COL MD 6 - FOR CODE-->
-
       </div>
-      <!--ROW-->
-
       <br>
-
       <div class="row">
-
         <div class="col-md-6">
-
           <div class="para">
-
             <p>
               נראה דוגמה ליצירת מערך דינמי:
               <br>
@@ -175,20 +139,12 @@
               <br>
               הערה: ניתן להשתמש בcalloc במקום malloc ובכך לדאוג שהמערך יהיה מאופס.
             </p>
-
           </div>
-          <!--para-->
-
-
         </div>
-        <!--COL MD 6 - FOR TEXT-->
-
-
         <div class="col-md-6">
-
           <figure class="code">
             <figcaption id="example1-caption">CODE 2: dynamic array declaration</figcaption>
-            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+            <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
   <b>void</b> main()
   {
     <b>int</b> rows, cols;
@@ -210,39 +166,20 @@
     }
 
 
-  }
-              </code></pre>
+  }</code></pre>
           </figure>
-
         </div>
-        <!--COL MD 6 - FOR CODE-->
-
       </div>
-      <!--ROW-->
-
       <br>
-
       <div class="row">
-
         <div class="col-md-6">
-
           <div class="para">
-
             <p>
               נניח שנרצה לחשב את הסכום כל ערכי המערך נוכל לעשות זאת באמצעות לולאה דו ממדית:
             </p>
-
-
           </div>
-          <!--para-->
-
-
         </div>
-        <!--COL MD 6 - FOR TEXT-->
-
-
         <div class="col-md-6">
-
           <figure class="code">
             <figcaption id="example1-caption">CODE 3: sum matrix values</figcaption>
             <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><b>int</b> returnSum(<b>int</b> **arr, <b>int</b> rows, <b>int</b> cols)
@@ -258,39 +195,20 @@
   }
     
   <b>return</b> sum;
-}
-              </code></pre>
+}</code></pre>
           </figure>
-
         </div>
-        <!--COL MD 6 - FOR CODE-->
-
       </div>
-      <!--ROW-->
-
       <br>
-
       <div class="row">
-
         <div class="col-md-6">
-
           <div class="para">
-
             <p>
               הדפסה של כל איברי המערך תתבצע בצורה הבאה:
             </p>
-
-
           </div>
-          <!--para-->
-
-
         </div>
-        <!--COL MD 6 - FOR TEXT-->
-
-
         <div class="col-md-6">
-
           <figure class="code">
             <figcaption id="example1-caption">CODE 4: print matrix values</figcaption>
             <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"> <b>void</b> printMat(<b>int</b> **arr ,<b>int</b> rows ,<b>int</b> cols)
@@ -306,23 +224,10 @@
     printf(<u>"\n"</u>);
   }
     
-}
-              </code></pre>
+}</code></pre>
           </figure>
-
         </div>
-        <!--COL MD 6 - FOR CODE-->
-
-
-
     </section>
-
 </body>
 
 </html>
-
-
-<!--CODE
-
-
--->

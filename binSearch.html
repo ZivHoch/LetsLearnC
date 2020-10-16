@@ -23,22 +23,15 @@
   <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="js/code.js"></script>
 
-
 </head>
 
 <body class="bg-three scrollbar scrollbar_style" id="the_main_id">
- 
   <section id="topPageIcon">
-
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
-
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
   </section>
-  
   <section id="topPage">
   </section>
-
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0,0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -70,8 +63,6 @@
   <section id="main" onclick="openOrCloseNav(0,0)">
     <h1 class="head-left">Let's learn C</h1>
     <h2 class="head-right">חיפוש בינארי</h2>
-
-
     <div class="First-Para">
       <p>
         חיפוש בינארי הינה שיטת חיפוש שבה אנו מוצאים (או לא מוצאים) את הנתון המבוקש בסדר גודל של log(n).
@@ -95,17 +86,13 @@
         <br>
         <br>
       </p>
-
     </div>
-
     <div class="First-Para">
       <p>
         נניח שיש לנו את המערך הבא:
       </p>
     </div>
-
     <img class="pic_big" src="assest/TablesForBinSearch/Binary_search_1.png" alt="binary_search_1">
-
     <div class="First-Para">
       <p>
         ואנו רוצים לדעת באיזה אינדקס נמצא האיבר 8 (אם בכלל הוא נמצא).
@@ -118,45 +105,32 @@
         middle = (start+end)/2 ולכן יהיה שווה ל4 (כי אנחנו מדברים על מספרים שלמים).
         <br>
         כעת נבדוק האם בתא middle (תא 4) נמצא הערך 8.
-
       </p>
     </div>
-
     <img class="pic_big" src="assest/TablesForBinSearch/Binary_search_2.png" alt="binary_search_1">
-
     <div class="First-Para">
       <p>
-
         גילינו שהערך בתא middle הוא 5 ולכן אנו מבינים שכל צד שמאל במערך שלנו קטן מ-8 ואין לנו צורך לבדוק יותר בצד זה.
         <br>
         בשל כך, בבדיקה הבאה שלנו נקדם את start להיות שווה לאינדקס של (middle+1).
-
       </p>
     </div>
-
     <img class="pic_big" src="assest/TablesForBinSearch/Binary_search_3.png" alt="binary_search_1">
-
     <div class="First-Para">
       <p>
         גילינו שהערך בתא middle הוא 7 ולכן אנו מבינים שכל צד שמאל במערך שלנו קטן מ-8 ואין לנו צורך לבדוק יותר בצד זה.
         <br>
         בשל כך, בבדיקה הבאה שלנו נקדם את start להיות שווה לאינדקס של (middle+1).
-
       </p>
     </div>
-
     <img class="pic_big" src="assest/TablesForBinSearch/Binary_search_4.png" alt="binary_search_1">
-
     <div class="First-Para">
       <p>
         בשלב זה גילינו שהערך 8 נמצא בתוך המערך שלנו באינדקס 7.
         לכן, נחזיר 7 חזרה בפונקציה ונסיים את האלגוריתם.
-
       </p>
     </div>
-
     <br>
-
     <div class="row">
       <div class="col-md-6">
         <div class="para">
@@ -166,7 +140,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>int</b> binary_search(<b>int</b> *arr , <b>int</b> sizeOfArr, <b>int</b> key)
 {
   <b>int</b> start = 0 , middle , end = sizeOfArr-1;
@@ -192,8 +166,6 @@
         </figure>
       </div>
     </div>
-
-
     <h3 class="head-right">הסבר על הקוד:</h3>
     <div class="First-Para">
       <p>
@@ -210,7 +182,6 @@
         לאחר מכן, נבדוק:
       </p>
     </div>
-
     <h3 class="head-right">האם האיבר שנמצא במערך באינדקס middle שווה לערך שאותו אנו מחפשים?</h3>
     <div class="First-Para">
       <p>
@@ -220,7 +191,6 @@
         <br>
       </p>
     </div>
-
     <h3 class="head-right">האם האיבר שנמצא במערך באינדקס middle קטן מהערך שאותו אנו מחפשים?</h3>
     <div class="First-Para">
       <p>
@@ -234,7 +204,6 @@
         <br>
       </p>
     </div>
-
     <h3 class="head-right">האם האיבר במערך גדול מהאיבר שאותו אנו מחפשים?</h3>
     <div class="First-Para">
       <p>
@@ -242,14 +211,11 @@
         נגיד שמעכשיו האיבר הראשון שעליו אנו מסתכלים ימצא ב middle - 1.
         (הסיבה לכך שאנו נחסיר 1 היא בגלל שאין לנו צורך להסתכל יותר על איבר האמצע מהסיבוב הנוכחי בלולאה כי הוא כבר נבדק).
         <br>
-
       </p>
     </div>
-
     <h3 class="head-right">המשך האלגוריתם:</h3>
     <div class="First-Para">
       <p>
-
         אנו נמשיך בצורה זו עד שנגיע לאחד משני מצבים:
         <br>
         המצב הראשון - מצאנו את האיבר שאותו אנו מחפשים נחזיר אינדקס והאלגוריתם הסתיים.
@@ -258,20 +224,16 @@
         <span dir="ltr">-1</span>.
       </p>
     </div>
-
     <h3 class="head-right">חשוב לציין:</h3>
     <div class="First-Para">
       <p>
-
         האלגוריתם המוצג בקוד זה הינו חיפוש בינארי בסיסי, יש אפשרויות לשנות חלקים ממנו בשביל לקבל תוצאה שונה.
         למשל, אם היינו רוצים לעשות חיפוש בינארי בתוך מערך שקיימות בו חזרות של מספרים (כלומר כל מספר עשוי להופיע יותר
         מפעם
         אחת) והיינו רוצים למצוא את המופע הראשון של המספר.
       </p>
     </div>
-
   </section>
-
 </body>
 
 </html>

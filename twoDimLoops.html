@@ -27,18 +27,12 @@
 </head>
 
 <body class="bg-oneAndHalf scrollbar scrollbar_style" id="the_main_id">
-
   <section id="topPageIcon">
-
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
-
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
   </section>
-  
   <section id="topPage">
   </section>
-
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0,0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
@@ -68,14 +62,9 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0,0)">
-
     <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">לולאות דו ממדיות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
-
     <div class="First-Para">
-
-
-
       <p>
         כפי שלמדנו בנושא <a href="oneDimLoops.html">לולאות</a> , לולאה הינה קטע קוד שרץ מספר פעמים לפי תנאי מסוים (למשל
         לולאות while , שרצה עד שהתנאי שניתן לה יהיה שיקרי).
@@ -83,34 +72,21 @@
         קיימת הרחבה לנושא הלולאות והיא נפוצה מאוד בעולם התכנות.<br>
         לולאה דו ממדית מורכבת מלולאה שמריצה בתוכה לולאה אחרת.<br>
         אחת מהמטרות של לולאה דו ממדית הוא לעבור על מערך דו ממדי / לבצע מיון / לבצע חיפוש.<br>
-        חשוב לציין שלולאה דו ממדית סטנדרטית רצה בסדר גודל של n<sup>2</sup> , כלומר היא תבצע n*n פעולות <br>(כאשר n הוא הנתון הראשי).<br>
+        חשוב לציין שלולאה דו ממדית סטנדרטית רצה בסדר גודל של n<sup>2</sup> , כלומר היא תבצע n*n פעולות <br>(כאשר n הוא
+        הנתון הראשי).<br>
         נניח שאנו רוצים להדפיס משולש שעשוי מכוכביות:
         <br>
       </p>
-
     </div>
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             במקום לרשום:
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -121,48 +97,26 @@
   printf(<u>"***\n"</u>);
   printf(<u>"****\n"</u>);
   printf(<u>"*****\n"</u>);
-}
-            </code></pre>
+}</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
     </div>
-
     <br>
     <br>
-
-
     </div>
-    <!--ROW-->
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             <br>
             נוכל לרשום:
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
-
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <b>void</b> main()
 {
   <b>int</b> i,j;
@@ -176,26 +130,19 @@
   }
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
     <div class="First-Para">
       <p>
         הסבר:
         <br>
         בדוגמא זו יש לנו לולאה בתוך לולאה,
         הלולאה הראשונה שלנו היא לולאה שרצה מi עד ל 5.<br> בתוך הלולאה הראשונה שלנו קיימת עוד לולאה שרצה כל פעם מj עד לi
-        הנוכחי.<br> בתוך הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה).<br> בכל פעם שאנו מסיימים את הלולאה השנייה
+        הנוכחי.<br> בתוך הלולאה השנייה שלנו אנו מדפיסים כוכבית אחת בכל איטרציה (ריצה).<br> בכל פעם שאנו מסיימים את
+        הלולאה השנייה
         אנו חוזרים לקוד שרץ בלולאה הראשונה ומבצעים ירידת שורה (כך אנו חוזרים שהמשך הקוד בלולאה הראשונה).
-
       </p>
     </div>
-
   </section>
 
 </body>

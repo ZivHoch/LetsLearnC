@@ -23,22 +23,15 @@
   <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="js/code.js"></script>
 
-
 </head>
 
 <body class="bg scrollbar scrollbar_style" id="the_main_id">
-
   <section id="topPageIcon">
-
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
-
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
   </section>
-  
   <section id="topPage">
   </section>
-
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
     <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0,0)">&times;</a>
     <a href="index.html">מי אנו?</a>
@@ -68,21 +61,16 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0,0)">
-
     <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">מצביע כפול</h1>
-
     <div class="First-Para">
       <p>
         ראינו שמצביע יכול להצביע לכל משתנה וכעת נראה מצביע שנקרא מצביע כפול שיכול להצביע למשתנה מסוג מצביע.
         לשם נוחות נציין שכאשר אנו מדברים על מצביע כפול אנו נרשום פה לעיתים דאבל-פוינטר כדי למנוע בלבול עם מצביעים
         רגילים.
-
       </p>
     </div>
-
     <h3 class="head-right">הצהרה של מצביע כפול / דאבל-פוינטר</h3>
-
     <div class="First-Para">
       <p>
         אם בשביל מצביע למשתנה היינו צריכים כוכבית אחת אז בשביל דאבל-פוינטר (שהוא בעצם מצביע למצביע) אנו צריכים שתי
@@ -98,22 +86,15 @@
         אם היינו רוצים להצביע למשתנה מסוג <span dir="ltr">int**</span> היינו משתמשים בשלושה כוכביות (טריפל-פוינטר).
         <br>
         וכך הלאה.
-
         <br>
         הצהרה של מצביע כפול תהיה בדרך הבאה:
         <br>
         <span dir="ltr">type ** name;</span>
-
       </p>
     </div>
-
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             דוגמא ראשונה למצביע כפול:
             <br>
@@ -122,18 +103,9 @@
             <br>
             שורה 6 – double_ptr מצביע על ptr שהוא מצביע
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -144,16 +116,9 @@
   double_ptr =&amp;ptr;
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
     <br>
-
     <div class="First-Para">
       <p>
         ישנם כמה דברים שונים בין מצביע למצביע לבין מצביע רגיל:
@@ -167,17 +132,11 @@
         <br>
         כאשר אנו נרשום printf(“%d”,*(*double_ptr)) אנו נקבל כאן את הערך של המשתנה המקורי (כלומר הערך המספרי שנמצא
         בפנים ולא הכתובת).
-
       </p>
     </div>
-
-
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
-
           <p>
             דוגמא שנייה למצביע כפול:
             <br>
@@ -187,18 +146,9 @@
             <span dir="ltr">(*(*double_ptr))++</span>
             – שינוי ערך של מצביע כפול תתבצע בצורה הזו.
           </p>
-
-
         </div>
-        <!--para-->
-
-
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
           <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
@@ -216,16 +166,9 @@
   (*(*<i>double_ptr</i>))++;
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-
-
   </section>
-
 
 </body>
 

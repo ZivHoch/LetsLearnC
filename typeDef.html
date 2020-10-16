@@ -32,12 +32,11 @@
 
   <section id="topPageIcon">
 
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
 
   </section>
-  
+
   <section id="topPage">
   </section>
 
@@ -69,13 +68,9 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-
   <section id="main" onclick="openOrCloseNav(0,0)">
-
     <h1 class="head-left">Let's learn C</h1>
     <h1 class="head-right">typedef & define</h1>
-
-
     <div class="First-Para">
       <p>
         שפת c נותנת לנו אפשרות להגדיר לפונקציה / משתנה / רצף מילים / מילה / שם נוסף אשר תפקידו הוא להפוך את הטקסט להיות
@@ -85,29 +80,27 @@
         unsigned
         int על ידי שם אחר, לדוגמא positive_only.
         <br>
-        כעת כאשר אנו נצטרך להשתמש במשתנה מסוג unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר קריא.<br>
+        כעת כאשר אנו נצטרך להשתמש במשתנה מסוג unsigned int אנו נוכל לרשום positive_only במקום ובכך לגרום לקוד להיות יותר
+        קריא.<br>
 
         באופן דומה אנו יכולים להגדיר גם רצף של מילים (או מילה) או פונקציות על ידי שמות שאנחנו נגדיר.<br>
 
         לדוגמא, אנו נוכל להגדיר את 1 להיות ODD ואת 0 להיות EVEN על ידי הגדרת define.
         <br>
-
         <br>
         <span dir="ltr"></span>
       </p>
-
     </div>
-<h3 class="head-right">הסינטקס של typedef & define:</h3>
+    <h3 class="head-right">הסינטקס של typedef & define:</h3>
     <div class="row">
-
       <div class="col-md-6">
-
         <div class="para">
           <p>
             typedef מסמן לקומפיילר שיש פה "הגדרה חדשה".<br>
             unsigned int מסמן לקומפיילר למה המחשב מתייחס.<br>
             positive_only מה המתכנת רואה.<br>
-            חשוב לזכור:<br> typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה.<br> נהוג לרשום define ו typedef
+            חשוב לזכור:<br> typedef זה רק למשתנים ומבני נתונים שונים, ואילו ל define אין הגבלה.<br> נהוג לרשום define ו
+            typedef
             בתחילת הקוד (אחרי הinclude 'ים).
           </p>
         </div>
@@ -115,7 +108,7 @@
       <div class="col-md-6">
         <figure class="code">
           <figcaption id="example1-caption">CODE 1:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <i>#define</i> <strong>ODD</strong> 1
 <b>typedef unsigned int</b> <span class="colorgold">positive_only</span>;
 <b>void</b> main()
@@ -134,16 +127,11 @@
             בקוד זה אנו רואים את השימוש ב typedef ו define כדי לבדוק אם מספר הוא זוגי או אי-זוגי בצורה קריאה הרבה יותר.
           </p>
         </div>
-        <!--para-->
       </div>
-      <!--COL MD 6 - FOR TEXT-->
-
-
       <div class="col-md-6">
-
         <figure class="code">
           <figcaption id="example1-caption">CODE 2:</figcaption>
-          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
+          <pre aria-describedby="example1-description" aria-labelledby="example1-caption" class="line-numbers"><div aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><code contenteditable="true" tabindex="0" spellcheck="false"><i>#include</i> <u>&lt;stdio.h&gt;</u>
 <i>#define</i> <strong>ODD</strong> 1
 <i>#define</i> <strong>EVEN</strong> 0
 <b>typedef unsigned int</b> <span class="colorgold">positive_only</span>;
@@ -163,49 +151,9 @@
   }
 }</code></pre>
         </figure>
-
       </div>
-      <!--COL MD 6 - FOR CODE-->
-
-
     </div>
-    <!--ROW-->
-
-
   </section>
-
 </body>
 
 </html>
-
-
-
-
-
-<!--FIRST CODE
- 
-    
-    define ODD 1
-
-    ______________
-    END CODE-->
-
-
-<!--SECOND CODE
-    #include <stdio.h>
-      #define odd 1
-      #define even 0
-      typedef unsigned int positive_only;
-      void main()
-      {
-      positive_only x;
-      printf("please enter number");
-      scanf_s("%u",&x);
-      if (x%2 == odd){
-      printf("the number is odd");
-      {
-      if (x%2 == even){
-      printf("the number is even");
-      }
-    ____________
-    END CODE-->

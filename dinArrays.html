@@ -29,12 +29,11 @@
 
   <section id="topPageIcon">
 
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
 
   </section>
-  
+
   <section id="topPage">
   </section>
 
@@ -69,45 +68,36 @@
   <section id="main" onclick="openOrCloseNav(0,0)">
     <h1 class="head-left">Let's learn C</h1>
     <h2 class="head-right">מערכים דינאמיים</h2>
-
     <!--למה צריכים מערכים דינאמיים-->
     <h3 class="head-right">למה אנו צריכים מערכים דינאמיים ?</h3>
     <div class="First-Para">
       <p>
         הכרנו את המבנה מערך סטטי והבנו שהוא מאוד שימושי במקרה של קליטת מידע רב, אבל רק כאשר אנו יודעים כבר מראש מה
         גודל המידע שלנו.
-
         <br>
         אבל מה קורה כאשר אנו צריכים להוסיף או להוריד מידע מהמערך שלנו ?
       </p>
     </div>
-
-
     <div class="First-Para">
       <p>
         הבעיה שלנו עם מערך סטטי הוא שאנו יכולים לבזבז מקום או שאנו יכולים להקצות מעט מדי מקום ואז אנו לא יכולים
         להכיל יותר מידע , לשם כך יש לנו את המערכים הדינאמיים.
       </p>
     </div>
-
     <h3 class="head-right">יצירת מערך דינאמי</h3>
     <div class="First-Para">
       <p>
         השימוש של מערך דינאמי מתאפשר בעזרת שימוש <a href="pointers.html">במצביעים</a> ומוצהר כך:
-
         <br>
         ;type *name
       </p>
     </div>
-
-
     <div class="First-Para">
       <p>
         כדי שניצור מערך דינאמי אנו צריכים מצביע ועליו נפעיל את אחת מהפקודות של הקצאת זיכרון דינאמי:<br>
         malloc או calloc
       </p>
     </div>
-
     <!--malloc & calloc-->
     <h4 class="head-right">malloc & calloc</h4>
     <div class="First-Para">
@@ -117,7 +107,6 @@
           <li> ;dynamic_array = (type*)malloc(amount*(sizeof(type))</li>
           <li> ;dynamic_array = (type*)calloc(amount , sizeof(type))</li>
         </ul>
-
       </p>
     </div>
     <h4 class="head-right">הסבר:</h4>
@@ -170,7 +159,6 @@
         ;name_of_function(array , amount)
       </p>
     </div>
-
     <div class="First-Para">
       <p>
         לעומת זאת חותמת הפונקציה במערך דינאמי בפונקציה תהיה שונה משל מערך רגיל:
@@ -187,20 +175,16 @@
         <br>
       </p>
     </div>
-
     <div class="First-Para">
       <p>
         הכוונה לכך היא כדי שנוכל לבצע שינויים בכתובת זיכרון של מערך בתוך פונקציה עלינו ליצור חותמת פונקציה שמקבלת
         שני כוכביות (שעליו עשינו נושא בנפרד <a href="doublePointer.html">מצביע כפול</a>).
-
         <br>
         כאשר אנו רושמים בmain שלנו את הקוד אנו נשלח כתובת של המערך שלנו כלומר:
-
         <br>
         <span dir="ltr">&amp;arr</span>
       </p>
     </div>
-
     <h3 class="head-right">חשוב לציין!</h3>
     <h4 class="head-right">()free</h4>
     <div class="First-Para">
@@ -269,19 +253,13 @@
         </figure>
       </div>
     </div>
-
-
-
-
     <!--realloc-->
     <h3 class="head-right">שינוי הקצאה של מערך דינאמי בעזרת realloc</h3>
     <div class="First-Para">
       <p>
         פונקציית realloc מאפשרת לנו להגדיל או להקטין את גודל המערך.
-
         <br>
         שימוש בפקודה זו יתבצע כך:
-
         <br>
         ;array_name = (type*)realloc(array_name ,sizeof(type)*amount)
       </p>
@@ -349,7 +327,6 @@
         </figure>
       </div>
     </div>
-
   </section>
 </body>
 
