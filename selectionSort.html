@@ -30,12 +30,11 @@
 
   <section id="topPageIcon">
 
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i
-        class="sidenav-icon fas fa-bars"></i>
-      </span>
+    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
+    </span>
 
   </section>
-  
+
   <section id="topPage">
   </section>
 
@@ -68,20 +67,14 @@
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
   <section id="main" onclick="openOrCloseNav(0,0)">
-
     <h1 class="head-left">Let's learn C</h1>
-
     <h2 class="head-right">מיון בחירה</h2>
-
-
     <div class="First-Para">
       <p>
         מיון בחירה נחשב למיון "מבוסס השוואות" , תפקידו לסדר את ערכי המערך מהקטן לגדול (ניתן לשנות את האלגוריתם כך שימיין
         מהגדול לקטן).
       </p>
     </div>
-
-
     <h2 class="head-right">מיון זה עובד בצורה הבאה:</h2>
     <div class="First-Para">
       <p>
@@ -98,18 +91,13 @@
         וכן הלאה עד שנגיע לאיבר הn-1.
       </p>
     </div>
-
     <h3 class="head-right">תהליך המיון</h3>
     <div class="First-Para">
       <p>
         דוגמה עם מערך בגודל 6 (n=6):
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_1.png" alt="first_array_no_change">
-
-
     <div class="First-Para">
       <p>
         <spam dir="ltr"> Current Parameters:i=0 ,j=1 ,min=0</spam>
@@ -127,21 +115,13 @@
         לכן, נחליף ביניהם.
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_2.png" alt="first_array_1_change">
-
-
     <div class="First-Para">
       <p>
         לאחר ההחלפה המערך יראה כך:
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_3.png" alt="first_array_2_change">
-
-
     <div class="First-Para">
       <p>
         <spam dir="ltr"> Current Parameters: i=1 ,j=2 ,min=1</spam>
@@ -157,11 +137,7 @@
         כלומר המערך ישאר כך:
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_3.png" alt="first_array_2_change">
-
-
     <div class="First-Para">
       <p>
         <spam dir="ltr"> Current Parameters:
@@ -174,11 +150,7 @@
         לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 4 הוא המינימלי ולכן נחליף אותו עם תא מספר 2.
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_4.png" alt="first_array_3_change">
-
-
     <div class="First-Para">
       <p>
         לאחר ההחלפה המערך יראה כך:
@@ -197,26 +169,18 @@
         לאחר שרצנו על כל המערך ראינו כי האיבר שנמצא בתא מספר 5 הוא המינימלי ולכן נחליף אותו עם תא מספר 3.
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_6.png" alt="first_array_5_change">
-
-
     <div class="First-Para">
       <p>
         לאחר ההחלפה המערך יראה כך:
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_7.png" alt="first_array_6_change">
-
-
     <div class="First-Para">
       <p>
         <spam dir="ltr"> Current Parameters:i=4 ,j=5 ,min=4</spam>
         <br>
-        בסבב החמישי i גדל  ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=4) כלומר,
+        בסבב החמישי i גדל ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=4) כלומר,
         אנו מחפשים כעת את האיבר החמישי הכי קטן.
         <br>
         נגדיר את j להיות 5 (כדי למנוע בדיקה על אותו המספר בריצה הראשונה).
@@ -226,17 +190,13 @@
         כלומר המערך ישאר כך:
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_7.png" alt="first_array_6_change">
-
-
     <div class="First-Para">
       <p>
         <spam dir="ltr"> Current Parameters:
           i=5 ,j=6 ,min=5</spam>
         <br>
-       בסבב השישי (והאחרון) i גדל ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=5).
+        בסבב השישי (והאחרון) i גדל ב1 (כי אנחנו יודעים שכל הערכים לפניו ממוינים), נשווה את הערך שבmin אליו (min=5).
         <br>
         כלומר, אנו מחפשים כעת את האיבר השישי הכי קטן.
         <br>
@@ -247,10 +207,7 @@
         כלומר המערך שלנו ממוין!
       </p>
     </div>
-
-
     <img class="pic_big" src="assest/TablesForSelectionSort/selection_sort_7.png" alt="first_array_6_change">
-
     <h3 class="head-right">מיון בחירה נראה כך בקוד:</h3>
     <div class="row">
       <div class="col-md-6">
@@ -293,8 +250,7 @@
       Swap(&amp;array[min], &amp;array[i]);
     }
   }
-}
-          </code></pre>
+}</code></pre>
         </figure>
       </div>
     </div>
