@@ -353,10 +353,10 @@
 <b>void</b> merge(<b>int</b> <i>*array</i> ,<b>int</b> <i>left_side</i> , <b>int</b> <i>middle</i> ,<b>int</b> <i>right_side</i>)
 {
   <b>int</b> i = <i>left_side</i> , j = <i>middle</i> + 1 , k = 0;
-  <b>int</b> *temp_array = (<b>int</b>*)malloc((<i>right_side</i> - <i>left_side</i>) + 1 * <b>sizeof(<b>int</b>)</b>);
+  <b>int</b> *temp_array = (<b>int</b>*)malloc(((<i>right_side</i> - <i>left_side</i>) + 1) * <b>sizeof(<b>int</b>)</b>);
   <b>while</b>(i &lt;= <i>middle</i> && j &lt;= <i>right_side</i>)
   {
-    <b>if</b>(<i>array</i>[i] &lt; <i>array</i>[j])
+    <b>if</b>(<i>array</i>[i] &lt;= <i>array</i>[j])
     {
       temp_array[k] = <i>array</i>[i];
       i = i + 1;
