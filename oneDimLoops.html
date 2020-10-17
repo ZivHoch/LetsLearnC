@@ -113,7 +113,7 @@
 {
   <em>//for decleration</em>
   <b>int</b> i;
-  <b>for</b> (i = 0; i &lt; number; i++)
+  <b>for</b> (i = 0; i &lt; <em>number</em>; i++)
   {
     <em>// code</em>
   }
@@ -138,7 +138,7 @@
 <b>void</b> main()
 {
   <em>//while decleration</em>
-  <b>while</b> (something)
+  <b>while</b> (<em>something</em>)
   {
     <em>// code</em>
   }
@@ -166,7 +166,7 @@
   <b>do</b>
   {
     <em>// code</em>
-  } <b>while</b> (something);
+  } <b>while</b> (<em>something</em>);
 }    
         </code></pre>
         </figure>
@@ -287,11 +287,11 @@
   <b>int</b> number ,sum = 0;
   <b>do</b> 
   {
-    printf(<u>"Please enter number (enter 0 to stop)/n"</u>);
+    printf(<u>"Please enter number (enter 0 to stop)\n"</u>);
     <em>//for visual studio 2017 or above use scanf_s</em>
     scanf(<u>"%d"</u>,&amp;number);
     sum += number;
-  } <b>while</b> (number != 0)
+  } <b>while</b> (number != 0);
   printf(<u>"the sum is : %d"</u>,sum);
 }  
           </code></pre>

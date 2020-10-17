@@ -160,8 +160,6 @@
       <em>// each one of the pointers points towards an array.</em>
       arr[i] = (<b>int</b>*)malloc(<b>sizeof</b>(<b>int</b>) * cols);
     }
-
-
   }</code></pre>
           </figure>
         </div>
@@ -184,12 +182,11 @@
 
   <b>for</b>(i=0; i &lt; rows; i++)
   {
-    <b>for</b>(j=0; i &lt; cols; j++)
+    <b>for</b>(j=0; j &lt; cols; j++)
     {
-      sum += mat[i,j]; 
+      sum += arr[i][j]; 
     }
   }
-    
   <b>return</b> sum;
 }</code></pre>
           </figure>
@@ -213,13 +210,12 @@
 
   <b>for</b>(i=0; i &lt; rows; i++)
   {
-    <b>for</b>(i=0; i &lt; cols; i++)
+    <b>for</b>(j=0; j &lt; cols; j++)
     {
       printf(<u>"%d "</u> , arr[i][j]);     
     }
     printf(<u>"\n"</u>);
   }
-    
 }</code></pre>
           </figure>
         </div>

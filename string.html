@@ -128,20 +128,21 @@
 <b>void</b> main()
 {
 
-  <b>char</b> s1[10] = <u>"hello"</u>;
+  <b>char</b> s1[11] = <u>"hello"</u>;
   <b>char</b> s2[10] = <u>"world"</u>;
   <b>char</b> s3[20];
   <b>int</b> length;
-
+  <em>/*in visual studio 2017 or above use strcpy_s, strcat_s
+    or type above the #include:#define _CRT_SECURE_NO_WARNINGS*/</em>
   strcpy(s3,s1); <em>// copied s1 into s3.</em>
   printf("%s\n",s3); <em>// prints hello</em> 
     
   strcat(s1,s2); 
-  printf("s/n" , s1); <em>// helloworld </em>
+  printf("%s\n" , s1); <em>// helloworld </em>
 
   
-  len = strlen(s1);
-  printf("%d",len); <em>// prints 10. (helloworld = 10 letters)</em>
+  length = strlen(s1);
+  printf("%d",length); <em>// prints 10. (helloworld = 10 letters,\0 is not included in the length of the string)</em>
 
 }</code></pre>
         </figure>
