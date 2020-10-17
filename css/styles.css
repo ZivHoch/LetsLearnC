@@ -7,7 +7,6 @@ html {
   text-align: right;
 }
 
-
 body {
   text-align: right;
   color: #232323;
@@ -33,7 +32,6 @@ a:hover {
   color: darkblue;
   text-decoration: none;
 }
-
 
 /******** Class ********/
 
@@ -121,10 +119,10 @@ a:hover {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 4;
+  z-index: 7;
   top: 0;
   right: 0;
-  background-color: #658DBC;
+  background-color: #658dbc;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -137,7 +135,7 @@ a:hover {
   font-size: 25px;
   color: #fff;
   display: block;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .sidenav a:hover {
@@ -158,24 +156,102 @@ a:hover {
 
 /* the place of the content of the page */
 #main {
-  transition: margin-right .5s;
+  transition: margin-right 0.5s;
   padding: 16px;
 }
 
 /* for the swipeLeft trigger( open the sidebar with swipe left) */
 #topPage {
+  visibility: hidden;
   position: fixed;
-  z-index: 10;
+  z-index: 5;
   height: 100%;
   width: 40px;
 }
 
-/* for the side nav bar button */
+/****************** for the side nav bar button ***************/
 #topPageIcon {
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   margin-top: 15px;
+  padding-right: -5px;
+  transition: 0.5s;
+  transform: scale(1.5);
 }
+
+.content_icon {
+  height: 64px;
+  overflow: hidden;
+  color: gray;
+}
+
+.content_icon .rx_icon {
+  float: none;
+  margin: 0 auto;
+  margin-top: 15px;
+  transition: 0.5s;
+}
+
+.rx_icon {
+  position: relative;
+  height: 64px;
+  width: 64px;
+}
+
+.rx_icon .ic {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.rx_icon .ic .line {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  background: gray;
+  outline: 1px solid transparent;
+}
+
+.rx_icon .ic .line.one {
+  top: 6px;
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  -o-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+
+.rx_icon .ic .line.two {
+  top: 11px;
+}
+
+.rx_icon .ic .line.thr {
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  top: 16px;
+}
+
+/*************CHECK!!!!*********/
+
+
+
+
+
+
+
+
+
+
+
 
 /************MATH FRACTION************/
 span.frac {
@@ -188,7 +264,6 @@ span.frac>sup,
 span.frac>sub {
   display: block;
   font: inherit;
-
 }
 
 span.frac>sup {
@@ -202,22 +277,17 @@ span.frac>span {
 
 /***********************SCROLLBAR******************/
 
-
-
-
 .scrollbar_style::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 10px;
 }
 
 .scrollbar_style::-webkit-scrollbar {
-
   width: 10px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .scrollbar_style::-webkit-scrollbar-thumb {
-
   border-radius: 10px;
   background-image: -webkit-gradient(linear,
       left bottom,
@@ -226,9 +296,6 @@ span.frac>span {
       color-stop(0.72, rgb(73, 125, 189)),
       color-stop(0.86, rgb(28, 58, 148)));
 }
-
-
-
 
 /******************paragraph*******************/
 .para {
@@ -245,7 +312,7 @@ span.frac>span {
 }
 
 .pic_big {
-  width: 60%;
+  width: 50%;
   margin-right: 50px;
 }
 
@@ -258,7 +325,6 @@ span.frac>span {
   width: 20%;
   margin-right: 50px;
 }
-
 
 /*****************************CODE STYLE***************************/
 
@@ -451,7 +517,6 @@ pre i * * {
 pre em,
 pre em *,
 pre em * * {
-
   letter-spacing: -0.1em;
   text-decoration: none;
   font-style: normal;
@@ -460,8 +525,9 @@ pre em * * {
 
 /******************MEDIA***************/
 
+
 /* for Ipad Pro <-> Ipad */
-@media screen and (max-width:1100px) and (min-width:768px) {
+@media screen and (max-width: 1100px) and (min-width: 768px) {
   h1 {
     color: #0099ff;
   }
@@ -484,11 +550,10 @@ pre em * * {
   .para {
     margin-top: 0;
   }
-
 }
 
 /* for phones */
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .para {
     margin-right: 15px;
   }
@@ -528,7 +593,7 @@ pre em * * {
   #menu {
     transform: none;
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   #main {
@@ -555,7 +620,6 @@ pre em * * {
   }
 
   figure {
-
     font-size: 15px;
     width: 100%;
   }
@@ -577,12 +641,14 @@ pre em * * {
   #mySidenav {
     padding-top: 15px;
     padding-bottom: 15px;
-
   }
 
-
   #topPageIcon {
-    display: none;
-    visibility: hidden;
+    margin-right: -5px;
+    transform: scale(1);
+  }
+
+  #topPage {
+    visibility: visible;
   }
 }

@@ -19,7 +19,7 @@
 
   <!-- Java Script -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
   <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="js/code.js"></script>
 
@@ -27,14 +27,15 @@
 </head>
 
 <body class="bg-oneAndHalf scrollbar scrollbar_style" id="the_main_id">
-  <section id="topPageIcon">
-    <span class="sidenav-icon" type="button" onclick="openOrCloseNav(1,1)"><i class="sidenav-icon fas fa-bars"></i>
-    </span>
+  <section id="topPageIcon" class="content_icon">
+    <div id="change_when_close" type="button" onclick="openOrCloseNav(1)">
+      <span id="rx_icon" class="sidenav-icon rx_icon" type="button"></span>
+    </div>
   </section>
-  <section id="topPage">
-  </section>
+  <section id="topPage"></section>
+
   <div id="mySidenav" class="sidenav scrollbar scrollbar_style">
-    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0,0)">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="openOrCloseNav(0)">&times;</a>
     <a href="index.html">מי אנחנו?</a>
     <a href="firstProgram.html">התוכנית הראשונה</a>
     <a href="variables.html">משתנים</a>
@@ -61,7 +62,7 @@
     <a href="quickSort.html">מיון מהיר</a>
     <a href="mergeSort.html">מיון מיזוג</a>
   </div>
-  <section id="main" onclick="openOrCloseNav(0,0)">
+  <section id="main" onclick="openOrCloseNav(0)">
     <h1 class="head-left">Let's learn C</h1><!-- את הכותרת שבצד שמאל נקשר לספרייה זו -->
     <h1 class="head-right">לולאות דו ממדיות</h1><!-- את הכותרת המשנית נקשר לספרייה זו -->
     <div class="First-Para">
