@@ -5,6 +5,7 @@ html {
   direction: rtl;
   padding: 0;
   text-align: right;
+
 }
 
 body {
@@ -240,18 +241,23 @@ a:hover {
   top: 16px;
 }
 
-/*************CHECK!!!!*********/
+/*************FIREFOX*********/
+.hideMe {
+  display: none;
+}
 
+.showMe {
+  display: block;
+}
 
+#fireFoxButton {
+  font-size: 15px;
+  margin-right: 15px;
+}
 
-
-
-
-
-
-
-
-
+.scrollbarFireFox {
+  scrollbar-color: #7a99d9 #497dbd;
+}
 
 /************MATH FRACTION************/
 span.frac {
@@ -524,7 +530,6 @@ pre em * * {
 }
 
 /******************MEDIA***************/
-
 
 /* for Ipad Pro <-> Ipad */
 @media screen and (max-width: 1100px) and (min-width: 768px) {
