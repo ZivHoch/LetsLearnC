@@ -34,7 +34,12 @@ a:hover {
   text-decoration: none;
 }
 
+
 /******** Class ********/
+
+.names i {
+  margin-right: 10px;
+}
 
 /***********************BACKGROUND IMAGE*********************/
 .bg,
