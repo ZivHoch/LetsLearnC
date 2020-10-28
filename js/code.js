@@ -15,7 +15,6 @@ if (!navigator.userAgent.toLowerCase().includes("chrome")) {
 }
 document.getElementById("fireFoxButton").addEventListener("click", changeIt);
 
-
 function changeIt() {
   if (changeIcon === 0) {
     document.getElementById("fireFoxButton").firstElementChild.innerHTML =
@@ -27,7 +26,6 @@ function changeIt() {
     changeIcon = 0;
   }
 }
-
 
 /***************CODE FUNCTIONS************* */
 (function () {
@@ -71,7 +69,6 @@ function changeIt() {
 var count = 0;
 
 function openOrCloseNav(flag) {
-
   if (flag) {
     //the button pressed or not
     count++;
@@ -330,24 +327,25 @@ window.addEventListener("load", function (e) {
   });
 });
 
-
 /*************count Of Users *********/
-var countOfUsers = [26];
-updateVisitCount();
-
-function updateVisitCount() {
-  var i = 1;
-
-  while (i < 26) {
-    if (document.querySelector("div#mySidenav").children[i].childElementCount) {
-      break;
-    }
-    i++;
-  }
-  fetch('https://api.countapi.xyz/update/Cprogram/index' + i + '/?amount=1')
-    .then(res => res.json())
-    .then(res => {
-      countOfUsers[i] = res.value;
+var countOfUsers2 = [];
+async function displayAmountOfUsers(countOfUsers) {
+  var i;
+  for (i = 1; i < 26; i++) {
+    await fetch("https://api.countapi.xyz/get/Cprogram/index" + i + "/").then((res) => res.json()).then((res) => {
+      countOfUsers.push(JSON.parse(res.value));
     });
+  }
+  console.log(countOfUsers);
+}
 
+function showUser() {
+  var countOfUsers1 = [];
+  displayAmountOfUsers(countOfUsers1);
+}
+
+/**********************LINK TO FILES****************/
+
+function iconToggleSwitch(x) {
+  x.classList.toggle("fa-envelope-open");
 }
