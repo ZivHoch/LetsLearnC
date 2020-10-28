@@ -327,23 +327,6 @@ window.addEventListener("load", function (e) {
   });
 });
 
-/*************count Of Users *********/
-var countOfUsers2 = [];
-async function displayAmountOfUsers(countOfUsers) {
-  var i;
-  for (i = 1; i < 26; i++) {
-    await fetch("https://api.countapi.xyz/get/Cprogram/index" + i + "/").then((res) => res.json()).then((res) => {
-      countOfUsers.push(JSON.parse(res.value));
-    });
-  }
-  console.log(countOfUsers);
-}
-
-function showUser() {
-  var countOfUsers1 = [];
-  displayAmountOfUsers(countOfUsers1);
-}
-
 /**********************LINK TO FILES****************/
 
 function iconToggleSwitch(x) {
