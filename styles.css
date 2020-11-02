@@ -1,0 +1,672 @@
+/******** Tag ********/
+
+html {
+  margin: 0;
+  direction: rtl;
+  padding: 0;
+  text-align: right;
+
+}
+
+body {
+  text-align: right;
+  color: #232323;
+  background: #cdcdcd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  height: 100%;
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+h1 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #03c4a1;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: darkblue;
+  text-decoration: none;
+}
+
+
+/******** Class ********/
+
+.names i {
+  margin-right: 10px;
+}
+
+.lightBlueColor{
+  color: #0099ff;
+}
+
+.blackColor{
+  color: #232323;
+}
+
+/***********************BACKGROUND IMAGE*********************/
+.bg,
+.bg-oneAndHalf,
+.bg-two,
+.bg-twoAndHalf,
+.bg-three,
+.bg-threeAndHalf,
+.bg-four,
+.bg-fourAndHalf,
+.bg-five,
+.bg-fiveAndHalf {
+  background: url("https://www.charpstar.se/wp-content/uploads/2018/10/light-blue-polygonal-background-seamles-loop-3d-render-4k-uhd-3840x2160_bhidnioy__F0000.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 99%;
+}
+
+.bg {
+  height: 100vh;
+}
+
+.bg-oneAndHalf {
+  height: 150vh;
+}
+
+.bg-two {
+  height: 200vh;
+}
+
+.bg-twoAndHalf {
+  height: 250vh;
+}
+
+.bg-three {
+  height: 300vh;
+}
+
+.bg-threeAndHalf {
+  height: 350vh;
+}
+
+.bg-four {
+  height: 400vh;
+}
+
+.bg-fourAndHalf {
+  height: 450vh;
+}
+
+.bg-five {
+  height: 500vh;
+}
+
+.bg-fiveAndHalf {
+  height: 550vh;
+}
+
+/* Top left text */
+.head-left {
+  margin-left: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.head-right {
+  color: #0099ff;
+  margin-top: 30px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+/*****************SIDE-BAR***************/
+.sidenav-icon {
+  margin: 18px 15px 0 0;
+  font-size: 20px;
+  color: #818181;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  right: 0;
+  background-color: #658dbc;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.sidenav a {
+  padding: 32px 20px 0;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidenav a:hover {
+  color: #686d76;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.colorcheck {
+  color: #03c4a1;
+}
+
+/* the place of the content of the page */
+#main {
+  transition: margin-right 0.5s;
+  padding: 16px;
+}
+
+/* for the swipeLeft trigger( open the sidebar with swipe left) */
+#topPage {
+  visibility: hidden;
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  width: 40px;
+}
+
+/****************** for the side nav bar button ***************/
+#topPageIcon {
+  position: fixed;
+  z-index: 6;
+  margin-top: 15px;
+  padding-right: -5px;
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.content_icon {
+  height: 64px;
+  overflow: hidden;
+  color: gray;
+}
+
+.content_icon .rx_icon {
+  float: none;
+  margin: 0 auto;
+  margin-top: 15px;
+  transition: 0.5s;
+}
+
+.rx_icon {
+  position: relative;
+  height: 64px;
+  width: 64px;
+}
+
+.rx_icon .ic {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.rx_icon .ic .line {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  background: gray;
+  outline: 1px solid transparent;
+}
+
+.rx_icon .ic .line.one {
+  top: 6px;
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  -o-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+
+.rx_icon .ic .line.two {
+  top: 11px;
+}
+
+.rx_icon .ic .line.thr {
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  top: 16px;
+}
+
+/*************FIREFOX*********/
+.hideMe {
+  display: none;
+}
+
+.showMe {
+  display: block;
+}
+
+#fireFoxButton {
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.scrollbarFireFox {
+  scrollbar-color: #7a99d9 #497dbd;
+}
+
+/************MATH FRACTION************/
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.frac>sup,
+span.frac>sub {
+  display: block;
+  font: inherit;
+}
+
+span.frac>sup {
+  top: 0;
+  border-bottom: 0.08rem solid;
+}
+
+span.frac>span {
+  display: none;
+}
+
+/***********************SCROLLBAR******************/
+
+.scrollbar_style::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.scrollbar_style::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+.scrollbar_style::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(122, 153, 217)),
+      color-stop(0.72, rgb(73, 125, 189)),
+      color-stop(0.86, rgb(28, 58, 148)));
+}
+
+/******************paragraph*******************/
+.para {
+  text-align: right;
+  direction: rtl;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.First-Para {
+  width: 60%;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.pic_big {
+  width: 50%;
+  margin-right: 50px;
+}
+
+.pic_med {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.pic_sm {
+  width: 20%;
+  margin-right: 50px;
+}
+
+/*****************************CODE STYLE***************************/
+
+/*code*/
+.code {
+  color: black;
+  text-align: left;
+  direction: ltr;
+  margin: 0 0 0 30px;
+}
+
+figure {
+  font-size: 20px;
+  display: block;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+}
+
+figure figcaption {
+  display: block;
+
+  padding: 5px 10px 4px 10px;
+
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+
+  font-weight: bold;
+
+  background: #ddd;
+  color: #777;
+}
+
+pre,
+pre * {
+  font: normal normal normal 1em/1.4 monaco, courier, monospace;
+}
+
+pre {
+  font-size: 0.8em;
+}
+
+pre,
+pre code,
+pre samp {
+  display: block;
+  margin: 0;
+
+  cursor: text;
+}
+
+pre code,
+pre samp {
+  /* enforce white-space for IE7 */
+  white-space: pre-wrap;
+
+  /* enforce word-wrap for mobile safari */
+  word-wrap: normal;
+
+  padding: 10px;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  z-index: -1;
+}
+
+/* additional focus rules to provide a visual cue */
+pre [contenteditable]:focus {
+  border-radius: 0 0 3px 0;
+
+  background: #fff;
+
+  outline: none;
+
+  box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+pre.line-numbers {
+  position: relative;
+}
+
+pre.line-numbers code,
+pre.line-numbers samp {
+  margin-left: 3em;
+
+  border-left: 1px solid #ccc;
+}
+
+pre.line-numbers>div {
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  border-radius: 0 0 0 3px;
+
+  background: #e5e5e5;
+
+  overflow: hidden;
+
+  counter-reset: line;
+}
+
+pre.line-numbers>div>span {
+  display: block;
+  width: 2.5em;
+  padding: 0 0.5em 0 0;
+
+  text-align: right;
+
+  color: #777;
+
+  overflow: hidden;
+
+  counter-increment: line;
+}
+
+pre.line-numbers>div>span::before {
+  content: counter(line);
+}
+
+pre.line-numbers>div>span:first-child {
+  margin-top: 10px;
+}
+
+pre.line-numbers>div>span:nth-child(odd) {
+  background: #dfdfdf;
+}
+
+@media print {
+  pre code {
+    overflow-x: visible;
+    white-space: pre-wrap;
+  }
+
+  pre.line-numbers div {
+    display: none;
+  }
+
+  pre.line-numbers>code,
+  pre.line-numbers>samp {
+    margin-left: 0;
+  }
+}
+
+/* double-up the syntax elements for cross-browser RTF-keystroke support */
+
+/************FOR THE INCLUDE TYPE***********/
+pre strong {
+  font-weight: normal;
+  color: rgb(214, 147, 214);
+}
+
+/* blue paint for types, if, else, etc */
+
+pre b {
+  font-weight: normal;
+  color: blue;
+}
+
+/* red paint for text and header file */
+pre u,
+pre u b {
+  text-decoration: none;
+  font-weight: normal;
+  color: red;
+}
+
+.colorgold {
+  font-weight: normal;
+  color: brown;
+}
+
+/* gray paint for include*/
+pre i,
+pre i *,
+pre i * * {
+  letter-spacing: -0.1em;
+  text-decoration: none;
+  font-style: normal;
+  color: gray;
+}
+
+/* orange paint for comments */
+pre em,
+pre em *,
+pre em * * {
+  letter-spacing: -0.1em;
+  text-decoration: none;
+  font-style: normal;
+  color: orange;
+}
+
+/******************MEDIA***************/
+
+/* for Ipad Pro <-> Ipad */
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+  h1 {
+    color: #0099ff;
+  }
+
+  .pic_big {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pic_med {
+    width: 60%;
+    margin-right: 40px;
+  }
+
+  .pic_sm {
+    width: 30%;
+    margin-right: 35px;
+  }
+
+  .para {
+    margin-top: 0;
+  }
+}
+
+/* for phones */
+@media screen and (max-width: 767px) {
+  .para {
+    margin-right: 15px;
+  }
+
+  .First-Para {
+    margin-right: 15px;
+    width: 85%;
+  }
+
+  .head-left {
+    margin-left: 15px;
+  }
+
+  .head-right {
+    margin-right: 15px;
+  }
+
+  .pic_big {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pic_med {
+    width: 90%;
+    margin-right: 25px;
+  }
+
+  .pic_sm {
+    width: 25%;
+    margin-right: 25px;
+  }
+
+  #title {
+    visibility: hidden;
+  }
+
+  #menu {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #main {
+    width: 100%;
+    font-size: 15px;
+    margin-right: 0;
+  }
+
+  h1 {
+    color: #0099ff;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  figure {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .col-md-6 {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #mySidenav a {
+    font-size: 18px;
+  }
+
+  #mySidenav .closebtn {
+    display: none;
+    visibility: hidden;
+  }
+
+  #mySidenav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  #topPageIcon {
+    margin-right: -5px;
+    transform: scale(1);
+  }
+
+  #topPage {
+    visibility: visible;
+  }
+}
